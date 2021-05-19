@@ -1,0 +1,11 @@
+[Desktop Entry]
+Name=Bulky
+Comment=Rename files
+Exec=bulky
+Icon=bulky
+Terminal=false
+Type=Application
+Encoding=UTF-8
+Categories=GTK;Utility;Core;
+Keywords=rename;bulk;
+StartupNotify=false

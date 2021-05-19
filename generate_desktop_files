@@ -1,0 +1,25 @@
+#!/usr/bin/python3
+
+DOMAIN = "bulky"
+PATH = "/usr/share/locale"
+
+import os
+import gettext
+from mintcommon import additionalfiles
+
+os.environ['LANGUAGE'] = "en_US.UTF-8"
+gettext.install(DOMAIN, PATH)
+
+prefix = "[Desktop Entry]\n"
+
+suffix = """Exec=bulky
+Icon=bulky
+Terminal=false
+Type=Application
+Encoding=UTF-8
+Categories=GTK;Utility;Core;
+Keywords=rename;bulk;
+StartupNotify=false
+"""
+
+additionalfiles.generate(DOMAIN, PATH, "usr/share/applications/bulky.desktop", prefix, _("Bulky"), _("Rename files"), suffix)

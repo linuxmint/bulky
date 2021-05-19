@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schemalist>
+  <schema id="org.x.bulky" path="/org/x/bulky/">
+    <key type="s" name="mpv-options">
+      <default>"hwdec=auto-safe"</default>
+      <summary></summary>
+      <description></description>
+    </key>
+    <key type="s" name="user-agent">
+      <default>"Mozilla/5.0"</default>
+      <summary></summary>
+      <description></description>
+    </key>
+    <key type="s" name="http-referer">
+      <default>""</default>
+      <summary></summary>
+      <description></description>
+    </key>
+    <key type="s" name="active-provider">
+      <default>"Free-TV"</default>
+      <summary>Provider selected by default</summary>
+      <description></description>
+    </key>
+    <key type="as" name="providers">
+      <default>['Free-TV:::url:::https://raw.githubusercontent.com/Free-TV/IPTV/master/playlist.m3u8:::::::::']</default>
+      <summary>Format: name:::type:::url(or path):::username:::password:::epg</summary>
+      <description></description>
+    </key>
+  </schema>
+</schemalist>
