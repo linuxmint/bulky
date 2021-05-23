@@ -291,14 +291,15 @@ class MainWindow():
                 file_obj = self.model.get_value(iter, COL_FILE)
                 name = self.model.get_value(iter, COL_NAME)
                 new_name = self.model.get_value(iter, COL_NEW_NAME)
-                new_path = os.path.join(file_obj.parent_path, new_name)
-                os.rename(file_obj.path, new_path)
-                self.paths.remove(file_obj.path)
-                self.paths.append(new_path)
-                file_obj.path = new_path
-                file_obj.name = new_name
-                self.model.set_value(iter, COL_NAME, new_name)
-                print("Renamed %s --> %s" % (name, new_name))
+                if new_name != name:
+                    new_path = os.path.join(file_obj.parent_path, new_name)
+                    os.rename(file_obj.path, new_path)
+                    self.paths.remove(file_obj.path)
+                    self.paths.append(new_path)
+                    file_obj.path = new_path
+                    file_obj.name = new_name
+                    self.model.set_value(iter, COL_NAME, new_name)
+                    print("Renamed %s --> %s" % (name, new_name))
             except Exception as e:
                 print(e)
         self.rename_button.set_sensitive(False)
