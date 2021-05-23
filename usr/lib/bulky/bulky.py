@@ -278,8 +278,15 @@ class MainWindow():
         self.application.quit()
 
     def on_rename_button(self, widget):
+        iters = []
         iter = self.model.get_iter_first()
         while iter != None:
+            iters.append(iter)
+            iter = self.model.iter_next(iter)
+        # We're modifying the model here, so we iterate
+        # through our own list of iters rather than the model
+        # itself
+        for iter in iters:
             try:
                 file_obj = self.model.get_value(iter, COL_FILE)
                 name = self.model.get_value(iter, COL_NAME)
@@ -292,7 +299,6 @@ class MainWindow():
                 file_obj.name = new_name
                 self.model.set_value(iter, COL_NAME, new_name)
                 print("Renamed %s --> %s" % (name, new_name))
-                iter = self.model.iter_next(iter)
             except Exception as e:
                 print(e)
         self.rename_button.set_sensitive(False)
