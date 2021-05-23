@@ -357,6 +357,14 @@ class MainWindow():
                 self.infobar.show()
                 self.error_label.set_text(_("Name collision on '%s'.") % renamed_path.replace(os.path.expanduser("~"), "~"))
                 self.rename_button.set_sensitive(False)
+            elif not os.access(file_obj.parent_path, os.W_OK):
+                self.infobar.show()
+                self.error_label.set_text(_("'%s' is not writeable.") % file_obj.parent_path.replace(os.path.expanduser("~"), "~"))
+                self.rename_button.set_sensitive(False)
+            elif not os.access(file_obj.path, os.W_OK):
+                self.infobar.show()
+                self.error_label.set_text(_("'%s' is not writeable.") % file_obj.path.replace(os.path.expanduser("~"), "~"))
+                self.rename_button.set_sensitive(False)
             self.renamed_paths.append(renamed_path)
             iter = self.model.iter_next(iter)
 
