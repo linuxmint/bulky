@@ -209,7 +209,7 @@
                                 <property name="visible">True</property>
                                 <property name="can_focus">True</property>
                                 <property name="receives_default">False</property>
-                                <property name="tooltip_text" translatable="yes">Edit</property>
+                                <property name="tooltip_text" translatable="yes">Clear</property>
                                 <child>
                                   <object class="GtkImage">
                                     <property name="visible">True</property>

@@ -191,7 +191,7 @@ class MainWindow():
         self.radio_firstuppercase.connect("toggled", self.on_widget_change)
 
         # Tooltips
-        variables_tooltip = _("Use %n, %0n, %00n, %000n to enumerate")
+        variables_tooltip = _("Use %n, %0n, %00n, %000n to enumerate.")
         self.replace_entry.set_tooltip_text(variables_tooltip)
         self.insert_entry.set_tooltip_text(variables_tooltip)
 
