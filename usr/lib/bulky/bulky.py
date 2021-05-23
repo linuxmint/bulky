@@ -111,18 +111,23 @@ class MainWindow():
 
         # Treeview
         self.treeview = self.builder.get_object("treeview")
-        renderer = Gtk.CellRendererPixbuf()
-        column = Gtk.TreeViewColumn("", renderer, pixbuf=COL_ICON)
-        column.set_cell_data_func(renderer, self.data_func_surface)
-        self.treeview.append_column(column)
-
-        column = Gtk.TreeViewColumn(_("Name"), Gtk.CellRendererText(), text=COL_NAME)
+        renderer_pixbuf = Gtk.CellRendererPixbuf()
+        renderer_text = Gtk.CellRendererText()
+        renderer_text.set_property("xalign", 0.00)
+        column = Gtk.TreeViewColumn()
+        column.set_title(_("Name"))
+        column.set_spacing(6)
+        column.set_cell_data_func(renderer_pixbuf, self.data_func_surface)
+        column.pack_start(renderer_pixbuf, False)
+        column.pack_start(renderer_text, True)
+        column.add_attribute(renderer_pixbuf, "pixbuf", COL_ICON)
+        column.add_attribute(renderer_text, "text", COL_NAME)
         column.set_sort_column_id(COL_NAME)
-        column.set_resizable(True)
+        column.set_expand(True)
         self.treeview.append_column(column)
 
         column = Gtk.TreeViewColumn(_("New name"), Gtk.CellRendererText(), text=COL_NEW_NAME)
-        column.set_resizable(True)
+        column.set_expand(True)
         self.treeview.append_column(column)
 
         self.treeview.show()
