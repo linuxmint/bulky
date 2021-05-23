@@ -174,6 +174,8 @@ class MainWindow():
         self.insert_spin.connect("value-changed", self.on_widget_change)
         self.insert_reverse_check.connect("toggled", self.on_widget_change)
         self.overwrite_check.connect("toggled", self.on_widget_change)
+        self.insert_spin.set_range(1, 100)
+        self.insert_spin.set_increments(1, 1)
 
         # Case widgets
         self.radio_titlecase = self.builder.get_object("radio_titlecase")
@@ -352,7 +354,25 @@ class MainWindow():
         return string[0:from_index]+string[to_index:]
 
     def insert_text(self, index, string):
-        print("insert text")
+        text = self.insert_entry.get_text()
+        length = len(string) - 1
+        from_index = self.insert_spin.get_value_as_int() - 1
+        if from_index >= length:
+            if self.insert_reverse_check.get_active():
+                return text+string
+            else:
+                return string+text
+        else:
+            if self.insert_reverse_check.get_active():
+                from_index = length - from_index + 1
+            if self.overwrite_check.get_active():
+                if len(text) >= length:
+                    return text
+                else:
+                    catchup = from_index + len(text)
+                    return string[0:from_index] + text + string[catchup:]
+            else:
+                return string[0:from_index] + text + string[from_index:]
 
     def change_case(self, index, string):
         if self.radio_titlecase.get_active():
