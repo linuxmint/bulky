@@ -160,6 +160,10 @@ class MainWindow():
         self.remove_to_spin.connect("value-changed", self.on_widget_change)
         self.remove_from_check.connect("toggled", self.on_widget_change)
         self.remove_to_check.connect("toggled", self.on_widget_change)
+        self.remove_from_spin.set_range(1, 100)
+        self.remove_from_spin.set_increments(1, 1)
+        self.remove_to_spin.set_range(1, 100)
+        self.remove_to_spin.set_increments(1, 1)
 
         # Insert widgets
         self.insert_entry = self.builder.get_object("insert_entry")
@@ -337,10 +341,15 @@ class MainWindow():
                 return reg.sub(replace, string)
 
     def remove_text(self, index, string):
-        self.remove_from_spin.connect("value-changed", self.on_widget_change)
-        self.remove_to_spin.connect("value-changed", self.on_widget_change)
-        self.remove_from_check.connect("toggled", self.on_widget_change)
-        self.remove_to_check.connect("toggled", self.on_widget_change)
+        length = len(string) - 1
+        from_index = min(self.remove_from_spin.get_value_as_int() - 1, length)
+        to_index = min(self.remove_to_spin.get_value_as_int() - 1, length)
+        if self.remove_from_check.get_active():
+            from_index = length - from_index
+        if self.remove_to_check.get_active():
+            to_index = length - to_index
+        to_index = max(to_index + 1, from_index)
+        return string[0:from_index]+string[to_index:]
 
     def insert_text(self, index, string):
         print("insert text")
