@@ -8,6 +8,12 @@ It's an XApp so it can work in any distribution and many desktop environments (C
 
 Thunar already has its own built-in file renamer so Bulky is redundant in Xfce.
 
+# Translations
+
+Please use Launchpad to translate Bulky: https://translations.launchpad.net/linuxmint/latest/.
+
+The PO files in this project are imported from there.
+
 # License
 
 - Code: GPLv3
