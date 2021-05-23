@@ -362,6 +362,7 @@ TODO
 - try/catch exceptions on a line per line basis
 - check new_name collisions for files in the same directory
 - translations
+- add special text for numbering, date, etc..
 
 '''
 
