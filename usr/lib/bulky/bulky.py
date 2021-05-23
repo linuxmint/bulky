@@ -202,15 +202,6 @@ class MainWindow():
         surface = Gdk.cairo_surface_create_from_pixbuf(pixbuf, self.window.get_scale_factor())
         cell.set_property("surface", surface)
 
-    def open_keyboard_shortcuts(self, widget):
-        gladefile = "/usr/share/bulky/shortcuts.ui"
-        builder = Gtk.Builder()
-        builder.set_translation_domain(APP)
-        builder.add_from_file(gladefile)
-        window = builder.get_object("shortcuts")
-        window.set_title(_("Shortcuts"))
-        window.show()
-
     def open_about(self, widget):
         dlg = Gtk.AboutDialog()
         dlg.set_transient_for(self.window)

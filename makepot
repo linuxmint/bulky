@@ -1,5 +1,4 @@
 #!/bin/bash
 intltool-extract --type=gettext/glade usr/share/bulky/bulky.ui
-intltool-extract --type=gettext/glade usr/share/bulky/shortcuts.ui
-xgettext --language=Python --keyword=_ --keyword=N_ --output=bulky.pot usr/lib/bulky/*.py generate_desktop_files usr/share/bulky/bulky.ui.h usr/share/bulky/shortcuts.ui.h
+xgettext --language=Python --keyword=_ --keyword=N_ --output=bulky.pot usr/lib/bulky/*.py generate_desktop_files usr/share/bulky/bulky.ui.h
 rm -f usr/share/bulky/*.ui.h
