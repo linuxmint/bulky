@@ -99,7 +99,7 @@
                             <property name="visible">True</property>
                             <property name="can_focus">True</property>
                             <property name="receives_default">False</property>
-                            <property name="tooltip_text" translatable="yes">Add</property>
+                            <property name="tooltip_text" translatable="yes">Add files...</property>
                             <child>
                               <object class="GtkImage">
                                 <property name="visible">True</property>
@@ -125,6 +125,7 @@
                               <object class="GtkImage">
                                 <property name="visible">True</property>
                                 <property name="can_focus">False</property>
+                                <property name="tooltip_text" translatable="yes">Remove selected files</property>
                                 <property name="icon_name">list-remove-symbolic</property>
                               </object>
                             </child>
@@ -145,6 +146,7 @@
                               <object class="GtkImage">
                                 <property name="visible">True</property>
                                 <property name="can_focus">False</property>
+                                <property name="tooltip_text" translatable="yes">Clear</property>
                                 <property name="icon_name">edit-clear-symbolic</property>
                               </object>
                             </child>
