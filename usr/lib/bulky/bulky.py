@@ -289,6 +289,7 @@ class MainWindow():
         self.model.clear()
         self.remove_button.set_sensitive(False)
         if len(sys.argv) > 1:
+            self.builder.get_object("file_toolbox").hide()
             for path in sys.argv[1:]:
                 self.add_file(path)
 

@@ -78,7 +78,7 @@
               </packing>
             </child>
             <child>
-              <object class="GtkToolbar">
+              <object class="GtkToolbar" id="file_toolbox">
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
                 <property name="toolbar_style">icons</property>
