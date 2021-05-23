@@ -22,4 +22,4 @@ Keywords=rename;bulk;
 StartupNotify=false
 """
 
-additionalfiles.generate(DOMAIN, PATH, "usr/share/applications/bulky.desktop", prefix, _("Bulky"), _("Rename files"), suffix)
+additionalfiles.generate(DOMAIN, PATH, "usr/share/applications/bulky.desktop", prefix, _("File Renamer"), _("Rename files and directories"), suffix)

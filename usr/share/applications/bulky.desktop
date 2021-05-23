@@ -1,6 +1,6 @@
 [Desktop Entry]
-Name=Bulky
-Comment=Rename files
+Name=File Renamer
+Comment=Rename files and directories
 Exec=bulky
 Icon=bulky
 Terminal=false
