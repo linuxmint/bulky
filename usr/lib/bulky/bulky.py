@@ -337,7 +337,10 @@ class MainWindow():
                 return reg.sub(replace, string)
 
     def remove_text(self, index, string):
-        print("remove text")
+        self.remove_from_spin.connect("value-changed", self.on_widget_change)
+        self.remove_to_spin.connect("value-changed", self.on_widget_change)
+        self.remove_from_check.connect("toggled", self.on_widget_change)
+        self.remove_to_check.connect("toggled", self.on_widget_change)
 
     def insert_text(self, index, string):
         print("insert text")
@@ -351,6 +354,16 @@ class MainWindow():
             return string.upper()
         else:
             return string.capitalize()
+
+'''
+TODO
+----
+
+- try/catch exceptions on a line per line basis
+- check new_name collisions for files in the same directory
+- translations
+
+'''
 
 if __name__ == "__main__":
     application = MyApplication("org.x.bulky", Gio.ApplicationFlags.FLAGS_NONE)
