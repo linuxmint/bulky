@@ -58,6 +58,9 @@ class MainWindow():
         self.icon_theme = Gtk.IconTheme.get_default()
         self.operation_function = self.replace_text
         self.scope = SCOPE_NAME_ONLY
+        # used to prevent collisions
+        self.paths = []
+        self.renamed_paths = []
 
         # Set the Glade file
         gladefile = "/usr/share/bulky/bulky.ui"
@@ -255,6 +258,8 @@ class MainWindow():
             # since removing changes the paths
             iters.append(self.model.get_iter(path))
         for iter in iters:
+            file_path = self.model.get_value(iter, COL_FILE).path
+            self.paths.remove(file_path)
             self.model.remove(iter)
 
     def on_add_button(self, widget):
@@ -291,6 +296,10 @@ class MainWindow():
         if os.path.exists(path):
             file_obj = FileObject(path)
             if file_obj.is_valid:
+                if file_obj.path in self.paths:
+                    print("%s is already loaded, ignoring" % file_obj.path)
+                    return
+                self.paths.append(file_obj.path)
                 pixbuf = self.icon_theme.load_icon(file_obj.icon, 22 * self.window.get_scale_factor(), 0)
                 iter = self.model.insert_before(None, None)
                 self.model.set_value(iter, COL_ICON, pixbuf)
