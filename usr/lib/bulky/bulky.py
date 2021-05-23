@@ -190,6 +190,11 @@ class MainWindow():
         self.radio_uppercase.connect("toggled", self.on_widget_change)
         self.radio_firstuppercase.connect("toggled", self.on_widget_change)
 
+        # Tooltips
+        variables_tooltip = _("Use %n, %0n, %00n, %000n to enumerate")
+        self.replace_entry.set_tooltip_text(variables_tooltip)
+        self.insert_entry.set_tooltip_text(variables_tooltip)
+
         self.load_files()
 
     def data_func_surface(self, column, cell, model, iter_, *args):
@@ -383,6 +388,7 @@ class MainWindow():
                     self.rename_button.set_sensitive(False)
                 self.renamed_paths.append(renamed_path)
                 iter = self.model.iter_next(iter)
+                index += 1
             except Exception as e:
                 print(e)
 
@@ -391,6 +397,7 @@ class MainWindow():
         regex = self.replace_regex_check.get_active()
         find = self.find_entry.get_text()
         replace = self.replace_entry.get_text()
+        replace = self.inject(index, replace)
         if regex:
             find = find.replace("*", ".+").replace("?", ".")
             if case:
@@ -419,6 +426,7 @@ class MainWindow():
 
     def insert_text(self, index, string):
         text = self.insert_entry.get_text()
+        text = self.inject(index, text)
         length = len(string) - 1
         from_index = self.insert_spin.get_value_as_int() - 1
         if from_index >= length:
@@ -448,11 +456,17 @@ class MainWindow():
         else:
             return string.capitalize()
 
+    def inject(self, index, string):
+        string = string.replace('%n', "{:01d}".format(index))
+        string = string.replace('%0n', "{:02d}".format(index))
+        string = string.replace('%00n', "{:03d}".format(index))
+        string = string.replace('%000n', "{:04d}".format(index))
+        return string
+
 '''
 TODO
 ----
 - translations
-- add special text for numbering, date, etc..
 
 '''
 
