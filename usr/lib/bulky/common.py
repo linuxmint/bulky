@@ -27,7 +27,6 @@ class FileObject():
     def __init__(self, path):
         self.path = os.path.abspath(path)
         self.name = os.path.basename(path)
-        self.new_name = self.name
         if os.path.isdir(self.path):
             self.icon = "folder"
         else:

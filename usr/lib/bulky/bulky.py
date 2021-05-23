@@ -55,7 +55,6 @@ class MainWindow():
 
         self.application = application
         self.settings = Gio.Settings(schema_id="org.x.bulky")
-        self.selected_files = []
         self.icon_theme = Gtk.IconTheme.get_default()
         self.operation_function = self.replace_text
         self.scope = SCOPE_NAME_ONLY
@@ -134,6 +133,7 @@ class MainWindow():
         self.model = Gtk.TreeStore(GdkPixbuf.Pixbuf, str, str, object) # icon, name, new_name, file
         self.model.set_sort_column_id(COL_NAME, Gtk.SortType.ASCENDING)
         self.treeview.set_model(self.model)
+        self.treeview.get_selection().set_mode(Gtk.SelectionMode.MULTIPLE)
         self.treeview.get_selection().connect("changed", self.on_files_selected)
 
         # Combos
@@ -234,10 +234,8 @@ class MainWindow():
         self.application.quit()
 
     def on_files_selected(self, selection):
-        model, iter = selection.get_selected()
-        if iter is not None:
-            #self.selected_files = ..
-            self.remove_button.set_sensitive(True)
+        paths = selection.get_selected_rows()
+        self.remove_button.set_sensitive(len(paths) > 0)
 
     def on_key_press_event(self, widget, event):
         ctrl = (event.state & Gdk.ModifierType.CONTROL_MASK)
@@ -250,14 +248,30 @@ class MainWindow():
                 self.on_clear_button(self.clear_button)
 
     def on_remove_button(self, widget):
-        if len(self.selected_files) > 0:
-            pass
+        iters = []
+        model, paths = self.treeview.get_selection().get_selected_rows()
+        for path in paths:
+            # Add selected iters to a list, we can't remove while we iterate
+            # since removing changes the paths
+            iters.append(self.model.get_iter(path))
+        for iter in iters:
+            self.model.remove(iter)
 
     def on_add_button(self, widget):
-        pass
+        dialog = Gtk.FileChooserDialog(title=_("Add files"), parent=self.window, action=Gtk.FileChooserAction.OPEN)
+        dialog.set_select_multiple(True)
+        dialog.add_buttons(_("Cancel"), Gtk.ResponseType.CANCEL)
+        dialog.add_buttons(_("Add"), Gtk.ResponseType.OK)
+        dialog.set_default_response(Gtk.ResponseType.OK)
+        response = dialog.run()
+        if response == Gtk.ResponseType.OK:
+            for path in dialog.get_filenames():
+                self.add_file(path)
+        self.preview_changes()
+        dialog.destroy()
 
     def on_clear_button(self, widget):
-        pass
+        self.model.clear()
 
     def on_close_button(self, widget):
         self.application.quit()
@@ -268,19 +282,21 @@ class MainWindow():
     def load_files(self):
         # Clear treeview and selection
         self.model.clear()
-        self.selected_files = []
         self.remove_button.set_sensitive(False)
         if len(sys.argv) > 1:
             for path in sys.argv[1:]:
-                if os.path.exists(path):
-                    file_obj = FileObject(path)
-                    if file_obj.is_valid:
-                        pixbuf = self.icon_theme.load_icon(file_obj.icon, 22 * self.window.get_scale_factor(), 0)
-                        iter = self.model.insert_before(None, None)
-                        self.model.set_value(iter, COL_ICON, pixbuf)
-                        self.model.set_value(iter, COL_NAME, file_obj.name)
-                        self.model.set_value(iter, COL_NEW_NAME, file_obj.new_name)
-                        self.model.set_value(iter, COL_FILE, file_obj)
+                self.add_file(path)
+
+    def add_file(self, path):
+        if os.path.exists(path):
+            file_obj = FileObject(path)
+            if file_obj.is_valid:
+                pixbuf = self.icon_theme.load_icon(file_obj.icon, 22 * self.window.get_scale_factor(), 0)
+                iter = self.model.insert_before(None, None)
+                self.model.set_value(iter, COL_ICON, pixbuf)
+                self.model.set_value(iter, COL_NAME, file_obj.name)
+                self.model.set_value(iter, COL_NEW_NAME, file_obj.name)
+                self.model.set_value(iter, COL_FILE, file_obj)
 
     def on_operation_changed(self, widget):
         operation_id = widget.get_active_id()

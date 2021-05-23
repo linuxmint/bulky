@@ -138,7 +138,6 @@
                         <child>
                           <object class="GtkButton" id="clear_button">
                             <property name="visible">True</property>
-                            <property name="sensitive">False</property>
                             <property name="can_focus">True</property>
                             <property name="receives_default">False</property>
                             <property name="tooltip_text" translatable="yes">Edit</property>
