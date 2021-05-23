@@ -92,13 +92,6 @@ class MainWindow():
         self.window.add_accel_group(accel_group)
         menu = self.builder.get_object("main_menu")
         item = Gtk.ImageMenuItem()
-        item.set_image(Gtk.Image.new_from_icon_name("preferences-desktop-keyboard-shortcuts-symbolic", Gtk.IconSize.MENU))
-        item.set_label(_("Keyboard Shortcuts"))
-        item.connect("activate", self.open_keyboard_shortcuts)
-        key, mod = Gtk.accelerator_parse("<Control>K")
-        item.add_accelerator("activate", accel_group, key, mod, Gtk.AccelFlags.VISIBLE)
-        menu.append(item)
-        item = Gtk.ImageMenuItem()
         item.set_image(Gtk.Image.new_from_icon_name("help-about-symbolic", Gtk.IconSize.MENU))
         item.set_label(_("About"))
         item.connect("activate", self.open_about)
@@ -340,33 +333,36 @@ class MainWindow():
         iter = self.model.get_iter_first()
         index = 1
         while iter != None:
-            file_obj = self.model.get_value(iter, COL_FILE)
-            name = self.model.get_value(iter, COL_NAME)
-            name, ext = os.path.splitext(name)
-            if self.scope == SCOPE_NAME_ONLY:
-                name = self.operation_function(index, name)
-            elif self.scope == SCOPE_EXTENSION_ONLY:
-                ext = self.operation_function(index, ext)
-            else:
-                name = self.operation_function(index, name)
-                ext = self.operation_function(index, ext)
-            new_name = name + ext
-            self.model.set_value(iter, COL_NEW_NAME, new_name)
-            renamed_path = os.path.join(file_obj.parent_path, new_name)
-            if renamed_path in self.renamed_paths:
-                self.infobar.show()
-                self.error_label.set_text(_("Name collision on '%s'.") % renamed_path.replace(os.path.expanduser("~"), "~"))
-                self.rename_button.set_sensitive(False)
-            elif not os.access(file_obj.parent_path, os.W_OK):
-                self.infobar.show()
-                self.error_label.set_text(_("'%s' is not writeable.") % file_obj.parent_path.replace(os.path.expanduser("~"), "~"))
-                self.rename_button.set_sensitive(False)
-            elif not os.access(file_obj.path, os.W_OK):
-                self.infobar.show()
-                self.error_label.set_text(_("'%s' is not writeable.") % file_obj.path.replace(os.path.expanduser("~"), "~"))
-                self.rename_button.set_sensitive(False)
-            self.renamed_paths.append(renamed_path)
-            iter = self.model.iter_next(iter)
+            try:
+                file_obj = self.model.get_value(iter, COL_FILE)
+                name = self.model.get_value(iter, COL_NAME)
+                name, ext = os.path.splitext(name)
+                if self.scope == SCOPE_NAME_ONLY:
+                    name = self.operation_function(index, name)
+                elif self.scope == SCOPE_EXTENSION_ONLY:
+                    ext = self.operation_function(index, ext)
+                else:
+                    name = self.operation_function(index, name)
+                    ext = self.operation_function(index, ext)
+                new_name = name + ext
+                self.model.set_value(iter, COL_NEW_NAME, new_name)
+                renamed_path = os.path.join(file_obj.parent_path, new_name)
+                if renamed_path in self.renamed_paths:
+                    self.infobar.show()
+                    self.error_label.set_text(_("Name collision on '%s'.") % renamed_path.replace(os.path.expanduser("~"), "~"))
+                    self.rename_button.set_sensitive(False)
+                elif not os.access(file_obj.parent_path, os.W_OK):
+                    self.infobar.show()
+                    self.error_label.set_text(_("'%s' is not writeable.") % file_obj.parent_path.replace(os.path.expanduser("~"), "~"))
+                    self.rename_button.set_sensitive(False)
+                elif not os.access(file_obj.path, os.W_OK):
+                    self.infobar.show()
+                    self.error_label.set_text(_("'%s' is not writeable.") % file_obj.path.replace(os.path.expanduser("~"), "~"))
+                    self.rename_button.set_sensitive(False)
+                self.renamed_paths.append(renamed_path)
+                iter = self.model.iter_next(iter)
+            except Exception as e:
+                print(e)
 
     def replace_text(self, index, string):
         case = self.replace_case_check.get_active()
@@ -433,9 +429,6 @@ class MainWindow():
 '''
 TODO
 ----
-
-- try/catch exceptions on a line per line basis
-- check new_name collisions for files in the same directory
 - translations
 - add special text for numbering, date, etc..
 
