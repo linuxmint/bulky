@@ -143,6 +143,8 @@ class MainWindow():
         self.builder.get_object("combo_operation").connect("changed", self.on_operation_changed)
         self.builder.get_object("combo_scope").connect("changed", self.on_scope_changed)
         self.stack = self.builder.get_object("stack")
+        self.infobar = self.builder.get_object("infobar")
+        self.error_label = self.builder.get_object("error_label")
 
         # Replace widgets
         self.find_entry = self.builder.get_object("find_entry")
@@ -332,6 +334,9 @@ class MainWindow():
         self.preview_changes()
 
     def preview_changes(self):
+        self.renamed_paths = []
+        self.infobar.hide()
+        self.rename_button.set_sensitive(True)
         iter = self.model.get_iter_first()
         index = 1
         while iter != None:
@@ -345,7 +350,14 @@ class MainWindow():
             else:
                 name = self.operation_function(index, name)
                 ext = self.operation_function(index, ext)
-            self.model.set_value(iter, COL_NEW_NAME, name+ext)
+            new_name = name + ext
+            self.model.set_value(iter, COL_NEW_NAME, new_name)
+            renamed_path = os.path.join(file_obj.parent_path, new_name)
+            if renamed_path in self.renamed_paths:
+                self.infobar.show()
+                self.error_label.set_text(_("Name collision on '%s'.") % renamed_path.replace(os.path.expanduser("~"), "~"))
+                self.rename_button.set_sensitive(False)
+            self.renamed_paths.append(renamed_path)
             iter = self.model.iter_next(iter)
 
     def replace_text(self, index, string):
