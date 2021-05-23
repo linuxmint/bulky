@@ -28,6 +28,9 @@ gettext.textdomain(APP)
 _ = gettext.gettext
 
 COL_ICON, COL_NAME, COL_NEW_NAME, COL_FILE = range(4)
+SCOPE_NAME_ONLY = "name"
+SCOPE_EXTENSION_ONLY = "extension"
+SCOPE_ALL = "all"
 
 class MyApplication(Gtk.Application):
     # Main initialization routine
@@ -54,6 +57,8 @@ class MainWindow():
         self.settings = Gio.Settings(schema_id="org.x.bulky")
         self.selected_files = []
         self.icon_theme = Gtk.IconTheme.get_default()
+        self.operation_function = self.replace_text
+        self.scope = SCOPE_NAME_ONLY
 
         # Set the Glade file
         gladefile = "/usr/share/bulky/bulky.ui"
@@ -130,6 +135,51 @@ class MainWindow():
         self.model.set_sort_column_id(COL_NAME, Gtk.SortType.ASCENDING)
         self.treeview.set_model(self.model)
         self.treeview.get_selection().connect("changed", self.on_files_selected)
+
+        # Combos
+        self.builder.get_object("combo_operation").connect("changed", self.on_operation_changed)
+        self.builder.get_object("combo_scope").connect("changed", self.on_scope_changed)
+        self.stack = self.builder.get_object("stack")
+
+        # Replace widgets
+        self.find_entry = self.builder.get_object("find_entry")
+        self.replace_entry = self.builder.get_object("replace_entry")
+        self.replace_regex_check = self.builder.get_object("replace_regex_check")
+        self.replace_case_check = self.builder.get_object("replace_case_check")
+        self.find_entry.connect("changed", self.on_widget_change)
+        self.replace_entry.connect("changed", self.on_widget_change)
+        self.replace_regex_check.connect("toggled", self.on_widget_change)
+        self.replace_case_check.connect("toggled", self.on_widget_change)
+
+        # Remove widgets
+        self.remove_from_spin = self.builder.get_object("remove_from_spin")
+        self.remove_to_spin = self.builder.get_object("remove_to_spin")
+        self.remove_from_check = self.builder.get_object("remove_from_check")
+        self.remove_to_check = self.builder.get_object("remove_to_check")
+        self.remove_from_spin.connect("value-changed", self.on_widget_change)
+        self.remove_to_spin.connect("value-changed", self.on_widget_change)
+        self.remove_from_check.connect("toggled", self.on_widget_change)
+        self.remove_to_check.connect("toggled", self.on_widget_change)
+
+        # Insert widgets
+        self.insert_entry = self.builder.get_object("insert_entry")
+        self.insert_spin = self.builder.get_object("insert_spin")
+        self.insert_reverse_check = self.builder.get_object("insert_reverse_check")
+        self.overwrite_check = self.builder.get_object("overwrite_check")
+        self.insert_entry.connect("changed", self.on_widget_change)
+        self.insert_spin.connect("value-changed", self.on_widget_change)
+        self.insert_reverse_check.connect("toggled", self.on_widget_change)
+        self.overwrite_check.connect("toggled", self.on_widget_change)
+
+        # Case widgets
+        self.radio_titlecase = self.builder.get_object("radio_titlecase")
+        self.radio_lowercase = self.builder.get_object("radio_lowercase")
+        self.radio_uppercase = self.builder.get_object("radio_uppercase")
+        self.radio_firstuppercase = self.builder.get_object("radio_firstuppercase")
+        self.radio_titlecase.connect("toggled", self.on_widget_change)
+        self.radio_lowercase.connect("toggled", self.on_widget_change)
+        self.radio_uppercase.connect("toggled", self.on_widget_change)
+        self.radio_firstuppercase.connect("toggled", self.on_widget_change)
 
         self.load_files()
 
@@ -225,6 +275,82 @@ class MainWindow():
                         self.model.set_value(iter, COL_NAME, file_obj.name)
                         self.model.set_value(iter, COL_NEW_NAME, file_obj.new_name)
                         self.model.set_value(iter, COL_FILE, file_obj)
+
+    def on_operation_changed(self, widget):
+        operation_id = widget.get_active_id()
+        if operation_id == "replace":
+            self.stack.set_visible_child_name("replace_page")
+            self.operation_function = self.replace_text
+        elif operation_id == "remove":
+            self.stack.set_visible_child_name("remove_page")
+            self.operation_function = self.remove_text
+        elif operation_id == "insert":
+            self.stack.set_visible_child_name("insert_page")
+            self.operation_function = self.insert_text
+        elif operation_id == "case":
+            self.stack.set_visible_child_name("case_page")
+            self.operation_function = self.change_case
+        self.preview_changes()
+
+    def on_scope_changed(self, widget):
+        self.scope = widget.get_active_id()
+        self.preview_changes()
+
+    def on_widget_change(self, widget):
+        self.preview_changes()
+
+    def preview_changes(self):
+        iter = self.model.get_iter_first()
+        index = 1
+        while iter != None:
+            file_obj = self.model.get_value(iter, COL_FILE)
+            name = self.model.get_value(iter, COL_NAME)
+            name, ext = os.path.splitext(name)
+            if self.scope == SCOPE_NAME_ONLY:
+                name = self.operation_function(index, name)
+            elif self.scope == SCOPE_EXTENSION_ONLY:
+                ext = self.operation_function(index, ext)
+            else:
+                name = self.operation_function(index, name)
+                ext = self.operation_function(index, ext)
+            self.model.set_value(iter, COL_NEW_NAME, name+ext)
+            iter = self.model.iter_next(iter)
+
+    def replace_text(self, index, string):
+        case = self.replace_case_check.get_active()
+        regex = self.replace_regex_check.get_active()
+        find = self.find_entry.get_text()
+        replace = self.replace_entry.get_text()
+        if regex:
+            find = find.replace("*", ".+").replace("?", ".")
+            if case:
+                return re.sub(find, replace, string)
+            else:
+                reg = re.compile(find, re.IGNORECASE)
+                return reg.sub(replace, string)
+        else:
+            if case:
+                # Simple replace will do
+                return string.replace(find, replace)
+            else:
+                reg = re.compile(re.escape(find), re.IGNORECASE)
+                return reg.sub(replace, string)
+
+    def remove_text(self, index, string):
+        print("remove text")
+
+    def insert_text(self, index, string):
+        print("insert text")
+
+    def change_case(self, index, string):
+        if self.radio_titlecase.get_active():
+            return string.title()
+        elif self.radio_lowercase.get_active():
+            return string.lower()
+        elif self.radio_uppercase.get_active():
+            return string.upper()
+        else:
+            return string.capitalize()
 
 if __name__ == "__main__":
     application = MyApplication("org.x.bulky", Gio.ApplicationFlags.FLAGS_NONE)

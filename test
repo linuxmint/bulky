@@ -2,4 +2,4 @@
 sudo rm -rf /usr/lib/bulky
 sudo rm -rf /usr/share/bulky
 sudo cp -R usr /
-bulky tests/test_dir tests/test_file_1 tests/test_file_2 tests/test_file_3
+bulky tests/test_dir tests/test_file_1.png tests/test_file_2 tests/test_file_3
