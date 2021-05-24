@@ -336,6 +336,11 @@ class MainWindow():
                 self.add_file(path)
 
     def add_file(self, path):
+        if "://" in path:
+            # we're dealing with a URI, only accept file://
+            if not path.startswith("file://"):
+                return
+            path = path.replace("file://", "")
         if os.path.exists(path):
             file_obj = FileObject(path)
             if file_obj.is_valid:
