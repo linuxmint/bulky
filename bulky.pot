@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-05-23 20:38+0100\n"
+"POT-Creation-Date: 2021-05-24 15:02+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,59 +17,62 @@ msgstr ""
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: usr/lib/bulky/bulky.py:71 usr/lib/bulky/bulky.py:210
-#: usr/share/bulky/bulky.ui.h:1
-msgid "Rename Files"
+#: usr/lib/bulky/bulky.py:93 usr/share/bulky/bulky.ui.h:1
+msgid "Rename..."
 msgstr ""
 
-#: usr/lib/bulky/bulky.py:96 usr/lib/bulky/bulky.py:208
+#: usr/lib/bulky/bulky.py:118 usr/lib/bulky/bulky.py:230
 msgid "About"
 msgstr ""
 
-#: usr/lib/bulky/bulky.py:101
+#: usr/lib/bulky/bulky.py:123
 msgid "Quit"
 msgstr ""
 
-#: usr/lib/bulky/bulky.py:118
+#: usr/lib/bulky/bulky.py:140
 msgid "Name"
 msgstr ""
 
-#: usr/lib/bulky/bulky.py:129
+#: usr/lib/bulky/bulky.py:151
 msgid "New name"
 msgstr ""
 
-#: usr/lib/bulky/bulky.py:194
+#: usr/lib/bulky/bulky.py:216
 msgid "Use %n, %0n, %00n, %000n to enumerate."
 msgstr ""
 
-#: usr/lib/bulky/bulky.py:262
+#: usr/lib/bulky/bulky.py:232
+msgid "Rename Files"
+msgstr ""
+
+#: usr/lib/bulky/bulky.py:284
 msgid "Add files"
 msgstr ""
 
-#: usr/lib/bulky/bulky.py:264
+#: usr/lib/bulky/bulky.py:286
 msgid "Cancel"
 msgstr ""
 
-#: usr/lib/bulky/bulky.py:265
+#: usr/lib/bulky/bulky.py:287
 msgid "Add"
 msgstr ""
 
-#: usr/lib/bulky/bulky.py:377
+#: usr/lib/bulky/bulky.py:338 generate_desktop_files:25
+msgid "File Renamer"
+msgstr ""
+
+#: usr/lib/bulky/bulky.py:339 generate_desktop_files:25
+msgid "Rename files and directories"
+msgstr ""
+
+#: usr/lib/bulky/bulky.py:407
 #, python-format
 msgid "Name collision on '%s'."
 msgstr ""
 
-#: usr/lib/bulky/bulky.py:381 usr/lib/bulky/bulky.py:385
+#: usr/lib/bulky/bulky.py:411 usr/lib/bulky/bulky.py:415
 #, python-format
 msgid "'%s' is not writeable."
-msgstr ""
-
-#: generate_desktop_files:25
-msgid "File Renamer"
-msgstr ""
-
-#: generate_desktop_files:25
-msgid "Rename files and directories"
 msgstr ""
 
 #: usr/share/bulky/bulky.ui.h:2
@@ -174,4 +177,8 @@ msgstr ""
 
 #: usr/share/bulky/bulky.ui.h:27
 msgid "Close"
+msgstr ""
+
+#: usr/share/bulky/bulky.ui.h:28
+msgid "Rename"
 msgstr ""
