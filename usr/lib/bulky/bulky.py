@@ -90,7 +90,7 @@ class MainWindow():
         self.builder.set_translation_domain(APP)
         self.builder.add_from_file(gladefile)
         self.window = self.builder.get_object("main_window")
-        self.window.set_title(_("Rename Files"))
+        self.window.set_title(_("Rename..."))
         self.window.set_icon_name("bulky")
 
         # Create variables to quickly access dynamic widgets
@@ -334,6 +334,9 @@ class MainWindow():
             self.builder.get_object("file_toolbox").hide()
             for path in sys.argv[1:]:
                 self.add_file(path)
+        else:
+            self.builder.get_object("headerbar").set_title(_("File Renamer"))
+            self.builder.get_object("headerbar").set_subtitle(_("Rename files and directories"))
 
     def add_file(self, path):
         if "://" in path:
