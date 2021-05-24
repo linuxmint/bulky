@@ -2,6 +2,7 @@
 import gettext
 import gi
 import locale
+import magic
 import os
 import re
 import setproctitle
@@ -14,8 +15,6 @@ warnings.filterwarnings("ignore")
 
 gi.require_version("Gtk", "3.0")
 from gi.repository import Gtk, Gdk, Gio, GdkPixbuf, GLib
-
-from common import *
 
 setproctitle.setproctitle("bulky")
 
@@ -31,6 +30,29 @@ COL_ICON, COL_NAME, COL_NEW_NAME, COL_FILE = range(4)
 SCOPE_NAME_ONLY = "name"
 SCOPE_EXTENSION_ONLY = "extension"
 SCOPE_ALL = "all"
+
+# This is a data structure representing
+# the file object
+class FileObject():
+
+    def __init__(self, path):
+        self.path = os.path.abspath(path)
+        self.parent_path, self.name = os.path.split(self.path)
+        if os.path.isdir(self.path):
+            self.icon = "folder"
+        else:
+            self.icon = "text-x-generic"
+            try:
+                icon_theme = Gtk.IconTheme.get_default()
+                mimetype = magic.from_file(self.path, mime=True)
+                for name in Gio.content_type_get_icon(mimetype).get_names():
+                    if icon_theme.has_icon(name):
+                        self.icon = name
+                        break
+            except Exception as e:
+                print(e)
+
+        self.is_valid = True
 
 class MyApplication(Gtk.Application):
     # Main initialization routine
