@@ -1,6 +1,18 @@
 [Desktop Entry]
 Name=File Renamer
+Name[es]=Renombrador de archivos
+Name[fr]=Renommeur de fichiers
+Name[he]=משנה שמות קבצים
+Name[it]=Rinominatore di File
+Name[ja]=ファイル名変更ツール
+Name[la]=Commutatio Nominum
 Comment=Rename files and directories
+Comment[es]=Renombrar archivos y directorios
+Comment[fr]=Renommer des fichiers et répertoires
+Comment[he]=שינוי שמות קבצים ומחיצות
+Comment[it]=Rinomina file e cartelle
+Comment[ja]=ファイルとディレクトリの名前変更
+Comment[la]=Nomina plicarum et directoriorum muta
 Exec=bulky
 Icon=bulky
 Terminal=false

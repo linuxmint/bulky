@@ -1,0 +1,177 @@
+# French translation for linuxmint
+# Copyright (c) 2021 Rosetta Contributors and Canonical Ltd 2021
+# This file is distributed under the same license as the linuxmint package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmint\n"
+"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2021-05-23 20:38+0100\n"
+"PO-Revision-Date: 2021-05-23 19:42+0000\n"
+"Last-Translator: Clement Lefebvre <root@linuxmint.com>\n"
+"Language-Team: French <fr@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2021-05-24 09:30+0000\n"
+"X-Generator: Launchpad (build ba75dbf44f1013379e594c259682f14c0528180a)\n"
+
+#: usr/lib/bulky/bulky.py:71 usr/lib/bulky/bulky.py:210
+#: usr/share/bulky/bulky.ui.h:1
+msgid "Rename Files"
+msgstr "Renommer des fichiers"
+
+#: usr/lib/bulky/bulky.py:96 usr/lib/bulky/bulky.py:208
+msgid "About"
+msgstr "À Propos"
+
+#: usr/lib/bulky/bulky.py:101
+msgid "Quit"
+msgstr "Quitter"
+
+#: usr/lib/bulky/bulky.py:118
+msgid "Name"
+msgstr "Nom"
+
+#: usr/lib/bulky/bulky.py:129
+msgid "New name"
+msgstr "Nouveau nom"
+
+#: usr/lib/bulky/bulky.py:194
+msgid "Use %n, %0n, %00n, %000n to enumerate."
+msgstr "Utilisez %n, %0n, %00n, %000n pour énumérer."
+
+#: usr/lib/bulky/bulky.py:262
+msgid "Add files"
+msgstr "Ajouter des fichiers"
+
+#: usr/lib/bulky/bulky.py:264
+msgid "Cancel"
+msgstr "Annuler"
+
+#: usr/lib/bulky/bulky.py:265
+msgid "Add"
+msgstr "Ajouter"
+
+#: usr/lib/bulky/bulky.py:377
+#, python-format
+msgid "Name collision on '%s'."
+msgstr "Collision de nom sur '%s'."
+
+#: usr/lib/bulky/bulky.py:381 usr/lib/bulky/bulky.py:385
+#, python-format
+msgid "'%s' is not writeable."
+msgstr "Droits en écriture manquants pour '%s'."
+
+#: generate_desktop_files:25
+msgid "File Renamer"
+msgstr "Renommeur de fichiers"
+
+#: generate_desktop_files:25
+msgid "Rename files and directories"
+msgstr "Renommer des fichiers et répertoires"
+
+#: usr/share/bulky/bulky.ui.h:2
+msgid "Add files..."
+msgstr "Ajouter des fichiers ..."
+
+#: usr/share/bulky/bulky.ui.h:3
+msgid "Remove"
+msgstr "Retirer"
+
+#: usr/share/bulky/bulky.ui.h:4
+msgid "Remove selected files"
+msgstr "Retirer les lignes sélectionnées"
+
+#: usr/share/bulky/bulky.ui.h:5
+msgid "Clear"
+msgstr "Effacer"
+
+#: usr/share/bulky/bulky.ui.h:6
+msgid "Replace"
+msgstr "Remplacer"
+
+#: usr/share/bulky/bulky.ui.h:7
+msgid "Insert"
+msgstr "Insérer"
+
+#: usr/share/bulky/bulky.ui.h:8
+msgid "Change case"
+msgstr "Changer la casse"
+
+#: usr/share/bulky/bulky.ui.h:9
+msgid "Name only"
+msgstr "Uniquement le nom"
+
+#: usr/share/bulky/bulky.ui.h:10
+msgid "Extension only"
+msgstr "Uniquement l'extension"
+
+#: usr/share/bulky/bulky.ui.h:11
+msgid "Name and extension"
+msgstr "Nom et extension"
+
+#: usr/share/bulky/bulky.ui.h:12
+msgid "Find:"
+msgstr "Chercher :"
+
+#: usr/share/bulky/bulky.ui.h:13
+msgid "Replace:"
+msgstr "Remplacer :"
+
+#: usr/share/bulky/bulky.ui.h:14
+msgid "Regular expression"
+msgstr "Expression régulière"
+
+#: usr/share/bulky/bulky.ui.h:15
+msgid "Case sensitive"
+msgstr "Respecter la casse"
+
+#: usr/share/bulky/bulky.ui.h:16
+msgid "At position:"
+msgstr "À la position :"
+
+#: usr/share/bulky/bulky.ui.h:17
+msgid "From the end"
+msgstr "En partant de la fin"
+
+#: usr/share/bulky/bulky.ui.h:18
+msgid "Overwrite"
+msgstr "Écraser"
+
+#: usr/share/bulky/bulky.ui.h:19
+msgid "Text:"
+msgstr "Texte :"
+
+#: usr/share/bulky/bulky.ui.h:20
+msgid "Convert to:"
+msgstr "Convertir en :"
+
+#: usr/share/bulky/bulky.ui.h:21
+msgid "Lower case"
+msgstr "Minuscules"
+
+#: usr/share/bulky/bulky.ui.h:22
+msgid "First character uppercase"
+msgstr "Majuscule sur la première lettre"
+
+#: usr/share/bulky/bulky.ui.h:23
+msgid "Title case"
+msgstr "Titre"
+
+#: usr/share/bulky/bulky.ui.h:24
+msgid "Upper case"
+msgstr "Majuscules"
+
+#: usr/share/bulky/bulky.ui.h:25
+msgid "Remove from position:"
+msgstr "De la position :"
+
+#: usr/share/bulky/bulky.ui.h:26
+msgid "To position:"
+msgstr "À la position :"
+
+#: usr/share/bulky/bulky.ui.h:27
+msgid "Close"
+msgstr "Fermer"
