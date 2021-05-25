@@ -1,3 +1,40 @@
+bulky (1.1) uma; urgency=medium
+
+  * Continue implementation
+  * Added a TODO section
+  * Add todo
+  * Implement string removals
+  * Implement string insertions
+  * Implement file add/remove/clear
+  * Prevent adding the same file twice
+  * Hide file buttons if filenames are loaded via sys.argv
+  * Add tooltips on file buttons
+  * Prevent name collisions
+  * Show an error when file permissions are missing
+  * Remove keyboard shortcuts
+  * Improve the look of the treeview
+  * Give the main window a generic title
+  * Implement rename button
+  * Add support for enumerations
+  * Update icon
+  * Menu: Use generic name
+  * l10n: Update POT
+  * Rename: Fix renaming loop
+  * Rename: Only rename when new and old names differ
+  * README: Add a screenshot
+  * Update README.md
+  * l18n: Update POT
+  * Add caja extension
+  * l10n: Update translations
+  * Revert "Add caja extension"
+  * Remove common.py
+  * Support URI (for local files)
+  * Use a different title/subtitle in app and dialog mode
+  * l10n: Update POT
+  * Fix wildcard support
+
+ -- Clement Lefebvre <root@linuxmint.com>  Tue, 25 May 2021 17:50:41 +0100
+
 bulky (1.0.0) ulyssa; urgency=low
 
   * Initial release
