@@ -1,3 +1,9 @@
+bulky (1.2) uma; urgency=medium
+
+  * packaging: Depend on python3-magic
+
+ -- Clement Lefebvre <root@linuxmint.com>  Fri, 04 Jun 2021 16:02:47 +0100
+
 bulky (1.1) uma; urgency=medium
 
   * Continue implementation
