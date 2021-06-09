@@ -7,70 +7,73 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxmint\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2021-05-23 20:38+0100\n"
-"PO-Revision-Date: 2021-05-24 05:43+0000\n"
+"POT-Creation-Date: 2021-05-24 15:02+0100\n"
+"PO-Revision-Date: 2021-05-26 05:10+0000\n"
 "Last-Translator: Avi Markovitz <avi.markovitz@gmail.com>\n"
 "Language-Team: Hebrew <he@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2021-05-24 09:30+0000\n"
-"X-Generator: Launchpad (build ba75dbf44f1013379e594c259682f14c0528180a)\n"
+"X-Launchpad-Export-Date: 2021-06-09 14:22+0000\n"
+"X-Generator: Launchpad (build b45bdbe3a00b6b668fa7f2069bd545c35c41f7f4)\n"
 
-#: usr/lib/bulky/bulky.py:71 usr/lib/bulky/bulky.py:210
-#: usr/share/bulky/bulky.ui.h:1
-msgid "Rename Files"
-msgstr "שנוי שמות קבצים"
+#: usr/lib/bulky/bulky.py:93 usr/share/bulky/bulky.ui.h:1
+msgid "Rename..."
+msgstr "שינוי שם..."
 
-#: usr/lib/bulky/bulky.py:96 usr/lib/bulky/bulky.py:208
+#: usr/lib/bulky/bulky.py:118 usr/lib/bulky/bulky.py:230
 msgid "About"
 msgstr "אודות"
 
-#: usr/lib/bulky/bulky.py:101
+#: usr/lib/bulky/bulky.py:123
 msgid "Quit"
 msgstr "יציאה"
 
-#: usr/lib/bulky/bulky.py:118
+#: usr/lib/bulky/bulky.py:140
 msgid "Name"
 msgstr "שם"
 
-#: usr/lib/bulky/bulky.py:129
+#: usr/lib/bulky/bulky.py:151
 msgid "New name"
 msgstr "שם חדש"
 
-#: usr/lib/bulky/bulky.py:194
+#: usr/lib/bulky/bulky.py:216
 msgid "Use %n, %0n, %00n, %000n to enumerate."
 msgstr "נא להשתמש ב- %n, %0n, %00n, %000n למספור."
 
-#: usr/lib/bulky/bulky.py:262
+#: usr/lib/bulky/bulky.py:232
+msgid "Rename Files"
+msgstr "שנוי שמות קבצים"
+
+#: usr/lib/bulky/bulky.py:284
 msgid "Add files"
 msgstr "הוספת קובץ"
 
-#: usr/lib/bulky/bulky.py:264
+#: usr/lib/bulky/bulky.py:286
 msgid "Cancel"
 msgstr "ביטול"
 
-#: usr/lib/bulky/bulky.py:265
+#: usr/lib/bulky/bulky.py:287
 msgid "Add"
 msgstr "הוספה"
 
-#: usr/lib/bulky/bulky.py:377
+#: usr/lib/bulky/bulky.py:338 generate_desktop_files:25
+msgid "File Renamer"
+msgstr "משנה שמות קבצים"
+
+#: usr/lib/bulky/bulky.py:339 generate_desktop_files:25
+msgid "Rename files and directories"
+msgstr "שינוי שמות קבצים ומחיצות"
+
+#: usr/lib/bulky/bulky.py:407
 #, python-format
 msgid "Name collision on '%s'."
 msgstr "התנגשות שמות ב- '%s'."
 
-#: usr/lib/bulky/bulky.py:381 usr/lib/bulky/bulky.py:385
+#: usr/lib/bulky/bulky.py:411 usr/lib/bulky/bulky.py:415
 #, python-format
 msgid "'%s' is not writeable."
 msgstr "'%s' לא ניתן לכתיבה."
-
-#: generate_desktop_files:25
-msgid "File Renamer"
-msgstr "משנה שמות קבצים"
-
-#: generate_desktop_files:25
-msgid "Rename files and directories"
-msgstr "שינוי שמות קבצים ומחיצות"
 
 #: usr/share/bulky/bulky.ui.h:2
 msgid "Add files..."
@@ -175,3 +178,7 @@ msgstr "למיקום:"
 #: usr/share/bulky/bulky.ui.h:27
 msgid "Close"
 msgstr "סגירה"
+
+#: usr/share/bulky/bulky.ui.h:28
+msgid "Rename"
+msgstr "שינוי שם"

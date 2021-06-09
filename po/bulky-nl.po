@@ -1,4 +1,4 @@
-# Latin translation for linuxmint
+# Dutch translation for linuxmint
 # Copyright (c) 2021 Rosetta Contributors and Canonical Ltd 2021
 # This file is distributed under the same license as the linuxmint package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
@@ -8,178 +8,177 @@ msgstr ""
 "Project-Id-Version: linuxmint\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2021-05-24 15:02+0100\n"
-"PO-Revision-Date: 2021-05-25 06:42+0000\n"
-"Last-Translator: Davide Novemila <Unknown>\n"
-"Language-Team: Latin <la@li.org>\n"
+"PO-Revision-Date: 2021-05-25 12:40+0000\n"
+"Last-Translator: Pjotr12345 <Unknown>\n"
+"Language-Team: Dutch <nl@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Launchpad-Export-Date: 2021-06-09 14:22+0000\n"
 "X-Generator: Launchpad (build b45bdbe3a00b6b668fa7f2069bd545c35c41f7f4)\n"
-"Language: la\n"
 
 #: usr/lib/bulky/bulky.py:93 usr/share/bulky/bulky.ui.h:1
 msgid "Rename..."
-msgstr "Nomen muta ..."
+msgstr "Hernoemen…"
 
 #: usr/lib/bulky/bulky.py:118 usr/lib/bulky/bulky.py:230
 msgid "About"
-msgstr "Circa"
+msgstr "Over"
 
 #: usr/lib/bulky/bulky.py:123
 msgid "Quit"
-msgstr "Relinque"
+msgstr "Afsluiten"
 
 #: usr/lib/bulky/bulky.py:140
 msgid "Name"
-msgstr "Nomen"
+msgstr "Naam"
 
 #: usr/lib/bulky/bulky.py:151
 msgid "New name"
-msgstr "Nomen novum"
+msgstr "Nieuwe naam"
 
 #: usr/lib/bulky/bulky.py:216
 msgid "Use %n, %0n, %00n, %000n to enumerate."
-msgstr "%n, %0n, %00n, %000n ad enumerandum utere."
+msgstr "Gebruik %n, %0n, %00n, %000n om op te sommen."
 
 #: usr/lib/bulky/bulky.py:232
 msgid "Rename Files"
-msgstr "Nomina Plicarum Muta"
+msgstr "Bestanden hernoemen"
 
 #: usr/lib/bulky/bulky.py:284
 msgid "Add files"
-msgstr "Plicas adde"
+msgstr "Bestanden toevoegen"
 
 #: usr/lib/bulky/bulky.py:286
 msgid "Cancel"
-msgstr "Interrumpe"
+msgstr "Afbreken"
 
 #: usr/lib/bulky/bulky.py:287
 msgid "Add"
-msgstr "Adde"
+msgstr "Toevoegen"
 
 #: usr/lib/bulky/bulky.py:338 generate_desktop_files:25
 msgid "File Renamer"
-msgstr "Commutatio Nominum"
+msgstr "Bestandhernoemer"
 
 #: usr/lib/bulky/bulky.py:339 generate_desktop_files:25
 msgid "Rename files and directories"
-msgstr "Nomina plicarum et directoriorum muta"
+msgstr "Bestanden en mappen hernoemen"
 
 #: usr/lib/bulky/bulky.py:407
 #, python-format
 msgid "Name collision on '%s'."
-msgstr "Collisio nominum in '%s'."
+msgstr "Naambotsing op '%s'."
 
 #: usr/lib/bulky/bulky.py:411 usr/lib/bulky/bulky.py:415
 #, python-format
 msgid "'%s' is not writeable."
-msgstr "'%s' non est scribendum."
+msgstr "'%s' is niet beschrijfbaar."
 
 #: usr/share/bulky/bulky.ui.h:2
 msgid "Add files..."
-msgstr "Plicas adde ..."
+msgstr "Bestanden toevoegen..."
 
 #: usr/share/bulky/bulky.ui.h:3
 msgid "Remove"
-msgstr "Remove"
+msgstr "Verwijderen"
 
 #: usr/share/bulky/bulky.ui.h:4
 msgid "Remove selected files"
-msgstr "Plicas electas remove"
+msgstr "Gekozen bestanden verwijderen"
 
 #: usr/share/bulky/bulky.ui.h:5
 msgid "Clear"
-msgstr "Dele"
+msgstr "Wissen"
 
 #: usr/share/bulky/bulky.ui.h:6
 msgid "Replace"
-msgstr "Substitue"
+msgstr "Vervangen"
 
 #: usr/share/bulky/bulky.ui.h:7
 msgid "Insert"
-msgstr "Insere"
+msgstr "Invoegen"
 
 #: usr/share/bulky/bulky.ui.h:8
 msgid "Change case"
-msgstr "Maiusculas minusculis permuta"
+msgstr "Hoofd-/kleine letters omschakelen"
 
 #: usr/share/bulky/bulky.ui.h:9
 msgid "Name only"
-msgstr "Nomen modo"
+msgstr "Alleen naam"
 
 #: usr/share/bulky/bulky.ui.h:10
 msgid "Extension only"
-msgstr "Extensio modo"
+msgstr "Alleen achtervoegsel"
 
 #: usr/share/bulky/bulky.ui.h:11
 msgid "Name and extension"
-msgstr "Nomen atque extensio"
+msgstr "Naam en achtervoegsel"
 
 #: usr/share/bulky/bulky.ui.h:12
 msgid "Find:"
-msgstr "Inveni:"
+msgstr "Zoeken:"
 
 #: usr/share/bulky/bulky.ui.h:13
 msgid "Replace:"
-msgstr "Substitue:"
+msgstr "Vervangen:"
 
 #: usr/share/bulky/bulky.ui.h:14
 msgid "Regular expression"
-msgstr "Expressio regularis"
+msgstr "Reguliere uitdrukking"
 
 #: usr/share/bulky/bulky.ui.h:15
 msgid "Case sensitive"
-msgstr "Maiusculas e minusculis discerne"
+msgstr "Hoofdlettergevoelig"
 
 #: usr/share/bulky/bulky.ui.h:16
 msgid "At position:"
-msgstr "Ad positionem:"
+msgstr "Op positie:"
 
 #: usr/share/bulky/bulky.ui.h:17
 msgid "From the end"
-msgstr "E fine"
+msgstr "Vanaf het einde"
 
 #: usr/share/bulky/bulky.ui.h:18
 msgid "Overwrite"
-msgstr "Supra scribe"
+msgstr "Overschrijven"
 
 #: usr/share/bulky/bulky.ui.h:19
 msgid "Text:"
-msgstr "Scriptum:"
+msgstr "Tekst:"
 
 #: usr/share/bulky/bulky.ui.h:20
 msgid "Convert to:"
-msgstr "Permuta ad:"
+msgstr "Omzetten in:"
 
 #: usr/share/bulky/bulky.ui.h:21
 msgid "Lower case"
-msgstr "Ad litteras minusculas"
+msgstr "Kleine letters"
 
 #: usr/share/bulky/bulky.ui.h:22
 msgid "First character uppercase"
-msgstr "Ad primam litteram maiusculam"
+msgstr "Eerste teken krijgt hoofdletter"
 
 #: usr/share/bulky/bulky.ui.h:23
 msgid "Title case"
-msgstr "Ad modum titulorum"
+msgstr "Hoofdletterstand van titel"
 
 #: usr/share/bulky/bulky.ui.h:24
 msgid "Upper case"
-msgstr "Ad litteras maiusculas"
+msgstr "Hoofdletters"
 
 #: usr/share/bulky/bulky.ui.h:25
 msgid "Remove from position:"
-msgstr "E positione remove:"
+msgstr "Verwijderen vanaf positie:"
 
 #: usr/share/bulky/bulky.ui.h:26
 msgid "To position:"
-msgstr "Ad positionem:"
+msgstr "Tot positie:"
 
 #: usr/share/bulky/bulky.ui.h:27
 msgid "Close"
-msgstr "Claude"
+msgstr "Sluiten"
 
 #: usr/share/bulky/bulky.ui.h:28
 msgid "Rename"
-msgstr "Nomen muta"
+msgstr "Hernoemen"

@@ -1,4 +1,4 @@
-# Latin translation for linuxmint
+# Belarusian translation for linuxmint
 # Copyright (c) 2021 Rosetta Contributors and Canonical Ltd 2021
 # This file is distributed under the same license as the linuxmint package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
@@ -8,178 +8,177 @@ msgstr ""
 "Project-Id-Version: linuxmint\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2021-05-24 15:02+0100\n"
-"PO-Revision-Date: 2021-05-25 06:42+0000\n"
-"Last-Translator: Davide Novemila <Unknown>\n"
-"Language-Team: Latin <la@li.org>\n"
+"PO-Revision-Date: 2021-06-08 08:53+0000\n"
+"Last-Translator: Anton Hryb <Unknown>\n"
+"Language-Team: Belarusian <be@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Launchpad-Export-Date: 2021-06-09 14:22+0000\n"
 "X-Generator: Launchpad (build b45bdbe3a00b6b668fa7f2069bd545c35c41f7f4)\n"
-"Language: la\n"
 
 #: usr/lib/bulky/bulky.py:93 usr/share/bulky/bulky.ui.h:1
 msgid "Rename..."
-msgstr "Nomen muta ..."
+msgstr "Пераназваць..."
 
 #: usr/lib/bulky/bulky.py:118 usr/lib/bulky/bulky.py:230
 msgid "About"
-msgstr "Circa"
+msgstr "Аб праграме"
 
 #: usr/lib/bulky/bulky.py:123
 msgid "Quit"
-msgstr "Relinque"
+msgstr "Выйсці"
 
 #: usr/lib/bulky/bulky.py:140
 msgid "Name"
-msgstr "Nomen"
+msgstr "Назва"
 
 #: usr/lib/bulky/bulky.py:151
 msgid "New name"
-msgstr "Nomen novum"
+msgstr "Новая назва"
 
 #: usr/lib/bulky/bulky.py:216
 msgid "Use %n, %0n, %00n, %000n to enumerate."
-msgstr "%n, %0n, %00n, %000n ad enumerandum utere."
+msgstr "Выкарыстоўваць %n, %0n, %00n, %000n для пераліку."
 
 #: usr/lib/bulky/bulky.py:232
 msgid "Rename Files"
-msgstr "Nomina Plicarum Muta"
+msgstr "Пераназваць файлы"
 
 #: usr/lib/bulky/bulky.py:284
 msgid "Add files"
-msgstr "Plicas adde"
+msgstr "Дадаць файлы"
 
 #: usr/lib/bulky/bulky.py:286
 msgid "Cancel"
-msgstr "Interrumpe"
+msgstr "Скасаваць"
 
 #: usr/lib/bulky/bulky.py:287
 msgid "Add"
-msgstr "Adde"
+msgstr "Дадаць"
 
 #: usr/lib/bulky/bulky.py:338 generate_desktop_files:25
 msgid "File Renamer"
-msgstr "Commutatio Nominum"
+msgstr "Пераназывальнік файлаў"
 
 #: usr/lib/bulky/bulky.py:339 generate_desktop_files:25
 msgid "Rename files and directories"
-msgstr "Nomina plicarum et directoriorum muta"
+msgstr "Пераназваць файлы і каталогі"
 
 #: usr/lib/bulky/bulky.py:407
 #, python-format
 msgid "Name collision on '%s'."
-msgstr "Collisio nominum in '%s'."
+msgstr "Супярэчнасць назваў у '%s'."
 
 #: usr/lib/bulky/bulky.py:411 usr/lib/bulky/bulky.py:415
 #, python-format
 msgid "'%s' is not writeable."
-msgstr "'%s' non est scribendum."
+msgstr "'%s' не запісваецца."
 
 #: usr/share/bulky/bulky.ui.h:2
 msgid "Add files..."
-msgstr "Plicas adde ..."
+msgstr "Дадаць файлы..."
 
 #: usr/share/bulky/bulky.ui.h:3
 msgid "Remove"
-msgstr "Remove"
+msgstr "Выдаліць"
 
 #: usr/share/bulky/bulky.ui.h:4
 msgid "Remove selected files"
-msgstr "Plicas electas remove"
+msgstr "Выдаліць вылучаныя файлы"
 
 #: usr/share/bulky/bulky.ui.h:5
 msgid "Clear"
-msgstr "Dele"
+msgstr "Ачысціць"
 
 #: usr/share/bulky/bulky.ui.h:6
 msgid "Replace"
-msgstr "Substitue"
+msgstr "Замяніць"
 
 #: usr/share/bulky/bulky.ui.h:7
 msgid "Insert"
-msgstr "Insere"
+msgstr "Уставіць"
 
 #: usr/share/bulky/bulky.ui.h:8
 msgid "Change case"
-msgstr "Maiusculas minusculis permuta"
+msgstr "Змяніць рэгістр"
 
 #: usr/share/bulky/bulky.ui.h:9
 msgid "Name only"
-msgstr "Nomen modo"
+msgstr "Толькі назва"
 
 #: usr/share/bulky/bulky.ui.h:10
 msgid "Extension only"
-msgstr "Extensio modo"
+msgstr "Толькі пашырэнне"
 
 #: usr/share/bulky/bulky.ui.h:11
 msgid "Name and extension"
-msgstr "Nomen atque extensio"
+msgstr "Назва і пашырэнне"
 
 #: usr/share/bulky/bulky.ui.h:12
 msgid "Find:"
-msgstr "Inveni:"
+msgstr "Знайсці:"
 
 #: usr/share/bulky/bulky.ui.h:13
 msgid "Replace:"
-msgstr "Substitue:"
+msgstr "Замяніць:"
 
 #: usr/share/bulky/bulky.ui.h:14
 msgid "Regular expression"
-msgstr "Expressio regularis"
+msgstr "Рэгулярны выраз"
 
 #: usr/share/bulky/bulky.ui.h:15
 msgid "Case sensitive"
-msgstr "Maiusculas e minusculis discerne"
+msgstr "З улікам рэгістра"
 
 #: usr/share/bulky/bulky.ui.h:16
 msgid "At position:"
-msgstr "Ad positionem:"
+msgstr "У пазіцыі:"
 
 #: usr/share/bulky/bulky.ui.h:17
 msgid "From the end"
-msgstr "E fine"
+msgstr "З канца"
 
 #: usr/share/bulky/bulky.ui.h:18
 msgid "Overwrite"
-msgstr "Supra scribe"
+msgstr "Перапісаць"
 
 #: usr/share/bulky/bulky.ui.h:19
 msgid "Text:"
-msgstr "Scriptum:"
+msgstr "Тэкст:"
 
 #: usr/share/bulky/bulky.ui.h:20
 msgid "Convert to:"
-msgstr "Permuta ad:"
+msgstr "Пераўтварыць у:"
 
 #: usr/share/bulky/bulky.ui.h:21
 msgid "Lower case"
-msgstr "Ad litteras minusculas"
+msgstr "Ніжні рэгістр"
 
 #: usr/share/bulky/bulky.ui.h:22
 msgid "First character uppercase"
-msgstr "Ad primam litteram maiusculam"
+msgstr "Першы сімвал у верхнім рэгістры"
 
 #: usr/share/bulky/bulky.ui.h:23
 msgid "Title case"
-msgstr "Ad modum titulorum"
+msgstr "Загаловачны рэгістр"
 
 #: usr/share/bulky/bulky.ui.h:24
 msgid "Upper case"
-msgstr "Ad litteras maiusculas"
+msgstr "Верхні рэгістр"
 
 #: usr/share/bulky/bulky.ui.h:25
 msgid "Remove from position:"
-msgstr "E positione remove:"
+msgstr "Выдаліць з пазіцыі:"
 
 #: usr/share/bulky/bulky.ui.h:26
 msgid "To position:"
-msgstr "Ad positionem:"
+msgstr "Да пазіцыі:"
 
 #: usr/share/bulky/bulky.ui.h:27
 msgid "Close"
-msgstr "Claude"
+msgstr "Закрыць"
 
 #: usr/share/bulky/bulky.ui.h:28
 msgid "Rename"
-msgstr "Nomen muta"
+msgstr "Пераназваць"
