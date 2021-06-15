@@ -1,3 +1,10 @@
+bulky (1.4) uma; urgency=medium
+
+  [ Michael Webster ]
+  * bulky.py: Handle escaped uris properly. (#4)
+
+ -- Clement Lefebvre <root@linuxmint.com>  Tue, 15 Jun 2021 11:27:53 +0100
+
 bulky (1.3) uma; urgency=medium
 
   * l10n: Update translations
