@@ -343,7 +343,8 @@ class MainWindow():
             # we're dealing with a URI, only accept file://
             if not path.startswith("file://"):
                 return
-            path = path.replace("file://", "")
+            f = Gio.File.new_for_uri(path)
+            path = f.get_path()
         if os.path.exists(path):
             file_obj = FileObject(path)
             if file_obj.is_valid:
