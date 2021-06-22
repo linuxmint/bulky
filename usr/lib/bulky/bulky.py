@@ -295,6 +295,7 @@ class MainWindow():
 
     def on_clear_button(self, widget):
         self.model.clear()
+        self.paths.clear()
 
     def on_close_button(self, widget):
         self.application.quit()
