@@ -393,6 +393,8 @@ class MainWindow():
                 file_obj = self.model.get_value(iter, COL_FILE)
                 name = self.model.get_value(iter, COL_NAME)
                 name, ext = os.path.splitext(name)
+                if ext and ext.startswith('.'):
+                    ext = ext[1:]
                 if self.scope == SCOPE_NAME_ONLY:
                     name = self.operation_function(index, name)
                 elif self.scope == SCOPE_EXTENSION_ONLY:
@@ -400,7 +402,7 @@ class MainWindow():
                 else:
                     name = self.operation_function(index, name)
                     ext = self.operation_function(index, ext)
-                new_name = name + ext
+                new_name = name + ('.' if ext else '') + ext
                 self.model.set_value(iter, COL_NEW_NAME, new_name)
                 renamed_path = os.path.join(file_obj.parent_path, new_name)
                 if renamed_path in self.renamed_paths:
