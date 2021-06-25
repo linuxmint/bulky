@@ -1,3 +1,15 @@
+bulky (1.5) uma; urgency=medium
+
+  [ Vincent Vermeulen ]
+  * fix extension rename
+
+  [ Clement Lefebvre ]
+  * Clear button: clear path list
+  * l10n: Update translations
+  * l10n: Generate files
+
+ -- Clement Lefebvre <root@linuxmint.com>  Fri, 25 Jun 2021 14:28:09 +0100
+
 bulky (1.4) uma; urgency=medium
 
   [ Michael Webster ]
