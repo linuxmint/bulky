@@ -1,3 +1,9 @@
+bulky (1.6) uma; urgency=medium
+
+  * Add button: Let user add both files and folders
+
+ -- Clement Lefebvre <root@linuxmint.com>  Fri, 25 Jun 2021 17:46:05 +0100
+
 bulky (1.5) uma; urgency=medium
 
   [ Vincent Vermeulen ]
