@@ -281,15 +281,30 @@ class MainWindow():
             self.model.remove(iter)
 
     def on_add_button(self, widget):
-        dialog = Gtk.FileChooserDialog(title=_("Add files"), parent=self.window, action=Gtk.FileChooserAction.OPEN)
-        dialog.set_select_multiple(True)
-        dialog.add_buttons(_("Cancel"), Gtk.ResponseType.CANCEL)
-        dialog.add_buttons(_("Add"), Gtk.ResponseType.OK)
-        dialog.set_default_response(Gtk.ResponseType.OK)
+        dialog = Gtk.Dialog(title=_("Add files"), parent=self.window, default_width=750, default_height=500)
+        dialog.add_buttons(_("Cancel"), Gtk.ResponseType.CANCEL,
+                           _("Add"), Gtk.ResponseType.OK)
+
+        chooser = Gtk.FileChooserWidget(action=Gtk.FileChooserAction.OPEN, select_multiple=True)
+        chooser.set_current_folder_file(Gio.File.new_for_path(GLib.get_home_dir()))
+        chooser.connect("file-activated", lambda chooser: dialog.response(Gtk.ResponseType.OK))
+
+        def update_last_location(dialog, response_id, data=None):
+            if response_id != Gtk.ResponseType.OK:
+                return
+            global last_location
+            last_location = chooser.get_current_folder_file()
+
+        dialog.connect("response", update_last_location)
+        chooser.show_all()
+        dialog.get_content_area().add(chooser)
+        dialog.get_content_area().set_border_width(0)
+
+        dialog.get_uris = chooser.get_uris
         response = dialog.run()
         if response == Gtk.ResponseType.OK:
-            for path in dialog.get_filenames():
-                self.add_file(path)
+            for uri in dialog.get_uris():
+                self.add_file(uri)
         self.preview_changes()
         dialog.destroy()
 
