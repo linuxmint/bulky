@@ -1,4 +1,4 @@
-# Latin translation for linuxmint
+# Welsh translation for linuxmint
 # Copyright (c) 2021 Rosetta Contributors and Canonical Ltd 2021
 # This file is distributed under the same license as the linuxmint package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
@@ -8,178 +8,178 @@ msgstr ""
 "Project-Id-Version: linuxmint\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2021-05-24 15:02+0100\n"
-"PO-Revision-Date: 2021-05-25 06:42+0000\n"
-"Last-Translator: Davide Novemila <Unknown>\n"
-"Language-Team: Latin <la@li.org>\n"
+"PO-Revision-Date: 2021-06-10 11:12+0000\n"
+"Last-Translator: Rhoslyn Prys <Unknown>\n"
+"Language-Team: Welsh <cy@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Launchpad-Export-Date: 2021-06-25 10:43+0000\n"
 "X-Generator: Launchpad (build 40cc6dba4163ba9ca785b26ad91f43c87d70ba4d)\n"
-"Language: la\n"
+"Language: cy\n"
 
 #: usr/lib/bulky/bulky.py:93 usr/share/bulky/bulky.ui.h:1
 msgid "Rename..."
-msgstr "Nomen muta ..."
+msgstr "Ailenwi..."
 
 #: usr/lib/bulky/bulky.py:118 usr/lib/bulky/bulky.py:230
 msgid "About"
-msgstr "Circa"
+msgstr "Ynghylch"
 
 #: usr/lib/bulky/bulky.py:123
 msgid "Quit"
-msgstr "Relinque"
+msgstr "Gadael"
 
 #: usr/lib/bulky/bulky.py:140
 msgid "Name"
-msgstr "Nomen"
+msgstr "Enw"
 
 #: usr/lib/bulky/bulky.py:151
 msgid "New name"
-msgstr "Nomen novum"
+msgstr "Enw newydd"
 
 #: usr/lib/bulky/bulky.py:216
 msgid "Use %n, %0n, %00n, %000n to enumerate."
-msgstr "%n, %0n, %00n, %000n ad enumerandum utere."
+msgstr "Defnyddiwch %n, %0n, %00n, %000n i gyfrif."
 
 #: usr/lib/bulky/bulky.py:232
 msgid "Rename Files"
-msgstr "Nomina Plicarum Muta"
+msgstr "Ail-enwi Ffeiliau"
 
 #: usr/lib/bulky/bulky.py:284
 msgid "Add files"
-msgstr "Plicas adde"
+msgstr "Ychwanegu ffeiliau"
 
 #: usr/lib/bulky/bulky.py:286
 msgid "Cancel"
-msgstr "Interrumpe"
+msgstr "Diddymu"
 
 #: usr/lib/bulky/bulky.py:287
 msgid "Add"
-msgstr "Adde"
+msgstr "Ychwanegu"
 
 #: usr/lib/bulky/bulky.py:338 generate_desktop_files:25
 msgid "File Renamer"
-msgstr "Commutatio Nominum"
+msgstr "Ail-enwi Ffeiliau"
 
 #: usr/lib/bulky/bulky.py:339 generate_desktop_files:25
 msgid "Rename files and directories"
-msgstr "Nomina plicarum et directoriorum muta"
+msgstr "Ail-enwi ffeiliau a chyfeiriaduron"
 
 #: usr/lib/bulky/bulky.py:407
 #, python-format
 msgid "Name collision on '%s'."
-msgstr "Collisio nominum in '%s'."
+msgstr "Gwrthdrawiad enw ar '%s'."
 
 #: usr/lib/bulky/bulky.py:411 usr/lib/bulky/bulky.py:415
 #, python-format
 msgid "'%s' is not writeable."
-msgstr "'%s' non est scribendum."
+msgstr "Nid yw '%s' yn ysgrifenadwy.."
 
 #: usr/share/bulky/bulky.ui.h:2
 msgid "Add files..."
-msgstr "Plicas adde ..."
+msgstr "Ychwanegu ffeiliau ..."
 
 #: usr/share/bulky/bulky.ui.h:3
 msgid "Remove"
-msgstr "Remove"
+msgstr "Tynnu"
 
 #: usr/share/bulky/bulky.ui.h:4
 msgid "Remove selected files"
-msgstr "Plicas electas remove"
+msgstr "Tynnu'r ffeiliau hyn"
 
 #: usr/share/bulky/bulky.ui.h:5
 msgid "Clear"
-msgstr "Dele"
+msgstr "Clirio"
 
 #: usr/share/bulky/bulky.ui.h:6
 msgid "Replace"
-msgstr "Substitue"
+msgstr "Amnewid"
 
 #: usr/share/bulky/bulky.ui.h:7
 msgid "Insert"
-msgstr "Insere"
+msgstr "Mewnosod"
 
 #: usr/share/bulky/bulky.ui.h:8
 msgid "Change case"
-msgstr "Maiusculas minusculis permuta"
+msgstr "Newid maint"
 
 #: usr/share/bulky/bulky.ui.h:9
 msgid "Name only"
-msgstr "Nomen modo"
+msgstr "Enw yn unig"
 
 #: usr/share/bulky/bulky.ui.h:10
 msgid "Extension only"
-msgstr "Extensio modo"
+msgstr "Estyniad yn unig"
 
 #: usr/share/bulky/bulky.ui.h:11
 msgid "Name and extension"
-msgstr "Nomen atque extensio"
+msgstr "Enw ac estyniad"
 
 #: usr/share/bulky/bulky.ui.h:12
 msgid "Find:"
-msgstr "Inveni:"
+msgstr "Canfod:"
 
 #: usr/share/bulky/bulky.ui.h:13
 msgid "Replace:"
-msgstr "Substitue:"
+msgstr "Amnewid:"
 
 #: usr/share/bulky/bulky.ui.h:14
 msgid "Regular expression"
-msgstr "Expressio regularis"
+msgstr "Mynegiad rheolaidd"
 
 #: usr/share/bulky/bulky.ui.h:15
 msgid "Case sensitive"
-msgstr "Maiusculas e minusculis discerne"
+msgstr "Sensitif i faint"
 
 #: usr/share/bulky/bulky.ui.h:16
 msgid "At position:"
-msgstr "Ad positionem:"
+msgstr "Yn safle:"
 
 #: usr/share/bulky/bulky.ui.h:17
 msgid "From the end"
-msgstr "E fine"
+msgstr "O'r diwedd"
 
 #: usr/share/bulky/bulky.ui.h:18
 msgid "Overwrite"
-msgstr "Supra scribe"
+msgstr "Trosysgrifo"
 
 #: usr/share/bulky/bulky.ui.h:19
 msgid "Text:"
-msgstr "Scriptum:"
+msgstr "Testun:"
 
 #: usr/share/bulky/bulky.ui.h:20
 msgid "Convert to:"
-msgstr "Permuta ad:"
+msgstr "Trosi i:"
 
 #: usr/share/bulky/bulky.ui.h:21
 msgid "Lower case"
-msgstr "Ad litteras minusculas"
+msgstr "Llythrennau bach"
 
 #: usr/share/bulky/bulky.ui.h:22
 msgid "First character uppercase"
-msgstr "Ad primam litteram maiusculam"
+msgstr "Nod cyntaf yn brif lythyren"
 
 #: usr/share/bulky/bulky.ui.h:23
 msgid "Title case"
-msgstr "Ad modum titulorum"
+msgstr "Maint teitl"
 
 #: usr/share/bulky/bulky.ui.h:24
 msgid "Upper case"
-msgstr "Ad litteras maiusculas"
+msgstr "Prif Lythrennau"
 
 #: usr/share/bulky/bulky.ui.h:25
 msgid "Remove from position:"
-msgstr "E positione remove:"
+msgstr "Tynnu o'r safle:"
 
 #: usr/share/bulky/bulky.ui.h:26
 msgid "To position:"
-msgstr "Ad positionem:"
+msgstr "I safle:"
 
 #: usr/share/bulky/bulky.ui.h:27
 msgid "Close"
-msgstr "Claude"
+msgstr "Cau"
 
 #: usr/share/bulky/bulky.ui.h:28
 msgid "Rename"
-msgstr "Nomen muta"
+msgstr "Ailenwi"

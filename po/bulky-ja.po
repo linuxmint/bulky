@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: linuxmint\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2021-05-24 15:02+0100\n"
-"PO-Revision-Date: 2021-06-04 23:40+0000\n"
+"PO-Revision-Date: 2021-06-20 05:54+0000\n"
 "Last-Translator: vega m57 <Unknown>\n"
 "Language-Team: Japanese <ja@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2021-06-09 14:22+0000\n"
-"X-Generator: Launchpad (build b45bdbe3a00b6b668fa7f2069bd545c35c41f7f4)\n"
+"X-Launchpad-Export-Date: 2021-06-25 10:43+0000\n"
+"X-Generator: Launchpad (build 40cc6dba4163ba9ca785b26ad91f43c87d70ba4d)\n"
 "Language: ja\n"
 
 #: usr/lib/bulky/bulky.py:93 usr/share/bulky/bulky.ui.h:1
@@ -118,11 +118,11 @@ msgstr "名前と拡張子"
 
 #: usr/share/bulky/bulky.ui.h:12
 msgid "Find:"
-msgstr "検索:"
+msgstr "対象文字列:"
 
 #: usr/share/bulky/bulky.ui.h:13
 msgid "Replace:"
-msgstr "置換:"
+msgstr "置換文字列:"
 
 #: usr/share/bulky/bulky.ui.h:14
 msgid "Regular expression"
@@ -146,7 +146,7 @@ msgstr "上書き"
 
 #: usr/share/bulky/bulky.ui.h:19
 msgid "Text:"
-msgstr "テキスト:"
+msgstr "文字列:"
 
 #: usr/share/bulky/bulky.ui.h:20
 msgid "Convert to:"
@@ -170,11 +170,11 @@ msgstr "大文字"
 
 #: usr/share/bulky/bulky.ui.h:25
 msgid "Remove from position:"
-msgstr "削除する開始位置:"
+msgstr "削除する文字列の始点:"
 
 #: usr/share/bulky/bulky.ui.h:26
 msgid "To position:"
-msgstr "終了位置:"
+msgstr "削除する文字列の終点:"
 
 #: usr/share/bulky/bulky.ui.h:27
 msgid "Close"
