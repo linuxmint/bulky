@@ -83,6 +83,7 @@ class MainWindow():
         # used to prevent collisions
         self.paths = []
         self.renamed_paths = []
+        self.last_chooser_location = Gio.File.new_for_path(GLib.get_home_dir())
 
         # Set the Glade file
         gladefile = "/usr/share/bulky/bulky.ui"
@@ -286,14 +287,13 @@ class MainWindow():
                            _("Add"), Gtk.ResponseType.OK)
 
         chooser = Gtk.FileChooserWidget(action=Gtk.FileChooserAction.OPEN, select_multiple=True)
-        chooser.set_current_folder_file(Gio.File.new_for_path(GLib.get_home_dir()))
+        chooser.set_current_folder_file(self.last_chooser_location)
         chooser.connect("file-activated", lambda chooser: dialog.response(Gtk.ResponseType.OK))
 
         def update_last_location(dialog, response_id, data=None):
             if response_id != Gtk.ResponseType.OK:
                 return
-            global last_location
-            last_location = chooser.get_current_folder_file()
+            self.last_chooser_location = chooser.get_current_folder_file()
 
         dialog.connect("response", update_last_location)
         chooser.show_all()
