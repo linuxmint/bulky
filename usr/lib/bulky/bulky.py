@@ -446,11 +446,14 @@ class MainWindow():
         replace = self.replace_entry.get_text()
         replace = self.inject(index, replace)
         if regex:
-            if case:
-                return re.sub(find, replace, string)
-            else:
-                reg = re.compile(find, re.IGNORECASE)
-                return reg.sub(replace, string)
+            try:
+                if case:
+                    return re.sub(find, replace, string)
+                else:
+                    reg = re.compile(find, re.IGNORECASE)
+                    return reg.sub(replace, string)
+            except re.error:
+                return string
         else:
             find = find.replace("*", "~~~REGSTAR~~~")
             find = find.replace("?", "~~~REGQUES~~~")
