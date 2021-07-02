@@ -266,8 +266,6 @@ class MainWindow():
                 self.on_add_button(self.add_button)
             elif event.keyval == Gdk.KEY_d:
                 self.on_remove_button(self.remove_button)
-            elif event.keyval == Gdk.KEY_c:
-                self.on_clear_button(self.clear_button)
 
     def on_remove_button(self, widget):
         iters = []
