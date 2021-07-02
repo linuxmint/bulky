@@ -1,3 +1,14 @@
+bulky (1.7) uma; urgency=medium
+
+  [ Michael Webster ]
+  * Handle invalid regex strings gracefully.
+  * Fix remembering the file chooser's last location.
+
+  [ Clement Lefebvre ]
+  * Remove Ctrl+C shortcut
+
+ -- Clement Lefebvre <root@linuxmint.com>  Fri, 02 Jul 2021 10:33:23 +0100
+
 bulky (1.6) uma; urgency=medium
 
   * Add button: Let user add both files and folders
