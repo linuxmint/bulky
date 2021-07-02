@@ -43,6 +43,7 @@ class FolderFileChooserDialog(Gtk.Dialog):
 
         self.chooser = Gtk.FileChooserWidget(action=Gtk.FileChooserAction.OPEN, select_multiple=True)
         self.chooser.set_current_folder_file(starting_location)
+        self.chooser.connect("file-activated", lambda chooser: self.response(Gtk.ResponseType.OK))
         self.chooser.show_all()
 
         self.get_content_area().add(self.chooser)
