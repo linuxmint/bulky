@@ -31,6 +31,34 @@ SCOPE_NAME_ONLY = "name"
 SCOPE_EXTENSION_ONLY = "extension"
 SCOPE_ALL = "all"
 
+class FolderFileChooserDialog(Gtk.Dialog):
+    def __init__(self, window_title, transient_parent, starting_location):
+        super(FolderFileChooserDialog, self).__init__(title=window_title,
+                                                      parent=transient_parent,
+                                                      default_width=750,
+                                                      default_height=500)
+
+        self.add_buttons(_("Cancel"), Gtk.ResponseType.CANCEL,
+                         _("Add"), Gtk.ResponseType.OK)
+
+        self.chooser = Gtk.FileChooserWidget(action=Gtk.FileChooserAction.OPEN, select_multiple=True)
+        self.chooser.set_current_folder_file(starting_location)
+        self.chooser.show_all()
+
+        self.get_content_area().add(self.chooser)
+        self.get_content_area().set_border_width(0)
+        self.get_uris = self.chooser.get_uris
+        self.get_current_folder_file = self.chooser.get_current_folder_file
+        self.connect("key-press-event", self.on_button_press)
+
+    def on_button_press(self, widget, event, data=None):
+        multi = len(self.chooser.get_uris()) != 1
+        if event.keyval in (Gdk.KEY_KP_Enter, Gdk.KEY_Return) and multi:
+            self.response(Gtk.ResponseType.OK)
+            return Gdk.EVENT_STOP
+
+        return Gdk.EVENT_PROPAGATE
+
 # This is a data structure representing
 # the file object
 class FileObject():
@@ -280,25 +308,15 @@ class MainWindow():
             self.model.remove(iter)
 
     def on_add_button(self, widget):
-        dialog = Gtk.Dialog(title=_("Add files"), parent=self.window, default_width=750, default_height=500)
-        dialog.add_buttons(_("Cancel"), Gtk.ResponseType.CANCEL,
-                           _("Add"), Gtk.ResponseType.OK)
-
-        chooser = Gtk.FileChooserWidget(action=Gtk.FileChooserAction.OPEN, select_multiple=True)
-        chooser.set_current_folder_file(self.last_chooser_location)
-        chooser.connect("file-activated", lambda chooser: dialog.response(Gtk.ResponseType.OK))
+        dialog = FolderFileChooserDialog(_("Add files"), self.window, self.last_chooser_location)
 
         def update_last_location(dialog, response_id, data=None):
             if response_id != Gtk.ResponseType.OK:
                 return
-            self.last_chooser_location = chooser.get_current_folder_file()
+            self.last_chooser_location = dialog.get_current_folder_file()
 
         dialog.connect("response", update_last_location)
-        chooser.show_all()
-        dialog.get_content_area().add(chooser)
-        dialog.get_content_area().set_border_width(0)
 
-        dialog.get_uris = chooser.get_uris
         response = dialog.run()
         if response == Gtk.ResponseType.OK:
             for uri in dialog.get_uris():
