@@ -64,24 +64,83 @@ class FolderFileChooserDialog(Gtk.Dialog):
 # the file object
 class FileObject():
 
-    def __init__(self, path):
-        self.path = os.path.abspath(path)
-        self.parent_path, self.name = os.path.split(self.path)
-        if os.path.isdir(self.path):
-            self.icon = "folder"
+    def __init__(self, path_or_uri):
+        if "://" in path_or_uri:
+            self.gfile = Gio.File.new_for_uri(path_or_uri)
         else:
-            self.icon = "text-x-generic"
-            try:
-                icon_theme = Gtk.IconTheme.get_default()
-                mimetype = magic.from_file(self.path, mime=True)
-                for name in Gio.content_type_get_icon(mimetype).get_names():
-                    if icon_theme.has_icon(name):
-                        self.icon = name
-                        break
-            except Exception as e:
-                print(e)
+            self.gfile = Gio.File.new_for_path(path_or_uri)
+
+        self._update_info()
+
+    def _update_info(self):
+        self.info = None
+        self.uri = self.gfile.get_uri()
+        self.name = self.gfile.get_basename() # temp in case query_info fails to get edit-name
+        self.icon = Gio.ThemedIcon.new("text-x-generic")
+
+        try:
+            self.info = self.gfile.query_info("standard::type,standard::icon,standard::edit-name,access::can-write",
+                                              Gio.FileQueryInfoFlags.NONE, None)
+
+            self.name = self.info.get_edit_name()
+
+            if self.info.get_file_type() == Gio.FileType.DIRECTORY:
+                self.icon = Gio.ThemedIcon.new("folder")
+            else:
+                info_icon = self.info.get_icon()
+
+                if info_icon:
+                    self.icon = info_icon
+                else:
+                    self.icon = Gio.ThemedIcon.new("text-x-generic")
+        except GLib.Error as e:
+            if e.code == Gio.IOErrorEnum.NOT_FOUND:
+                print("file %s does not exist" % self.uri)
+            else:
+                print(e.message)
+            self.is_valid = False
+            return
 
         self.is_valid = True
+
+    def rename(self, new_name):
+        # this can fail, our caller will catch
+        new_gfile = self.gfile.set_display_name(new_name, None)
+
+        self.gfile = new_gfile
+        self._update_info()
+
+        return True
+
+    def get_pending_uri(self, new_name):
+        parent = self.gfile.get_parent()
+        return parent.get_child(new_name).get_uri()
+
+    def get_path_or_uri_for_display(self):
+        if self.uri.startswith("file://"):
+            return self.gfile.get_path().replace(os.path.expanduser("~"), "~")
+        else:
+            return self.name
+
+    def get_parent_path_or_uri_for_display(self):
+        parent = self.gfile.get_parent()
+        uri = parent.get_uri()
+        if uri.startswith("file://"):
+            return parent.get_path().replace(os.path.expanduser("~"), "~")
+        else:
+            return parent.get_basename()
+
+    def writable(self):
+        return self.info.get_attribute_boolean("access::can-write")
+
+    def parent_writable(self):
+        parent = self.gfile.get_parent()
+
+        if parent.equal(self.gfile):
+            return False
+
+        parent_fileobj = FileObject(parent.get_uri())
+        return parent_fileobj.writable()
 
 class MyApplication(Gtk.Application):
     # Main initialization routine
@@ -110,8 +169,8 @@ class MainWindow():
         self.operation_function = self.replace_text
         self.scope = SCOPE_NAME_ONLY
         # used to prevent collisions
-        self.paths = []
-        self.renamed_paths = []
+        self.uris = []
+        self.renamed_uris = []
         self.last_chooser_location = Gio.File.new_for_path(GLib.get_home_dir())
 
         # Set the Glade file
@@ -169,10 +228,10 @@ class MainWindow():
         column = Gtk.TreeViewColumn()
         column.set_title(_("Name"))
         column.set_spacing(6)
-        column.set_cell_data_func(renderer_pixbuf, self.data_func_surface)
+        # column.set_cell_data_func(renderer_pixbuf, self.data_func_surface)
         column.pack_start(renderer_pixbuf, False)
         column.pack_start(renderer_text, True)
-        column.add_attribute(renderer_pixbuf, "pixbuf", COL_ICON)
+        column.add_attribute(renderer_pixbuf, "gicon", COL_ICON)
         column.add_attribute(renderer_text, "text", COL_NAME)
         column.set_sort_column_id(COL_NAME)
         column.set_expand(True)
@@ -183,7 +242,7 @@ class MainWindow():
         self.treeview.append_column(column)
 
         self.treeview.show()
-        self.model = Gtk.TreeStore(GdkPixbuf.Pixbuf, str, str, object) # icon, name, new_name, file
+        self.model = Gtk.TreeStore(Gio.Icon, str, str, object) # icon, name, new_name, file
         self.model.set_sort_column_id(COL_NAME, Gtk.SortType.ASCENDING)
         self.treeview.set_model(self.model)
         self.treeview.get_selection().set_mode(Gtk.SelectionMode.MULTIPLE)
@@ -304,9 +363,10 @@ class MainWindow():
             # since removing changes the paths
             iters.append(self.model.get_iter(path))
         for iter in iters:
-            file_path = self.model.get_value(iter, COL_FILE).path
-            self.paths.remove(file_path)
+            file_uri = self.model.get_value(iter, COL_FILE).uri
+            self.uris.remove(file_uri)
             self.model.remove(iter)
+        self.preview_changes()
 
     def on_add_button(self, widget):
         dialog = FolderFileChooserDialog(_("Add files"), self.window, self.last_chooser_location)
@@ -321,13 +381,14 @@ class MainWindow():
         response = dialog.run()
         if response == Gtk.ResponseType.OK:
             for uri in dialog.get_uris():
+
                 self.add_file(uri)
         self.preview_changes()
         dialog.destroy()
 
     def on_clear_button(self, widget):
         self.model.clear()
-        self.paths.clear()
+        self.uris.clear()
 
     def on_close_button(self, widget):
         self.application.quit()
@@ -347,14 +408,12 @@ class MainWindow():
                 name = self.model.get_value(iter, COL_NAME)
                 new_name = self.model.get_value(iter, COL_NEW_NAME)
                 if new_name != name:
-                    new_path = os.path.join(file_obj.parent_path, new_name)
-                    os.rename(file_obj.path, new_path)
-                    self.paths.remove(file_obj.path)
-                    self.paths.append(new_path)
-                    file_obj.path = new_path
-                    file_obj.name = new_name
-                    self.model.set_value(iter, COL_NAME, new_name)
-                    print("Renamed %s --> %s" % (name, new_name))
+                    old_uri = file_obj.uri
+                    if file_obj.rename(new_name):
+                        self.uris.remove(old_uri)
+                        self.uris.append(file_obj.uri)
+                        self.model.set_value(iter, COL_NAME, new_name)
+                        print("Renamed %s --> %s" % (name, new_name))
             except Exception as e:
                 print(e)
         self.rename_button.set_sensitive(False)
@@ -371,26 +430,21 @@ class MainWindow():
             self.builder.get_object("headerbar").set_title(_("File Renamer"))
             self.builder.get_object("headerbar").set_subtitle(_("Rename files and directories"))
 
-    def add_file(self, path):
-        if "://" in path:
-            # we're dealing with a URI, only accept file://
-            if not path.startswith("file://"):
+        self.preview_changes()
+
+    def add_file(self, uri_or_path):
+        file_obj = FileObject(uri_or_path)
+
+        if file_obj.is_valid:
+            if file_obj.uri in self.uris:
+                print("%s is already loaded, ignoring" % file_obj.path)
                 return
-            f = Gio.File.new_for_uri(path)
-            path = f.get_path()
-        if os.path.exists(path):
-            file_obj = FileObject(path)
-            if file_obj.is_valid:
-                if file_obj.path in self.paths:
-                    print("%s is already loaded, ignoring" % file_obj.path)
-                    return
-                self.paths.append(file_obj.path)
-                pixbuf = self.icon_theme.load_icon(file_obj.icon, 22 * self.window.get_scale_factor(), 0)
-                iter = self.model.insert_before(None, None)
-                self.model.set_value(iter, COL_ICON, pixbuf)
-                self.model.set_value(iter, COL_NAME, file_obj.name)
-                self.model.set_value(iter, COL_NEW_NAME, file_obj.name)
-                self.model.set_value(iter, COL_FILE, file_obj)
+            self.uris.append(file_obj.uri)
+            iter = self.model.insert_before(None, None)
+            self.model.set_value(iter, COL_ICON, file_obj.icon)
+            self.model.set_value(iter, COL_NAME, file_obj.name)
+            self.model.set_value(iter, COL_NEW_NAME, file_obj.name)
+            self.model.set_value(iter, COL_FILE, file_obj)
 
     def on_operation_changed(self, widget):
         operation_id = widget.get_active_id()
@@ -416,7 +470,7 @@ class MainWindow():
         self.preview_changes()
 
     def preview_changes(self):
-        self.renamed_paths = []
+        self.renamed_uris = []
         self.infobar.hide()
         self.rename_button.set_sensitive(True)
         iter = self.model.get_iter_first()
@@ -437,20 +491,20 @@ class MainWindow():
                     ext = self.operation_function(index, ext)
                 new_name = name + ('.' if ext else '') + ext
                 self.model.set_value(iter, COL_NEW_NAME, new_name)
-                renamed_path = os.path.join(file_obj.parent_path, new_name)
-                if renamed_path in self.renamed_paths:
+                renamed_uri = file_obj.get_pending_uri(new_name)
+                if renamed_uri in self.renamed_uris:
                     self.infobar.show()
-                    self.error_label.set_text(_("Name collision on '%s'.") % renamed_path.replace(os.path.expanduser("~"), "~"))
+                    self.error_label.set_text(_("Name collision on '%s'.") % file_obj.get_path_or_uri_for_display())
                     self.rename_button.set_sensitive(False)
-                elif not os.access(file_obj.parent_path, os.W_OK):
+                elif not file_obj.parent_writable():
                     self.infobar.show()
-                    self.error_label.set_text(_("'%s' is not writeable.") % file_obj.parent_path.replace(os.path.expanduser("~"), "~"))
+                    self.error_label.set_text(_("'%s' is not writeable.") % file_obj.get_parent_path_or_uri_for_display())
                     self.rename_button.set_sensitive(False)
-                elif not os.access(file_obj.path, os.W_OK):
+                elif not file_obj.writable():
                     self.infobar.show()
-                    self.error_label.set_text(_("'%s' is not writeable.") % file_obj.path.replace(os.path.expanduser("~"), "~"))
+                    self.error_label.set_text(_("'%s' is not writeable.") % file_obj.get_path_or_uri_for_display())
                     self.rename_button.set_sensitive(False)
-                self.renamed_paths.append(renamed_path)
+                self.renamed_uris.append(renamed_uri)
                 iter = self.model.iter_next(iter)
                 index += 1
             except Exception as e:
