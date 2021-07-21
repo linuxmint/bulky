@@ -437,7 +437,7 @@ class MainWindow():
 
         if file_obj.is_valid:
             if file_obj.uri in self.uris:
-                print("%s is already loaded, ignoring" % file_obj.path)
+                print("%s is already loaded, ignoring" % file_obj.uri)
                 return
             self.uris.append(file_obj.uri)
             iter = self.model.insert_before(None, None)
