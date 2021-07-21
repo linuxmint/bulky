@@ -9,6 +9,7 @@ import setproctitle
 import subprocess
 import warnings
 import sys
+import functools
 
 # Suppress GTK deprecation warnings
 warnings.filterwarnings("ignore")
@@ -141,6 +142,9 @@ class FileObject():
 
         parent_fileobj = FileObject(parent.get_uri())
         return parent_fileobj.writable()
+
+    def is_a_dir(self):
+        return self.info.get_file_type() == Gio.FileType.DIRECTORY
 
 class MyApplication(Gtk.Application):
     # Main initialization routine
@@ -381,7 +385,6 @@ class MainWindow():
         response = dialog.run()
         if response == Gtk.ResponseType.OK:
             for uri in dialog.get_uris():
-
                 self.add_file(uri)
         self.preview_changes()
         dialog.destroy()
@@ -402,11 +405,24 @@ class MainWindow():
         # We're modifying the model here, so we iterate
         # through our own list of iters rather than the model
         # itself
+        rename_list = []
         for iter in iters:
             try:
                 file_obj = self.model.get_value(iter, COL_FILE)
                 name = self.model.get_value(iter, COL_NAME)
                 new_name = self.model.get_value(iter, COL_NEW_NAME)
+                rename_list.append((file_obj, name, new_name))
+            except Exception as e:
+                print(e)
+
+        rename_list = self.sort_list_by_depth(rename_list)
+
+        # for i in rename_list:
+        #     print(i[0].gfile.get_uri())
+
+        for tup in rename_list:
+            try:
+                file_obj, name, new_name = tup
                 if new_name != name:
                     old_uri = file_obj.uri
                     if file_obj.rename(new_name):
@@ -416,7 +432,30 @@ class MainWindow():
                         print("Renamed %s --> %s" % (name, new_name))
             except Exception as e:
                 print(e)
+
         self.rename_button.set_sensitive(False)
+
+    def sort_list_by_depth(self, rename_list):
+        # Rename files first, followed by directories from deep to shallow.
+        def file_cmp(tup_a, tup_b):
+            fo_a = tup_a[0]
+            fo_b = tup_b[0]
+
+            if fo_a.is_a_dir() and (not fo_b.is_a_dir()):
+                return 1
+            elif fo_b.is_a_dir() and (not fo_a.is_a_dir()):
+                return -1
+
+            if fo_a.gfile.has_prefix(fo_b.gfile):
+                return -1
+            elif fo_b.gfile.has_prefix(fo_a.gfile):
+                return 1
+
+            return GLib.utf8_collate(fo_a.uri, fo_b.uri)
+
+        rename_list.sort(key=lambda tup: tup[0].gfile.get_uri_scheme())
+        rename_list.sort(key=functools.cmp_to_key(file_cmp))
+        return rename_list
 
     def load_files(self):
         # Clear treeview and selection
