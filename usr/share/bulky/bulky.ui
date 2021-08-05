@@ -283,7 +283,7 @@
                     <items>
                       <item id="name" translatable="yes">Name only</item>
                       <item id="extension" translatable="yes">Extension only</item>
-                      <item id="all" translatable="yes">Name and extension</item>
+                      <item id="all" translatable="yes">Entire filename</item>
                     </items>
                   </object>
                   <packing>

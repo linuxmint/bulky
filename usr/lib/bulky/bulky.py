@@ -539,16 +539,38 @@ class MainWindow():
         self.preview_changes()
 
     def preview_changes(self):
-        self.renamed_uris = []
         self.infobar.hide()
-        self.rename_button.set_sensitive(True)
+
+        # Adjust scope first if necessary
+        any_dirs = False
+        iter = self.model.get_iter_first()
+        while iter != None:
+            try:
+                file_obj = self.model.get_value(iter, COL_FILE)
+                any_dirs = file_obj.is_a_dir() or any_dirs
+                iter = self.model.iter_next(iter)
+            except:
+                pass
+
+        combo = self.builder.get_object("combo_scope")
+
+        if any_dirs:
+            # on_scope_changed will update self.scope
+            combo.set_active_id(SCOPE_ALL)
+            combo.set_sensitive(False)
+        else:
+            combo.set_sensitive(True)
+
+        self.renamed_uris = []
+        any_changes = False
+
         iter = self.model.get_iter_first()
         index = 1
         while iter != None:
             try:
                 file_obj = self.model.get_value(iter, COL_FILE)
-                name = self.model.get_value(iter, COL_NAME)
-                name, ext = os.path.splitext(name)
+                orig_name = self.model.get_value(iter, COL_NAME)
+                name, ext = os.path.splitext(orig_name)
                 if ext and ext.startswith('.'):
                     ext = ext[1:]
                 if self.scope == SCOPE_NAME_ONLY:
@@ -556,9 +578,14 @@ class MainWindow():
                 elif self.scope == SCOPE_EXTENSION_ONLY:
                     ext = self.operation_function(index, ext)
                 else:
-                    name = self.operation_function(index, name)
-                    ext = self.operation_function(index, ext)
-                new_name = name + ('.' if ext else '') + ext
+                    full_name = self.operation_function(index, orig_name)
+                if self.scope == SCOPE_ALL:
+                    new_name = full_name
+                else:
+                    new_name = name + ('.' if ext else '') + ext
+
+                any_changes = (new_name != orig_name) or any_changes
+
                 self.model.set_value(iter, COL_NEW_NAME, new_name)
                 renamed_uri = file_obj.get_pending_uri(new_name)
                 if renamed_uri in self.renamed_uris:
@@ -578,6 +605,7 @@ class MainWindow():
                 index += 1
             except Exception as e:
                 print(e)
+        self.rename_button.set_sensitive(any_changes)
 
     def replace_text(self, index, string):
         case = self.replace_case_check.get_active()
