@@ -1,2 +1,2 @@
 #!/bin/bash
-/usr/lib/bulky/bulky.py $@ &
+/usr/lib/bulky/bulky.py "$@" &
