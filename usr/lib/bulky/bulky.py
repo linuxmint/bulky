@@ -411,7 +411,7 @@ class MainWindow():
                 file_obj = self.model.get_value(iter, COL_FILE)
                 name = self.model.get_value(iter, COL_NAME)
                 new_name = self.model.get_value(iter, COL_NEW_NAME)
-                rename_list.append((file_obj, name, new_name))
+                rename_list.append((iter, file_obj, name, new_name))
             except Exception as e:
                 print(e)
 
@@ -422,7 +422,7 @@ class MainWindow():
 
         for tup in rename_list:
             try:
-                file_obj, name, new_name = tup
+                iter, file_obj, name, new_name = tup
                 if new_name != name:
                     old_uri = file_obj.uri
                     if file_obj.rename(new_name):
@@ -438,8 +438,8 @@ class MainWindow():
     def sort_list_by_depth(self, rename_list):
         # Rename files first, followed by directories from deep to shallow.
         def file_cmp(tup_a, tup_b):
-            fo_a = tup_a[0]
-            fo_b = tup_b[0]
+            fo_a = tup_a[1]
+            fo_b = tup_b[1]
 
             if fo_a.is_a_dir() and (not fo_b.is_a_dir()):
                 return 1
@@ -453,7 +453,7 @@ class MainWindow():
 
             return GLib.utf8_collate(fo_a.uri, fo_b.uri)
 
-        rename_list.sort(key=lambda tup: tup[0].gfile.get_uri_scheme())
+        rename_list.sort(key=lambda tup: tup[1].gfile.get_uri_scheme())
         rename_list.sort(key=functools.cmp_to_key(file_cmp))
         return rename_list
 
