@@ -1,3 +1,20 @@
+bulky (1.8) uma; urgency=medium
+
+  [ Michael Webster ]
+  * file picker: Don't lose a multi-selection when enter is pressed.
+  * file picker: Handle file-activated again.
+  * Use uris instead of paths internally, to allow files on remote filesystems to be renamed.
+  * Remove leftover path reference from previous commit.
+  * Rename files before directories, and children before parents.
+
+  [ Vincent Vermeulen ]
+  * preserve whitespace in arguments
+
+  [ Michael Webster ]
+  * Update names in the correct rows after renaming.
+
+ -- Clement Lefebvre <root@linuxmint.com>  Fri, 15 Oct 2021 17:26:02 +0100
+
 bulky (1.7) uma; urgency=medium
 
   [ Michael Webster ]
