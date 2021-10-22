@@ -66,12 +66,19 @@ class FolderFileChooserDialog(Gtk.Dialog):
 class FileObject():
 
     def __init__(self, path_or_uri):
-        if "://" in path_or_uri:
-            self.gfile = Gio.File.new_for_uri(path_or_uri)
-        else:
-            self.gfile = Gio.File.new_for_path(path_or_uri)
 
+        self.gfile = self.create_gfile(path_or_uri)
         self._update_info()
+
+    def create_gfile(self, path_or_uri):
+        gfile = None
+
+        if "://" in path_or_uri:
+            gfile = Gio.File.new_for_uri(path_or_uri)
+        else:
+            gfile = Gio.File.new_for_path(path_or_uri)
+
+        return gfile
 
     def _update_info(self):
         self.info = None
@@ -105,8 +112,15 @@ class FileObject():
         self.is_valid = True
 
     def rename(self, new_name):
-        # this can fail, our caller will catch
-        new_gfile = self.gfile.set_display_name(new_name, None)
+        backup_gfile = self.gfile.dup()
+        try:
+            new_gfile = self.gfile.set_display_name(new_name, None)
+        except:
+            # This can fail - make sure the GFile is still in a pre-fail state
+            # (not sure this is necessary), then let the caller handle telling
+            # the user.
+            self.gfile = backup_gfile
+            raise
 
         self.gfile = new_gfile
         self._update_info()
@@ -396,6 +410,21 @@ class MainWindow():
     def on_close_button(self, widget):
         self.application.quit()
 
+    def report_os_error(self, file_obj, new_path, error):
+        message = ""
+        # Gio's error prints the too-long filename as part of its
+        # error message, which looks really bad. Maybe we'll need
+        # to add more exceptions here for other error codes.
+        if Gio.IOErrorEnum(error.code) == Gio.IOErrorEnum.FILENAME_TOO_LONG:
+            message = _("Unable to rename '%s': File name too long") \
+                % file_obj.get_path_or_uri_for_display()
+        else:
+            message = _("Unable to rename '%s': %s") \
+                % (file_obj.get_path_or_uri_for_display(), error.message)
+
+        self.error_label.set_text(message)
+        self.infobar.show()
+
     def on_rename_button(self, widget):
         iters = []
         iter = self.model.get_iter_first()
@@ -421,17 +450,18 @@ class MainWindow():
         #     print(i[0].gfile.get_uri())
 
         for tup in rename_list:
-            try:
                 iter, file_obj, name, new_name = tup
                 if new_name != name:
-                    old_uri = file_obj.uri
-                    if file_obj.rename(new_name):
-                        self.uris.remove(old_uri)
-                        self.uris.append(file_obj.uri)
-                        self.model.set_value(iter, COL_NAME, new_name)
-                        print("Renamed %s --> %s" % (name, new_name))
-            except Exception as e:
-                print(e)
+                    try:
+                        old_uri = file_obj.uri
+                        # print("Renaming %s --> %s" % (file_obj.get_path_or_uri_for_display(), new_name))
+                        if file_obj.rename(new_name):
+                            self.uris.remove(old_uri)
+                            self.uris.append(file_obj.uri)
+                            self.model.set_value(iter, COL_NAME, new_name)
+                    except GLib.Error as e:
+                        self.report_os_error(file_obj, new_name, e)
+                        break
 
         self.rename_button.set_sensitive(False)
 
