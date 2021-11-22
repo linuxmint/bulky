@@ -1,3 +1,14 @@
+bulky (1.9) una; urgency=medium
+
+  [ Michael Webster ]
+  * Handle rename errors and report to the user via info bar.
+  * Never treat folders as though they have extensions.
+
+  [ Clement Lefebvre ]
+  * l10n: Update POT
+
+ -- Clement Lefebvre <root@linuxmint.com>  Mon, 22 Nov 2021 16:35:19 +0000
+
 bulky (1.8) uma; urgency=medium
 
   [ Michael Webster ]
