@@ -7,73 +7,83 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxmint\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2021-05-24 15:02+0100\n"
-"PO-Revision-Date: 2021-05-31 13:11+0000\n"
-"Last-Translator: Daniel Slavu <Unknown>\n"
+"POT-Creation-Date: 2021-11-22 16:34+0000\n"
+"PO-Revision-Date: 2021-06-27 20:04+0000\n"
+"Last-Translator: Nicolae Crefelean <Unknown>\n"
 "Language-Team: Romanian <ro@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2021-06-25 10:43+0000\n"
-"X-Generator: Launchpad (build 40cc6dba4163ba9ca785b26ad91f43c87d70ba4d)\n"
+"X-Launchpad-Export-Date: 2021-12-06 15:07+0000\n"
+"X-Generator: Launchpad (build f92b6e0bb2624f8a9125e3f45b7621c6e230c5ff)\n"
 
-#: usr/lib/bulky/bulky.py:93 usr/share/bulky/bulky.ui.h:1
-msgid "Rename..."
-msgstr "Redenumește..."
-
-#: usr/lib/bulky/bulky.py:118 usr/lib/bulky/bulky.py:230
-msgid "About"
-msgstr "Despre"
-
-#: usr/lib/bulky/bulky.py:123
-msgid "Quit"
-msgstr "Închide"
-
-#: usr/lib/bulky/bulky.py:140
-msgid "Name"
-msgstr "Denumire"
-
-#: usr/lib/bulky/bulky.py:151
-msgid "New name"
-msgstr "Denumire nouă"
-
-#: usr/lib/bulky/bulky.py:216
-msgid "Use %n, %0n, %00n, %000n to enumerate."
-msgstr "Utilizați %n, %0n, %00n, %000n pentru a enumera."
-
-#: usr/lib/bulky/bulky.py:232
-msgid "Rename Files"
-msgstr "Redenumiți fișierele"
-
-#: usr/lib/bulky/bulky.py:284
-msgid "Add files"
-msgstr "Adaugă fișiere"
-
-#: usr/lib/bulky/bulky.py:286
+#: usr/lib/bulky/bulky.py:42
 msgid "Cancel"
 msgstr "Anulare"
 
-#: usr/lib/bulky/bulky.py:287
+#: usr/lib/bulky/bulky.py:43
 msgid "Add"
 msgstr "Adaugă"
 
-#: usr/lib/bulky/bulky.py:338 generate_desktop_files:25
+#: usr/lib/bulky/bulky.py:200 usr/share/bulky/bulky.ui.h:1
+msgid "Rename..."
+msgstr "Redenumește..."
+
+#: usr/lib/bulky/bulky.py:225 usr/lib/bulky/bulky.py:337
+msgid "About"
+msgstr "Despre"
+
+#: usr/lib/bulky/bulky.py:230
+msgid "Quit"
+msgstr "Închide"
+
+#: usr/lib/bulky/bulky.py:247
+msgid "Name"
+msgstr "Denumire"
+
+#: usr/lib/bulky/bulky.py:258
+msgid "New name"
+msgstr "Denumire nouă"
+
+#: usr/lib/bulky/bulky.py:323
+msgid "Use %n, %0n, %00n, %000n to enumerate."
+msgstr "Utilizați %n, %0n, %00n, %000n pentru a enumera."
+
+#: usr/lib/bulky/bulky.py:339
+msgid "Rename Files"
+msgstr "Redenumiți fișierele"
+
+#: usr/lib/bulky/bulky.py:390
+msgid "Add files"
+msgstr "Adaugă fișiere"
+
+#: usr/lib/bulky/bulky.py:419
+#, python-format
+msgid "Unable to rename '%s': File name too long"
+msgstr ""
+
+#: usr/lib/bulky/bulky.py:422
+#, python-format
+msgid "Unable to rename '%s': %s"
+msgstr ""
+
+#: usr/lib/bulky/bulky.py:499 generate_desktop_files:25
 msgid "File Renamer"
 msgstr "Redenumire fişier"
 
-#: usr/lib/bulky/bulky.py:339 generate_desktop_files:25
+#: usr/lib/bulky/bulky.py:500 generate_desktop_files:25
 msgid "Rename files and directories"
 msgstr "Redenumiți fișierele și directoarele"
 
-#: usr/lib/bulky/bulky.py:407
+#: usr/lib/bulky/bulky.py:593
 #, python-format
 msgid "Name collision on '%s'."
-msgstr ""
+msgstr "Coliziune de nume la '%s'."
 
-#: usr/lib/bulky/bulky.py:411 usr/lib/bulky/bulky.py:415
+#: usr/lib/bulky/bulky.py:597 usr/lib/bulky/bulky.py:601
 #, python-format
 msgid "'%s' is not writeable."
-msgstr ""
+msgstr "'%s' este protejat la scriere."
 
 #: usr/share/bulky/bulky.ui.h:2
 msgid "Add files..."
@@ -101,7 +111,7 @@ msgstr "Inserează"
 
 #: usr/share/bulky/bulky.ui.h:8
 msgid "Change case"
-msgstr ""
+msgstr "Inversează literele majuscule/majuscule"
 
 #: usr/share/bulky/bulky.ui.h:9
 msgid "Name only"
@@ -112,8 +122,8 @@ msgid "Extension only"
 msgstr "Doar extensie"
 
 #: usr/share/bulky/bulky.ui.h:11
-msgid "Name and extension"
-msgstr "Nume și extensie"
+msgid "Entire filename"
+msgstr ""
 
 #: usr/share/bulky/bulky.ui.h:12
 msgid "Find:"
@@ -125,60 +135,60 @@ msgstr "Înlocuiește:"
 
 #: usr/share/bulky/bulky.ui.h:14
 msgid "Regular expression"
-msgstr ""
+msgstr "Expresie regulată"
 
 #: usr/share/bulky/bulky.ui.h:15
 msgid "Case sensitive"
-msgstr ""
+msgstr "Sensibil la majuscule"
 
 #: usr/share/bulky/bulky.ui.h:16
 msgid "At position:"
-msgstr ""
+msgstr "La poziția:"
 
 #: usr/share/bulky/bulky.ui.h:17
 msgid "From the end"
-msgstr ""
+msgstr "De la final"
 
 #: usr/share/bulky/bulky.ui.h:18
 msgid "Overwrite"
-msgstr ""
+msgstr "Supracrie"
 
 #: usr/share/bulky/bulky.ui.h:19
 msgid "Text:"
-msgstr ""
+msgstr "Text:"
 
 #: usr/share/bulky/bulky.ui.h:20
 msgid "Convert to:"
-msgstr ""
+msgstr "Convertește în:"
 
 #: usr/share/bulky/bulky.ui.h:21
 msgid "Lower case"
-msgstr ""
+msgstr "Minuscule"
 
 #: usr/share/bulky/bulky.ui.h:22
 msgid "First character uppercase"
-msgstr ""
+msgstr "Majusculă pe primul caracter"
 
 #: usr/share/bulky/bulky.ui.h:23
 msgid "Title case"
-msgstr ""
+msgstr "Format de titlu"
 
 #: usr/share/bulky/bulky.ui.h:24
 msgid "Upper case"
-msgstr ""
+msgstr "Complet cu majuscule"
 
 #: usr/share/bulky/bulky.ui.h:25
 msgid "Remove from position:"
-msgstr ""
+msgstr "Șterge de la poziția:"
 
 #: usr/share/bulky/bulky.ui.h:26
 msgid "To position:"
-msgstr ""
+msgstr "Până la poziția:"
 
 #: usr/share/bulky/bulky.ui.h:27
 msgid "Close"
-msgstr ""
+msgstr "Închide"
 
 #: usr/share/bulky/bulky.ui.h:28
 msgid "Rename"
-msgstr ""
+msgstr "Redenumește"

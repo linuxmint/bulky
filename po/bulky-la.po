@@ -7,71 +7,81 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxmint\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2021-05-24 15:02+0100\n"
+"POT-Creation-Date: 2021-11-22 16:34+0000\n"
 "PO-Revision-Date: 2021-05-25 06:42+0000\n"
 "Last-Translator: Davide Novemila <Unknown>\n"
 "Language-Team: Latin <la@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2021-06-25 10:43+0000\n"
-"X-Generator: Launchpad (build 40cc6dba4163ba9ca785b26ad91f43c87d70ba4d)\n"
+"X-Launchpad-Export-Date: 2021-12-06 15:07+0000\n"
+"X-Generator: Launchpad (build f92b6e0bb2624f8a9125e3f45b7621c6e230c5ff)\n"
 "Language: la\n"
 
-#: usr/lib/bulky/bulky.py:93 usr/share/bulky/bulky.ui.h:1
-msgid "Rename..."
-msgstr "Nomen muta ..."
-
-#: usr/lib/bulky/bulky.py:118 usr/lib/bulky/bulky.py:230
-msgid "About"
-msgstr "Circa"
-
-#: usr/lib/bulky/bulky.py:123
-msgid "Quit"
-msgstr "Relinque"
-
-#: usr/lib/bulky/bulky.py:140
-msgid "Name"
-msgstr "Nomen"
-
-#: usr/lib/bulky/bulky.py:151
-msgid "New name"
-msgstr "Nomen novum"
-
-#: usr/lib/bulky/bulky.py:216
-msgid "Use %n, %0n, %00n, %000n to enumerate."
-msgstr "%n, %0n, %00n, %000n ad enumerandum utere."
-
-#: usr/lib/bulky/bulky.py:232
-msgid "Rename Files"
-msgstr "Nomina Plicarum Muta"
-
-#: usr/lib/bulky/bulky.py:284
-msgid "Add files"
-msgstr "Plicas adde"
-
-#: usr/lib/bulky/bulky.py:286
+#: usr/lib/bulky/bulky.py:42
 msgid "Cancel"
 msgstr "Interrumpe"
 
-#: usr/lib/bulky/bulky.py:287
+#: usr/lib/bulky/bulky.py:43
 msgid "Add"
 msgstr "Adde"
 
-#: usr/lib/bulky/bulky.py:338 generate_desktop_files:25
+#: usr/lib/bulky/bulky.py:200 usr/share/bulky/bulky.ui.h:1
+msgid "Rename..."
+msgstr "Nomen muta ..."
+
+#: usr/lib/bulky/bulky.py:225 usr/lib/bulky/bulky.py:337
+msgid "About"
+msgstr "Circa"
+
+#: usr/lib/bulky/bulky.py:230
+msgid "Quit"
+msgstr "Relinque"
+
+#: usr/lib/bulky/bulky.py:247
+msgid "Name"
+msgstr "Nomen"
+
+#: usr/lib/bulky/bulky.py:258
+msgid "New name"
+msgstr "Nomen novum"
+
+#: usr/lib/bulky/bulky.py:323
+msgid "Use %n, %0n, %00n, %000n to enumerate."
+msgstr "%n, %0n, %00n, %000n ad enumerandum utere."
+
+#: usr/lib/bulky/bulky.py:339
+msgid "Rename Files"
+msgstr "Nomina Plicarum Muta"
+
+#: usr/lib/bulky/bulky.py:390
+msgid "Add files"
+msgstr "Plicas adde"
+
+#: usr/lib/bulky/bulky.py:419
+#, python-format
+msgid "Unable to rename '%s': File name too long"
+msgstr ""
+
+#: usr/lib/bulky/bulky.py:422
+#, python-format
+msgid "Unable to rename '%s': %s"
+msgstr ""
+
+#: usr/lib/bulky/bulky.py:499 generate_desktop_files:25
 msgid "File Renamer"
 msgstr "Commutatio Nominum"
 
-#: usr/lib/bulky/bulky.py:339 generate_desktop_files:25
+#: usr/lib/bulky/bulky.py:500 generate_desktop_files:25
 msgid "Rename files and directories"
 msgstr "Nomina plicarum et directoriorum muta"
 
-#: usr/lib/bulky/bulky.py:407
+#: usr/lib/bulky/bulky.py:593
 #, python-format
 msgid "Name collision on '%s'."
 msgstr "Collisio nominum in '%s'."
 
-#: usr/lib/bulky/bulky.py:411 usr/lib/bulky/bulky.py:415
+#: usr/lib/bulky/bulky.py:597 usr/lib/bulky/bulky.py:601
 #, python-format
 msgid "'%s' is not writeable."
 msgstr "'%s' non est scribendum."
@@ -113,8 +123,8 @@ msgid "Extension only"
 msgstr "Extensio modo"
 
 #: usr/share/bulky/bulky.ui.h:11
-msgid "Name and extension"
-msgstr "Nomen atque extensio"
+msgid "Entire filename"
+msgstr ""
 
 #: usr/share/bulky/bulky.ui.h:12
 msgid "Find:"

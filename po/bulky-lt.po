@@ -7,81 +7,91 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxmint\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2021-05-24 15:02+0100\n"
-"PO-Revision-Date: 2021-05-24 12:00+0000\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2021-11-22 16:34+0000\n"
+"PO-Revision-Date: 2021-09-02 20:14+0000\n"
+"Last-Translator: Moo <hazap@hotmail.com>\n"
 "Language-Team: Lithuanian <lt@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2021-06-25 10:43+0000\n"
-"X-Generator: Launchpad (build 40cc6dba4163ba9ca785b26ad91f43c87d70ba4d)\n"
+"X-Launchpad-Export-Date: 2021-12-06 15:07+0000\n"
+"X-Generator: Launchpad (build f92b6e0bb2624f8a9125e3f45b7621c6e230c5ff)\n"
 
-#: usr/lib/bulky/bulky.py:93 usr/share/bulky/bulky.ui.h:1
+#: usr/lib/bulky/bulky.py:42
+msgid "Cancel"
+msgstr "Atsisakyti"
+
+#: usr/lib/bulky/bulky.py:43
+msgid "Add"
+msgstr "Pridėti"
+
+#: usr/lib/bulky/bulky.py:200 usr/share/bulky/bulky.ui.h:1
 msgid "Rename..."
-msgstr ""
+msgstr "Pervadinti..."
 
-#: usr/lib/bulky/bulky.py:118 usr/lib/bulky/bulky.py:230
+#: usr/lib/bulky/bulky.py:225 usr/lib/bulky/bulky.py:337
 msgid "About"
-msgstr ""
+msgstr "Apie"
 
-#: usr/lib/bulky/bulky.py:123
+#: usr/lib/bulky/bulky.py:230
 msgid "Quit"
-msgstr ""
+msgstr "Išeiti"
 
-#: usr/lib/bulky/bulky.py:140
+#: usr/lib/bulky/bulky.py:247
 msgid "Name"
-msgstr ""
+msgstr "Pavadinimas"
 
-#: usr/lib/bulky/bulky.py:151
+#: usr/lib/bulky/bulky.py:258
 msgid "New name"
-msgstr ""
+msgstr "Naujas pavadinimas"
 
-#: usr/lib/bulky/bulky.py:216
+#: usr/lib/bulky/bulky.py:323
 msgid "Use %n, %0n, %00n, %000n to enumerate."
 msgstr ""
 
-#: usr/lib/bulky/bulky.py:232
+#: usr/lib/bulky/bulky.py:339
 msgid "Rename Files"
-msgstr ""
+msgstr "Pervadinti failus"
 
-#: usr/lib/bulky/bulky.py:284
+#: usr/lib/bulky/bulky.py:390
 msgid "Add files"
+msgstr "Pridėti failus"
+
+#: usr/lib/bulky/bulky.py:419
+#, python-format
+msgid "Unable to rename '%s': File name too long"
 msgstr ""
 
-#: usr/lib/bulky/bulky.py:286
-msgid "Cancel"
+#: usr/lib/bulky/bulky.py:422
+#, python-format
+msgid "Unable to rename '%s': %s"
 msgstr ""
 
-#: usr/lib/bulky/bulky.py:287
-msgid "Add"
-msgstr ""
-
-#: usr/lib/bulky/bulky.py:338 generate_desktop_files:25
+#: usr/lib/bulky/bulky.py:499 generate_desktop_files:25
 msgid "File Renamer"
 msgstr ""
 
-#: usr/lib/bulky/bulky.py:339 generate_desktop_files:25
+#: usr/lib/bulky/bulky.py:500 generate_desktop_files:25
 msgid "Rename files and directories"
-msgstr ""
+msgstr "Pervadinti failus ir katalogus"
 
-#: usr/lib/bulky/bulky.py:407
+#: usr/lib/bulky/bulky.py:593
 #, python-format
 msgid "Name collision on '%s'."
 msgstr ""
 
-#: usr/lib/bulky/bulky.py:411 usr/lib/bulky/bulky.py:415
+#: usr/lib/bulky/bulky.py:597 usr/lib/bulky/bulky.py:601
 #, python-format
 msgid "'%s' is not writeable."
 msgstr ""
 
 #: usr/share/bulky/bulky.ui.h:2
 msgid "Add files..."
-msgstr ""
+msgstr "Pridėti failus..."
 
 #: usr/share/bulky/bulky.ui.h:3
 msgid "Remove"
-msgstr ""
+msgstr "Šalinti"
 
 #: usr/share/bulky/bulky.ui.h:4
 msgid "Remove selected files"
@@ -89,19 +99,19 @@ msgstr ""
 
 #: usr/share/bulky/bulky.ui.h:5
 msgid "Clear"
-msgstr ""
+msgstr "Išvalyti"
 
 #: usr/share/bulky/bulky.ui.h:6
 msgid "Replace"
-msgstr ""
+msgstr "Pakeisti"
 
 #: usr/share/bulky/bulky.ui.h:7
 msgid "Insert"
-msgstr ""
+msgstr "Įterpti"
 
 #: usr/share/bulky/bulky.ui.h:8
 msgid "Change case"
-msgstr ""
+msgstr "Keisti raidžių dydį"
 
 #: usr/share/bulky/bulky.ui.h:9
 msgid "Name only"
@@ -112,12 +122,12 @@ msgid "Extension only"
 msgstr ""
 
 #: usr/share/bulky/bulky.ui.h:11
-msgid "Name and extension"
+msgid "Entire filename"
 msgstr ""
 
 #: usr/share/bulky/bulky.ui.h:12
 msgid "Find:"
-msgstr ""
+msgstr "Rasti:"
 
 #: usr/share/bulky/bulky.ui.h:13
 msgid "Replace:"
@@ -125,7 +135,7 @@ msgstr ""
 
 #: usr/share/bulky/bulky.ui.h:14
 msgid "Regular expression"
-msgstr ""
+msgstr "Reguliarusis reiškinys"
 
 #: usr/share/bulky/bulky.ui.h:15
 msgid "Case sensitive"
@@ -141,11 +151,11 @@ msgstr ""
 
 #: usr/share/bulky/bulky.ui.h:18
 msgid "Overwrite"
-msgstr ""
+msgstr "Perrašyti"
 
 #: usr/share/bulky/bulky.ui.h:19
 msgid "Text:"
-msgstr ""
+msgstr "Tekstas:"
 
 #: usr/share/bulky/bulky.ui.h:20
 msgid "Convert to:"
@@ -177,7 +187,7 @@ msgstr ""
 
 #: usr/share/bulky/bulky.ui.h:27
 msgid "Close"
-msgstr ""
+msgstr "Užverti"
 
 #: usr/share/bulky/bulky.ui.h:28
 msgid "Rename"

@@ -1,4 +1,4 @@
-# Catalan translation for linuxmint
+# Korean translation for linuxmint
 # Copyright (c) 2021 Rosetta Contributors and Canonical Ltd 2021
 # This file is distributed under the same license as the linuxmint package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
@@ -8,9 +8,9 @@ msgstr ""
 "Project-Id-Version: linuxmint\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2021-11-22 16:34+0000\n"
-"PO-Revision-Date: 2021-11-23 13:07+0000\n"
-"Last-Translator: Isidro Pisa <isidro@utils.info>\n"
-"Language-Team: Catalan <ca@li.org>\n"
+"PO-Revision-Date: 2021-11-28 18:59+0000\n"
+"Last-Translator: Jung-Kyu Park <bagjunggyu@gmail.com>\n"
+"Language-Team: Korean <ko@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -19,176 +19,176 @@ msgstr ""
 
 #: usr/lib/bulky/bulky.py:42
 msgid "Cancel"
-msgstr "Cancel·la"
+msgstr "취소"
 
 #: usr/lib/bulky/bulky.py:43
 msgid "Add"
-msgstr "Afegeix"
+msgstr "추가"
 
 #: usr/lib/bulky/bulky.py:200 usr/share/bulky/bulky.ui.h:1
 msgid "Rename..."
-msgstr "Canvia el nom..."
+msgstr "이름 변경..."
 
 #: usr/lib/bulky/bulky.py:225 usr/lib/bulky/bulky.py:337
 msgid "About"
-msgstr "Quant a"
+msgstr "소개"
 
 #: usr/lib/bulky/bulky.py:230
 msgid "Quit"
-msgstr "Surt"
+msgstr "닫기"
 
 #: usr/lib/bulky/bulky.py:247
 msgid "Name"
-msgstr "Nom"
+msgstr "이름"
 
 #: usr/lib/bulky/bulky.py:258
 msgid "New name"
-msgstr "Nom nou"
+msgstr "새 이름"
 
 #: usr/lib/bulky/bulky.py:323
 msgid "Use %n, %0n, %00n, %000n to enumerate."
-msgstr "Useu %n, %0n, %00n, %000n per enumerar."
+msgstr "숫자를 열거하려면 %n, %0n, %00n, %000n을 사용하세요."
 
 #: usr/lib/bulky/bulky.py:339
 msgid "Rename Files"
-msgstr "Reanomena arxius"
+msgstr "파일 이름 변경"
 
 #: usr/lib/bulky/bulky.py:390
 msgid "Add files"
-msgstr "Afegeix arxius"
+msgstr "파일 추가"
 
 #: usr/lib/bulky/bulky.py:419
 #, python-format
 msgid "Unable to rename '%s': File name too long"
-msgstr "No es pot canviar el nom a '%s': el nom és massa llarg"
+msgstr "'%s'로 파일 이름을 바꿀 수 없습니다 : 파일 이름이 너무 깁니다"
 
 #: usr/lib/bulky/bulky.py:422
 #, python-format
 msgid "Unable to rename '%s': %s"
-msgstr "No es pot canviar el nom a '%s': %s"
+msgstr "'%s': %s 로 이름을 바꿀 수 없습니다"
 
 #: usr/lib/bulky/bulky.py:499 generate_desktop_files:25
 msgid "File Renamer"
-msgstr "Reanomenador d'arxius"
+msgstr "파일 이름 변경"
 
 #: usr/lib/bulky/bulky.py:500 generate_desktop_files:25
 msgid "Rename files and directories"
-msgstr "Reanomena arxius i directoris"
+msgstr "파일 및 디렉터리 이름 변경"
 
 #: usr/lib/bulky/bulky.py:593
 #, python-format
 msgid "Name collision on '%s'."
-msgstr "Col·lisió de noms amb '%s'."
+msgstr "'%s'의 이름 충돌"
 
 #: usr/lib/bulky/bulky.py:597 usr/lib/bulky/bulky.py:601
 #, python-format
 msgid "'%s' is not writeable."
-msgstr "'%s' no es pot escriure."
+msgstr "'%s'은(는) 쓸 수 없습니다.'"
 
 #: usr/share/bulky/bulky.ui.h:2
 msgid "Add files..."
-msgstr "Afegeix arxius..."
+msgstr "파일 추가..."
 
 #: usr/share/bulky/bulky.ui.h:3
 msgid "Remove"
-msgstr "Suprimeix"
+msgstr "제거"
 
 #: usr/share/bulky/bulky.ui.h:4
 msgid "Remove selected files"
-msgstr "Suprimeix els arxius seleccionats"
+msgstr "선택된 파일 제거"
 
 #: usr/share/bulky/bulky.ui.h:5
 msgid "Clear"
-msgstr "Neteja"
+msgstr "초기화"
 
 #: usr/share/bulky/bulky.ui.h:6
 msgid "Replace"
-msgstr "Substitueix"
+msgstr "변환"
 
 #: usr/share/bulky/bulky.ui.h:7
 msgid "Insert"
-msgstr "Insereix"
+msgstr "추가"
 
 #: usr/share/bulky/bulky.ui.h:8
 msgid "Change case"
-msgstr "Canvia majúscules i minúscules"
+msgstr "변환 방식"
 
 #: usr/share/bulky/bulky.ui.h:9
 msgid "Name only"
-msgstr "Només nom"
+msgstr "이름만 변경"
 
 #: usr/share/bulky/bulky.ui.h:10
 msgid "Extension only"
-msgstr "Només extensió"
+msgstr "확장자만 변경"
 
 #: usr/share/bulky/bulky.ui.h:11
 msgid "Entire filename"
-msgstr "Nom d'arxiu complet"
+msgstr "파일 전체 이름"
 
 #: usr/share/bulky/bulky.ui.h:12
 msgid "Find:"
-msgstr "Cerca:"
+msgstr "찾기:"
 
 #: usr/share/bulky/bulky.ui.h:13
 msgid "Replace:"
-msgstr "Substitueix:"
+msgstr "변환:"
 
 #: usr/share/bulky/bulky.ui.h:14
 msgid "Regular expression"
-msgstr "Expressió normal"
+msgstr "정규 표현식"
 
 #: usr/share/bulky/bulky.ui.h:15
 msgid "Case sensitive"
-msgstr "Diferencia les majúscules"
+msgstr "대소문자 구분"
 
 #: usr/share/bulky/bulky.ui.h:16
 msgid "At position:"
-msgstr "En  la posició:"
+msgstr "위치:"
 
 #: usr/share/bulky/bulky.ui.h:17
 msgid "From the end"
-msgstr "Des del final"
+msgstr "뒤에서부터"
 
 #: usr/share/bulky/bulky.ui.h:18
 msgid "Overwrite"
-msgstr "Sobreescriu"
+msgstr "덮어쓰기"
 
 #: usr/share/bulky/bulky.ui.h:19
 msgid "Text:"
-msgstr "Text:"
+msgstr "내용:"
 
 #: usr/share/bulky/bulky.ui.h:20
 msgid "Convert to:"
-msgstr "Converteix a:"
+msgstr "변환:"
 
 #: usr/share/bulky/bulky.ui.h:21
 msgid "Lower case"
-msgstr "Minúscules"
+msgstr "소문자 형식"
 
 #: usr/share/bulky/bulky.ui.h:22
 msgid "First character uppercase"
-msgstr "Primer caràcter majúscula"
+msgstr "첫 번째 문자 대문자 형식"
 
 #: usr/share/bulky/bulky.ui.h:23
 msgid "Title case"
-msgstr "Majúscules en el títol"
+msgstr "제목 형식"
 
 #: usr/share/bulky/bulky.ui.h:24
 msgid "Upper case"
-msgstr "Majúscules"
+msgstr "대문자 형식"
 
 #: usr/share/bulky/bulky.ui.h:25
 msgid "Remove from position:"
-msgstr "Suprimeix des de la posició:"
+msgstr "위치에서:"
 
 #: usr/share/bulky/bulky.ui.h:26
 msgid "To position:"
-msgstr "Fins la posició:"
+msgstr "위치까지 제거:"
 
 #: usr/share/bulky/bulky.ui.h:27
 msgid "Close"
-msgstr "Tanca"
+msgstr "닫기"
 
 #: usr/share/bulky/bulky.ui.h:28
 msgid "Rename"
-msgstr "Canvia el nom"
+msgstr "이름변경"

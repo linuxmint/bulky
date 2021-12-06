@@ -7,78 +7,88 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxmint\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2021-05-24 15:02+0100\n"
-"PO-Revision-Date: 2021-06-10 11:12+0000\n"
+"POT-Creation-Date: 2021-11-22 16:34+0000\n"
+"PO-Revision-Date: 2021-10-19 15:54+0000\n"
 "Last-Translator: Rhoslyn Prys <Unknown>\n"
 "Language-Team: Welsh <cy@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2021-06-25 10:43+0000\n"
-"X-Generator: Launchpad (build 40cc6dba4163ba9ca785b26ad91f43c87d70ba4d)\n"
+"X-Launchpad-Export-Date: 2021-12-06 15:07+0000\n"
+"X-Generator: Launchpad (build f92b6e0bb2624f8a9125e3f45b7621c6e230c5ff)\n"
 "Language: cy\n"
 
-#: usr/lib/bulky/bulky.py:93 usr/share/bulky/bulky.ui.h:1
-msgid "Rename..."
-msgstr "Ailenwi..."
-
-#: usr/lib/bulky/bulky.py:118 usr/lib/bulky/bulky.py:230
-msgid "About"
-msgstr "Ynghylch"
-
-#: usr/lib/bulky/bulky.py:123
-msgid "Quit"
-msgstr "Gadael"
-
-#: usr/lib/bulky/bulky.py:140
-msgid "Name"
-msgstr "Enw"
-
-#: usr/lib/bulky/bulky.py:151
-msgid "New name"
-msgstr "Enw newydd"
-
-#: usr/lib/bulky/bulky.py:216
-msgid "Use %n, %0n, %00n, %000n to enumerate."
-msgstr "Defnyddiwch %n, %0n, %00n, %000n i gyfrif."
-
-#: usr/lib/bulky/bulky.py:232
-msgid "Rename Files"
-msgstr "Ail-enwi Ffeiliau"
-
-#: usr/lib/bulky/bulky.py:284
-msgid "Add files"
-msgstr "Ychwanegu ffeiliau"
-
-#: usr/lib/bulky/bulky.py:286
+#: usr/lib/bulky/bulky.py:42
 msgid "Cancel"
 msgstr "Diddymu"
 
-#: usr/lib/bulky/bulky.py:287
+#: usr/lib/bulky/bulky.py:43
 msgid "Add"
 msgstr "Ychwanegu"
 
-#: usr/lib/bulky/bulky.py:338 generate_desktop_files:25
+#: usr/lib/bulky/bulky.py:200 usr/share/bulky/bulky.ui.h:1
+msgid "Rename..."
+msgstr "Ailenwi..."
+
+#: usr/lib/bulky/bulky.py:225 usr/lib/bulky/bulky.py:337
+msgid "About"
+msgstr "Ynghylch"
+
+#: usr/lib/bulky/bulky.py:230
+msgid "Quit"
+msgstr "Gadael"
+
+#: usr/lib/bulky/bulky.py:247
+msgid "Name"
+msgstr "Enw"
+
+#: usr/lib/bulky/bulky.py:258
+msgid "New name"
+msgstr "Enw newydd"
+
+#: usr/lib/bulky/bulky.py:323
+msgid "Use %n, %0n, %00n, %000n to enumerate."
+msgstr "Defnyddiwch %n, %0n, %00n, %000n i gyfrif."
+
+#: usr/lib/bulky/bulky.py:339
+msgid "Rename Files"
+msgstr "Ailenwi Ffeiliau"
+
+#: usr/lib/bulky/bulky.py:390
+msgid "Add files"
+msgstr "Ychwanegu ffeiliau"
+
+#: usr/lib/bulky/bulky.py:419
+#, python-format
+msgid "Unable to rename '%s': File name too long"
+msgstr ""
+
+#: usr/lib/bulky/bulky.py:422
+#, python-format
+msgid "Unable to rename '%s': %s"
+msgstr ""
+
+#: usr/lib/bulky/bulky.py:499 generate_desktop_files:25
 msgid "File Renamer"
-msgstr "Ail-enwi Ffeiliau"
+msgstr "Ailenwr Ffeiliau"
 
-#: usr/lib/bulky/bulky.py:339 generate_desktop_files:25
+#: usr/lib/bulky/bulky.py:500 generate_desktop_files:25
 msgid "Rename files and directories"
-msgstr "Ail-enwi ffeiliau a chyfeiriaduron"
+msgstr "Ailenwi ffeiliau a chyfeiriaduron"
 
-#: usr/lib/bulky/bulky.py:407
+#: usr/lib/bulky/bulky.py:593
 #, python-format
 msgid "Name collision on '%s'."
 msgstr "Gwrthdrawiad enw ar '%s'."
 
-#: usr/lib/bulky/bulky.py:411 usr/lib/bulky/bulky.py:415
+#: usr/lib/bulky/bulky.py:597 usr/lib/bulky/bulky.py:601
 #, python-format
 msgid "'%s' is not writeable."
 msgstr "Nid yw '%s' yn ysgrifenadwy.."
 
 #: usr/share/bulky/bulky.ui.h:2
 msgid "Add files..."
-msgstr "Ychwanegu ffeiliau ..."
+msgstr "Ychwanegu ffeiliau..."
 
 #: usr/share/bulky/bulky.ui.h:3
 msgid "Remove"
@@ -113,8 +123,8 @@ msgid "Extension only"
 msgstr "Estyniad yn unig"
 
 #: usr/share/bulky/bulky.ui.h:11
-msgid "Name and extension"
-msgstr "Enw ac estyniad"
+msgid "Entire filename"
+msgstr ""
 
 #: usr/share/bulky/bulky.ui.h:12
 msgid "Find:"
