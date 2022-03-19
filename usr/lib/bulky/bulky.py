@@ -613,27 +613,27 @@ class MainWindow():
         find = self.find_entry.get_text()
         replace = self.replace_entry.get_text()
         replace = self.inject(index, replace)
-        if regex:
-            try:
+        try:
+            if regex:
                 if case:
                     return re.sub(find, replace, string)
                 else:
                     reg = re.compile(find, re.IGNORECASE)
                     return reg.sub(replace, string)
-            except re.error:
-                return string
-        else:
-            find = find.replace("*", "~~~REGSTAR~~~")
-            find = find.replace("?", "~~~REGQUES~~~")
-            find = re.escape(find)
-            find = find.replace(re.escape("~~~REGSTAR~~~"), ".+")
-            find = find.replace(re.escape("~~~REGQUES~~~"), ".")
-            if case:
-                reg = re.compile(find)
-                return reg.sub(replace, string)
             else:
-                reg = re.compile(find, re.IGNORECASE)
-                return reg.sub(replace, string)
+                find = find.replace("*", "~~~REGSTAR~~~")
+                find = find.replace("?", "~~~REGQUES~~~")
+                find = re.escape(find)
+                find = find.replace(re.escape("~~~REGSTAR~~~"), ".+")
+                find = find.replace(re.escape("~~~REGQUES~~~"), ".")
+                if case:
+                    reg = re.compile(find)
+                    return reg.sub(replace, string)
+                else:
+                    reg = re.compile(find, re.IGNORECASE)
+                    return reg.sub(replace, string)
+        except re.error:
+            return string
 
     def remove_text(self, index, string):
         length = len(string) - 1
