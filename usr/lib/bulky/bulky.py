@@ -661,7 +661,7 @@ class MainWindow():
                 from_index = length - from_index + 1
             if self.overwrite_check.get_active():
                 if len(text) >= length:
-                    return text
+                    return string[0:from_index] + text
                 else:
                     catchup = from_index + len(text)
                     return string[0:from_index] + text + string[catchup:]
