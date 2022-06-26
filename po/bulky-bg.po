@@ -1,16 +1,16 @@
-# Brazilian Portuguese translation for linuxmint
-# Copyright (c) 2021 Rosetta Contributors and Canonical Ltd 2021
+# Bulgarian translation for linuxmint
+# Copyright (c) 2022 Rosetta Contributors and Canonical Ltd 2022
 # This file is distributed under the same license as the linuxmint package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: linuxmint\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2021-11-22 16:34+0000\n"
-"PO-Revision-Date: 2021-12-03 00:34+0000\n"
-"Last-Translator: Gilberto vagner <vagner.unix@gmail.com>\n"
-"Language-Team: Brazilian Portuguese <pt_BR@li.org>\n"
+"PO-Revision-Date: 2022-04-07 06:33+0000\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: Bulgarian <bg@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -19,176 +19,176 @@ msgstr ""
 
 #: usr/lib/bulky/bulky.py:42
 msgid "Cancel"
-msgstr "Cancelar"
+msgstr ""
 
 #: usr/lib/bulky/bulky.py:43
 msgid "Add"
-msgstr "Adicionar"
+msgstr ""
 
 #: usr/lib/bulky/bulky.py:200 usr/share/bulky/bulky.ui.h:1
 msgid "Rename..."
-msgstr "Renomear..."
+msgstr ""
 
 #: usr/lib/bulky/bulky.py:225 usr/lib/bulky/bulky.py:337
 msgid "About"
-msgstr "Sobre"
+msgstr ""
 
 #: usr/lib/bulky/bulky.py:230
 msgid "Quit"
-msgstr "Sair"
+msgstr ""
 
 #: usr/lib/bulky/bulky.py:247
 msgid "Name"
-msgstr "Nome"
+msgstr ""
 
 #: usr/lib/bulky/bulky.py:258
 msgid "New name"
-msgstr "Novo nome"
+msgstr ""
 
 #: usr/lib/bulky/bulky.py:323
 msgid "Use %n, %0n, %00n, %000n to enumerate."
-msgstr "Use %n, %0n, %00n, %000n para numerar"
+msgstr ""
 
 #: usr/lib/bulky/bulky.py:339
 msgid "Rename Files"
-msgstr "Renomear arquivos"
+msgstr ""
 
 #: usr/lib/bulky/bulky.py:390
 msgid "Add files"
-msgstr "Adicionar arquivos"
+msgstr ""
 
 #: usr/lib/bulky/bulky.py:419
 #, python-format
 msgid "Unable to rename '%s': File name too long"
-msgstr "Incapaz de renomear '%s': nome de arquivo muito longo"
+msgstr ""
 
 #: usr/lib/bulky/bulky.py:422
 #, python-format
 msgid "Unable to rename '%s': %s"
-msgstr "Incapaz de renomear '%s': %s"
+msgstr ""
 
 #: usr/lib/bulky/bulky.py:499 generate_desktop_files:25
 msgid "File Renamer"
-msgstr "Renomeador de arquivo"
+msgstr ""
 
 #: usr/lib/bulky/bulky.py:500 generate_desktop_files:25
 msgid "Rename files and directories"
-msgstr "Renomear arquivos e diretórios"
+msgstr ""
 
 #: usr/lib/bulky/bulky.py:593
 #, python-format
 msgid "Name collision on '%s'."
-msgstr "Colisão de nomes em '%s'."
+msgstr ""
 
 #: usr/lib/bulky/bulky.py:597 usr/lib/bulky/bulky.py:601
 #, python-format
 msgid "'%s' is not writeable."
-msgstr "'%s' não é gravável."
+msgstr ""
 
 #: usr/share/bulky/bulky.ui.h:2
 msgid "Add files..."
-msgstr "Adicionar arquivos..."
+msgstr ""
 
 #: usr/share/bulky/bulky.ui.h:3
 msgid "Remove"
-msgstr "Remover"
+msgstr ""
 
 #: usr/share/bulky/bulky.ui.h:4
 msgid "Remove selected files"
-msgstr "Remover arquivos selecionados"
+msgstr ""
 
 #: usr/share/bulky/bulky.ui.h:5
 msgid "Clear"
-msgstr "Limpar"
+msgstr ""
 
 #: usr/share/bulky/bulky.ui.h:6
 msgid "Replace"
-msgstr "Substituir"
+msgstr ""
 
 #: usr/share/bulky/bulky.ui.h:7
 msgid "Insert"
-msgstr "Inserir"
+msgstr ""
 
 #: usr/share/bulky/bulky.ui.h:8
 msgid "Change case"
-msgstr "Mudar maiúsculas e minúsculas"
+msgstr ""
 
 #: usr/share/bulky/bulky.ui.h:9
 msgid "Name only"
-msgstr "Apenas nome"
+msgstr ""
 
 #: usr/share/bulky/bulky.ui.h:10
 msgid "Extension only"
-msgstr "Apenas extensão"
+msgstr ""
 
 #: usr/share/bulky/bulky.ui.h:11
 msgid "Entire filename"
-msgstr "Nome do arquivo inteiro"
+msgstr ""
 
 #: usr/share/bulky/bulky.ui.h:12
 msgid "Find:"
-msgstr "Procurar:"
+msgstr ""
 
 #: usr/share/bulky/bulky.ui.h:13
 msgid "Replace:"
-msgstr "Substituir:"
+msgstr ""
 
 #: usr/share/bulky/bulky.ui.h:14
 msgid "Regular expression"
-msgstr "Expressão regular"
+msgstr ""
 
 #: usr/share/bulky/bulky.ui.h:15
 msgid "Case sensitive"
-msgstr "Maiúsculas e Minúsculas"
+msgstr ""
 
 #: usr/share/bulky/bulky.ui.h:16
 msgid "At position:"
-msgstr "Na posição:"
+msgstr ""
 
 #: usr/share/bulky/bulky.ui.h:17
 msgid "From the end"
-msgstr "Desde o fim"
+msgstr ""
 
 #: usr/share/bulky/bulky.ui.h:18
 msgid "Overwrite"
-msgstr "Sobrescrever"
+msgstr ""
 
 #: usr/share/bulky/bulky.ui.h:19
 msgid "Text:"
-msgstr "Texto:"
+msgstr ""
 
 #: usr/share/bulky/bulky.ui.h:20
 msgid "Convert to:"
-msgstr "Converter para:"
+msgstr ""
 
 #: usr/share/bulky/bulky.ui.h:21
 msgid "Lower case"
-msgstr "Minúsculas"
+msgstr ""
 
 #: usr/share/bulky/bulky.ui.h:22
 msgid "First character uppercase"
-msgstr "Primeiro caractere maiúsculo"
+msgstr ""
 
 #: usr/share/bulky/bulky.ui.h:23
 msgid "Title case"
-msgstr "Caixa do título"
+msgstr ""
 
 #: usr/share/bulky/bulky.ui.h:24
 msgid "Upper case"
-msgstr "Maiúsculas"
+msgstr ""
 
 #: usr/share/bulky/bulky.ui.h:25
 msgid "Remove from position:"
-msgstr "Remover da posição:"
+msgstr ""
 
 #: usr/share/bulky/bulky.ui.h:26
 msgid "To position:"
-msgstr "Posicionar:"
+msgstr ""
 
 #: usr/share/bulky/bulky.ui.h:27
 msgid "Close"
-msgstr "Fechar"
+msgstr ""
 
 #: usr/share/bulky/bulky.ui.h:28
 msgid "Rename"
-msgstr "Renomear"
+msgstr ""

@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: linuxmint\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2021-11-22 16:34+0000\n"
-"PO-Revision-Date: 2021-11-28 12:19+0000\n"
+"PO-Revision-Date: 2022-01-20 22:58+0000\n"
 "Last-Translator: Marius Urenya <Unknown>\n"
 "Language-Team: Catalan (Valencian) <ca@valencia@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2021-12-31 12:26+0000\n"
-"X-Generator: Launchpad (build adb364d6a74a28e7b95d51cd30446ec16160de6c)\n"
+"X-Launchpad-Export-Date: 2022-06-26 11:30+0000\n"
+"X-Generator: Launchpad (build 51a2e4fa2e9b8e45f00904ad7f53546f45ac48a5)\n"
 
 #: usr/lib/bulky/bulky.py:42
 msgid "Cancel"
@@ -47,7 +47,7 @@ msgstr "Nou nom"
 
 #: usr/lib/bulky/bulky.py:323
 msgid "Use %n, %0n, %00n, %000n to enumerate."
-msgstr ""
+msgstr "Useu %n, %0n, %00n, %000n per enumerar."
 
 #: usr/lib/bulky/bulky.py:339
 msgid "Rename Files"
@@ -60,7 +60,7 @@ msgstr "Afig fitxers"
 #: usr/lib/bulky/bulky.py:419
 #, python-format
 msgid "Unable to rename '%s': File name too long"
-msgstr ""
+msgstr "No es pot canviar el nom a '%s': el nom és massa llarg"
 
 #: usr/lib/bulky/bulky.py:422
 #, python-format
@@ -103,92 +103,92 @@ msgstr "Neteja"
 
 #: usr/share/bulky/bulky.ui.h:6
 msgid "Replace"
-msgstr ""
+msgstr "Reemplaça"
 
 #: usr/share/bulky/bulky.ui.h:7
 msgid "Insert"
-msgstr ""
+msgstr "Insereix"
 
 #: usr/share/bulky/bulky.ui.h:8
 msgid "Change case"
-msgstr ""
+msgstr "Canvia majúscules i minúscules"
 
 #: usr/share/bulky/bulky.ui.h:9
 msgid "Name only"
-msgstr ""
+msgstr "Només nom"
 
 #: usr/share/bulky/bulky.ui.h:10
 msgid "Extension only"
-msgstr ""
+msgstr "Només extensió"
 
 #: usr/share/bulky/bulky.ui.h:11
 msgid "Entire filename"
-msgstr ""
+msgstr "Nom d'arxiu complet"
 
 #: usr/share/bulky/bulky.ui.h:12
 msgid "Find:"
-msgstr ""
+msgstr "Trobar:"
 
 #: usr/share/bulky/bulky.ui.h:13
 msgid "Replace:"
-msgstr ""
+msgstr "Reemplaçar:"
 
 #: usr/share/bulky/bulky.ui.h:14
 msgid "Regular expression"
-msgstr ""
+msgstr "Expressió regular"
 
 #: usr/share/bulky/bulky.ui.h:15
 msgid "Case sensitive"
-msgstr ""
+msgstr "Distingeix entre majúscules i minúscules"
 
 #: usr/share/bulky/bulky.ui.h:16
 msgid "At position:"
-msgstr ""
+msgstr "En  la posició:"
 
 #: usr/share/bulky/bulky.ui.h:17
 msgid "From the end"
-msgstr ""
+msgstr "Des del final"
 
 #: usr/share/bulky/bulky.ui.h:18
 msgid "Overwrite"
-msgstr ""
+msgstr "Sobreescriu"
 
 #: usr/share/bulky/bulky.ui.h:19
 msgid "Text:"
-msgstr ""
+msgstr "Text:"
 
 #: usr/share/bulky/bulky.ui.h:20
 msgid "Convert to:"
-msgstr ""
+msgstr "Converteix a:"
 
 #: usr/share/bulky/bulky.ui.h:21
 msgid "Lower case"
-msgstr ""
+msgstr "Minúscules"
 
 #: usr/share/bulky/bulky.ui.h:22
 msgid "First character uppercase"
-msgstr ""
+msgstr "Primer caràcter majúscula"
 
 #: usr/share/bulky/bulky.ui.h:23
 msgid "Title case"
-msgstr ""
+msgstr "Majúscules en el títol"
 
 #: usr/share/bulky/bulky.ui.h:24
 msgid "Upper case"
-msgstr ""
+msgstr "Majúscules"
 
 #: usr/share/bulky/bulky.ui.h:25
 msgid "Remove from position:"
-msgstr ""
+msgstr "Suprimeix des de la posició:"
 
 #: usr/share/bulky/bulky.ui.h:26
 msgid "To position:"
-msgstr ""
+msgstr "A la posició:"
 
 #: usr/share/bulky/bulky.ui.h:27
 msgid "Close"
-msgstr ""
+msgstr "Tanca"
 
 #: usr/share/bulky/bulky.ui.h:28
 msgid "Rename"
-msgstr ""
+msgstr "Reanomena"

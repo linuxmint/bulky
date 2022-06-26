@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: linuxmint\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2021-11-22 16:34+0000\n"
-"PO-Revision-Date: 2021-11-23 16:58+0000\n"
+"PO-Revision-Date: 2022-01-16 14:27+0000\n"
 "Last-Translator: Anton Hryb <Unknown>\n"
 "Language-Team: Belarusian <be@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2021-12-31 12:26+0000\n"
-"X-Generator: Launchpad (build adb364d6a74a28e7b95d51cd30446ec16160de6c)\n"
+"X-Launchpad-Export-Date: 2022-06-26 11:30+0000\n"
+"X-Generator: Launchpad (build 51a2e4fa2e9b8e45f00904ad7f53546f45ac48a5)\n"
 
 #: usr/lib/bulky/bulky.py:42
 msgid "Cancel"
@@ -27,7 +27,7 @@ msgstr "Дадаць"
 
 #: usr/lib/bulky/bulky.py:200 usr/share/bulky/bulky.ui.h:1
 msgid "Rename..."
-msgstr "Пераназваць..."
+msgstr "Перайменаваць..."
 
 #: usr/lib/bulky/bulky.py:225 usr/lib/bulky/bulky.py:337
 msgid "About"
@@ -51,7 +51,7 @@ msgstr "Выкарыстоўваць %n, %0n, %00n, %000n для пералік�
 
 #: usr/lib/bulky/bulky.py:339
 msgid "Rename Files"
-msgstr "Пераназваць файлы"
+msgstr "Перайменаваць файлы"
 
 #: usr/lib/bulky/bulky.py:390
 msgid "Add files"
@@ -60,30 +60,30 @@ msgstr "Дадаць файлы"
 #: usr/lib/bulky/bulky.py:419
 #, python-format
 msgid "Unable to rename '%s': File name too long"
-msgstr "Немагчыма пераназваць '%s': задаўгая назва файла"
+msgstr "Немагчыма перайменаваць \"%s\": задаўгая назва файла"
 
 #: usr/lib/bulky/bulky.py:422
 #, python-format
 msgid "Unable to rename '%s': %s"
-msgstr "Немагчыма пераназваць '%s': %s"
+msgstr "Немагчыма перайменаваць \"%s\": %s"
 
 #: usr/lib/bulky/bulky.py:499 generate_desktop_files:25
 msgid "File Renamer"
-msgstr "Пераназывальнік файлаў"
+msgstr "Перайменаванне файлаў"
 
 #: usr/lib/bulky/bulky.py:500 generate_desktop_files:25
 msgid "Rename files and directories"
-msgstr "Пераназваць файлы і каталогі"
+msgstr "Масавае перайменаванне файлы і папкі"
 
 #: usr/lib/bulky/bulky.py:593
 #, python-format
 msgid "Name collision on '%s'."
-msgstr "Супярэчнасць назваў у '%s'."
+msgstr "Супярэчнасць назваў у \"%s\"."
 
 #: usr/lib/bulky/bulky.py:597 usr/lib/bulky/bulky.py:601
 #, python-format
 msgid "'%s' is not writeable."
-msgstr "'%s' не запісваецца."
+msgstr "\"%s\" немагчыма запісаць."
 
 #: usr/share/bulky/bulky.ui.h:2
 msgid "Add files..."
@@ -95,7 +95,7 @@ msgstr "Выдаліць"
 
 #: usr/share/bulky/bulky.ui.h:4
 msgid "Remove selected files"
-msgstr "Выдаліць вылучаныя файлы"
+msgstr "Прыбраць вылучаныя файлы"
 
 #: usr/share/bulky/bulky.ui.h:5
 msgid "Clear"
@@ -191,4 +191,4 @@ msgstr "Закрыць"
 
 #: usr/share/bulky/bulky.ui.h:28
 msgid "Rename"
-msgstr "Пераназваць"
+msgstr "Перайменаваць"
