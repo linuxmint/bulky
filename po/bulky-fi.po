@@ -8,18 +8,18 @@ msgstr ""
 "Project-Id-Version: linuxmint\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2021-11-22 16:34+0000\n"
-"PO-Revision-Date: 2021-11-25 16:17+0000\n"
+"PO-Revision-Date: 2022-07-18 12:50+0000\n"
 "Last-Translator: Kimmo Kujansuu <Unknown>\n"
 "Language-Team: Finnish <fi@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2022-06-26 11:30+0000\n"
-"X-Generator: Launchpad (build 51a2e4fa2e9b8e45f00904ad7f53546f45ac48a5)\n"
+"X-Launchpad-Export-Date: 2022-07-24 09:43+0000\n"
+"X-Generator: Launchpad (build 025a39fd866a641b6ae33074cda0d02a2c712d38)\n"
 
 #: usr/lib/bulky/bulky.py:42
 msgid "Cancel"
-msgstr "Peru"
+msgstr "Peruuta"
 
 #: usr/lib/bulky/bulky.py:43
 msgid "Add"
@@ -51,7 +51,7 @@ msgstr "Käytä listauksessa %n, %0n, %00n, %000n."
 
 #: usr/lib/bulky/bulky.py:339
 msgid "Rename Files"
-msgstr "Nimeä tiedostot"
+msgstr "Nimeää tiedostot uudelleen"
 
 #: usr/lib/bulky/bulky.py:390
 msgid "Add files"
@@ -69,7 +69,7 @@ msgstr "Ei voi nimetä uudelleen \"%s\": %s"
 
 #: usr/lib/bulky/bulky.py:499 generate_desktop_files:25
 msgid "File Renamer"
-msgstr "Tiedostonimen vaihtaja"
+msgstr "Bulky nimien vaihtaja"
 
 #: usr/lib/bulky/bulky.py:500 generate_desktop_files:25
 msgid "Rename files and directories"
@@ -123,7 +123,7 @@ msgstr "Vain tiedoston pääte"
 
 #: usr/share/bulky/bulky.ui.h:11
 msgid "Entire filename"
-msgstr "Tiedoston nimi"
+msgstr "Koko nimessä"
 
 #: usr/share/bulky/bulky.ui.h:12
 msgid "Find:"
@@ -147,7 +147,7 @@ msgstr "Paikasta:"
 
 #: usr/share/bulky/bulky.ui.h:17
 msgid "From the end"
-msgstr "Loppusta"
+msgstr "Lopusta"
 
 #: usr/share/bulky/bulky.ui.h:18
 msgid "Overwrite"
@@ -171,7 +171,7 @@ msgstr "Ensimmäinen merkki isolla kirjaimella"
 
 #: usr/share/bulky/bulky.ui.h:23
 msgid "Title case"
-msgstr "Otsikossa"
+msgstr "Nimessä"
 
 #: usr/share/bulky/bulky.ui.h:24
 msgid "Upper case"
