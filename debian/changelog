@@ -1,3 +1,10 @@
+bulky (2.4) vanessa; urgency=medium
+
+  * l10n: Update translations
+  * l10n: Update files
+
+ -- Clement Lefebvre <root@linuxmint.com>  Sun, 24 Jul 2022 11:54:24 +0200
+
 bulky (2.3) vanessa; urgency=medium
 
   * l10n: Update translations
