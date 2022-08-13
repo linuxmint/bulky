@@ -651,20 +651,17 @@ class MainWindow():
         text = self.inject(index, text)
         length = len(string) - 1
         from_index = self.insert_spin.get_value_as_int() - 1
-        if from_index >= length:
-            if self.insert_reverse_check.get_active():
-                return text+string
-            else:
-                return string+text
-        else:
-            if self.insert_reverse_check.get_active():
-                from_index = length - from_index + 1
+        a = len(string)
+        b = len(text)
+        if self.insert_reverse_check.get_active():
+            diff = max(0, a - from_index)
             if self.overwrite_check.get_active():
-                if len(text) >= length:
-                    return string[0:from_index] + text
-                else:
-                    catchup = from_index + len(text)
-                    return string[0:from_index] + text + string[catchup:]
+                return string[0:diff] + text + string[diff + b:]
+            else:
+                return string[0:diff] + text + string[diff:]
+        else:
+            if self.overwrite_check.get_active():
+                return string[0:from_index] + text + string[from_index + b:]
             else:
                 return string[0:from_index] + text + string[from_index:]
 
