@@ -584,8 +584,6 @@ class MainWindow():
                 else:
                     new_name = name + ('.' if ext else '') + ext
 
-                any_changes = (new_name != orig_name) or any_changes
-
                 self.model.set_value(iter, COL_NEW_NAME, new_name)
                 renamed_uri = file_obj.get_pending_uri(new_name)
                 if renamed_uri in self.renamed_uris:
@@ -601,10 +599,15 @@ class MainWindow():
                     self.error_label.set_text(_("'%s' is not writeable.") % file_obj.get_path_or_uri_for_display())
                     self.rename_button.set_sensitive(False)
                 self.renamed_uris.append(renamed_uri)
-                iter = self.model.iter_next(iter)
-                index += 1
+                any_changes = (new_name != orig_name) or any_changes
             except Exception as e:
                 print(e)
+                self.infobar.show()
+                self.error_label.set_text(_("'%s' %s.") % (file_obj.get_path_or_uri_for_display(), str(e)))
+                self.model.set_value(iter, COL_NEW_NAME, orig_name)
+                self.renamed_uris.append(file_obj.uri)
+            iter = self.model.iter_next(iter)
+            index += 1
         self.rename_button.set_sensitive(any_changes)
 
     def replace_text(self, index, string):
