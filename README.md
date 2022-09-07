@@ -1,4 +1,5 @@
-# Bulky
+# Bulky - Rename multiple files at once.
+![build](https://github.com/linuxmint/bulky/actions/workflows/build.yml/badge.svg)
 
 ![image](https://user-images.githubusercontent.com/1138515/119273676-dcc8c100-bc03-11eb-95dd-841a831285cc.png)
 
