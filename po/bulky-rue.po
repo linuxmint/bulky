@@ -1,16 +1,16 @@
-# Hebrew translation for linuxmint
-# Copyright (c) 2021 Rosetta Contributors and Canonical Ltd 2021
+# Rusyn translation for linuxmint
+# Copyright (c) 2022 Rosetta Contributors and Canonical Ltd 2022
 # This file is distributed under the same license as the linuxmint package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: linuxmint\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2021-11-22 16:34+0000\n"
-"PO-Revision-Date: 2022-03-11 13:47+0000\n"
-"Last-Translator: Omer I.S. <Unknown>\n"
-"Language-Team: Hebrew <he@li.org>\n"
+"PO-Revision-Date: 2022-11-10 15:04+0000\n"
+"Last-Translator: Vondrosh Tenkač <Unknown>\n"
+"Language-Team: Rusyn <rue@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -19,176 +19,176 @@ msgstr ""
 
 #: usr/lib/bulky/bulky.py:42
 msgid "Cancel"
-msgstr "ביטול"
+msgstr "Одмінити"
 
 #: usr/lib/bulky/bulky.py:43
 msgid "Add"
-msgstr "הוספה"
+msgstr "Придати"
 
 #: usr/lib/bulky/bulky.py:200 usr/share/bulky/bulky.ui.h:1
 msgid "Rename..."
-msgstr "שינוי שם..."
+msgstr "Переназвати..."
 
 #: usr/lib/bulky/bulky.py:225 usr/lib/bulky/bulky.py:337
 msgid "About"
-msgstr "על אודות"
+msgstr "За"
 
 #: usr/lib/bulky/bulky.py:230
 msgid "Quit"
-msgstr "יציאה"
+msgstr "Уйти"
 
 #: usr/lib/bulky/bulky.py:247
 msgid "Name"
-msgstr "שם"
+msgstr "Имня"
 
 #: usr/lib/bulky/bulky.py:258
 msgid "New name"
-msgstr "שם חדש"
+msgstr "Новоє имня"
 
 #: usr/lib/bulky/bulky.py:323
 msgid "Use %n, %0n, %00n, %000n to enumerate."
-msgstr "נא להשתמש ב־%n,‏ %0n,‏ %00n,‏ %000n למספור."
+msgstr "Хоснуйте %n, %0n, %00n, %000n про нумерацію."
 
 #: usr/lib/bulky/bulky.py:339
 msgid "Rename Files"
-msgstr "שינוי שמות קבצים"
+msgstr "Переназвіт файлы"
 
 #: usr/lib/bulky/bulky.py:390
 msgid "Add files"
-msgstr "הוספת קבצים"
+msgstr "Придати файлы"
 
 #: usr/lib/bulky/bulky.py:419
 #, python-format
 msgid "Unable to rename '%s': File name too long"
-msgstr "אין אפשרות לשנות את השם של \"%s\": שם הקובץ ארוך מדי"
+msgstr "Не уйшло переназвати '%s': дуже довгоє имня файла"
 
 #: usr/lib/bulky/bulky.py:422
 #, python-format
 msgid "Unable to rename '%s': %s"
-msgstr "אין אפשרות לשנות את השם של \"%s\": %s"
+msgstr "Не уйшло переназвати '%s': %s"
 
 #: usr/lib/bulky/bulky.py:499 generate_desktop_files:25
 msgid "File Renamer"
-msgstr "מְשנה שמות הקבצים"
+msgstr "Переназвач файлув"
 
 #: usr/lib/bulky/bulky.py:500 generate_desktop_files:25
 msgid "Rename files and directories"
-msgstr "שינוי שמות קבצים ותיקיות"
+msgstr "Переназвіт файлы а діректорії"
 
 #: usr/lib/bulky/bulky.py:593
 #, python-format
 msgid "Name collision on '%s'."
-msgstr "התנגשות שמות ב־'%s'."
+msgstr "Совпаданя имня '%s'."
 
 #: usr/lib/bulky/bulky.py:597 usr/lib/bulky/bulky.py:601
 #, python-format
 msgid "'%s' is not writeable."
-msgstr "'%s' לא ניתן לכתיבה."
+msgstr "'%s' не може быти записаный."
 
 #: usr/share/bulky/bulky.ui.h:2
 msgid "Add files..."
-msgstr "הוספת קבצים..."
+msgstr "Придати файлы"
 
 #: usr/share/bulky/bulky.ui.h:3
 msgid "Remove"
-msgstr "הסרה"
+msgstr "Удалити"
 
 #: usr/share/bulky/bulky.ui.h:4
 msgid "Remove selected files"
-msgstr "הסרת קבצים שנבחרו"
+msgstr "Удалити убрані файлы"
 
 #: usr/share/bulky/bulky.ui.h:5
 msgid "Clear"
-msgstr "ניקוי"
+msgstr "Стерти"
 
 #: usr/share/bulky/bulky.ui.h:6
 msgid "Replace"
-msgstr "החלפה"
+msgstr "Замінити"
 
 #: usr/share/bulky/bulky.ui.h:7
 msgid "Insert"
-msgstr "הכנסה"
+msgstr "Укласти"
 
 #: usr/share/bulky/bulky.ui.h:8
 msgid "Change case"
-msgstr "שינוי רישיות"
+msgstr "Перемінити реґістер"
 
 #: usr/share/bulky/bulky.ui.h:9
 msgid "Name only"
-msgstr "שם בלבד"
+msgstr "Лем имня"
 
 #: usr/share/bulky/bulky.ui.h:10
 msgid "Extension only"
-msgstr "סיומת בלבד"
+msgstr "Лем придаток"
 
 #: usr/share/bulky/bulky.ui.h:11
 msgid "Entire filename"
-msgstr "שם הקובץ בכללותו"
+msgstr "Повноє имня файла"
 
 #: usr/share/bulky/bulky.ui.h:12
 msgid "Find:"
-msgstr "חיפוש:"
+msgstr "Найти:"
 
 #: usr/share/bulky/bulky.ui.h:13
 msgid "Replace:"
-msgstr "החלפה:"
+msgstr "Замінити:"
 
 #: usr/share/bulky/bulky.ui.h:14
 msgid "Regular expression"
-msgstr "ביטוי סדיר"
+msgstr "Реґуларноє проявеня"
 
 #: usr/share/bulky/bulky.ui.h:15
 msgid "Case sensitive"
-msgstr "תלוי רישיות"
+msgstr "Уважувучи на реґістер"
 
 #: usr/share/bulky/bulky.ui.h:16
 msgid "At position:"
-msgstr "במיקום:"
+msgstr "У позіції:"
 
 #: usr/share/bulky/bulky.ui.h:17
 msgid "From the end"
-msgstr "מהסוף"
+msgstr "З конця"
 
 #: usr/share/bulky/bulky.ui.h:18
 msgid "Overwrite"
-msgstr "כתיבה עַל הכָּתוּב"
+msgstr "Перезаписати"
 
 #: usr/share/bulky/bulky.ui.h:19
 msgid "Text:"
-msgstr "מלל:"
+msgstr "Текст:"
 
 #: usr/share/bulky/bulky.ui.h:20
 msgid "Convert to:"
-msgstr "המרה ל:"
+msgstr "Перемінити на:"
 
 #: usr/share/bulky/bulky.ui.h:21
 msgid "Lower case"
-msgstr "אותיות קטנות"
+msgstr "Нижньый реґістер"
 
 #: usr/share/bulky/bulky.ui.h:22
 msgid "First character uppercase"
-msgstr "רישיות בכל מילה"
+msgstr "Первый сімбол у верхньому реґістерови"
 
 #: usr/share/bulky/bulky.ui.h:23
 msgid "Title case"
-msgstr "רישיות בכל מילה"
+msgstr "Великі буквы"
 
 #: usr/share/bulky/bulky.ui.h:24
 msgid "Upper case"
-msgstr "אותיות רישיות"
+msgstr "Верхньый реґістер"
 
 #: usr/share/bulky/bulky.ui.h:25
 msgid "Remove from position:"
-msgstr "הסרה ממיקום:"
+msgstr "Удалити из позіції:"
 
 #: usr/share/bulky/bulky.ui.h:26
 msgid "To position:"
-msgstr "למיקום:"
+msgstr "Од позіції:"
 
 #: usr/share/bulky/bulky.ui.h:27
 msgid "Close"
-msgstr "סגירה"
+msgstr "Закрыти"
 
 #: usr/share/bulky/bulky.ui.h:28
 msgid "Rename"
-msgstr "שינוי שם"
+msgstr "Переназвати"
