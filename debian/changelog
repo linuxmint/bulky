@@ -1,3 +1,10 @@
+bulky (2.7) vera; urgency=medium
+
+  * l10n: Update translations
+  * l10n: Update files
+
+ -- Clement Lefebvre <root@linuxmint.com>  Fri, 16 Dec 2022 12:56:33 +0000
+
 bulky (2.6) vanessa; urgency=medium
 
   [ Michael Webster ]
