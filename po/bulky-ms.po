@@ -1,16 +1,16 @@
-# Estonian translation for linuxmint
-# Copyright (c) 2021 Rosetta Contributors and Canonical Ltd 2021
+# Malay translation for linuxmint
+# Copyright (c) 2022 Rosetta Contributors and Canonical Ltd 2022
 # This file is distributed under the same license as the linuxmint package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: linuxmint\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2021-11-22 16:34+0000\n"
-"PO-Revision-Date: 2021-11-24 10:48+0000\n"
-"Last-Translator: vaba <Unknown>\n"
-"Language-Team: Estonian <et@li.org>\n"
+"PO-Revision-Date: 2022-12-07 11:51+0000\n"
+"Last-Translator: Adam Iskandar <Unknown>\n"
+"Language-Team: Malay <ms@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -19,176 +19,176 @@ msgstr ""
 
 #: usr/lib/bulky/bulky.py:42
 msgid "Cancel"
-msgstr "Tühista"
+msgstr "Batal"
 
 #: usr/lib/bulky/bulky.py:43
 msgid "Add"
-msgstr "Lisa"
+msgstr "Tambah"
 
 #: usr/lib/bulky/bulky.py:200 usr/share/bulky/bulky.ui.h:1
 msgid "Rename..."
-msgstr "Nimeta ümber..."
+msgstr "Namakan Semula..."
 
 #: usr/lib/bulky/bulky.py:225 usr/lib/bulky/bulky.py:337
 msgid "About"
-msgstr "Teave"
+msgstr "Perihal"
 
 #: usr/lib/bulky/bulky.py:230
 msgid "Quit"
-msgstr "Välju"
+msgstr "Keluar"
 
 #: usr/lib/bulky/bulky.py:247
 msgid "Name"
-msgstr "Nimi"
+msgstr "Nama"
 
 #: usr/lib/bulky/bulky.py:258
 msgid "New name"
-msgstr "Uus nimi"
+msgstr "Nama baru"
 
 #: usr/lib/bulky/bulky.py:323
 msgid "Use %n, %0n, %00n, %000n to enumerate."
-msgstr "Loendamiseks kasutage %n, %0n, %00n, %000n."
+msgstr "Gunakan %n, %0n, %00n, %000n untuk menghitung"
 
 #: usr/lib/bulky/bulky.py:339
 msgid "Rename Files"
-msgstr "Nimeta failid ümber"
+msgstr "Namakan semula fail-fail"
 
 #: usr/lib/bulky/bulky.py:390
 msgid "Add files"
-msgstr "Lisa failid"
+msgstr "Tambah fail-fail"
 
 #: usr/lib/bulky/bulky.py:419
 #, python-format
 msgid "Unable to rename '%s': File name too long"
-msgstr "Faili '%s' ei saa ümber nimetada: failinimi on liiga pikk"
+msgstr "Gagal untuk menamakan semula '%s': Nama fail terlalu panjang"
 
 #: usr/lib/bulky/bulky.py:422
 #, python-format
 msgid "Unable to rename '%s': %s"
-msgstr "Ei saa ümber nimetada '%s': %s"
+msgstr "Gagal untuk menamakan semula '%s': %s"
 
 #: usr/lib/bulky/bulky.py:499 generate_desktop_files:25
 msgid "File Renamer"
-msgstr "Failide ümbernimetamine"
+msgstr "Penama Semula Fail"
 
 #: usr/lib/bulky/bulky.py:500 generate_desktop_files:25
 msgid "Rename files and directories"
-msgstr "Nimeta failid ja kataloogid ümber"
+msgstr "Namakan semula fail dan direktori"
 
 #: usr/lib/bulky/bulky.py:593
 #, python-format
 msgid "Name collision on '%s'."
-msgstr "Nime konflikt '%s'."
+msgstr "Perlanggaran nama pada '%s'"
 
 #: usr/lib/bulky/bulky.py:597 usr/lib/bulky/bulky.py:601
 #, python-format
 msgid "'%s' is not writeable."
-msgstr "'%s' ei ole kirjutatav."
+msgstr "'%s' tidak boleh ditulis"
 
 #: usr/share/bulky/bulky.ui.h:2
 msgid "Add files..."
-msgstr "Lisa faile..."
+msgstr "Tambah fail..."
 
 #: usr/share/bulky/bulky.ui.h:3
 msgid "Remove"
-msgstr "Eemalda"
+msgstr "Buang"
 
 #: usr/share/bulky/bulky.ui.h:4
 msgid "Remove selected files"
-msgstr "Eemaldage valitud failid"
+msgstr "Buang fail yang dipilih"
 
 #: usr/share/bulky/bulky.ui.h:5
 msgid "Clear"
-msgstr "Puhasta"
+msgstr "Kosongkan"
 
 #: usr/share/bulky/bulky.ui.h:6
 msgid "Replace"
-msgstr "Asenda"
+msgstr "Ganti"
 
 #: usr/share/bulky/bulky.ui.h:7
 msgid "Insert"
-msgstr "Sisesta"
+msgstr "Sisip"
 
 #: usr/share/bulky/bulky.ui.h:8
 msgid "Change case"
-msgstr "Muuda tähte"
+msgstr "Ubah kata"
 
 #: usr/share/bulky/bulky.ui.h:9
 msgid "Name only"
-msgstr "Ainult nimi"
+msgstr "Nama sahaja"
 
 #: usr/share/bulky/bulky.ui.h:10
 msgid "Extension only"
-msgstr "Ainult laiendusega"
+msgstr "Ekstensi sahaja"
 
 #: usr/share/bulky/bulky.ui.h:11
 msgid "Entire filename"
-msgstr "Kogu failinimi"
+msgstr "Seluruh nama fail"
 
 #: usr/share/bulky/bulky.ui.h:12
 msgid "Find:"
-msgstr "Otsi:"
+msgstr "Cari:"
 
 #: usr/share/bulky/bulky.ui.h:13
 msgid "Replace:"
-msgstr "Asendamine:"
+msgstr "Ganti:"
 
 #: usr/share/bulky/bulky.ui.h:14
 msgid "Regular expression"
-msgstr "Regulaarne väljend"
+msgstr "Ungkapan biasa"
 
 #: usr/share/bulky/bulky.ui.h:15
 msgid "Case sensitive"
-msgstr "Tõstutundlik"
+msgstr "Sensitif huruf"
 
 #: usr/share/bulky/bulky.ui.h:16
 msgid "At position:"
-msgstr "Asendis:"
+msgstr "Pada kedudukan:"
 
 #: usr/share/bulky/bulky.ui.h:17
 msgid "From the end"
-msgstr "Alates lõpust"
+msgstr "Dari penghujung"
 
 #: usr/share/bulky/bulky.ui.h:18
 msgid "Overwrite"
-msgstr "Ülekirjutamine"
+msgstr "Tulis Ganti"
 
 #: usr/share/bulky/bulky.ui.h:19
 msgid "Text:"
-msgstr "Tekst:"
+msgstr "Teks:"
 
 #: usr/share/bulky/bulky.ui.h:20
 msgid "Convert to:"
-msgstr "Teisenda:"
+msgstr "Tukar kepada:"
 
 #: usr/share/bulky/bulky.ui.h:21
 msgid "Lower case"
-msgstr "Väiketähed"
+msgstr "Huruf kecil"
 
 #: usr/share/bulky/bulky.ui.h:22
 msgid "First character uppercase"
-msgstr "Esimene märk suurtähtedega"
+msgstr "Huruf besar pada aksara pertama"
 
 #: usr/share/bulky/bulky.ui.h:23
 msgid "Title case"
-msgstr "Pealkiri"
+msgstr "Huruf tajuk"
 
 #: usr/share/bulky/bulky.ui.h:24
 msgid "Upper case"
-msgstr "Suurtähed"
+msgstr "Huruf besar"
 
 #: usr/share/bulky/bulky.ui.h:25
 msgid "Remove from position:"
-msgstr "Asendist eemaldamine:"
+msgstr "Buang dari kedudukan:"
 
 #: usr/share/bulky/bulky.ui.h:26
 msgid "To position:"
-msgstr "Asendisse:"
+msgstr "Ke kedudukan:"
 
 #: usr/share/bulky/bulky.ui.h:27
 msgid "Close"
-msgstr "Sulge"
+msgstr "Tutup"
 
 #: usr/share/bulky/bulky.ui.h:28
 msgid "Rename"
-msgstr "Nimeta ümber"
+msgstr "Namakan semula"
