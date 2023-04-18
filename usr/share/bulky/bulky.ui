@@ -341,6 +341,7 @@
                                 <property name="visible">True</property>
                                 <property name="can-focus">True</property>
                                 <property name="hexpand">True</property>
+                                <property name="placeholder-text" translatable="yes">Use %n, %0n, %00n, %000n to enumerate.</property>
                               </object>
                               <packing>
                                 <property name="left-attach">1</property>
@@ -411,6 +412,7 @@
                                 <property name="visible">True</property>
                                 <property name="can-focus">True</property>
                                 <property name="hexpand">True</property>
+                                <property name="placeholder-text" translatable="yes">Use %n, %0n, %00n, %000n to enumerate.</property>
                               </object>
                               <packing>
                                 <property name="left-attach">1</property>
