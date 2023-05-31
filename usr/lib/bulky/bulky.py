@@ -603,7 +603,7 @@ class MainWindow():
             except Exception as e:
                 print(e)
                 self.infobar.show()
-                self.error_label.set_text(_("'%s' %s.") % (file_obj.get_path_or_uri_for_display(), str(e)))
+                self.error_label.set_text("'%s' %s." % (file_obj.get_path_or_uri_for_display(), str(e)))
                 self.model.set_value(iter, COL_NEW_NAME, orig_name)
                 self.renamed_uris.append(file_obj.uri)
             iter = self.model.iter_next(iter)

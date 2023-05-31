@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-11-22 16:34+0000\n"
+"POT-Creation-Date: 2023-05-31 14:00+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -25,7 +25,7 @@ msgstr ""
 msgid "Add"
 msgstr ""
 
-#: usr/lib/bulky/bulky.py:200 usr/share/bulky/bulky.ui.h:1
+#: usr/lib/bulky/bulky.py:200 usr/share/bulky/bulky.ui.h:30
 msgid "Rename..."
 msgstr ""
 
@@ -45,7 +45,7 @@ msgstr ""
 msgid "New name"
 msgstr ""
 
-#: usr/lib/bulky/bulky.py:323
+#: usr/lib/bulky/bulky.py:323 usr/share/bulky/bulky.ui.h:14
 msgid "Use %n, %0n, %00n, %000n to enumerate."
 msgstr ""
 
@@ -75,120 +75,120 @@ msgstr ""
 msgid "Rename files and directories"
 msgstr ""
 
-#: usr/lib/bulky/bulky.py:593
+#: usr/lib/bulky/bulky.py:591
 #, python-format
 msgid "Name collision on '%s'."
 msgstr ""
 
-#: usr/lib/bulky/bulky.py:597 usr/lib/bulky/bulky.py:601
+#: usr/lib/bulky/bulky.py:595 usr/lib/bulky/bulky.py:599
 #, python-format
 msgid "'%s' is not writeable."
 msgstr ""
 
-#: usr/share/bulky/bulky.ui.h:2
+#: usr/share/bulky/bulky.ui.h:1
 msgid "Add files..."
 msgstr ""
 
-#: usr/share/bulky/bulky.ui.h:3
+#: usr/share/bulky/bulky.ui.h:2
 msgid "Remove"
 msgstr ""
 
-#: usr/share/bulky/bulky.ui.h:4
+#: usr/share/bulky/bulky.ui.h:3
 msgid "Remove selected files"
 msgstr ""
 
-#: usr/share/bulky/bulky.ui.h:5
+#: usr/share/bulky/bulky.ui.h:4
 msgid "Clear"
 msgstr ""
 
-#: usr/share/bulky/bulky.ui.h:6
+#: usr/share/bulky/bulky.ui.h:5
 msgid "Replace"
 msgstr ""
 
-#: usr/share/bulky/bulky.ui.h:7
+#: usr/share/bulky/bulky.ui.h:6
 msgid "Insert"
 msgstr ""
 
-#: usr/share/bulky/bulky.ui.h:8
+#: usr/share/bulky/bulky.ui.h:7
 msgid "Change case"
 msgstr ""
 
-#: usr/share/bulky/bulky.ui.h:9
+#: usr/share/bulky/bulky.ui.h:8
 msgid "Name only"
 msgstr ""
 
-#: usr/share/bulky/bulky.ui.h:10
+#: usr/share/bulky/bulky.ui.h:9
 msgid "Extension only"
 msgstr ""
 
-#: usr/share/bulky/bulky.ui.h:11
+#: usr/share/bulky/bulky.ui.h:10
 msgid "Entire filename"
 msgstr ""
 
-#: usr/share/bulky/bulky.ui.h:12
+#: usr/share/bulky/bulky.ui.h:11
 msgid "Find:"
 msgstr ""
 
-#: usr/share/bulky/bulky.ui.h:13
+#: usr/share/bulky/bulky.ui.h:12
 msgid "Replace:"
 msgstr ""
 
-#: usr/share/bulky/bulky.ui.h:14
+#: usr/share/bulky/bulky.ui.h:15
 msgid "Regular expression"
 msgstr ""
 
-#: usr/share/bulky/bulky.ui.h:15
+#: usr/share/bulky/bulky.ui.h:16
 msgid "Case sensitive"
 msgstr ""
 
-#: usr/share/bulky/bulky.ui.h:16
+#: usr/share/bulky/bulky.ui.h:17
 msgid "At position:"
 msgstr ""
 
-#: usr/share/bulky/bulky.ui.h:17
+#: usr/share/bulky/bulky.ui.h:18
 msgid "From the end"
 msgstr ""
 
-#: usr/share/bulky/bulky.ui.h:18
+#: usr/share/bulky/bulky.ui.h:19
 msgid "Overwrite"
 msgstr ""
 
-#: usr/share/bulky/bulky.ui.h:19
+#: usr/share/bulky/bulky.ui.h:20
 msgid "Text:"
 msgstr ""
 
-#: usr/share/bulky/bulky.ui.h:20
+#: usr/share/bulky/bulky.ui.h:21
 msgid "Convert to:"
 msgstr ""
 
-#: usr/share/bulky/bulky.ui.h:21
+#: usr/share/bulky/bulky.ui.h:22
 msgid "Lower case"
 msgstr ""
 
-#: usr/share/bulky/bulky.ui.h:22
+#: usr/share/bulky/bulky.ui.h:23
 msgid "First character uppercase"
 msgstr ""
 
-#: usr/share/bulky/bulky.ui.h:23
+#: usr/share/bulky/bulky.ui.h:24
 msgid "Title case"
 msgstr ""
 
-#: usr/share/bulky/bulky.ui.h:24
+#: usr/share/bulky/bulky.ui.h:25
 msgid "Upper case"
 msgstr ""
 
-#: usr/share/bulky/bulky.ui.h:25
+#: usr/share/bulky/bulky.ui.h:26
 msgid "Remove from position:"
 msgstr ""
 
-#: usr/share/bulky/bulky.ui.h:26
+#: usr/share/bulky/bulky.ui.h:27
 msgid "To position:"
 msgstr ""
 
-#: usr/share/bulky/bulky.ui.h:27
+#: usr/share/bulky/bulky.ui.h:28
 msgid "Close"
 msgstr ""
 
-#: usr/share/bulky/bulky.ui.h:28
+#: usr/share/bulky/bulky.ui.h:29
 msgid "Rename"
 msgstr ""
