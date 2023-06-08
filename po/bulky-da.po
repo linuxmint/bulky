@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: linuxmint\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2021-11-22 16:34+0000\n"
-"PO-Revision-Date: 2021-11-22 18:23+0000\n"
+"PO-Revision-Date: 2023-02-21 20:09+0000\n"
 "Last-Translator: Alan Mortensen <alanmortensen.am@gmail.com>\n"
 "Language-Team: Danish <da@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2022-12-16 12:08+0000\n"
-"X-Generator: Launchpad (build 31c78762a8046acf7ab47372e5d588ebb3759d2e)\n"
+"X-Launchpad-Export-Date: 2023-06-08 10:22+0000\n"
+"X-Generator: Launchpad (build 620cd5280e3a973662e263ebf9346837ed657a46)\n"
 
 #: usr/lib/bulky/bulky.py:42
 msgid "Cancel"
@@ -60,12 +60,12 @@ msgstr "Tilføj filer"
 #: usr/lib/bulky/bulky.py:419
 #, python-format
 msgid "Unable to rename '%s': File name too long"
-msgstr "Kunne ikke omdøbe \"%s\": Filnavnet er for langt"
+msgstr "Kunne ikke omdøbe “%s”: Filnavnet er for langt"
 
 #: usr/lib/bulky/bulky.py:422
 #, python-format
 msgid "Unable to rename '%s': %s"
-msgstr "Kunne ikke omdøbe \"%s\": %s"
+msgstr "Kunne ikke omdøbe “%s”: %s"
 
 #: usr/lib/bulky/bulky.py:499 generate_desktop_files:25
 msgid "File Renamer"
@@ -78,12 +78,12 @@ msgstr "Omdøb filer og mapper"
 #: usr/lib/bulky/bulky.py:593
 #, python-format
 msgid "Name collision on '%s'."
-msgstr "Navnesammenstød på \"%s\"."
+msgstr "Navnesammenstød på “%s”."
 
 #: usr/lib/bulky/bulky.py:597 usr/lib/bulky/bulky.py:601
 #, python-format
 msgid "'%s' is not writeable."
-msgstr "Der kan ikke skrives til \"%s\"."
+msgstr "Der kan ikke skrives til “%s”."
 
 #: usr/share/bulky/bulky.ui.h:2
 msgid "Add files..."

@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: linuxmint\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2021-11-22 16:34+0000\n"
-"PO-Revision-Date: 2021-12-01 08:49+0000\n"
+"PO-Revision-Date: 2022-12-25 23:37+0000\n"
 "Last-Translator: Bahram Bakhtiyar Abasov <Unknown>\n"
 "Language-Team: Azerbaijani <az@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2022-12-16 12:08+0000\n"
-"X-Generator: Launchpad (build 31c78762a8046acf7ab47372e5d588ebb3759d2e)\n"
+"X-Launchpad-Export-Date: 2023-06-08 10:22+0000\n"
+"X-Generator: Launchpad (build 620cd5280e3a973662e263ebf9346837ed657a46)\n"
 
 #: usr/lib/bulky/bulky.py:42
 msgid "Cancel"
@@ -47,7 +47,7 @@ msgstr "Yeni ad"
 
 #: usr/lib/bulky/bulky.py:323
 msgid "Use %n, %0n, %00n, %000n to enumerate."
-msgstr ""
+msgstr "Sadalamaq üçün %n, %0n, %00n, %000n istifadə et."
 
 #: usr/lib/bulky/bulky.py:339
 msgid "Rename Files"
@@ -60,30 +60,30 @@ msgstr "Faylları əlavə et"
 #: usr/lib/bulky/bulky.py:419
 #, python-format
 msgid "Unable to rename '%s': File name too long"
-msgstr ""
+msgstr "'%s' yenidən adlandırılaması mümkün olmadı : Fayl adı çox uzundur"
 
 #: usr/lib/bulky/bulky.py:422
 #, python-format
 msgid "Unable to rename '%s': %s"
-msgstr ""
+msgstr "'%s' yenidən adlandırılaması mümkün olmadı : %s"
 
 #: usr/lib/bulky/bulky.py:499 generate_desktop_files:25
 msgid "File Renamer"
-msgstr ""
+msgstr "Fayl Yenidən Adlandırıcı"
 
 #: usr/lib/bulky/bulky.py:500 generate_desktop_files:25
 msgid "Rename files and directories"
-msgstr ""
+msgstr "Fayl və qovluqları yenidən adlandır"
 
 #: usr/lib/bulky/bulky.py:593
 #, python-format
 msgid "Name collision on '%s'."
-msgstr ""
+msgstr "'%s' üzərində ad ziddiyyəti."
 
 #: usr/lib/bulky/bulky.py:597 usr/lib/bulky/bulky.py:601
 #, python-format
 msgid "'%s' is not writeable."
-msgstr ""
+msgstr "'%s' yazıla bilən deyil."
 
 #: usr/share/bulky/bulky.ui.h:2
 msgid "Add files..."
@@ -91,104 +91,104 @@ msgstr "Faylları əlavə et..."
 
 #: usr/share/bulky/bulky.ui.h:3
 msgid "Remove"
-msgstr ""
+msgstr "Sil"
 
 #: usr/share/bulky/bulky.ui.h:4
 msgid "Remove selected files"
-msgstr ""
+msgstr "Seçilmiş faylları sil"
 
 #: usr/share/bulky/bulky.ui.h:5
 msgid "Clear"
-msgstr ""
+msgstr "Təmizlə"
 
 #: usr/share/bulky/bulky.ui.h:6
 msgid "Replace"
-msgstr ""
+msgstr "Əvəz et"
 
 #: usr/share/bulky/bulky.ui.h:7
 msgid "Insert"
-msgstr ""
+msgstr "Daxil et"
 
 #: usr/share/bulky/bulky.ui.h:8
 msgid "Change case"
-msgstr ""
+msgstr "Böyük/kiçik hərf vəziyyətini dəyiş"
 
 #: usr/share/bulky/bulky.ui.h:9
 msgid "Name only"
-msgstr ""
+msgstr "Yalnız ad"
 
 #: usr/share/bulky/bulky.ui.h:10
 msgid "Extension only"
-msgstr ""
+msgstr "Yalnız artırma"
 
 #: usr/share/bulky/bulky.ui.h:11
 msgid "Entire filename"
-msgstr ""
+msgstr "Tam Fayl adı"
 
 #: usr/share/bulky/bulky.ui.h:12
 msgid "Find:"
-msgstr ""
+msgstr "Axtar:"
 
 #: usr/share/bulky/bulky.ui.h:13
 msgid "Replace:"
-msgstr ""
+msgstr "Əvəz et:"
 
 #: usr/share/bulky/bulky.ui.h:14
 msgid "Regular expression"
-msgstr ""
+msgstr "Müntəzəm ifadə"
 
 #: usr/share/bulky/bulky.ui.h:15
 msgid "Case sensitive"
-msgstr ""
+msgstr "Böyük/kiçik hərfə həssas"
 
 #: usr/share/bulky/bulky.ui.h:16
 msgid "At position:"
-msgstr ""
+msgstr "Mövqedə:"
 
 #: usr/share/bulky/bulky.ui.h:17
 msgid "From the end"
-msgstr ""
+msgstr "Sondan"
 
 #: usr/share/bulky/bulky.ui.h:18
 msgid "Overwrite"
-msgstr ""
+msgstr "Üzərinə yaz"
 
 #: usr/share/bulky/bulky.ui.h:19
 msgid "Text:"
-msgstr ""
+msgstr "Mətn:"
 
 #: usr/share/bulky/bulky.ui.h:20
 msgid "Convert to:"
-msgstr ""
+msgstr "Çevir:"
 
 #: usr/share/bulky/bulky.ui.h:21
 msgid "Lower case"
-msgstr ""
+msgstr "Kiçik hərf"
 
 #: usr/share/bulky/bulky.ui.h:22
 msgid "First character uppercase"
-msgstr ""
+msgstr "Birinci simvol böyük hərf"
 
 #: usr/share/bulky/bulky.ui.h:23
 msgid "Title case"
-msgstr ""
+msgstr "Başlıq formatında"
 
 #: usr/share/bulky/bulky.ui.h:24
 msgid "Upper case"
-msgstr ""
+msgstr "Böyük hərf"
 
 #: usr/share/bulky/bulky.ui.h:25
 msgid "Remove from position:"
-msgstr ""
+msgstr "Mövqedən sil:"
 
 #: usr/share/bulky/bulky.ui.h:26
 msgid "To position:"
-msgstr ""
+msgstr "Mövqeyə:"
 
 #: usr/share/bulky/bulky.ui.h:27
 msgid "Close"
-msgstr ""
+msgstr "Bağla"
 
 #: usr/share/bulky/bulky.ui.h:28
 msgid "Rename"
-msgstr ""
+msgstr "Yenidən adlandır"

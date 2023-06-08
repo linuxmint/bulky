@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: linuxmint\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2021-11-22 16:34+0000\n"
-"PO-Revision-Date: 2021-11-29 09:21+0000\n"
-"Last-Translator: Vasilis Kosmidis <Unknown>\n"
+"PO-Revision-Date: 2023-05-08 13:32+0000\n"
+"Last-Translator: Aster Bandis <Unknown>\n"
 "Language-Team: Greek <el@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2022-12-16 12:08+0000\n"
-"X-Generator: Launchpad (build 31c78762a8046acf7ab47372e5d588ebb3759d2e)\n"
+"X-Launchpad-Export-Date: 2023-06-08 10:22+0000\n"
+"X-Generator: Launchpad (build 620cd5280e3a973662e263ebf9346837ed657a46)\n"
 
 #: usr/lib/bulky/bulky.py:42
 msgid "Cancel"
@@ -31,7 +31,7 @@ msgstr "Μετονομασία..."
 
 #: usr/lib/bulky/bulky.py:225 usr/lib/bulky/bulky.py:337
 msgid "About"
-msgstr "Σχετικά"
+msgstr "Περί"
 
 #: usr/lib/bulky/bulky.py:230
 msgid "Quit"
@@ -69,7 +69,7 @@ msgstr "Αδυναμία μετονομασίας '%s': %s"
 
 #: usr/lib/bulky/bulky.py:499 generate_desktop_files:25
 msgid "File Renamer"
-msgstr "Μετονομασία αρχείων"
+msgstr "Μετονομαστής Αρχείων"
 
 #: usr/lib/bulky/bulky.py:500 generate_desktop_files:25
 msgid "Rename files and directories"
@@ -91,7 +91,7 @@ msgstr "Προσθήκη αρχείων..."
 
 #: usr/share/bulky/bulky.ui.h:3
 msgid "Remove"
-msgstr "Αφαίρεση"
+msgstr "Κατάργηση"
 
 #: usr/share/bulky/bulky.ui.h:4
 msgid "Remove selected files"
@@ -135,7 +135,7 @@ msgstr "Αντικατάσταση:"
 
 #: usr/share/bulky/bulky.ui.h:14
 msgid "Regular expression"
-msgstr "Κοινή έκφραση"
+msgstr "Κανονική έκφραση"
 
 #: usr/share/bulky/bulky.ui.h:15
 msgid "Case sensitive"

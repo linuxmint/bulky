@@ -1,16 +1,16 @@
-# Amharic translation for linuxmint
-# Copyright (c) 2021 Rosetta Contributors and Canonical Ltd 2021
+# Persian translation for linuxmint
+# Copyright (c) 2023 Rosetta Contributors and Canonical Ltd 2023
 # This file is distributed under the same license as the linuxmint package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: linuxmint\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2021-11-22 16:34+0000\n"
-"PO-Revision-Date: 2021-07-29 16:30+0000\n"
-"Last-Translator: samson <Unknown>\n"
-"Language-Team: Amharic <am@li.org>\n"
+"PO-Revision-Date: 2023-03-23 16:35+0000\n"
+"Last-Translator: Mr.Ravi <Unknown>\n"
+"Language-Team: Persian <fa@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -19,176 +19,176 @@ msgstr ""
 
 #: usr/lib/bulky/bulky.py:42
 msgid "Cancel"
-msgstr "መሰረዣ"
+msgstr "لغو"
 
 #: usr/lib/bulky/bulky.py:43
 msgid "Add"
-msgstr "መጨመሪያ"
+msgstr "افزودن"
 
 #: usr/lib/bulky/bulky.py:200 usr/share/bulky/bulky.ui.h:1
 msgid "Rename..."
-msgstr "እንደገና መሰየሚያ..."
+msgstr "تغییر نام..."
 
 #: usr/lib/bulky/bulky.py:225 usr/lib/bulky/bulky.py:337
 msgid "About"
-msgstr "ስለ"
+msgstr "درباره"
 
 #: usr/lib/bulky/bulky.py:230
 msgid "Quit"
-msgstr "ማጥፊያ"
+msgstr "خروج"
 
 #: usr/lib/bulky/bulky.py:247
 msgid "Name"
-msgstr "ስም"
+msgstr "نام"
 
 #: usr/lib/bulky/bulky.py:258
 msgid "New name"
-msgstr "አዲስ ስም"
+msgstr "نام جدید"
 
 #: usr/lib/bulky/bulky.py:323
 msgid "Use %n, %0n, %00n, %000n to enumerate."
-msgstr "ይጠቀሙ %n, %0n, %00n, %000n ለ መቁጠሪያ"
+msgstr "از %n ، %0n ، %00n ، %000n  برای شمارش استفاده شود."
 
 #: usr/lib/bulky/bulky.py:339
 msgid "Rename Files"
-msgstr "ፋይሎች እንደገና መሰየሚያ"
+msgstr "تغییر نام فایل ها"
 
 #: usr/lib/bulky/bulky.py:390
 msgid "Add files"
-msgstr "ፋይሎች መጨመሪያ"
+msgstr "اضافه کردن فایل ها"
 
 #: usr/lib/bulky/bulky.py:419
 #, python-format
 msgid "Unable to rename '%s': File name too long"
-msgstr ""
+msgstr "ناتوان در تغییرنام «%s»: نام فابل خیلی طولانی است"
 
 #: usr/lib/bulky/bulky.py:422
 #, python-format
 msgid "Unable to rename '%s': %s"
-msgstr ""
+msgstr "ناتوان در تغییرنام «%s»: %s"
 
 #: usr/lib/bulky/bulky.py:499 generate_desktop_files:25
 msgid "File Renamer"
-msgstr "ፋይል እንደገና መሰየሚያ"
+msgstr "تغییردهنده نام فایل"
 
 #: usr/lib/bulky/bulky.py:500 generate_desktop_files:25
 msgid "Rename files and directories"
-msgstr "ፋይሎች እና ዳይሬክቶሪ እንደገና መሰየሚያ"
+msgstr "تغییر نام فایل ها و مسیر ها"
 
 #: usr/lib/bulky/bulky.py:593
 #, python-format
 msgid "Name collision on '%s'."
-msgstr "የ ስም መጋጨት በ '%s'."
+msgstr "تداخل اسمی در «%s»."
 
 #: usr/lib/bulky/bulky.py:597 usr/lib/bulky/bulky.py:601
 #, python-format
 msgid "'%s' is not writeable."
-msgstr "'%s' መጻፍ አይቻልም"
+msgstr "«%s» قابل نوشتن نیست."
 
 #: usr/share/bulky/bulky.ui.h:2
 msgid "Add files..."
-msgstr "ፋይሎች መጨመሪያ..."
+msgstr "افزودن فایل ها..."
 
 #: usr/share/bulky/bulky.ui.h:3
 msgid "Remove"
-msgstr "ማስወገጃ"
+msgstr "حذف"
 
 #: usr/share/bulky/bulky.ui.h:4
 msgid "Remove selected files"
-msgstr "የ ተመረጡትን ፋይሎች ማስወገጃ"
+msgstr "حذف فایل های انتخابی"
 
 #: usr/share/bulky/bulky.ui.h:5
 msgid "Clear"
-msgstr "ማስወገጃ"
+msgstr "پاک‌سازی"
 
 #: usr/share/bulky/bulky.ui.h:6
 msgid "Replace"
-msgstr "መቀየሪያ"
+msgstr "جای‌گزینی"
 
 #: usr/share/bulky/bulky.ui.h:7
 msgid "Insert"
-msgstr "ማስገቢያ"
+msgstr "وارد کردن"
 
 #: usr/share/bulky/bulky.ui.h:8
 msgid "Change case"
-msgstr ""
+msgstr "تغییر مورد"
 
 #: usr/share/bulky/bulky.ui.h:9
 msgid "Name only"
-msgstr "ስም ብቻ"
+msgstr "فقط نام"
 
 #: usr/share/bulky/bulky.ui.h:10
 msgid "Extension only"
-msgstr "ተጨማሪ ብቻ"
+msgstr "فقط افزونه"
 
 #: usr/share/bulky/bulky.ui.h:11
 msgid "Entire filename"
-msgstr ""
+msgstr "نام کامل فایل"
 
 #: usr/share/bulky/bulky.ui.h:12
 msgid "Find:"
-msgstr "መፈለጊያ:"
+msgstr "پیدا کردن:"
 
 #: usr/share/bulky/bulky.ui.h:13
 msgid "Replace:"
-msgstr "መቀየሪያ:"
+msgstr "جایگزینی:"
 
 #: usr/share/bulky/bulky.ui.h:14
 msgid "Regular expression"
-msgstr "መደበኛ አገላለጽ"
+msgstr "عبارت منظم"
 
 #: usr/share/bulky/bulky.ui.h:15
 msgid "Case sensitive"
-msgstr ""
+msgstr "حساس به بزرگی و کوچکی حروف"
 
 #: usr/share/bulky/bulky.ui.h:16
 msgid "At position:"
-msgstr "በዚህ ቦታ:"
+msgstr "در موقعیت:"
 
 #: usr/share/bulky/bulky.ui.h:17
 msgid "From the end"
-msgstr "ከ መጨረሻው በኩል"
+msgstr "از انتها"
 
 #: usr/share/bulky/bulky.ui.h:18
 msgid "Overwrite"
-msgstr "በ ላዩ ላይ መጻፊያ"
+msgstr "بازنویسی"
 
 #: usr/share/bulky/bulky.ui.h:19
 msgid "Text:"
-msgstr "ጽሁፍ:"
+msgstr "متن:"
 
 #: usr/share/bulky/bulky.ui.h:20
 msgid "Convert to:"
-msgstr "መቀየሪያ ወደ:"
+msgstr "تبدیل کردن به:"
 
 #: usr/share/bulky/bulky.ui.h:21
 msgid "Lower case"
-msgstr ""
+msgstr "حروف کوچک"
 
 #: usr/share/bulky/bulky.ui.h:22
 msgid "First character uppercase"
-msgstr "የ መጀመሪያው ባህሪ በ አቢይ ፊደል"
+msgstr "اولین حرف بزرگ"
 
 #: usr/share/bulky/bulky.ui.h:23
 msgid "Title case"
-msgstr ""
+msgstr "مورد عنوان"
 
 #: usr/share/bulky/bulky.ui.h:24
 msgid "Upper case"
-msgstr ""
+msgstr "حروف بزرگ"
 
 #: usr/share/bulky/bulky.ui.h:25
 msgid "Remove from position:"
-msgstr "ከ ቦታው ማስወገጃ:"
+msgstr "حذف از موقعیت:"
 
 #: usr/share/bulky/bulky.ui.h:26
 msgid "To position:"
-msgstr "ወደ ቦታ:"
+msgstr "به موقعیت:"
 
 #: usr/share/bulky/bulky.ui.h:27
 msgid "Close"
-msgstr "መዝጊያ"
+msgstr "بستن"
 
 #: usr/share/bulky/bulky.ui.h:28
 msgid "Rename"
-msgstr "እንደገና መሰየሚያ"
+msgstr "تغییر نام"

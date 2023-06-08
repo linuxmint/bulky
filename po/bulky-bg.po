@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: linuxmint\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2021-11-22 16:34+0000\n"
-"PO-Revision-Date: 2022-09-20 21:38+0000\n"
-"Last-Translator: Nikolay Trifonov <trifonov88@gmail.com>\n"
+"PO-Revision-Date: 2022-12-28 20:49+0000\n"
+"Last-Translator: Vasil Kashilski <Unknown>\n"
 "Language-Team: Bulgarian <bg@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2022-12-16 12:08+0000\n"
-"X-Generator: Launchpad (build 31c78762a8046acf7ab47372e5d588ebb3759d2e)\n"
+"X-Launchpad-Export-Date: 2023-06-08 10:22+0000\n"
+"X-Generator: Launchpad (build 620cd5280e3a973662e263ebf9346837ed657a46)\n"
 
 #: usr/lib/bulky/bulky.py:42
 msgid "Cancel"
@@ -69,7 +69,7 @@ msgstr "Не може да се преименува '%s': %s"
 
 #: usr/lib/bulky/bulky.py:499 generate_desktop_files:25
 msgid "File Renamer"
-msgstr ""
+msgstr "Преименуване на файлове"
 
 #: usr/lib/bulky/bulky.py:500 generate_desktop_files:25
 msgid "Rename files and directories"
@@ -95,7 +95,7 @@ msgstr "Премахване"
 
 #: usr/share/bulky/bulky.ui.h:4
 msgid "Remove selected files"
-msgstr ""
+msgstr "Изтрий избраните файлове"
 
 #: usr/share/bulky/bulky.ui.h:5
 msgid "Clear"
@@ -103,11 +103,11 @@ msgstr "Изчистване"
 
 #: usr/share/bulky/bulky.ui.h:6
 msgid "Replace"
-msgstr ""
+msgstr "Замяна"
 
 #: usr/share/bulky/bulky.ui.h:7
 msgid "Insert"
-msgstr ""
+msgstr "Вмъкване"
 
 #: usr/share/bulky/bulky.ui.h:8
 msgid "Change case"
@@ -115,59 +115,59 @@ msgstr ""
 
 #: usr/share/bulky/bulky.ui.h:9
 msgid "Name only"
-msgstr ""
+msgstr "Само по име"
 
 #: usr/share/bulky/bulky.ui.h:10
 msgid "Extension only"
-msgstr ""
+msgstr "Само по разширение"
 
 #: usr/share/bulky/bulky.ui.h:11
 msgid "Entire filename"
-msgstr ""
+msgstr "Цялото име на файла"
 
 #: usr/share/bulky/bulky.ui.h:12
 msgid "Find:"
-msgstr ""
+msgstr "Търси:"
 
 #: usr/share/bulky/bulky.ui.h:13
 msgid "Replace:"
-msgstr ""
+msgstr "Замени"
 
 #: usr/share/bulky/bulky.ui.h:14
 msgid "Regular expression"
-msgstr ""
+msgstr "Регулярен израз"
 
 #: usr/share/bulky/bulky.ui.h:15
 msgid "Case sensitive"
-msgstr ""
+msgstr "Зачитане на главни/малки"
 
 #: usr/share/bulky/bulky.ui.h:16
 msgid "At position:"
-msgstr ""
+msgstr "От позиция"
 
 #: usr/share/bulky/bulky.ui.h:17
 msgid "From the end"
-msgstr ""
+msgstr "От края"
 
 #: usr/share/bulky/bulky.ui.h:18
 msgid "Overwrite"
-msgstr ""
+msgstr "презапиши"
 
 #: usr/share/bulky/bulky.ui.h:19
 msgid "Text:"
-msgstr ""
+msgstr "Текст"
 
 #: usr/share/bulky/bulky.ui.h:20
 msgid "Convert to:"
-msgstr ""
+msgstr "Конвертирай в"
 
 #: usr/share/bulky/bulky.ui.h:21
 msgid "Lower case"
-msgstr ""
+msgstr "Малки букви"
 
 #: usr/share/bulky/bulky.ui.h:22
 msgid "First character uppercase"
-msgstr ""
+msgstr "Първи символ с главна буква"
 
 #: usr/share/bulky/bulky.ui.h:23
 msgid "Title case"
@@ -175,20 +175,20 @@ msgstr ""
 
 #: usr/share/bulky/bulky.ui.h:24
 msgid "Upper case"
-msgstr ""
+msgstr "Главни букви"
 
 #: usr/share/bulky/bulky.ui.h:25
 msgid "Remove from position:"
-msgstr ""
+msgstr "Изртрий от позиция"
 
 #: usr/share/bulky/bulky.ui.h:26
 msgid "To position:"
-msgstr ""
+msgstr "Към позиция"
 
 #: usr/share/bulky/bulky.ui.h:27
 msgid "Close"
-msgstr ""
+msgstr "Спиране на програмата"
 
 #: usr/share/bulky/bulky.ui.h:28
 msgid "Rename"
-msgstr ""
+msgstr "Преименувай"

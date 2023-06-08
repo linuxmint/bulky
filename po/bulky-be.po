@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: linuxmint\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2021-11-22 16:34+0000\n"
-"PO-Revision-Date: 2022-01-16 14:27+0000\n"
+"PO-Revision-Date: 2022-12-28 18:43+0000\n"
 "Last-Translator: Anton Hryb <Unknown>\n"
 "Language-Team: Belarusian <be@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2022-12-16 12:08+0000\n"
-"X-Generator: Launchpad (build 31c78762a8046acf7ab47372e5d588ebb3759d2e)\n"
+"X-Launchpad-Export-Date: 2023-06-08 10:22+0000\n"
+"X-Generator: Launchpad (build 620cd5280e3a973662e263ebf9346837ed657a46)\n"
 
 #: usr/lib/bulky/bulky.py:42
 msgid "Cancel"
@@ -73,7 +73,7 @@ msgstr "Перайменаванне файлаў"
 
 #: usr/lib/bulky/bulky.py:500 generate_desktop_files:25
 msgid "Rename files and directories"
-msgstr "Масавае перайменаванне файлы і папкі"
+msgstr "Масавае перайменаванне файлаў і папак"
 
 #: usr/lib/bulky/bulky.py:593
 #, python-format
@@ -91,7 +91,7 @@ msgstr "Дадаць файлы..."
 
 #: usr/share/bulky/bulky.ui.h:3
 msgid "Remove"
-msgstr "Выдаліць"
+msgstr "Прыбраць"
 
 #: usr/share/bulky/bulky.ui.h:4
 msgid "Remove selected files"
@@ -139,7 +139,7 @@ msgstr "Рэгулярны выраз"
 
 #: usr/share/bulky/bulky.ui.h:15
 msgid "Case sensitive"
-msgstr "З улікам рэгістра"
+msgstr "Улічваць рэгістр"
 
 #: usr/share/bulky/bulky.ui.h:16
 msgid "At position:"
