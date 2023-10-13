@@ -27,7 +27,7 @@ gettext.bindtextdomain(APP, LOCALE_DIR)
 gettext.textdomain(APP)
 _ = gettext.gettext
 
-COL_ICON, COL_NAME, COL_NEW_NAME, COL_FILE = range(4)
+COL_ICON, COL_NAME, COL_NEW_NAME, COL_FILE, COL_PIXBUF = range(5)
 SCOPE_NAME_ONLY = "name"
 SCOPE_EXTENSION_ONLY = "extension"
 SCOPE_ALL = "all"
@@ -64,10 +64,9 @@ class FolderFileChooserDialog(Gtk.Dialog):
 # This is a data structure representing
 # the file object
 class FileObject():
-
-    def __init__(self, path_or_uri):
-
+    def __init__(self, path_or_uri, scale):
         self.gfile = self.create_gfile(path_or_uri)
+        self.scale = scale
         self._update_info()
 
     def create_gfile(self, path_or_uri):
@@ -85,16 +84,33 @@ class FileObject():
         self.uri = self.gfile.get_uri()
         self.name = self.gfile.get_basename() # temp in case query_info fails to get edit-name
         self.icon = Gio.ThemedIcon.new("text-x-generic")
+        self.pixbuf = None
+
+        attrs = ",".join([
+            "standard::type",
+            "standard::icon",
+            "standard::edit-name",
+            "access::can-write",
+            "thumbnail::path",
+            "thumbnail::is-valid"
+        ])
 
         try:
-            self.info = self.gfile.query_info("standard::type,standard::icon,standard::edit-name,access::can-write",
-                                              Gio.FileQueryInfoFlags.NONE, None)
-
+            self.info = self.gfile.query_info(attrs, Gio.FileQueryInfoFlags.NONE, None)
             self.name = self.info.get_edit_name()
 
             if self.info.get_file_type() == Gio.FileType.DIRECTORY:
                 self.icon = Gio.ThemedIcon.new("folder")
             else:
+                thumb_ok = self.info.get_attribute_boolean("thumbnail::is-valid")
+
+                if thumb_ok:
+                    thumb_path = self.info.get_attribute_byte_string("thumbnail::path")
+                    if thumb_path and os.path.exists(thumb_path):
+                        pixbuf = GdkPixbuf.Pixbuf.new_from_file_at_scale(thumb_path, 22 *  self.scale, 22 * self.scale, True)
+                        if pixbuf is not None:
+                            self.pixbuf = pixbuf
+
                 info_icon = self.info.get_icon()
 
                 if info_icon:
@@ -154,7 +170,7 @@ class FileObject():
         if parent.equal(self.gfile):
             return False
 
-        parent_fileobj = FileObject(parent.get_uri())
+        parent_fileobj = FileObject(parent.get_uri(), self.scale)
         return parent_fileobj.writable()
 
     def is_a_dir(self):
@@ -259,10 +275,10 @@ class MainWindow():
         column = Gtk.TreeViewColumn()
         column.set_title(_("Name"))
         column.set_spacing(6)
-        # column.set_cell_data_func(renderer_pixbuf, self.data_func_surface)
+        column.set_cell_data_func(renderer_pixbuf, self.data_func_icon)
         column.pack_start(renderer_pixbuf, False)
         column.pack_start(renderer_text, True)
-        column.add_attribute(renderer_pixbuf, "gicon", COL_ICON)
+        # column.add_attribute(renderer_pixbuf, "gicon", COL_ICON)
         column.add_attribute(renderer_text, "text", COL_NAME)
         column.set_sort_column_id(COL_NAME)
         column.set_expand(True)
@@ -273,7 +289,7 @@ class MainWindow():
         self.treeview.append_column(column)
 
         self.treeview.show()
-        self.model = Gtk.TreeStore(Gio.Icon, str, str, object) # icon, name, new_name, file
+        self.model = Gtk.TreeStore(Gio.Icon, str, str, object, GdkPixbuf.Pixbuf) # icon, name, new_name, file, pixbuf
         self.model.set_sort_column_id(COL_NAME, Gtk.SortType.ASCENDING)
         self.treeview.set_model(self.model)
         self.treeview.get_selection().set_mode(Gtk.SelectionMode.MULTIPLE)
@@ -353,10 +369,17 @@ class MainWindow():
 
         Gtk.drag_finish(context, True, False, _time)
 
-    def data_func_surface(self, column, cell, model, iter_, *args):
-        pixbuf = model.get_value(iter_, COL_ICON)
-        surface = Gdk.cairo_surface_create_from_pixbuf(pixbuf, self.window.get_scale_factor())
-        cell.set_property("surface", surface)
+    def data_func_icon(self, column, cell, model, iter_, *args):
+        pixbuf = model.get_value(iter_, COL_PIXBUF)
+        icon = model.get_value(iter_, COL_ICON)
+
+        if pixbuf is not None:
+            surface = Gdk.cairo_surface_create_from_pixbuf(pixbuf, self.window.get_scale_factor())
+            cell.set_property("gicon", None)
+            cell.set_property("surface", surface)
+        else:
+            cell.set_property("surface", None)
+            cell.set_property("gicon", icon)
 
     def open_about(self, widget):
         dlg = Gtk.AboutDialog()
@@ -528,7 +551,7 @@ class MainWindow():
         self.preview_changes()
 
     def add_file(self, uri_or_path):
-        file_obj = FileObject(uri_or_path)
+        file_obj = FileObject(uri_or_path, self.window.get_scale_factor())
 
         if file_obj.is_valid:
             if file_obj.uri in self.uris:
@@ -540,6 +563,7 @@ class MainWindow():
             self.model.set_value(iter, COL_NAME, file_obj.name)
             self.model.set_value(iter, COL_NEW_NAME, file_obj.name)
             self.model.set_value(iter, COL_FILE, file_obj)
+            self.model.set_value(iter, COL_PIXBUF, file_obj.pixbuf)
 
     def on_operation_changed(self, widget):
         operation_id = widget.get_active_id()
