@@ -283,6 +283,10 @@ class MainWindow():
         self.replace_regex_check.connect("toggled", self.on_widget_change)
         self.replace_case_check.connect("toggled", self.on_widget_change)
 
+        # Put the next entry in focus as suggested by issue #53
+        self.find_entry.connect("activate", self.focus_on_next_entry, "find_entry")
+        self.replace_entry.connect("activate", self.focus_on_next_entry, "replace_entry")
+
         # Remove widgets
         self.remove_from_spin = self.builder.get_object("remove_from_spin")
         self.remove_to_spin = self.builder.get_object("remove_to_spin")
@@ -684,6 +688,15 @@ class MainWindow():
         string = string.replace('%00n', "{:03d}".format(index))
         string = string.replace('%000n', "{:04d}".format(index))
         return string
+
+    def focus_on_next_entry(self, widget, id):
+        # Put the next entry in focus as suggested by issue #53 
+        if id == "find_entry":
+            self.replace_entry.grab_focus()
+            return
+        if id == "replace_entry":
+            self.find_entry.grab_focus()
+            return
 
 '''
 TODO
