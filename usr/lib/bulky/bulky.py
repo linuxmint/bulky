@@ -216,6 +216,19 @@ class MainWindow():
         self.rename_button.connect("clicked", self.on_rename_button)
         self.window.connect("key-press-event",self.on_key_press_event)
 
+        # DND
+        self.dnd_box = self.builder.get_object("dnd")  # DND target, topmost window child
+        entry_uri = Gtk.TargetEntry.new("text/uri-list",  0, 0)
+        entry_text = Gtk.TargetEntry.new("text/plain",  0, 0)
+        self.dnd_box.drag_dest_set(Gtk.DestDefaults.ALL,
+                                   (entry_uri, entry_text),
+                                   Gdk.DragAction.COPY)
+
+        # Box highlighting happens automatically, as does restricting the type of dnd data, so
+        # all we need to connect to is the post drop signal to get our uris.
+        self.dnd_box.connect("drag-data-received", self.on_drag_data_received)
+        # /DND
+
         # Menubar
         accel_group = Gtk.AccelGroup()
         self.window.add_accel_group(accel_group)
@@ -324,7 +337,21 @@ class MainWindow():
         self.replace_entry.set_tooltip_text(variables_tooltip)
         self.insert_entry.set_tooltip_text(variables_tooltip)
 
-        self.load_files()
+        self.load_files(sys.argv[1:], initial_load=True)
+
+    def on_drag_data_received(self, widget, context, x, y, data, info, _time, user_data=None):
+        if data:
+            dtype = data.get_data_type().name()
+            if context.get_selected_action() == Gdk.DragAction.COPY:
+                if dtype.startswith("text/uri-list"):
+                    uris = data.get_uris()
+                    self.load_files(uris)
+                elif dtype == "text/plain":
+                    text = data.get_text()
+                    self.load_files([text])
+
+
+        Gtk.drag_finish(context, True, False, _time)
 
     def data_func_surface(self, column, cell, model, iter_, *args):
         pixbuf = model.get_value(iter_, COL_ICON)
@@ -487,13 +514,12 @@ class MainWindow():
         rename_list.sort(key=functools.cmp_to_key(file_cmp))
         return rename_list
 
-    def load_files(self):
+    def load_files(self, uris, initial_load=False):
         # Clear treeview and selection
-        self.model.clear()
-        self.remove_button.set_sensitive(False)
-        if len(sys.argv) > 1:
-            self.builder.get_object("file_toolbox").hide()
-            for path in sys.argv[1:]:
+        if len(uris) > 0:
+            if initial_load:
+                self.builder.get_object("file_toolbox").hide()
+            for path in uris:
                 self.add_file(path)
         else:
             self.builder.get_object("headerbar").set_title(_("File Renamer"))
