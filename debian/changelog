@@ -1,3 +1,14 @@
+bulky (3.0) virginia; urgency=medium
+
+  [ Michael Webster ]
+  * Support DND for file manager items, or a single text path/uri.
+  * Fix file icons/thumbnails.
+
+  [ Clement Lefebvre ]
+  * Reorder focus chain in the replace page
+
+ -- Clement Lefebvre <root@linuxmint.com>  Tue, 28 Nov 2023 12:25:33 +0000
+
 bulky (2.10) victoria; urgency=medium
 
   * l10n: Update translations
