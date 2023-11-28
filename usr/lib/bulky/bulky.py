@@ -312,6 +312,11 @@ class MainWindow():
         self.replace_regex_check.connect("toggled", self.on_widget_change)
         self.replace_case_check.connect("toggled", self.on_widget_change)
 
+        # Set focus chain
+        # Not that this is deprecated (but not implemented differently) in Gtk3.
+        # If we move to GTK4, we'll just drop this line of code.
+        self.builder.get_object("grid_replace").set_focus_chain([self.find_entry, self.replace_entry, self.replace_regex_check, self.replace_case_check])
+
         # Remove widgets
         self.remove_from_spin = self.builder.get_object("remove_from_spin")
         self.remove_to_spin = self.builder.get_object("remove_to_spin")
