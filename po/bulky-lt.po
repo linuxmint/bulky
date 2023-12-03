@@ -8,18 +8,18 @@ msgstr ""
 "Project-Id-Version: linuxmint\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2021-11-22 16:34+0000\n"
-"PO-Revision-Date: 2022-10-21 18:50+0000\n"
-"Last-Translator: Ernestas Karalius <Unknown>\n"
+"PO-Revision-Date: 2023-10-28 23:29+0000\n"
+"Last-Translator: Moo <hazap@hotmail.com>\n"
 "Language-Team: Lithuanian <lt@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2023-07-07 12:58+0000\n"
-"X-Generator: Launchpad (build 2ac9e3bf4ab511504f8fc651371e24a6a047ba12)\n"
+"X-Launchpad-Export-Date: 2023-12-03 13:35+0000\n"
+"X-Generator: Launchpad (build 886068b1e1d10de444fbd53b0c7d3f6d4fb3e658)\n"
 
 #: usr/lib/bulky/bulky.py:42
 msgid "Cancel"
-msgstr "Atšaukti"
+msgstr "Atsisakyti"
 
 #: usr/lib/bulky/bulky.py:43
 msgid "Add"
@@ -27,7 +27,7 @@ msgstr "Pridėti"
 
 #: usr/lib/bulky/bulky.py:200 usr/share/bulky/bulky.ui.h:1
 msgid "Rename..."
-msgstr "Pervardyti"
+msgstr "Pervadinti..."
 
 #: usr/lib/bulky/bulky.py:225 usr/lib/bulky/bulky.py:337
 msgid "About"
@@ -51,7 +51,7 @@ msgstr "Naudokite %n, %0n, %00n, %000n išvardijimui."
 
 #: usr/lib/bulky/bulky.py:339
 msgid "Rename Files"
-msgstr "Pervardyti failus"
+msgstr "Pervadinti failus"
 
 #: usr/lib/bulky/bulky.py:390
 msgid "Add files"
@@ -60,16 +60,16 @@ msgstr "Pridėti failus"
 #: usr/lib/bulky/bulky.py:419
 #, python-format
 msgid "Unable to rename '%s': File name too long"
-msgstr "Nepavyko pervardyti %s: failo pavadinimas per ilgas"
+msgstr "Nepavyko pervadinti „%s“: Failo pavadinimas per ilgas"
 
 #: usr/lib/bulky/bulky.py:422
 #, python-format
 msgid "Unable to rename '%s': %s"
-msgstr "Nepavyko pervardyt „%s“: %s"
+msgstr "Nepavyko pervadinti „%s“: %s"
 
 #: usr/lib/bulky/bulky.py:499 generate_desktop_files:25
 msgid "File Renamer"
-msgstr "Failų pervardytojas"
+msgstr "Failų pervadinimo įrankis"
 
 #: usr/lib/bulky/bulky.py:500 generate_desktop_files:25
 msgid "Rename files and directories"
@@ -78,7 +78,7 @@ msgstr "Pervadinti failus ir katalogus"
 #: usr/lib/bulky/bulky.py:593
 #, python-format
 msgid "Name collision on '%s'."
-msgstr "Pavadinimų konfliktas „%s“"
+msgstr "Pavadinimų konfliktas ties „%s“"
 
 #: usr/lib/bulky/bulky.py:597 usr/lib/bulky/bulky.py:601
 #, python-format
@@ -99,7 +99,7 @@ msgstr "Šalinti pasirinktus failus"
 
 #: usr/share/bulky/bulky.ui.h:5
 msgid "Clear"
-msgstr "Valyti"
+msgstr "Išvalyti"
 
 #: usr/share/bulky/bulky.ui.h:6
 msgid "Replace"
@@ -119,7 +119,7 @@ msgstr "Tik pavadinimas"
 
 #: usr/share/bulky/bulky.ui.h:10
 msgid "Extension only"
-msgstr "Tik plėtinys"
+msgstr "Tik prievardis"
 
 #: usr/share/bulky/bulky.ui.h:11
 msgid "Entire filename"
@@ -171,7 +171,7 @@ msgstr "Pirmoji raidė didžioji"
 
 #: usr/share/bulky/bulky.ui.h:23
 msgid "Title case"
-msgstr "Antraštės raidžių dydis"
+msgstr "Iš didžiųjų raidžių"
 
 #: usr/share/bulky/bulky.ui.h:24
 msgid "Upper case"
@@ -191,4 +191,4 @@ msgstr "Užverti"
 
 #: usr/share/bulky/bulky.ui.h:28
 msgid "Rename"
-msgstr "Pervardyti"
+msgstr "Pervadinti"

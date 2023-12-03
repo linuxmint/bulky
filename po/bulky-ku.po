@@ -1,16 +1,16 @@
-# Swedish translation for linuxmint
-# Copyright (c) 2021 Rosetta Contributors and Canonical Ltd 2021
+# Kurdish translation for linuxmint
+# Copyright (c) 2023 Rosetta Contributors and Canonical Ltd 2023
 # This file is distributed under the same license as the linuxmint package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: linuxmint\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2021-11-22 16:34+0000\n"
-"PO-Revision-Date: 2021-11-22 23:45+0000\n"
-"Last-Translator: Jan-Olof Svensson <jan-olof.svensson@abc.se>\n"
-"Language-Team: Swedish <sv@li.org>\n"
+"PO-Revision-Date: 2023-08-12 17:36+0000\n"
+"Last-Translator: Sahin Elci <Unknown>\n"
+"Language-Team: Kurdish <ku@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -19,176 +19,176 @@ msgstr ""
 
 #: usr/lib/bulky/bulky.py:42
 msgid "Cancel"
-msgstr "Avbryt"
+msgstr "Betal Bike"
 
 #: usr/lib/bulky/bulky.py:43
 msgid "Add"
-msgstr "Lägg till"
+msgstr "Lêzêdekirin"
 
 #: usr/lib/bulky/bulky.py:200 usr/share/bulky/bulky.ui.h:1
 msgid "Rename..."
-msgstr "Byt namn..."
+msgstr "Nav biguherîne..."
 
 #: usr/lib/bulky/bulky.py:225 usr/lib/bulky/bulky.py:337
 msgid "About"
-msgstr "Om programmet"
+msgstr "Derbar"
 
 #: usr/lib/bulky/bulky.py:230
 msgid "Quit"
-msgstr "Avsluta"
+msgstr "Derkeve"
 
 #: usr/lib/bulky/bulky.py:247
 msgid "Name"
-msgstr "Namnge"
+msgstr "Nav"
 
 #: usr/lib/bulky/bulky.py:258
 msgid "New name"
-msgstr "Nytt namn"
+msgstr "Navê nû"
 
 #: usr/lib/bulky/bulky.py:323
 msgid "Use %n, %0n, %00n, %000n to enumerate."
-msgstr "Använd %n, %0n, %00n, %000n för uppräkning."
+msgstr "Ji bo %n, %0n, %00n, %000n rêzkirin bikarbînin."
 
 #: usr/lib/bulky/bulky.py:339
 msgid "Rename Files"
-msgstr "Döp om filer"
+msgstr "Binavkirina Dosyayê"
 
 #: usr/lib/bulky/bulky.py:390
 msgid "Add files"
-msgstr "Lägg till filer"
+msgstr "Zêdekirina dosyayê"
 
 #: usr/lib/bulky/bulky.py:419
 #, python-format
 msgid "Unable to rename '%s': File name too long"
-msgstr "Kan inte byta namn på '%s': Filnamnet är för långt"
+msgstr "Jinûve nayê binavkirin '%s': Navê dosyayê dirêje"
 
 #: usr/lib/bulky/bulky.py:422
 #, python-format
 msgid "Unable to rename '%s': %s"
-msgstr "Kan inte byta namn på '%s': %s"
+msgstr "Jinûve nayê binavkirin'%s': %s"
 
 #: usr/lib/bulky/bulky.py:499 generate_desktop_files:25
 msgid "File Renamer"
-msgstr "Filnamnbyte"
+msgstr "Jinûve Binavkirin"
 
 #: usr/lib/bulky/bulky.py:500 generate_desktop_files:25
 msgid "Rename files and directories"
-msgstr "Döp om filer och mappar"
+msgstr "Dosya û rê jinûve binav bikin"
 
 #: usr/lib/bulky/bulky.py:593
 #, python-format
 msgid "Name collision on '%s'."
-msgstr "'%s' - namnet används redan."
+msgstr "Hevkatina nav vekirî ye'%s'."
 
 #: usr/lib/bulky/bulky.py:597 usr/lib/bulky/bulky.py:601
 #, python-format
 msgid "'%s' is not writeable."
-msgstr "'%s' är inte skrivbar."
+msgstr "'%s' nayê nivîsandin."
 
 #: usr/share/bulky/bulky.ui.h:2
 msgid "Add files..."
-msgstr "Lägg till filer..."
+msgstr "Zêdekirina dosyayan..."
 
 #: usr/share/bulky/bulky.ui.h:3
 msgid "Remove"
-msgstr "Ta bort"
+msgstr "Jê bibe"
 
 #: usr/share/bulky/bulky.ui.h:4
 msgid "Remove selected files"
-msgstr "Ta bort markerade filer"
+msgstr "Dosyayên jêgirtî rakin"
 
 #: usr/share/bulky/bulky.ui.h:5
 msgid "Clear"
-msgstr "Rensa"
+msgstr "Paqij Bike"
 
 #: usr/share/bulky/bulky.ui.h:6
 msgid "Replace"
-msgstr "Ersätt"
+msgstr "Cîhgûherîn"
 
 #: usr/share/bulky/bulky.ui.h:7
 msgid "Insert"
-msgstr "Infoga"
+msgstr "Texistin"
 
 #: usr/share/bulky/bulky.ui.h:8
 msgid "Change case"
-msgstr "Ändra skiftläge"
+msgstr "Kasê biguherîne"
 
 #: usr/share/bulky/bulky.ui.h:9
 msgid "Name only"
-msgstr "Endast namn"
+msgstr "Tenê nav"
 
 #: usr/share/bulky/bulky.ui.h:10
 msgid "Extension only"
-msgstr "Endast filtyp"
+msgstr "Tenê lehik"
 
 #: usr/share/bulky/bulky.ui.h:11
 msgid "Entire filename"
-msgstr "Fullständigt filnamn"
+msgstr "Hemî navêdosya"
 
 #: usr/share/bulky/bulky.ui.h:12
 msgid "Find:"
-msgstr "Sök:"
+msgstr "Lêgerîn:"
 
 #: usr/share/bulky/bulky.ui.h:13
 msgid "Replace:"
-msgstr "Ersätt:"
+msgstr "Cîhgûherîn"
 
 #: usr/share/bulky/bulky.ui.h:14
 msgid "Regular expression"
-msgstr "Reguljärt uttryck"
+msgstr "Derbirîna bi pergal"
 
 #: usr/share/bulky/bulky.ui.h:15
 msgid "Case sensitive"
-msgstr "Skiftlägeskänslig"
+msgstr "Ji rewşê re hestiyare"
 
 #: usr/share/bulky/bulky.ui.h:16
 msgid "At position:"
-msgstr "I position:"
+msgstr "Ji pozîsyona:"
 
 #: usr/share/bulky/bulky.ui.h:17
 msgid "From the end"
-msgstr "Från slutet"
+msgstr "Cîhê dawî"
 
 #: usr/share/bulky/bulky.ui.h:18
 msgid "Overwrite"
-msgstr "Ersätt"
+msgstr "Li ser binivîse"
 
 #: usr/share/bulky/bulky.ui.h:19
 msgid "Text:"
-msgstr "Text:"
+msgstr "Nivîs:"
 
 #: usr/share/bulky/bulky.ui.h:20
 msgid "Convert to:"
-msgstr "Konvertera till:"
+msgstr "Guhertin a:"
 
 #: usr/share/bulky/bulky.ui.h:21
 msgid "Lower case"
-msgstr "Små bokstäver"
+msgstr "Kasa piçûk"
 
 #: usr/share/bulky/bulky.ui.h:22
 msgid "First character uppercase"
-msgstr "Inledande stor bokstav"
+msgstr "Karekterê ewil mezin"
 
 #: usr/share/bulky/bulky.ui.h:23
 msgid "Title case"
-msgstr "Inled varje ord med versal"
+msgstr "Kasa sernivîs"
 
 #: usr/share/bulky/bulky.ui.h:24
 msgid "Upper case"
-msgstr "Stora bokstäver"
+msgstr "Kasa mezin"
 
 #: usr/share/bulky/bulky.ui.h:25
 msgid "Remove from position:"
-msgstr "Radera från position:"
+msgstr "Ji wî cîh rake"
 
 #: usr/share/bulky/bulky.ui.h:26
 msgid "To position:"
-msgstr "Till position:"
+msgstr "Bicihkirin"
 
 #: usr/share/bulky/bulky.ui.h:27
 msgid "Close"
-msgstr "Stäng"
+msgstr "Bigire"
 
 #: usr/share/bulky/bulky.ui.h:28
 msgid "Rename"
-msgstr "Byt namn"
+msgstr "Jinûnavkirin"

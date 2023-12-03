@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: linuxmint\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2021-11-22 16:34+0000\n"
-"PO-Revision-Date: 2021-11-22 21:13+0000\n"
-"Last-Translator: vega m57 <Unknown>\n"
+"PO-Revision-Date: 2023-12-02 11:00+0000\n"
+"Last-Translator: kmyyfz8q <Unknown>\n"
 "Language-Team: Japanese <ja@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2023-07-07 12:58+0000\n"
-"X-Generator: Launchpad (build 2ac9e3bf4ab511504f8fc651371e24a6a047ba12)\n"
+"X-Launchpad-Export-Date: 2023-12-03 13:35+0000\n"
+"X-Generator: Launchpad (build 886068b1e1d10de444fbd53b0c7d3f6d4fb3e658)\n"
 "Language: ja\n"
 
 #: usr/lib/bulky/bulky.py:42
@@ -52,7 +52,7 @@ msgstr "%n, %0n, %00n, %000n で連番を振ることができます。"
 
 #: usr/lib/bulky/bulky.py:339
 msgid "Rename Files"
-msgstr "ファイル名の変更"
+msgstr "ファイル名を変更"
 
 #: usr/lib/bulky/bulky.py:390
 msgid "Add files"
@@ -61,7 +61,7 @@ msgstr "ファイルを追加"
 #: usr/lib/bulky/bulky.py:419
 #, python-format
 msgid "Unable to rename '%s': File name too long"
-msgstr "'%s' の名前を変更できません:ファイル名が長すぎます"
+msgstr "'%s' の名前を変更できません: ファイル名が長すぎます"
 
 #: usr/lib/bulky/bulky.py:422
 #, python-format
@@ -79,12 +79,12 @@ msgstr "ファイルとディレクトリの名前を変更します"
 #: usr/lib/bulky/bulky.py:593
 #, python-format
 msgid "Name collision on '%s'."
-msgstr "名前でダブるものがあります｡ '%s'"
+msgstr "'%s' の名前が重複しています。"
 
 #: usr/lib/bulky/bulky.py:597 usr/lib/bulky/bulky.py:601
 #, python-format
 msgid "'%s' is not writeable."
-msgstr "'%s' は書き込めません。"
+msgstr "'%s' には書き込めません。"
 
 #: usr/share/bulky/bulky.ui.h:2
 msgid "Add files..."
@@ -100,11 +100,11 @@ msgstr "選択したファイルを削除"
 
 #: usr/share/bulky/bulky.ui.h:5
 msgid "Clear"
-msgstr "クリア"
+msgstr "すべて消去"
 
 #: usr/share/bulky/bulky.ui.h:6
 msgid "Replace"
-msgstr "置き換え"
+msgstr "置換"
 
 #: usr/share/bulky/bulky.ui.h:7
 msgid "Insert"
@@ -140,7 +140,7 @@ msgstr "正規表現"
 
 #: usr/share/bulky/bulky.ui.h:15
 msgid "Case sensitive"
-msgstr "大文字と小文字は区別"
+msgstr "大文字と小文字を区別"
 
 #: usr/share/bulky/bulky.ui.h:16
 msgid "At position:"
@@ -148,7 +148,7 @@ msgstr "位置:"
 
 #: usr/share/bulky/bulky.ui.h:17
 msgid "From the end"
-msgstr "最後から"
+msgstr "末尾から"
 
 #: usr/share/bulky/bulky.ui.h:18
 msgid "Overwrite"
@@ -160,7 +160,7 @@ msgstr "文字列:"
 
 #: usr/share/bulky/bulky.ui.h:20
 msgid "Convert to:"
-msgstr "次に変換:"
+msgstr "変換:"
 
 #: usr/share/bulky/bulky.ui.h:21
 msgid "Lower case"
@@ -168,11 +168,11 @@ msgstr "小文字"
 
 #: usr/share/bulky/bulky.ui.h:22
 msgid "First character uppercase"
-msgstr "先頭文字は大文字"
+msgstr "全体の先頭のみ大文字"
 
 #: usr/share/bulky/bulky.ui.h:23
 msgid "Title case"
-msgstr "各単語の先頭だけ大文字"
+msgstr "各単語の先頭のみ大文字"
 
 #: usr/share/bulky/bulky.ui.h:24
 msgid "Upper case"
@@ -180,11 +180,11 @@ msgstr "大文字"
 
 #: usr/share/bulky/bulky.ui.h:25
 msgid "Remove from position:"
-msgstr "削除する文字列の始点:"
+msgstr "削除する始点:"
 
 #: usr/share/bulky/bulky.ui.h:26
 msgid "To position:"
-msgstr "削除する文字列の終点:"
+msgstr "終点:"
 
 #: usr/share/bulky/bulky.ui.h:27
 msgid "Close"

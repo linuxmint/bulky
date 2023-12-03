@@ -8,14 +8,15 @@ msgstr ""
 "Project-Id-Version: linuxmint\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2021-11-22 16:34+0000\n"
-"PO-Revision-Date: 2023-03-23 16:35+0000\n"
+"PO-Revision-Date: 2023-09-26 14:42+0000\n"
 "Last-Translator: Mr.Ravi <Unknown>\n"
 "Language-Team: Persian <fa@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2023-07-07 12:58+0000\n"
-"X-Generator: Launchpad (build 2ac9e3bf4ab511504f8fc651371e24a6a047ba12)\n"
+"X-Launchpad-Export-Date: 2023-12-03 13:35+0000\n"
+"X-Generator: Launchpad (build 886068b1e1d10de444fbd53b0c7d3f6d4fb3e658)\n"
+"Language: fa\n"
 
 #: usr/lib/bulky/bulky.py:42
 msgid "Cancel"
@@ -65,7 +66,7 @@ msgstr "ناتوان در تغییرنام «%s»: نام فابل خیلی طو
 #: usr/lib/bulky/bulky.py:422
 #, python-format
 msgid "Unable to rename '%s': %s"
-msgstr "ناتوان در تغییرنام «%s»: %s"
+msgstr "ناتوان در تغییرنام '%s': %s"
 
 #: usr/lib/bulky/bulky.py:499 generate_desktop_files:25
 msgid "File Renamer"
@@ -73,7 +74,7 @@ msgstr "تغییردهنده نام فایل"
 
 #: usr/lib/bulky/bulky.py:500 generate_desktop_files:25
 msgid "Rename files and directories"
-msgstr "تغییر نام فایل ها و مسیر ها"
+msgstr "تغییر نام فایل ها و شاخه ها"
 
 #: usr/lib/bulky/bulky.py:593
 #, python-format
@@ -95,7 +96,7 @@ msgstr "حذف"
 
 #: usr/share/bulky/bulky.ui.h:4
 msgid "Remove selected files"
-msgstr "حذف فایل های انتخابی"
+msgstr "حذف فایل های انتخاب"
 
 #: usr/share/bulky/bulky.ui.h:5
 msgid "Clear"
@@ -103,7 +104,7 @@ msgstr "پاک‌سازی"
 
 #: usr/share/bulky/bulky.ui.h:6
 msgid "Replace"
-msgstr "جای‌گزینی"
+msgstr "جایگزین کردن"
 
 #: usr/share/bulky/bulky.ui.h:7
 msgid "Insert"
