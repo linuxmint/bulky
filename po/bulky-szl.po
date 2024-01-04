@@ -1,194 +1,195 @@
-# Interlingua translation for linuxmint
-# Copyright (c) 2021 Rosetta Contributors and Canonical Ltd 2021
+# Silesian translation for linuxmint
+# Copyright (c) 2023 Rosetta Contributors and Canonical Ltd 2023
 # This file is distributed under the same license as the linuxmint package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: linuxmint\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2021-11-22 16:34+0000\n"
-"PO-Revision-Date: 2023-12-30 04:31+0000\n"
-"Last-Translator: famese <Unknown>\n"
-"Language-Team: Interlingua <ia@li.org>\n"
+"PO-Revision-Date: 2023-12-26 17:09+0000\n"
+"Last-Translator: Marcin Lis <Unknown>\n"
+"Language-Team: Silesian <szl@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Launchpad-Export-Date: 2024-01-04 14:59+0000\n"
 "X-Generator: Launchpad (build e1eeab5b20e19239bd7d5f36676f7a52988db88b)\n"
+"Language: szl\n"
 
 #: usr/lib/bulky/bulky.py:42
 msgid "Cancel"
-msgstr "Cancellar"
+msgstr "Pociep"
 
 #: usr/lib/bulky/bulky.py:43
 msgid "Add"
-msgstr "Adder"
+msgstr "Przidej"
 
 #: usr/lib/bulky/bulky.py:200 usr/share/bulky/bulky.ui.h:1
 msgid "Rename..."
-msgstr "Renominar…"
+msgstr "Zmiyń miano..."
 
 #: usr/lib/bulky/bulky.py:225 usr/lib/bulky/bulky.py:337
 msgid "About"
-msgstr "A  proposito"
+msgstr "Informacyje"
 
 #: usr/lib/bulky/bulky.py:230
 msgid "Quit"
-msgstr "Quitar"
+msgstr "Zakōńcz"
 
 #: usr/lib/bulky/bulky.py:247
 msgid "Name"
-msgstr "Nomine"
+msgstr "Miano"
 
 #: usr/lib/bulky/bulky.py:258
 msgid "New name"
-msgstr "Nove nomine"
+msgstr "Nowe miano"
 
 #: usr/lib/bulky/bulky.py:323
 msgid "Use %n, %0n, %00n, %000n to enumerate."
-msgstr "Usar %n, %0n, %00n, %000n pro enumerar."
+msgstr "Użyj %n, %0n, %00n, %000n, coby wyliczyć."
 
 #: usr/lib/bulky/bulky.py:339
 msgid "Rename Files"
-msgstr "Renominar files"
+msgstr "Zmiyń miana ôd zbiorōw"
 
 #: usr/lib/bulky/bulky.py:390
 msgid "Add files"
-msgstr "Adder files"
+msgstr "Przidej zbiory"
 
 #: usr/lib/bulky/bulky.py:419
 #, python-format
 msgid "Unable to rename '%s': File name too long"
-msgstr "Impossibile renominar '%s': nomine de file troppo longe"
+msgstr "Niy idzie zmiynić miana ôd '%s': za duge miano ôd zbioru"
 
 #: usr/lib/bulky/bulky.py:422
 #, python-format
 msgid "Unable to rename '%s': %s"
-msgstr "Impossibile renominar '%s': %s"
+msgstr "Niy idzie zmiynić miana ôd '%s': %s"
 
 #: usr/lib/bulky/bulky.py:499 generate_desktop_files:25
 msgid "File Renamer"
-msgstr "Renominator de files"
+msgstr "Zmiana mian ôd zbiorōw"
 
 #: usr/lib/bulky/bulky.py:500 generate_desktop_files:25
 msgid "Rename files and directories"
-msgstr "Renominar files e directorios."
+msgstr "Zmiyń miana ôd zbiorōw i katalogōw"
 
 #: usr/lib/bulky/bulky.py:593
 #, python-format
 msgid "Name collision on '%s'."
-msgstr "Collision de nomine sur '%s'."
+msgstr "Kolizyjŏ miana w '%s'."
 
 #: usr/lib/bulky/bulky.py:597 usr/lib/bulky/bulky.py:601
 #, python-format
 msgid "'%s' is not writeable."
-msgstr "'%s' non es scribibile"
+msgstr ""
 
 #: usr/share/bulky/bulky.ui.h:2
 msgid "Add files..."
-msgstr "Adder files..."
+msgstr "Przidej zbiory..."
 
 #: usr/share/bulky/bulky.ui.h:3
 msgid "Remove"
-msgstr "Remover"
+msgstr "Wyciep"
 
 #: usr/share/bulky/bulky.ui.h:4
 msgid "Remove selected files"
-msgstr "Remover le files seligite"
+msgstr "Wyciep ôbrane zbiory"
 
 #: usr/share/bulky/bulky.ui.h:5
 msgid "Clear"
-msgstr "Clarar"
+msgstr "Wysnŏż"
 
 #: usr/share/bulky/bulky.ui.h:6
 msgid "Replace"
-msgstr "Reimplaciar"
+msgstr "Podmiyń"
 
 #: usr/share/bulky/bulky.ui.h:7
 msgid "Insert"
-msgstr "Inserer"
+msgstr "Wrŏź"
 
 #: usr/share/bulky/bulky.ui.h:8
 msgid "Change case"
-msgstr "Cambiar minuscule <> majuscule"
+msgstr "Zmiyń wielgość liter"
 
 #: usr/share/bulky/bulky.ui.h:9
 msgid "Name only"
-msgstr "Solo nomine"
+msgstr "Ino miano"
 
 #: usr/share/bulky/bulky.ui.h:10
 msgid "Extension only"
-msgstr "Solo extension"
+msgstr "Ino rozszerzynie"
 
 #: usr/share/bulky/bulky.ui.h:11
 msgid "Entire filename"
-msgstr "Nomine de file integre"
+msgstr "Cołke miano ôd zbioru"
 
 #: usr/share/bulky/bulky.ui.h:12
 msgid "Find:"
-msgstr "Trovar:"
+msgstr "Znojdź:"
 
 #: usr/share/bulky/bulky.ui.h:13
 msgid "Replace:"
-msgstr "Reimplaciar:"
+msgstr "Podmiyń:"
 
 #: usr/share/bulky/bulky.ui.h:14
 msgid "Regular expression"
-msgstr "Expression regular"
+msgstr "Regularny ausdruk"
 
 #: usr/share/bulky/bulky.ui.h:15
 msgid "Case sensitive"
-msgstr "Distinguer inter majusculas e minusculas"
+msgstr ""
 
 #: usr/share/bulky/bulky.ui.h:16
 msgid "At position:"
-msgstr "Al position:"
+msgstr "Na pozycyji:"
 
 #: usr/share/bulky/bulky.ui.h:17
 msgid "From the end"
-msgstr "Ab le fin"
+msgstr "Ôd kōńca"
 
 #: usr/share/bulky/bulky.ui.h:18
 msgid "Overwrite"
-msgstr "Superscriber"
+msgstr "Nadpisz"
 
 #: usr/share/bulky/bulky.ui.h:19
 msgid "Text:"
-msgstr "Texto:"
+msgstr "Tekst:"
 
 #: usr/share/bulky/bulky.ui.h:20
 msgid "Convert to:"
-msgstr "Converter a:"
+msgstr "Przerōb na:"
 
 #: usr/share/bulky/bulky.ui.h:21
 msgid "Lower case"
-msgstr "Minuscule"
+msgstr "Małe litery"
 
 #: usr/share/bulky/bulky.ui.h:22
 msgid "First character uppercase"
-msgstr "Prime character majuscule"
+msgstr "Piyrszŏ litera wielgŏ"
 
 #: usr/share/bulky/bulky.ui.h:23
 msgid "Title case"
-msgstr "Tutulo majuscule"
+msgstr "Jak tytuł"
 
 #: usr/share/bulky/bulky.ui.h:24
 msgid "Upper case"
-msgstr "Majuscule"
+msgstr "Wielge litery"
 
 #: usr/share/bulky/bulky.ui.h:25
 msgid "Remove from position:"
-msgstr "Remove ab position:"
+msgstr "Wyciep ôd pozycyje:"
 
 #: usr/share/bulky/bulky.ui.h:26
 msgid "To position:"
-msgstr "Al position:"
+msgstr "Do pozycyje:"
 
 #: usr/share/bulky/bulky.ui.h:27
 msgid "Close"
-msgstr "Clauder"
+msgstr "Zawrzij"
 
 #: usr/share/bulky/bulky.ui.h:28
 msgid "Rename"
-msgstr "Renominar"
+msgstr "Zmiyń miano"
