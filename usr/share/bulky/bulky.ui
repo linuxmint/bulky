@@ -616,10 +616,29 @@
                               </packing>
                             </child>
                             <child>
-                              <placeholder/>
+                              <object class="GtkLabel">
+                                <property name="visible">True</property>
+                                <property name="can-focus">False</property>
+                              </object>
+                              <packing>
+                                <property name="left-attach">0</property>
+                                <property name="top-attach">2</property>
+                              </packing>
                             </child>
                             <child>
-                              <placeholder/>
+                              <object class="GtkRadioButton" id="radio_accents">
+                                <property name="label" translatable="yes">Remove accents</property>
+                                <property name="visible">True</property>
+                                <property name="can-focus">True</property>
+                                <property name="receives-default">False</property>
+                                <property name="halign">start</property>
+                                <property name="draw-indicator">True</property>
+                                <property name="group">radio_uppercase</property>
+                              </object>
+                              <packing>
+                                <property name="left-attach">1</property>
+                                <property name="top-attach">2</property>
+                              </packing>
                             </child>
                             <child>
                               <placeholder/>
