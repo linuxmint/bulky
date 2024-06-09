@@ -10,6 +10,7 @@ import subprocess
 import warnings
 import sys
 import functools
+import unidecode
 
 # Suppress GTK deprecation warnings
 warnings.filterwarnings("ignore")
@@ -348,6 +349,8 @@ class MainWindow():
         self.radio_lowercase = self.builder.get_object("radio_lowercase")
         self.radio_uppercase = self.builder.get_object("radio_uppercase")
         self.radio_firstuppercase = self.builder.get_object("radio_firstuppercase")
+        self.radio_accents = self.builder.get_object("radio_accents")
+
         self.radio_titlecase.connect("toggled", self.on_widget_change)
         self.radio_lowercase.connect("toggled", self.on_widget_change)
         self.radio_uppercase.connect("toggled", self.on_widget_change)
@@ -730,8 +733,10 @@ class MainWindow():
             return string.lower()
         elif self.radio_uppercase.get_active():
             return string.upper()
-        else:
+        elif self.radio_firstuppercase.get_active():
             return string.capitalize()
+        else:
+            return unidecode.unidecode(string)
 
     def inject(self, index, string):
         string = string.replace('%n', "{:01d}".format(index))
