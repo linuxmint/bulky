@@ -355,6 +355,7 @@ class MainWindow():
         self.radio_lowercase.connect("toggled", self.on_widget_change)
         self.radio_uppercase.connect("toggled", self.on_widget_change)
         self.radio_firstuppercase.connect("toggled", self.on_widget_change)
+        self.radio_accents.connect("toggled", self.on_widget_change)
 
         # Tooltips
         variables_tooltip = _("Use %n, %0n, %00n, %000n to enumerate.")
