@@ -1,3 +1,10 @@
+bulky (3.3) wilma; urgency=medium
+
+  * l10n: Update translations
+  * l10n: Update files
+
+ -- Clement Lefebvre <root@linuxmint.com>  Tue, 18 Jun 2024 19:14:31 +0100
+
 bulky (3.2) virginia; urgency=medium
 
   * l10n: Update translations
