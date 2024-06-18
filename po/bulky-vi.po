@@ -8,26 +8,26 @@ msgstr ""
 "Project-Id-Version: linuxmint\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2021-11-22 16:34+0000\n"
-"PO-Revision-Date: 2021-12-06 12:59+0000\n"
-"Last-Translator: Clement Lefebvre <root@linuxmint.com>\n"
+"PO-Revision-Date: 2024-03-29 14:05+0000\n"
+"Last-Translator: thieninox <Unknown>\n"
 "Language-Team: Vietnamese <vi@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2024-01-04 14:59+0000\n"
-"X-Generator: Launchpad (build e1eeab5b20e19239bd7d5f36676f7a52988db88b)\n"
+"X-Launchpad-Export-Date: 2024-06-18 17:57+0000\n"
+"X-Generator: Launchpad (build bbfa2351d9d6a9ddfe262109428f7bf5516e65d1)\n"
 
 #: usr/lib/bulky/bulky.py:42
 msgid "Cancel"
-msgstr ""
+msgstr "Hủy bỏ"
 
 #: usr/lib/bulky/bulky.py:43
 msgid "Add"
-msgstr ""
+msgstr "Thêm"
 
 #: usr/lib/bulky/bulky.py:200 usr/share/bulky/bulky.ui.h:1
 msgid "Rename..."
-msgstr "Đổi tên"
+msgstr "Đổi tên..."
 
 #: usr/lib/bulky/bulky.py:225 usr/lib/bulky/bulky.py:337
 msgid "About"
@@ -60,12 +60,12 @@ msgstr "Thêm tập tin"
 #: usr/lib/bulky/bulky.py:419
 #, python-format
 msgid "Unable to rename '%s': File name too long"
-msgstr ""
+msgstr "Không thể đổi tên '%s': Tên của tệp quá dài"
 
 #: usr/lib/bulky/bulky.py:422
 #, python-format
 msgid "Unable to rename '%s': %s"
-msgstr ""
+msgstr "Không thể đổi tên '%s': %s"
 
 #: usr/lib/bulky/bulky.py:499 generate_desktop_files:25
 msgid "File Renamer"
@@ -99,23 +99,23 @@ msgstr "Gỡ bỏ tập tin được chọn"
 
 #: usr/share/bulky/bulky.ui.h:5
 msgid "Clear"
-msgstr ""
+msgstr "Xóa sạch"
 
 #: usr/share/bulky/bulky.ui.h:6
 msgid "Replace"
-msgstr ""
+msgstr "Thay thế"
 
 #: usr/share/bulky/bulky.ui.h:7
 msgid "Insert"
-msgstr ""
+msgstr "Chèn"
 
 #: usr/share/bulky/bulky.ui.h:8
 msgid "Change case"
-msgstr "Thay đổi vỏ bọc"
+msgstr "Thay đổi HOA/thường"
 
 #: usr/share/bulky/bulky.ui.h:9
 msgid "Name only"
-msgstr ""
+msgstr "Chỉ hiện Tên"
 
 #: usr/share/bulky/bulky.ui.h:10
 msgid "Extension only"
@@ -123,23 +123,23 @@ msgstr "Chỉ phần mở rộng"
 
 #: usr/share/bulky/bulky.ui.h:11
 msgid "Entire filename"
-msgstr ""
+msgstr "Toàn bộ tên tệp"
 
 #: usr/share/bulky/bulky.ui.h:12
 msgid "Find:"
-msgstr ""
+msgstr "Tìm:"
 
 #: usr/share/bulky/bulky.ui.h:13
 msgid "Replace:"
-msgstr ""
+msgstr "Thay thế:"
 
 #: usr/share/bulky/bulky.ui.h:14
 msgid "Regular expression"
-msgstr ""
+msgstr "Biểu thức chính quy"
 
 #: usr/share/bulky/bulky.ui.h:15
 msgid "Case sensitive"
-msgstr ""
+msgstr "Phân biệt chữ HOA/thường"
 
 #: usr/share/bulky/bulky.ui.h:16
 msgid "At position:"
@@ -151,11 +151,11 @@ msgstr "Đến đoạn cuối"
 
 #: usr/share/bulky/bulky.ui.h:18
 msgid "Overwrite"
-msgstr ""
+msgstr "Ghi đè"
 
 #: usr/share/bulky/bulky.ui.h:19
 msgid "Text:"
-msgstr ""
+msgstr "Chữ:"
 
 #: usr/share/bulky/bulky.ui.h:20
 msgid "Convert to:"
@@ -187,8 +187,8 @@ msgstr "Đến vị trí này:"
 
 #: usr/share/bulky/bulky.ui.h:27
 msgid "Close"
-msgstr ""
+msgstr "Đóng"
 
 #: usr/share/bulky/bulky.ui.h:28
 msgid "Rename"
-msgstr ""
+msgstr "Đổi tên"

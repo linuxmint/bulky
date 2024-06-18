@@ -8,130 +8,130 @@ msgstr ""
 "Project-Id-Version: linuxmint\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2021-11-22 16:34+0000\n"
-"PO-Revision-Date: 2021-09-01 09:36+0000\n"
-"Last-Translator: ryantsui <Unknown>\n"
+"PO-Revision-Date: 2024-02-13 16:49+0000\n"
+"Last-Translator: 爽自由 <coby2023t@gmail.com>\n"
 "Language-Team: Chinese (Traditional) <zh_TW@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2024-01-04 14:59+0000\n"
-"X-Generator: Launchpad (build e1eeab5b20e19239bd7d5f36676f7a52988db88b)\n"
+"X-Launchpad-Export-Date: 2024-06-18 17:57+0000\n"
+"X-Generator: Launchpad (build bbfa2351d9d6a9ddfe262109428f7bf5516e65d1)\n"
 
 #: usr/lib/bulky/bulky.py:42
 msgid "Cancel"
-msgstr ""
+msgstr "取消"
 
 #: usr/lib/bulky/bulky.py:43
 msgid "Add"
-msgstr ""
+msgstr "新增"
 
 #: usr/lib/bulky/bulky.py:200 usr/share/bulky/bulky.ui.h:1
 msgid "Rename..."
-msgstr ""
+msgstr "重新命名..."
 
 #: usr/lib/bulky/bulky.py:225 usr/lib/bulky/bulky.py:337
 msgid "About"
-msgstr ""
+msgstr "關於"
 
 #: usr/lib/bulky/bulky.py:230
 msgid "Quit"
-msgstr ""
+msgstr "離開"
 
 #: usr/lib/bulky/bulky.py:247
 msgid "Name"
-msgstr ""
+msgstr "名稱"
 
 #: usr/lib/bulky/bulky.py:258
 msgid "New name"
-msgstr ""
+msgstr "新名稱"
 
 #: usr/lib/bulky/bulky.py:323
 msgid "Use %n, %0n, %00n, %000n to enumerate."
-msgstr ""
+msgstr "使用 %n, %0n, %00n, %000n 來計數"
 
 #: usr/lib/bulky/bulky.py:339
 msgid "Rename Files"
-msgstr ""
+msgstr "更改檔名"
 
 #: usr/lib/bulky/bulky.py:390
 msgid "Add files"
-msgstr ""
+msgstr "加入檔案"
 
 #: usr/lib/bulky/bulky.py:419
 #, python-format
 msgid "Unable to rename '%s': File name too long"
-msgstr ""
+msgstr "無法更改 '%s' 檔名：名字太長了"
 
 #: usr/lib/bulky/bulky.py:422
 #, python-format
 msgid "Unable to rename '%s': %s"
-msgstr ""
+msgstr "無法更改檔名 '%s': %s"
 
 #: usr/lib/bulky/bulky.py:499 generate_desktop_files:25
 msgid "File Renamer"
-msgstr ""
+msgstr "檔案改名工具"
 
 #: usr/lib/bulky/bulky.py:500 generate_desktop_files:25
 msgid "Rename files and directories"
-msgstr ""
+msgstr "更改檔案和目錄名"
 
 #: usr/lib/bulky/bulky.py:593
 #, python-format
 msgid "Name collision on '%s'."
-msgstr ""
+msgstr "名字和 '%s' 有衝突。"
 
 #: usr/lib/bulky/bulky.py:597 usr/lib/bulky/bulky.py:601
 #, python-format
 msgid "'%s' is not writeable."
-msgstr ""
+msgstr "無法寫入 %s"
 
 #: usr/share/bulky/bulky.ui.h:2
 msgid "Add files..."
-msgstr ""
+msgstr "加入檔案..."
 
 #: usr/share/bulky/bulky.ui.h:3
 msgid "Remove"
-msgstr ""
+msgstr "刪除"
 
 #: usr/share/bulky/bulky.ui.h:4
 msgid "Remove selected files"
-msgstr ""
+msgstr "刪除選擇的檔案"
 
 #: usr/share/bulky/bulky.ui.h:5
 msgid "Clear"
-msgstr ""
+msgstr "清除"
 
 #: usr/share/bulky/bulky.ui.h:6
 msgid "Replace"
-msgstr ""
+msgstr "取代"
 
 #: usr/share/bulky/bulky.ui.h:7
 msgid "Insert"
-msgstr ""
+msgstr "插入"
 
 #: usr/share/bulky/bulky.ui.h:8
 msgid "Change case"
-msgstr ""
+msgstr "改變大小寫"
 
 #: usr/share/bulky/bulky.ui.h:9
 msgid "Name only"
-msgstr ""
+msgstr "限用名稱"
 
 #: usr/share/bulky/bulky.ui.h:10
 msgid "Extension only"
-msgstr ""
+msgstr "僅限擴充"
 
 #: usr/share/bulky/bulky.ui.h:11
 msgid "Entire filename"
-msgstr ""
+msgstr "完整檔名"
 
 #: usr/share/bulky/bulky.ui.h:12
 msgid "Find:"
-msgstr ""
+msgstr "搜尋："
 
 #: usr/share/bulky/bulky.ui.h:13
 msgid "Replace:"
-msgstr ""
+msgstr "取代："
 
 #: usr/share/bulky/bulky.ui.h:14
 msgid "Regular expression"
@@ -143,52 +143,52 @@ msgstr "區分大小寫"
 
 #: usr/share/bulky/bulky.ui.h:16
 msgid "At position:"
-msgstr ""
+msgstr "位於："
 
 #: usr/share/bulky/bulky.ui.h:17
 msgid "From the end"
-msgstr ""
+msgstr "從後面"
 
 #: usr/share/bulky/bulky.ui.h:18
 msgid "Overwrite"
-msgstr ""
+msgstr "覆蓋"
 
 #: usr/share/bulky/bulky.ui.h:19
 msgid "Text:"
-msgstr ""
+msgstr "文字："
 
 #: usr/share/bulky/bulky.ui.h:20
 msgid "Convert to:"
-msgstr ""
+msgstr "轉換為："
 
 #: usr/share/bulky/bulky.ui.h:21
 msgid "Lower case"
-msgstr ""
+msgstr "小寫"
 
 #: usr/share/bulky/bulky.ui.h:22
 msgid "First character uppercase"
-msgstr ""
+msgstr "第一個字母大寫"
 
 #: usr/share/bulky/bulky.ui.h:23
 msgid "Title case"
-msgstr ""
+msgstr "抬頭大小寫"
 
 #: usr/share/bulky/bulky.ui.h:24
 msgid "Upper case"
-msgstr ""
+msgstr "大寫"
 
 #: usr/share/bulky/bulky.ui.h:25
 msgid "Remove from position:"
-msgstr ""
+msgstr "從位置移除："
 
 #: usr/share/bulky/bulky.ui.h:26
 msgid "To position:"
-msgstr ""
+msgstr "到位置："
 
 #: usr/share/bulky/bulky.ui.h:27
 msgid "Close"
-msgstr ""
+msgstr "關閉"
 
 #: usr/share/bulky/bulky.ui.h:28
 msgid "Rename"
-msgstr ""
+msgstr "改名"
