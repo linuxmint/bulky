@@ -1,16 +1,16 @@
-# Malay translation for linuxmint
-# Copyright (c) 2022 Rosetta Contributors and Canonical Ltd 2022
+# Breton translation for linuxmint
+# Copyright (c) 2024 Rosetta Contributors and Canonical Ltd 2024
 # This file is distributed under the same license as the linuxmint package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: linuxmint\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2021-11-22 16:34+0000\n"
-"PO-Revision-Date: 2022-12-07 11:51+0000\n"
-"Last-Translator: Adam Iskandar <Unknown>\n"
-"Language-Team: Malay <ms@li.org>\n"
+"PO-Revision-Date: 2024-07-04 08:58+0000\n"
+"Last-Translator: Anthony Guechoum <a.guechoum@gmail.com>\n"
+"Language-Team: Breton <br@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -19,176 +19,176 @@ msgstr ""
 
 #: usr/lib/bulky/bulky.py:42
 msgid "Cancel"
-msgstr "Batal"
+msgstr "Nullañ"
 
 #: usr/lib/bulky/bulky.py:43
 msgid "Add"
-msgstr "Tambah"
+msgstr "Ouzhpennañ"
 
 #: usr/lib/bulky/bulky.py:200 usr/share/bulky/bulky.ui.h:1
 msgid "Rename..."
-msgstr "Namakan Semula..."
+msgstr "Adenvel..."
 
 #: usr/lib/bulky/bulky.py:225 usr/lib/bulky/bulky.py:337
 msgid "About"
-msgstr "Perihal"
+msgstr "Diwar-benn"
 
 #: usr/lib/bulky/bulky.py:230
 msgid "Quit"
-msgstr "Keluar"
+msgstr "Kuitaat"
 
 #: usr/lib/bulky/bulky.py:247
 msgid "Name"
-msgstr "Nama"
+msgstr "Anv"
 
 #: usr/lib/bulky/bulky.py:258
 msgid "New name"
-msgstr "Nama baru"
+msgstr "Anv nevez"
 
 #: usr/lib/bulky/bulky.py:323
 msgid "Use %n, %0n, %00n, %000n to enumerate."
-msgstr "Gunakan %n, %0n, %00n, %000n untuk menghitung"
+msgstr "Implijit %n, %0n, %00n, %000n evit niveriñ."
 
 #: usr/lib/bulky/bulky.py:339
 msgid "Rename Files"
-msgstr "Namakan semula fail-fail"
+msgstr "Adenvel Restroù"
 
 #: usr/lib/bulky/bulky.py:390
 msgid "Add files"
-msgstr "Tambah fail-fail"
+msgstr "Ouzhpennañ restroù"
 
 #: usr/lib/bulky/bulky.py:419
 #, python-format
 msgid "Unable to rename '%s': File name too long"
-msgstr "Gagal untuk menamakan semula '%s': Nama fail terlalu panjang"
+msgstr "N'haller ket adenvel '%s': Re hir eo anv ar restr"
 
 #: usr/lib/bulky/bulky.py:422
 #, python-format
 msgid "Unable to rename '%s': %s"
-msgstr "Gagal untuk menamakan semula '%s': %s"
+msgstr "N'haller ket adenvel '%s': %s"
 
 #: usr/lib/bulky/bulky.py:499 generate_desktop_files:25
 msgid "File Renamer"
-msgstr "Penama Semula Fail"
+msgstr "Adanver restroù"
 
 #: usr/lib/bulky/bulky.py:500 generate_desktop_files:25
 msgid "Rename files and directories"
-msgstr "Namakan semula fail dan direktori"
+msgstr "Adenvel restroù ha kavlec'hiadoù"
 
 #: usr/lib/bulky/bulky.py:593
 #, python-format
 msgid "Name collision on '%s'."
-msgstr "Perlanggaran nama pada '%s'"
+msgstr "Ur c'henniñv a zo gant an anv '%s'."
 
 #: usr/lib/bulky/bulky.py:597 usr/lib/bulky/bulky.py:601
 #, python-format
 msgid "'%s' is not writeable."
-msgstr "'%s' tidak boleh ditulis"
+msgstr "'%s' n'hall ket bet skrivet warnañ."
 
 #: usr/share/bulky/bulky.ui.h:2
 msgid "Add files..."
-msgstr "Tambah fail..."
+msgstr "Ouzhpennañ restroù"
 
 #: usr/share/bulky/bulky.ui.h:3
 msgid "Remove"
-msgstr "Buang"
+msgstr "Dilemel"
 
 #: usr/share/bulky/bulky.ui.h:4
 msgid "Remove selected files"
-msgstr "Buang fail yang dipilih"
+msgstr "Dilemel ar restroù diuzet"
 
 #: usr/share/bulky/bulky.ui.h:5
 msgid "Clear"
-msgstr "Kosongkan"
+msgstr "Skarzhañ"
 
 #: usr/share/bulky/bulky.ui.h:6
 msgid "Replace"
-msgstr "Ganti"
+msgstr "Amsaviñ"
 
 #: usr/share/bulky/bulky.ui.h:7
 msgid "Insert"
-msgstr "Sisip"
+msgstr "Enlakaat"
 
 #: usr/share/bulky/bulky.ui.h:8
 msgid "Change case"
-msgstr "Ubah kata"
+msgstr "Kemmañ an direnneg"
 
 #: usr/share/bulky/bulky.ui.h:9
 msgid "Name only"
-msgstr "Nama sahaja"
+msgstr "Anv hepken"
 
 #: usr/share/bulky/bulky.ui.h:10
 msgid "Extension only"
-msgstr "Ekstensi sahaja"
+msgstr "Askouezhadenn hepken"
 
 #: usr/share/bulky/bulky.ui.h:11
 msgid "Entire filename"
-msgstr "Seluruh nama fail"
+msgstr "Anv restr a-bezh"
 
 #: usr/share/bulky/bulky.ui.h:12
 msgid "Find:"
-msgstr "Cari:"
+msgstr "Klask:"
 
 #: usr/share/bulky/bulky.ui.h:13
 msgid "Replace:"
-msgstr "Ganti:"
+msgstr "Amsaviñ:"
 
 #: usr/share/bulky/bulky.ui.h:14
 msgid "Regular expression"
-msgstr "Ungkapan biasa"
+msgstr "Bomm reol"
 
 #: usr/share/bulky/bulky.ui.h:15
 msgid "Case sensitive"
-msgstr "Sensitif huruf"
+msgstr "Doujañs d'ar bennlizherenn"
 
 #: usr/share/bulky/bulky.ui.h:16
 msgid "At position:"
-msgstr "Pada kedudukan:"
+msgstr "D'al lec'hiadur:"
 
 #: usr/share/bulky/bulky.ui.h:17
 msgid "From the end"
-msgstr "Dari penghujung"
+msgstr "Diouzh an dibenn"
 
 #: usr/share/bulky/bulky.ui.h:18
 msgid "Overwrite"
-msgstr "Tulis Ganti"
+msgstr "Flastrañ"
 
 #: usr/share/bulky/bulky.ui.h:19
 msgid "Text:"
-msgstr "Teks:"
+msgstr "Testenn:"
 
 #: usr/share/bulky/bulky.ui.h:20
 msgid "Convert to:"
-msgstr "Tukar kepada:"
+msgstr "Amdreiñ da:"
 
 #: usr/share/bulky/bulky.ui.h:21
 msgid "Lower case"
-msgstr "Huruf kecil"
+msgstr "Lizherennoù munut"
 
 #: usr/share/bulky/bulky.ui.h:22
 msgid "First character uppercase"
-msgstr "Huruf besar pada aksara pertama"
+msgstr "Lakaat al lizherenn gentañ da bennlizherenn"
 
 #: usr/share/bulky/bulky.ui.h:23
 msgid "Title case"
-msgstr "Huruf tajuk"
+msgstr "Tirenneg an titl"
 
 #: usr/share/bulky/bulky.ui.h:24
 msgid "Upper case"
-msgstr "Huruf besar"
+msgstr "Pennlizherennoù"
 
 #: usr/share/bulky/bulky.ui.h:25
 msgid "Remove from position:"
-msgstr "Buang dari kedudukan:"
+msgstr "Dilemel diouzh al lec'hiadur:"
 
 #: usr/share/bulky/bulky.ui.h:26
 msgid "To position:"
-msgstr "Ke kedudukan:"
+msgstr "D'al lec'hiadur:"
 
 #: usr/share/bulky/bulky.ui.h:27
 msgid "Close"
-msgstr "Tutup"
+msgstr "Serriñ"
 
 #: usr/share/bulky/bulky.ui.h:28
 msgid "Rename"
-msgstr "Namakan semula"
+msgstr "Adenvel"
