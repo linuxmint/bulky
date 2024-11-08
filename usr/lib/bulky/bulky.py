@@ -27,7 +27,7 @@ gettext.bindtextdomain(APP, LOCALE_DIR)
 gettext.textdomain(APP)
 _ = gettext.gettext
 
-COL_ICON, COL_NAME, COL_NEW_NAME, COL_FILE, COL_PIXBUF = range(5)
+COL_ICON, COL_NAME, COL_NEW_NAME, COL_FILE, COL_PIXBUF, COL_MODIFIED, COL_CREATED = range(7)
 SCOPE_NAME_ONLY = "name"
 SCOPE_EXTENSION_ONLY = "extension"
 SCOPE_ALL = "all"
@@ -85,11 +85,15 @@ class FileObject():
         self.name = self.gfile.get_basename() # temp in case query_info fails to get edit-name
         self.icon = Gio.ThemedIcon.new("text-x-generic")
         self.pixbuf = None
+        self.modified = 0
+        self.created = 0
 
         attrs = ",".join([
             "standard::type",
             "standard::icon",
             "standard::edit-name",
+            "time::created",
+            "time::modified",
             "access::can-write",
             "thumbnail::path",
             "thumbnail::is-valid"
@@ -98,6 +102,8 @@ class FileObject():
         try:
             self.info = self.gfile.query_info(attrs, Gio.FileQueryInfoFlags.NONE, None)
             self.name = self.info.get_edit_name()
+            self.modified = self.info.get_attribute_uint64("time::modified")
+            self.created = self.info.get_attribute_uint64("time::created")
 
             if self.info.get_file_type() == Gio.FileType.DIRECTORY:
                 self.icon = Gio.ThemedIcon.new("folder")
@@ -208,7 +214,7 @@ class MainWindow():
         self.last_chooser_location = Gio.File.new_for_path(GLib.get_home_dir())
 
         # Set the Glade file
-        gladefile = "/usr/share/bulky/bulky.ui"
+        gladefile = "/usr/share/bulky/bulky.ui" # revert to usr/share/bulky/bulky.ui when the code finally works
         self.builder = Gtk.Builder()
         self.builder.set_translation_domain(APP)
         self.builder.add_from_file(gladefile)
@@ -287,9 +293,9 @@ class MainWindow():
         column = Gtk.TreeViewColumn(_("New name"), Gtk.CellRendererText(), text=COL_NEW_NAME)
         column.set_expand(True)
         self.treeview.append_column(column)
-
         self.treeview.show()
-        self.model = Gtk.TreeStore(Gio.Icon, str, str, object, GdkPixbuf.Pixbuf) # icon, name, new_name, file, pixbuf
+
+        self.model = Gtk.TreeStore(Gio.Icon, str, str, object, GdkPixbuf.Pixbuf, int, int) # icon, name, new_name, file, pixbuf, created, modified
         self.model.set_sort_column_id(COL_NAME, Gtk.SortType.ASCENDING)
         self.treeview.set_model(self.model)
         self.treeview.get_selection().set_mode(Gtk.SelectionMode.MULTIPLE)
@@ -298,6 +304,7 @@ class MainWindow():
         # Combos
         self.builder.get_object("combo_operation").connect("changed", self.on_operation_changed)
         self.builder.get_object("combo_scope").connect("changed", self.on_scope_changed)
+        self.builder.get_object("combo_sort").connect("changed", self.on_sort_changed)
         self.stack = self.builder.get_object("stack")
         self.infobar = self.builder.get_object("infobar")
         self.error_label = self.builder.get_object("error_label")
@@ -520,6 +527,33 @@ class MainWindow():
 
         self.rename_button.set_sensitive(False)
 
+    # sort files in the treecolumn by name, modification date or creation date
+    def on_sort_changed(self,  widget):
+        sort_id = widget.get_active_id()
+        column = self.treeview.get_column(0)
+
+        def render_tree(col_id):
+            self.model.set_sort_column_id(col_id, Gtk.SortType.ASCENDING)
+            column.set_sort_column_id(col_id)   
+            # probably should have a return statement, will do later tonight
+
+        if sort_id == 'name':
+           column.set_title(_("Name"))
+           render_tree(col_id=COL_NAME)
+
+        elif sort_id == 'created':
+           column.set_title(_("Created"))
+           render_tree(col_id=COL_CREATED)
+
+        elif sort_id == "modified": # incase i need to add modification instead of creation
+            column.set_title(_("Modified"))
+            render_tree(col_id=COL_MODIFIED)
+
+        # for id in widget.get_id():  # if theres any need to include more sorting parameters, remove the if else statements and uncomment this
+        #     if id == widget.get_active_id():
+        #         column.set_title(id)
+        #         render_tree(col_id=id)
+
     def sort_list_by_depth(self, rename_list):
         # Rename files first, followed by directories from deep to shallow.
         def file_cmp(tup_a, tup_b):
@@ -569,6 +603,8 @@ class MainWindow():
             self.model.set_value(iter, COL_NEW_NAME, file_obj.name)
             self.model.set_value(iter, COL_FILE, file_obj)
             self.model.set_value(iter, COL_PIXBUF, file_obj.pixbuf)
+            self.model.set_value(iter, COL_CREATED, file_obj.created)
+            self.model.set_value(iter, COL_MODIFIED, file_obj.modified)
 
     def on_operation_changed(self, widget):
         operation_id = widget.get_active_id()

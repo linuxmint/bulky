@@ -299,7 +299,8 @@
                     <property name="active-id">name</property>
                     <items>
                       <item id="name" translatable="yes">Name</item>
-                      <item id="date" translatable="yes">Date</item>
+                      <item id="created" translatable="yes">Created</item>
+                      <item id="modified" translatable="yes">Modified</item>
                     </items>
                   </object>
                   <packing>
