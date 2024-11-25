@@ -192,3 +192,7 @@ msgstr "Zamknij"
 #: usr/share/bulky/bulky.ui.h:28
 msgid "Rename"
 msgstr "Zmień nazwę"
+
+#: usr/share/bulky/bulky.ui.h:29
+msgid "Remove accents"
+msgstr "Usuń znaki akcentowane"
