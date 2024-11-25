@@ -238,7 +238,6 @@
                 <child type="label">
                   <object class="GtkLabel">
                     <property name="can-focus">False</property>
-                    <property name="label" translatable="yes">__glade_unnamed_8</property>
                   </object>
                 </child>
               </object>
