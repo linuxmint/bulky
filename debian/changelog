@@ -1,3 +1,15 @@
+bulky (3.5) xia; urgency=medium
+
+  [ Michał Wójtowicz ]
+  * Added unacenting option in change case (#61)
+
+  [ Clement Lefebvre ]
+  * l10n: Update POT
+  * l10n: Update translations
+  * l10n: Update files
+
+ -- Clement Lefebvre <root@linuxmint.com>  Thu, 05 Dec 2024 10:34:59 +0000
+
 bulky (3.4) wilma; urgency=medium
 
   * l10n: Update translations
