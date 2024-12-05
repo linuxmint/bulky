@@ -1,16 +1,16 @@
-# Chinese (Traditional) translation for linuxmint
-# Copyright (c) 2021 Rosetta Contributors and Canonical Ltd 2021
+# Albanian translation for linuxmint
+# Copyright (c) 2024 Rosetta Contributors and Canonical Ltd 2024
 # This file is distributed under the same license as the linuxmint package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: linuxmint\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2024-11-25 11:35+0000\n"
-"PO-Revision-Date: 2024-11-28 13:18+0000\n"
-"Last-Translator: 爽自由 <coby2023t@gmail.com>\n"
-"Language-Team: Chinese (Traditional) <zh_TW@li.org>\n"
+"PO-Revision-Date: 2024-11-07 15:03+0000\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: Albanian <sq@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -19,180 +19,180 @@ msgstr ""
 
 #: usr/lib/bulky/bulky.py:43
 msgid "Cancel"
-msgstr "取消"
+msgstr ""
 
 #: usr/lib/bulky/bulky.py:44
 msgid "Add"
-msgstr "新增"
+msgstr ""
 
 #: usr/lib/bulky/bulky.py:217 usr/share/bulky/bulky.ui.h:31
 msgid "Rename..."
-msgstr "重新命名..."
+msgstr ""
 
 #: usr/lib/bulky/bulky.py:255 usr/lib/bulky/bulky.py:396
 msgid "About"
-msgstr "關於"
+msgstr ""
 
 #: usr/lib/bulky/bulky.py:260
 msgid "Quit"
-msgstr "離開"
+msgstr ""
 
 #: usr/lib/bulky/bulky.py:277
 msgid "Name"
-msgstr "名稱"
+msgstr ""
 
 #: usr/lib/bulky/bulky.py:288
 msgid "New name"
-msgstr "新名稱"
+msgstr ""
 
 #: usr/lib/bulky/bulky.py:361 usr/share/bulky/bulky.ui.h:14
 msgid "Use %n, %0n, %00n, %000n to enumerate."
-msgstr "使用 %n, %0n, %00n, %000n 來計數"
+msgstr ""
 
 #: usr/lib/bulky/bulky.py:398
 msgid "Rename Files"
-msgstr "更改檔名"
+msgstr ""
 
 #: usr/lib/bulky/bulky.py:449
 msgid "Add files"
-msgstr "加入檔案"
+msgstr ""
 
 #: usr/lib/bulky/bulky.py:478
 #, python-format
 msgid "Unable to rename '%s': File name too long"
-msgstr "無法更改 '%s' 檔名：名字太長了"
+msgstr ""
 
 #: usr/lib/bulky/bulky.py:481
 #, python-format
 msgid "Unable to rename '%s': %s"
-msgstr "無法更改檔名 '%s': %s"
+msgstr ""
 
 #: usr/lib/bulky/bulky.py:557 generate_desktop_files:25
 msgid "File Renamer"
-msgstr "檔案改名工具"
+msgstr ""
 
 #: usr/lib/bulky/bulky.py:558 generate_desktop_files:25
 msgid "Rename files and directories"
-msgstr "更改檔案和目錄名"
+msgstr ""
 
 #: usr/lib/bulky/bulky.py:650
 #, python-format
 msgid "Name collision on '%s'."
-msgstr "名字和 '%s' 有衝突。"
+msgstr ""
 
 #: usr/lib/bulky/bulky.py:654 usr/lib/bulky/bulky.py:658
 #, python-format
 msgid "'%s' is not writeable."
-msgstr "無法寫入 %s"
+msgstr ""
 
 #: usr/share/bulky/bulky.ui.h:1
 msgid "Add files..."
-msgstr "加入檔案..."
+msgstr ""
 
 #: usr/share/bulky/bulky.ui.h:2
 msgid "Remove"
-msgstr "刪除"
+msgstr ""
 
 #: usr/share/bulky/bulky.ui.h:3
 msgid "Remove selected files"
-msgstr "刪除選擇的檔案"
+msgstr ""
 
 #: usr/share/bulky/bulky.ui.h:4
 msgid "Clear"
-msgstr "清除"
+msgstr ""
 
 #: usr/share/bulky/bulky.ui.h:5
 msgid "Replace"
-msgstr "取代"
+msgstr ""
 
 #: usr/share/bulky/bulky.ui.h:6
 msgid "Insert"
-msgstr "插入"
+msgstr ""
 
 #: usr/share/bulky/bulky.ui.h:7
 msgid "Change case"
-msgstr "改變大小寫"
+msgstr ""
 
 #: usr/share/bulky/bulky.ui.h:8
 msgid "Name only"
-msgstr "限用名稱"
+msgstr ""
 
 #: usr/share/bulky/bulky.ui.h:9
 msgid "Extension only"
-msgstr "僅限擴充"
+msgstr ""
 
 #: usr/share/bulky/bulky.ui.h:10
 msgid "Entire filename"
-msgstr "完整檔名"
+msgstr ""
 
 #: usr/share/bulky/bulky.ui.h:11
 msgid "Find:"
-msgstr "搜尋："
+msgstr ""
 
 #: usr/share/bulky/bulky.ui.h:12
 msgid "Replace:"
-msgstr "取代："
+msgstr ""
 
 #: usr/share/bulky/bulky.ui.h:15
 msgid "Regular expression"
-msgstr "正規表示式"
+msgstr ""
 
 #: usr/share/bulky/bulky.ui.h:16
 msgid "Case sensitive"
-msgstr "區分大小寫"
+msgstr ""
 
 #: usr/share/bulky/bulky.ui.h:17
 msgid "At position:"
-msgstr "位於："
+msgstr ""
 
 #: usr/share/bulky/bulky.ui.h:18
 msgid "From the end"
-msgstr "從後面"
+msgstr ""
 
 #: usr/share/bulky/bulky.ui.h:19
 msgid "Overwrite"
-msgstr "覆蓋"
+msgstr ""
 
 #: usr/share/bulky/bulky.ui.h:20
 msgid "Text:"
-msgstr "文字："
+msgstr ""
 
 #: usr/share/bulky/bulky.ui.h:21
 msgid "Convert to:"
-msgstr "轉換為："
+msgstr ""
 
 #: usr/share/bulky/bulky.ui.h:22
 msgid "Lower case"
-msgstr "小寫"
+msgstr ""
 
 #: usr/share/bulky/bulky.ui.h:23
 msgid "First character uppercase"
-msgstr "第一個字母大寫"
+msgstr ""
 
 #: usr/share/bulky/bulky.ui.h:24
 msgid "Title case"
-msgstr "抬頭大小寫"
+msgstr ""
 
 #: usr/share/bulky/bulky.ui.h:25
 msgid "Upper case"
-msgstr "大寫"
+msgstr ""
 
 #: usr/share/bulky/bulky.ui.h:26
 msgid "Remove accents"
-msgstr "移除聲調符號"
+msgstr ""
 
 #: usr/share/bulky/bulky.ui.h:27
 msgid "Remove from position:"
-msgstr "從位置移除："
+msgstr ""
 
 #: usr/share/bulky/bulky.ui.h:28
 msgid "To position:"
-msgstr "到位置："
+msgstr ""
 
 #: usr/share/bulky/bulky.ui.h:29
 msgid "Close"
-msgstr "關閉"
+msgstr ""
 
 #: usr/share/bulky/bulky.ui.h:30
 msgid "Rename"
-msgstr "改名"
+msgstr ""

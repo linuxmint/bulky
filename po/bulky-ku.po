@@ -7,188 +7,192 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxmint\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2021-11-22 16:34+0000\n"
+"POT-Creation-Date: 2024-11-25 11:35+0000\n"
 "PO-Revision-Date: 2023-08-12 17:36+0000\n"
 "Last-Translator: Sahin Elci <Unknown>\n"
 "Language-Team: Kurdish <ku@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2024-07-21 09:03+0000\n"
-"X-Generator: Launchpad (build bbfa2351d9d6a9ddfe262109428f7bf5516e65d1)\n"
+"X-Launchpad-Export-Date: 2024-12-05 10:20+0000\n"
+"X-Generator: Launchpad (build 1519c6efe8e9bd78e6c5ebf2eb5bcb040b95ad32)\n"
 
-#: usr/lib/bulky/bulky.py:42
+#: usr/lib/bulky/bulky.py:43
 msgid "Cancel"
 msgstr "Betal Bike"
 
-#: usr/lib/bulky/bulky.py:43
+#: usr/lib/bulky/bulky.py:44
 msgid "Add"
 msgstr "Lêzêdekirin"
 
-#: usr/lib/bulky/bulky.py:200 usr/share/bulky/bulky.ui.h:1
+#: usr/lib/bulky/bulky.py:217 usr/share/bulky/bulky.ui.h:31
 msgid "Rename..."
 msgstr "Nav biguherîne..."
 
-#: usr/lib/bulky/bulky.py:225 usr/lib/bulky/bulky.py:337
+#: usr/lib/bulky/bulky.py:255 usr/lib/bulky/bulky.py:396
 msgid "About"
 msgstr "Derbar"
 
-#: usr/lib/bulky/bulky.py:230
+#: usr/lib/bulky/bulky.py:260
 msgid "Quit"
 msgstr "Derkeve"
 
-#: usr/lib/bulky/bulky.py:247
+#: usr/lib/bulky/bulky.py:277
 msgid "Name"
 msgstr "Nav"
 
-#: usr/lib/bulky/bulky.py:258
+#: usr/lib/bulky/bulky.py:288
 msgid "New name"
 msgstr "Navê nû"
 
-#: usr/lib/bulky/bulky.py:323
+#: usr/lib/bulky/bulky.py:361 usr/share/bulky/bulky.ui.h:14
 msgid "Use %n, %0n, %00n, %000n to enumerate."
 msgstr "Ji bo %n, %0n, %00n, %000n rêzkirin bikarbînin."
 
-#: usr/lib/bulky/bulky.py:339
+#: usr/lib/bulky/bulky.py:398
 msgid "Rename Files"
 msgstr "Binavkirina Dosyayê"
 
-#: usr/lib/bulky/bulky.py:390
+#: usr/lib/bulky/bulky.py:449
 msgid "Add files"
 msgstr "Zêdekirina dosyayê"
 
-#: usr/lib/bulky/bulky.py:419
+#: usr/lib/bulky/bulky.py:478
 #, python-format
 msgid "Unable to rename '%s': File name too long"
 msgstr "Jinûve nayê binavkirin '%s': Navê dosyayê dirêje"
 
-#: usr/lib/bulky/bulky.py:422
+#: usr/lib/bulky/bulky.py:481
 #, python-format
 msgid "Unable to rename '%s': %s"
 msgstr "Jinûve nayê binavkirin'%s': %s"
 
-#: usr/lib/bulky/bulky.py:499 generate_desktop_files:25
+#: usr/lib/bulky/bulky.py:557 generate_desktop_files:25
 msgid "File Renamer"
 msgstr "Jinûve Binavkirin"
 
-#: usr/lib/bulky/bulky.py:500 generate_desktop_files:25
+#: usr/lib/bulky/bulky.py:558 generate_desktop_files:25
 msgid "Rename files and directories"
 msgstr "Dosya û rê jinûve binav bikin"
 
-#: usr/lib/bulky/bulky.py:593
+#: usr/lib/bulky/bulky.py:650
 #, python-format
 msgid "Name collision on '%s'."
 msgstr "Hevkatina nav vekirî ye'%s'."
 
-#: usr/lib/bulky/bulky.py:597 usr/lib/bulky/bulky.py:601
+#: usr/lib/bulky/bulky.py:654 usr/lib/bulky/bulky.py:658
 #, python-format
 msgid "'%s' is not writeable."
 msgstr "'%s' nayê nivîsandin."
 
-#: usr/share/bulky/bulky.ui.h:2
+#: usr/share/bulky/bulky.ui.h:1
 msgid "Add files..."
 msgstr "Zêdekirina dosyayan..."
 
-#: usr/share/bulky/bulky.ui.h:3
+#: usr/share/bulky/bulky.ui.h:2
 msgid "Remove"
 msgstr "Jê bibe"
 
-#: usr/share/bulky/bulky.ui.h:4
+#: usr/share/bulky/bulky.ui.h:3
 msgid "Remove selected files"
 msgstr "Dosyayên jêgirtî rakin"
 
-#: usr/share/bulky/bulky.ui.h:5
+#: usr/share/bulky/bulky.ui.h:4
 msgid "Clear"
 msgstr "Paqij Bike"
 
-#: usr/share/bulky/bulky.ui.h:6
+#: usr/share/bulky/bulky.ui.h:5
 msgid "Replace"
 msgstr "Cîhgûherîn"
 
-#: usr/share/bulky/bulky.ui.h:7
+#: usr/share/bulky/bulky.ui.h:6
 msgid "Insert"
 msgstr "Texistin"
 
-#: usr/share/bulky/bulky.ui.h:8
+#: usr/share/bulky/bulky.ui.h:7
 msgid "Change case"
 msgstr "Kasê biguherîne"
 
-#: usr/share/bulky/bulky.ui.h:9
+#: usr/share/bulky/bulky.ui.h:8
 msgid "Name only"
 msgstr "Tenê nav"
 
-#: usr/share/bulky/bulky.ui.h:10
+#: usr/share/bulky/bulky.ui.h:9
 msgid "Extension only"
 msgstr "Tenê lehik"
 
-#: usr/share/bulky/bulky.ui.h:11
+#: usr/share/bulky/bulky.ui.h:10
 msgid "Entire filename"
 msgstr "Hemî navêdosya"
 
-#: usr/share/bulky/bulky.ui.h:12
+#: usr/share/bulky/bulky.ui.h:11
 msgid "Find:"
 msgstr "Lêgerîn:"
 
-#: usr/share/bulky/bulky.ui.h:13
+#: usr/share/bulky/bulky.ui.h:12
 msgid "Replace:"
 msgstr "Cîhgûherîn"
 
-#: usr/share/bulky/bulky.ui.h:14
+#: usr/share/bulky/bulky.ui.h:15
 msgid "Regular expression"
 msgstr "Derbirîna bi pergal"
 
-#: usr/share/bulky/bulky.ui.h:15
+#: usr/share/bulky/bulky.ui.h:16
 msgid "Case sensitive"
 msgstr "Ji rewşê re hestiyare"
 
-#: usr/share/bulky/bulky.ui.h:16
+#: usr/share/bulky/bulky.ui.h:17
 msgid "At position:"
 msgstr "Ji pozîsyona:"
 
-#: usr/share/bulky/bulky.ui.h:17
+#: usr/share/bulky/bulky.ui.h:18
 msgid "From the end"
 msgstr "Cîhê dawî"
 
-#: usr/share/bulky/bulky.ui.h:18
+#: usr/share/bulky/bulky.ui.h:19
 msgid "Overwrite"
 msgstr "Li ser binivîse"
 
-#: usr/share/bulky/bulky.ui.h:19
+#: usr/share/bulky/bulky.ui.h:20
 msgid "Text:"
 msgstr "Nivîs:"
 
-#: usr/share/bulky/bulky.ui.h:20
+#: usr/share/bulky/bulky.ui.h:21
 msgid "Convert to:"
 msgstr "Guhertin a:"
 
-#: usr/share/bulky/bulky.ui.h:21
+#: usr/share/bulky/bulky.ui.h:22
 msgid "Lower case"
 msgstr "Kasa piçûk"
 
-#: usr/share/bulky/bulky.ui.h:22
+#: usr/share/bulky/bulky.ui.h:23
 msgid "First character uppercase"
 msgstr "Karekterê ewil mezin"
 
-#: usr/share/bulky/bulky.ui.h:23
+#: usr/share/bulky/bulky.ui.h:24
 msgid "Title case"
 msgstr "Kasa sernivîs"
 
-#: usr/share/bulky/bulky.ui.h:24
+#: usr/share/bulky/bulky.ui.h:25
 msgid "Upper case"
 msgstr "Kasa mezin"
 
-#: usr/share/bulky/bulky.ui.h:25
+#: usr/share/bulky/bulky.ui.h:26
+msgid "Remove accents"
+msgstr ""
+
+#: usr/share/bulky/bulky.ui.h:27
 msgid "Remove from position:"
 msgstr "Ji wî cîh rake"
 
-#: usr/share/bulky/bulky.ui.h:26
+#: usr/share/bulky/bulky.ui.h:28
 msgid "To position:"
 msgstr "Bicihkirin"
 
-#: usr/share/bulky/bulky.ui.h:27
+#: usr/share/bulky/bulky.ui.h:29
 msgid "Close"
 msgstr "Bigire"
 
-#: usr/share/bulky/bulky.ui.h:28
+#: usr/share/bulky/bulky.ui.h:30
 msgid "Rename"
 msgstr "Jinûnavkirin"

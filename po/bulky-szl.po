@@ -7,189 +7,193 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxmint\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2021-11-22 16:34+0000\n"
-"PO-Revision-Date: 2023-12-26 17:09+0000\n"
+"POT-Creation-Date: 2024-11-25 11:35+0000\n"
+"PO-Revision-Date: 2024-11-03 07:12+0000\n"
 "Last-Translator: Marcin Lis <Unknown>\n"
 "Language-Team: Silesian <szl@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2024-07-21 09:03+0000\n"
-"X-Generator: Launchpad (build bbfa2351d9d6a9ddfe262109428f7bf5516e65d1)\n"
+"X-Launchpad-Export-Date: 2024-12-05 10:20+0000\n"
+"X-Generator: Launchpad (build 1519c6efe8e9bd78e6c5ebf2eb5bcb040b95ad32)\n"
 "Language: szl\n"
 
-#: usr/lib/bulky/bulky.py:42
+#: usr/lib/bulky/bulky.py:43
 msgid "Cancel"
 msgstr "Pociep"
 
-#: usr/lib/bulky/bulky.py:43
+#: usr/lib/bulky/bulky.py:44
 msgid "Add"
 msgstr "Przidej"
 
-#: usr/lib/bulky/bulky.py:200 usr/share/bulky/bulky.ui.h:1
+#: usr/lib/bulky/bulky.py:217 usr/share/bulky/bulky.ui.h:31
 msgid "Rename..."
-msgstr "Zmiyń miano..."
+msgstr "Przemianuj..."
 
-#: usr/lib/bulky/bulky.py:225 usr/lib/bulky/bulky.py:337
+#: usr/lib/bulky/bulky.py:255 usr/lib/bulky/bulky.py:396
 msgid "About"
 msgstr "Informacyje"
 
-#: usr/lib/bulky/bulky.py:230
+#: usr/lib/bulky/bulky.py:260
 msgid "Quit"
 msgstr "Zakōńcz"
 
-#: usr/lib/bulky/bulky.py:247
+#: usr/lib/bulky/bulky.py:277
 msgid "Name"
 msgstr "Miano"
 
-#: usr/lib/bulky/bulky.py:258
+#: usr/lib/bulky/bulky.py:288
 msgid "New name"
 msgstr "Nowe miano"
 
-#: usr/lib/bulky/bulky.py:323
+#: usr/lib/bulky/bulky.py:361 usr/share/bulky/bulky.ui.h:14
 msgid "Use %n, %0n, %00n, %000n to enumerate."
 msgstr "Użyj %n, %0n, %00n, %000n, coby wyliczyć."
 
-#: usr/lib/bulky/bulky.py:339
+#: usr/lib/bulky/bulky.py:398
 msgid "Rename Files"
-msgstr "Zmiyń miana ôd zbiorōw"
+msgstr "Przemianuj zbiory"
 
-#: usr/lib/bulky/bulky.py:390
+#: usr/lib/bulky/bulky.py:449
 msgid "Add files"
 msgstr "Przidej zbiory"
 
-#: usr/lib/bulky/bulky.py:419
+#: usr/lib/bulky/bulky.py:478
 #, python-format
 msgid "Unable to rename '%s': File name too long"
-msgstr "Niy idzie zmiynić miana ôd '%s': za duge miano ôd zbioru"
+msgstr "Niy idzie przemianować '%s': za duge miano ôd zbioru"
 
-#: usr/lib/bulky/bulky.py:422
+#: usr/lib/bulky/bulky.py:481
 #, python-format
 msgid "Unable to rename '%s': %s"
-msgstr "Niy idzie zmiynić miana ôd '%s': %s"
+msgstr "Niy idzie przemianować '%s': %s"
 
-#: usr/lib/bulky/bulky.py:499 generate_desktop_files:25
+#: usr/lib/bulky/bulky.py:557 generate_desktop_files:25
 msgid "File Renamer"
 msgstr "Zmiana mian ôd zbiorōw"
 
-#: usr/lib/bulky/bulky.py:500 generate_desktop_files:25
+#: usr/lib/bulky/bulky.py:558 generate_desktop_files:25
 msgid "Rename files and directories"
-msgstr "Zmiyń miana ôd zbiorōw i katalogōw"
+msgstr "Przemianuj zbiory i katalogi"
 
-#: usr/lib/bulky/bulky.py:593
+#: usr/lib/bulky/bulky.py:650
 #, python-format
 msgid "Name collision on '%s'."
-msgstr "Kolizyjŏ miana w '%s'."
+msgstr "Kolizyjŏ mian w '%s'."
 
-#: usr/lib/bulky/bulky.py:597 usr/lib/bulky/bulky.py:601
+#: usr/lib/bulky/bulky.py:654 usr/lib/bulky/bulky.py:658
 #, python-format
 msgid "'%s' is not writeable."
-msgstr ""
+msgstr "'%s' niy ma zapisowalne."
 
-#: usr/share/bulky/bulky.ui.h:2
+#: usr/share/bulky/bulky.ui.h:1
 msgid "Add files..."
 msgstr "Przidej zbiory..."
 
-#: usr/share/bulky/bulky.ui.h:3
+#: usr/share/bulky/bulky.ui.h:2
 msgid "Remove"
 msgstr "Wyciep"
 
-#: usr/share/bulky/bulky.ui.h:4
+#: usr/share/bulky/bulky.ui.h:3
 msgid "Remove selected files"
 msgstr "Wyciep ôbrane zbiory"
 
-#: usr/share/bulky/bulky.ui.h:5
+#: usr/share/bulky/bulky.ui.h:4
 msgid "Clear"
 msgstr "Wysnŏż"
 
-#: usr/share/bulky/bulky.ui.h:6
+#: usr/share/bulky/bulky.ui.h:5
 msgid "Replace"
 msgstr "Podmiyń"
 
-#: usr/share/bulky/bulky.ui.h:7
+#: usr/share/bulky/bulky.ui.h:6
 msgid "Insert"
 msgstr "Wrŏź"
 
-#: usr/share/bulky/bulky.ui.h:8
+#: usr/share/bulky/bulky.ui.h:7
 msgid "Change case"
 msgstr "Zmiyń wielgość liter"
 
-#: usr/share/bulky/bulky.ui.h:9
+#: usr/share/bulky/bulky.ui.h:8
 msgid "Name only"
 msgstr "Ino miano"
 
-#: usr/share/bulky/bulky.ui.h:10
+#: usr/share/bulky/bulky.ui.h:9
 msgid "Extension only"
 msgstr "Ino rozszerzynie"
 
-#: usr/share/bulky/bulky.ui.h:11
+#: usr/share/bulky/bulky.ui.h:10
 msgid "Entire filename"
 msgstr "Cołke miano ôd zbioru"
 
-#: usr/share/bulky/bulky.ui.h:12
+#: usr/share/bulky/bulky.ui.h:11
 msgid "Find:"
 msgstr "Znojdź:"
 
-#: usr/share/bulky/bulky.ui.h:13
+#: usr/share/bulky/bulky.ui.h:12
 msgid "Replace:"
 msgstr "Podmiyń:"
 
-#: usr/share/bulky/bulky.ui.h:14
+#: usr/share/bulky/bulky.ui.h:15
 msgid "Regular expression"
 msgstr "Regularny ausdruk"
 
-#: usr/share/bulky/bulky.ui.h:15
-msgid "Case sensitive"
-msgstr ""
-
 #: usr/share/bulky/bulky.ui.h:16
+msgid "Case sensitive"
+msgstr "Pozorny na wielgość liter"
+
+#: usr/share/bulky/bulky.ui.h:17
 msgid "At position:"
 msgstr "Na pozycyji:"
 
-#: usr/share/bulky/bulky.ui.h:17
+#: usr/share/bulky/bulky.ui.h:18
 msgid "From the end"
 msgstr "Ôd kōńca"
 
-#: usr/share/bulky/bulky.ui.h:18
+#: usr/share/bulky/bulky.ui.h:19
 msgid "Overwrite"
 msgstr "Nadpisz"
 
-#: usr/share/bulky/bulky.ui.h:19
+#: usr/share/bulky/bulky.ui.h:20
 msgid "Text:"
 msgstr "Tekst:"
 
-#: usr/share/bulky/bulky.ui.h:20
+#: usr/share/bulky/bulky.ui.h:21
 msgid "Convert to:"
 msgstr "Przerōb na:"
 
-#: usr/share/bulky/bulky.ui.h:21
+#: usr/share/bulky/bulky.ui.h:22
 msgid "Lower case"
 msgstr "Małe litery"
 
-#: usr/share/bulky/bulky.ui.h:22
+#: usr/share/bulky/bulky.ui.h:23
 msgid "First character uppercase"
 msgstr "Piyrszŏ litera wielgŏ"
 
-#: usr/share/bulky/bulky.ui.h:23
+#: usr/share/bulky/bulky.ui.h:24
 msgid "Title case"
 msgstr "Jak tytuł"
 
-#: usr/share/bulky/bulky.ui.h:24
+#: usr/share/bulky/bulky.ui.h:25
 msgid "Upper case"
 msgstr "Wielge litery"
 
-#: usr/share/bulky/bulky.ui.h:25
+#: usr/share/bulky/bulky.ui.h:26
+msgid "Remove accents"
+msgstr ""
+
+#: usr/share/bulky/bulky.ui.h:27
 msgid "Remove from position:"
 msgstr "Wyciep ôd pozycyje:"
 
-#: usr/share/bulky/bulky.ui.h:26
+#: usr/share/bulky/bulky.ui.h:28
 msgid "To position:"
 msgstr "Do pozycyje:"
 
-#: usr/share/bulky/bulky.ui.h:27
+#: usr/share/bulky/bulky.ui.h:29
 msgid "Close"
 msgstr "Zawrzij"
 
-#: usr/share/bulky/bulky.ui.h:28
+#: usr/share/bulky/bulky.ui.h:30
 msgid "Rename"
-msgstr "Zmiyń miano"
+msgstr "Przemianuj"

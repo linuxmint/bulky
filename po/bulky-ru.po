@@ -7,188 +7,192 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxmint\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2021-11-22 16:34+0000\n"
+"POT-Creation-Date: 2024-11-25 11:35+0000\n"
 "PO-Revision-Date: 2021-12-02 06:49+0000\n"
 "Last-Translator: Aleksey Kabanov <Unknown>\n"
 "Language-Team: Russian <ru@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2024-07-21 09:03+0000\n"
-"X-Generator: Launchpad (build bbfa2351d9d6a9ddfe262109428f7bf5516e65d1)\n"
+"X-Launchpad-Export-Date: 2024-12-05 10:20+0000\n"
+"X-Generator: Launchpad (build 1519c6efe8e9bd78e6c5ebf2eb5bcb040b95ad32)\n"
 
-#: usr/lib/bulky/bulky.py:42
+#: usr/lib/bulky/bulky.py:43
 msgid "Cancel"
 msgstr "Отменить"
 
-#: usr/lib/bulky/bulky.py:43
+#: usr/lib/bulky/bulky.py:44
 msgid "Add"
 msgstr "Добавить"
 
-#: usr/lib/bulky/bulky.py:200 usr/share/bulky/bulky.ui.h:1
+#: usr/lib/bulky/bulky.py:217 usr/share/bulky/bulky.ui.h:31
 msgid "Rename..."
 msgstr "Переименовать…"
 
-#: usr/lib/bulky/bulky.py:225 usr/lib/bulky/bulky.py:337
+#: usr/lib/bulky/bulky.py:255 usr/lib/bulky/bulky.py:396
 msgid "About"
 msgstr "О программе"
 
-#: usr/lib/bulky/bulky.py:230
+#: usr/lib/bulky/bulky.py:260
 msgid "Quit"
 msgstr "Выйти"
 
-#: usr/lib/bulky/bulky.py:247
+#: usr/lib/bulky/bulky.py:277
 msgid "Name"
 msgstr "Имя"
 
-#: usr/lib/bulky/bulky.py:258
+#: usr/lib/bulky/bulky.py:288
 msgid "New name"
 msgstr "Новое имя"
 
-#: usr/lib/bulky/bulky.py:323
+#: usr/lib/bulky/bulky.py:361 usr/share/bulky/bulky.ui.h:14
 msgid "Use %n, %0n, %00n, %000n to enumerate."
 msgstr "Используйте %n, %0n, %00n, %000n для нумерации."
 
-#: usr/lib/bulky/bulky.py:339
+#: usr/lib/bulky/bulky.py:398
 msgid "Rename Files"
 msgstr "Переименовать файлы"
 
-#: usr/lib/bulky/bulky.py:390
+#: usr/lib/bulky/bulky.py:449
 msgid "Add files"
 msgstr "Добавить файлы"
 
-#: usr/lib/bulky/bulky.py:419
+#: usr/lib/bulky/bulky.py:478
 #, python-format
 msgid "Unable to rename '%s': File name too long"
 msgstr "Не удалось переименовать '%s': слишком длинное имя файла"
 
-#: usr/lib/bulky/bulky.py:422
+#: usr/lib/bulky/bulky.py:481
 #, python-format
 msgid "Unable to rename '%s': %s"
 msgstr "Не удалось переименовать '%s': %s"
 
-#: usr/lib/bulky/bulky.py:499 generate_desktop_files:25
+#: usr/lib/bulky/bulky.py:557 generate_desktop_files:25
 msgid "File Renamer"
 msgstr "Переименователь файлов"
 
-#: usr/lib/bulky/bulky.py:500 generate_desktop_files:25
+#: usr/lib/bulky/bulky.py:558 generate_desktop_files:25
 msgid "Rename files and directories"
 msgstr "Переименование файлов и каталогов"
 
-#: usr/lib/bulky/bulky.py:593
+#: usr/lib/bulky/bulky.py:650
 #, python-format
 msgid "Name collision on '%s'."
 msgstr "Совпадение имени '%s'."
 
-#: usr/lib/bulky/bulky.py:597 usr/lib/bulky/bulky.py:601
+#: usr/lib/bulky/bulky.py:654 usr/lib/bulky/bulky.py:658
 #, python-format
 msgid "'%s' is not writeable."
 msgstr "'%s' недоступен для записи."
 
-#: usr/share/bulky/bulky.ui.h:2
+#: usr/share/bulky/bulky.ui.h:1
 msgid "Add files..."
 msgstr "Добавить файлы..."
 
-#: usr/share/bulky/bulky.ui.h:3
+#: usr/share/bulky/bulky.ui.h:2
 msgid "Remove"
 msgstr "Удалить"
 
-#: usr/share/bulky/bulky.ui.h:4
+#: usr/share/bulky/bulky.ui.h:3
 msgid "Remove selected files"
 msgstr "Удалить выделенные файлы"
 
-#: usr/share/bulky/bulky.ui.h:5
+#: usr/share/bulky/bulky.ui.h:4
 msgid "Clear"
 msgstr "Очистить"
 
-#: usr/share/bulky/bulky.ui.h:6
+#: usr/share/bulky/bulky.ui.h:5
 msgid "Replace"
 msgstr "Заменить"
 
-#: usr/share/bulky/bulky.ui.h:7
+#: usr/share/bulky/bulky.ui.h:6
 msgid "Insert"
 msgstr "Вставить"
 
-#: usr/share/bulky/bulky.ui.h:8
+#: usr/share/bulky/bulky.ui.h:7
 msgid "Change case"
 msgstr "Изменить регистр"
 
-#: usr/share/bulky/bulky.ui.h:9
+#: usr/share/bulky/bulky.ui.h:8
 msgid "Name only"
 msgstr "Только имя"
 
-#: usr/share/bulky/bulky.ui.h:10
+#: usr/share/bulky/bulky.ui.h:9
 msgid "Extension only"
 msgstr "Только расширение"
 
-#: usr/share/bulky/bulky.ui.h:11
+#: usr/share/bulky/bulky.ui.h:10
 msgid "Entire filename"
 msgstr "Полное имя файла"
 
-#: usr/share/bulky/bulky.ui.h:12
+#: usr/share/bulky/bulky.ui.h:11
 msgid "Find:"
 msgstr "Найти:"
 
-#: usr/share/bulky/bulky.ui.h:13
+#: usr/share/bulky/bulky.ui.h:12
 msgid "Replace:"
 msgstr "Заменить:"
 
-#: usr/share/bulky/bulky.ui.h:14
+#: usr/share/bulky/bulky.ui.h:15
 msgid "Regular expression"
 msgstr "Регулярное выражение"
 
-#: usr/share/bulky/bulky.ui.h:15
+#: usr/share/bulky/bulky.ui.h:16
 msgid "Case sensitive"
 msgstr "С учётом регистра"
 
-#: usr/share/bulky/bulky.ui.h:16
+#: usr/share/bulky/bulky.ui.h:17
 msgid "At position:"
 msgstr "В позиции:"
 
-#: usr/share/bulky/bulky.ui.h:17
+#: usr/share/bulky/bulky.ui.h:18
 msgid "From the end"
 msgstr "С конца"
 
-#: usr/share/bulky/bulky.ui.h:18
+#: usr/share/bulky/bulky.ui.h:19
 msgid "Overwrite"
 msgstr "Перезаписать"
 
-#: usr/share/bulky/bulky.ui.h:19
+#: usr/share/bulky/bulky.ui.h:20
 msgid "Text:"
 msgstr "Текст:"
 
-#: usr/share/bulky/bulky.ui.h:20
+#: usr/share/bulky/bulky.ui.h:21
 msgid "Convert to:"
 msgstr "Преобразовать в:"
 
-#: usr/share/bulky/bulky.ui.h:21
+#: usr/share/bulky/bulky.ui.h:22
 msgid "Lower case"
 msgstr "Нижний регистр"
 
-#: usr/share/bulky/bulky.ui.h:22
+#: usr/share/bulky/bulky.ui.h:23
 msgid "First character uppercase"
 msgstr "Первый символ в верхнем регистре"
 
-#: usr/share/bulky/bulky.ui.h:23
+#: usr/share/bulky/bulky.ui.h:24
 msgid "Title case"
 msgstr "Заглавные буквы"
 
-#: usr/share/bulky/bulky.ui.h:24
+#: usr/share/bulky/bulky.ui.h:25
 msgid "Upper case"
 msgstr "Верхний регистр"
 
-#: usr/share/bulky/bulky.ui.h:25
+#: usr/share/bulky/bulky.ui.h:26
+msgid "Remove accents"
+msgstr ""
+
+#: usr/share/bulky/bulky.ui.h:27
 msgid "Remove from position:"
 msgstr "Удалить с позиции:"
 
-#: usr/share/bulky/bulky.ui.h:26
+#: usr/share/bulky/bulky.ui.h:28
 msgid "To position:"
 msgstr "До позиции:"
 
-#: usr/share/bulky/bulky.ui.h:27
+#: usr/share/bulky/bulky.ui.h:29
 msgid "Close"
 msgstr "Закрыть"
 
-#: usr/share/bulky/bulky.ui.h:28
+#: usr/share/bulky/bulky.ui.h:30
 msgid "Rename"
 msgstr "Переименовать"

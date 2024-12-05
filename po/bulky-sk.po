@@ -7,189 +7,193 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxmint\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2021-11-22 16:34+0000\n"
+"POT-Creation-Date: 2024-11-25 11:35+0000\n"
 "PO-Revision-Date: 2022-02-09 16:44+0000\n"
 "Last-Translator: Adrián Bíro <biroadrian@protonmail.com>\n"
 "Language-Team: Slovak <sk@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2024-07-21 09:03+0000\n"
-"X-Generator: Launchpad (build bbfa2351d9d6a9ddfe262109428f7bf5516e65d1)\n"
+"X-Launchpad-Export-Date: 2024-12-05 10:20+0000\n"
+"X-Generator: Launchpad (build 1519c6efe8e9bd78e6c5ebf2eb5bcb040b95ad32)\n"
 "Language: sk\n"
 
-#: usr/lib/bulky/bulky.py:42
+#: usr/lib/bulky/bulky.py:43
 msgid "Cancel"
 msgstr "Zrušiť"
 
-#: usr/lib/bulky/bulky.py:43
+#: usr/lib/bulky/bulky.py:44
 msgid "Add"
 msgstr "Pridať"
 
-#: usr/lib/bulky/bulky.py:200 usr/share/bulky/bulky.ui.h:1
+#: usr/lib/bulky/bulky.py:217 usr/share/bulky/bulky.ui.h:31
 msgid "Rename..."
 msgstr "Premenovanie..."
 
-#: usr/lib/bulky/bulky.py:225 usr/lib/bulky/bulky.py:337
+#: usr/lib/bulky/bulky.py:255 usr/lib/bulky/bulky.py:396
 msgid "About"
 msgstr "O aplikácii"
 
-#: usr/lib/bulky/bulky.py:230
+#: usr/lib/bulky/bulky.py:260
 msgid "Quit"
 msgstr "Ukončiť"
 
-#: usr/lib/bulky/bulky.py:247
+#: usr/lib/bulky/bulky.py:277
 msgid "Name"
 msgstr "Názov"
 
-#: usr/lib/bulky/bulky.py:258
+#: usr/lib/bulky/bulky.py:288
 msgid "New name"
 msgstr "Nový názov"
 
-#: usr/lib/bulky/bulky.py:323
+#: usr/lib/bulky/bulky.py:361 usr/share/bulky/bulky.ui.h:14
 msgid "Use %n, %0n, %00n, %000n to enumerate."
 msgstr "Použite výrazy %n, %0n, %00n, %000n na prepočítanie."
 
-#: usr/lib/bulky/bulky.py:339
+#: usr/lib/bulky/bulky.py:398
 msgid "Rename Files"
 msgstr "Premenovanie súborov"
 
-#: usr/lib/bulky/bulky.py:390
+#: usr/lib/bulky/bulky.py:449
 msgid "Add files"
 msgstr "Pridanie súborov"
 
-#: usr/lib/bulky/bulky.py:419
+#: usr/lib/bulky/bulky.py:478
 #, python-format
 msgid "Unable to rename '%s': File name too long"
 msgstr "Navrhovaný názov '%s': je príliš dlhý"
 
-#: usr/lib/bulky/bulky.py:422
+#: usr/lib/bulky/bulky.py:481
 #, python-format
 msgid "Unable to rename '%s': %s"
 msgstr "Nedá sa premenovať  '%s': %s"
 
-#: usr/lib/bulky/bulky.py:499 generate_desktop_files:25
+#: usr/lib/bulky/bulky.py:557 generate_desktop_files:25
 msgid "File Renamer"
 msgstr "Nástroj na premenovanie súborov"
 
-#: usr/lib/bulky/bulky.py:500 generate_desktop_files:25
+#: usr/lib/bulky/bulky.py:558 generate_desktop_files:25
 msgid "Rename files and directories"
 msgstr "Premenováva súbory a adresáre"
 
-#: usr/lib/bulky/bulky.py:593
+#: usr/lib/bulky/bulky.py:650
 #, python-format
 msgid "Name collision on '%s'."
 msgstr "Rozpor názvov v ceste „%s“."
 
-#: usr/lib/bulky/bulky.py:597 usr/lib/bulky/bulky.py:601
+#: usr/lib/bulky/bulky.py:654 usr/lib/bulky/bulky.py:658
 #, python-format
 msgid "'%s' is not writeable."
 msgstr "Cesta „%s“ nie je zapisovateľná."
 
-#: usr/share/bulky/bulky.ui.h:2
+#: usr/share/bulky/bulky.ui.h:1
 msgid "Add files..."
 msgstr "Pridá súbory..."
 
-#: usr/share/bulky/bulky.ui.h:3
+#: usr/share/bulky/bulky.ui.h:2
 msgid "Remove"
 msgstr "Odstráni"
 
-#: usr/share/bulky/bulky.ui.h:4
+#: usr/share/bulky/bulky.ui.h:3
 msgid "Remove selected files"
 msgstr "Odstráni vybrané súbory"
 
-#: usr/share/bulky/bulky.ui.h:5
+#: usr/share/bulky/bulky.ui.h:4
 msgid "Clear"
 msgstr "Vymaže"
 
-#: usr/share/bulky/bulky.ui.h:6
+#: usr/share/bulky/bulky.ui.h:5
 msgid "Replace"
 msgstr "Nahradiť"
 
-#: usr/share/bulky/bulky.ui.h:7
+#: usr/share/bulky/bulky.ui.h:6
 msgid "Insert"
 msgstr "Vložiť"
 
-#: usr/share/bulky/bulky.ui.h:8
+#: usr/share/bulky/bulky.ui.h:7
 msgid "Change case"
 msgstr "Zmeniť veľkosť písmen"
 
-#: usr/share/bulky/bulky.ui.h:9
+#: usr/share/bulky/bulky.ui.h:8
 msgid "Name only"
 msgstr "Iba názov"
 
-#: usr/share/bulky/bulky.ui.h:10
+#: usr/share/bulky/bulky.ui.h:9
 msgid "Extension only"
 msgstr "Iba prípona"
 
-#: usr/share/bulky/bulky.ui.h:11
+#: usr/share/bulky/bulky.ui.h:10
 msgid "Entire filename"
 msgstr "Celý názov súboru"
 
-#: usr/share/bulky/bulky.ui.h:12
+#: usr/share/bulky/bulky.ui.h:11
 msgid "Find:"
 msgstr "Nájsť:"
 
-#: usr/share/bulky/bulky.ui.h:13
+#: usr/share/bulky/bulky.ui.h:12
 msgid "Replace:"
 msgstr "Nahradiť:"
 
-#: usr/share/bulky/bulky.ui.h:14
+#: usr/share/bulky/bulky.ui.h:15
 msgid "Regular expression"
 msgstr "Regulárny výraz"
 
-#: usr/share/bulky/bulky.ui.h:15
+#: usr/share/bulky/bulky.ui.h:16
 msgid "Case sensitive"
 msgstr "Rozlišovať veľkosť písmen"
 
-#: usr/share/bulky/bulky.ui.h:16
+#: usr/share/bulky/bulky.ui.h:17
 msgid "At position:"
 msgstr "Na pozícii:"
 
-#: usr/share/bulky/bulky.ui.h:17
+#: usr/share/bulky/bulky.ui.h:18
 msgid "From the end"
 msgstr "Od konca"
 
-#: usr/share/bulky/bulky.ui.h:18
+#: usr/share/bulky/bulky.ui.h:19
 msgid "Overwrite"
 msgstr "Prepísať"
 
-#: usr/share/bulky/bulky.ui.h:19
+#: usr/share/bulky/bulky.ui.h:20
 msgid "Text:"
 msgstr "Text:"
 
-#: usr/share/bulky/bulky.ui.h:20
+#: usr/share/bulky/bulky.ui.h:21
 msgid "Convert to:"
 msgstr "Previesť na:"
 
-#: usr/share/bulky/bulky.ui.h:21
+#: usr/share/bulky/bulky.ui.h:22
 msgid "Lower case"
 msgstr "Malé písmená"
 
-#: usr/share/bulky/bulky.ui.h:22
+#: usr/share/bulky/bulky.ui.h:23
 msgid "First character uppercase"
 msgstr "Prvé písmeno veľké"
 
-#: usr/share/bulky/bulky.ui.h:23
+#: usr/share/bulky/bulky.ui.h:24
 msgid "Title case"
 msgstr "Prvé písmená veľké"
 
-#: usr/share/bulky/bulky.ui.h:24
+#: usr/share/bulky/bulky.ui.h:25
 msgid "Upper case"
 msgstr "Veľké písmená"
 
-#: usr/share/bulky/bulky.ui.h:25
+#: usr/share/bulky/bulky.ui.h:26
+msgid "Remove accents"
+msgstr ""
+
+#: usr/share/bulky/bulky.ui.h:27
 msgid "Remove from position:"
 msgstr "Odstrániť z pozície:"
 
-#: usr/share/bulky/bulky.ui.h:26
+#: usr/share/bulky/bulky.ui.h:28
 msgid "To position:"
 msgstr "Na pozíciu:"
 
-#: usr/share/bulky/bulky.ui.h:27
+#: usr/share/bulky/bulky.ui.h:29
 msgid "Close"
 msgstr "Zavrieť"
 
-#: usr/share/bulky/bulky.ui.h:28
+#: usr/share/bulky/bulky.ui.h:30
 msgid "Rename"
 msgstr "Premenovať"
