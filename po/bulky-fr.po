@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: linuxmint\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2024-11-25 11:35+0000\n"
-"PO-Revision-Date: 2024-11-25 12:14+0000\n"
-"Last-Translator: Clement Lefebvre <root@linuxmint.com>\n"
+"PO-Revision-Date: 2024-12-30 21:38+0000\n"
+"Last-Translator: AO <Unknown>\n"
 "Language-Team: French <fr@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2024-12-05 10:20+0000\n"
-"X-Generator: Launchpad (build 1519c6efe8e9bd78e6c5ebf2eb5bcb040b95ad32)\n"
+"X-Launchpad-Export-Date: 2025-01-06 12:01+0000\n"
+"X-Generator: Launchpad (build 6394e03793719e8d73f5a60b5439440e693c92f1)\n"
 
 #: usr/lib/bulky/bulky.py:43
 msgid "Cancel"
@@ -60,12 +60,12 @@ msgstr "Ajouter des fichiers"
 #: usr/lib/bulky/bulky.py:478
 #, python-format
 msgid "Unable to rename '%s': File name too long"
-msgstr "Impossible de renommer '%s' : Nom de fichier trop long"
+msgstr "Impossible de renommer '%s' : le nom de fichier est trop long"
 
 #: usr/lib/bulky/bulky.py:481
 #, python-format
 msgid "Unable to rename '%s': %s"
-msgstr "Impossible de renommer '%s' : %s"
+msgstr "Impossible de renommer '%s' : %s"
 
 #: usr/lib/bulky/bulky.py:557 generate_desktop_files:25
 msgid "File Renamer"
@@ -73,17 +73,17 @@ msgstr "Renommeur de fichiers"
 
 #: usr/lib/bulky/bulky.py:558 generate_desktop_files:25
 msgid "Rename files and directories"
-msgstr "Renommer des fichiers et répertoires"
+msgstr "Renommer des fichiers et dossiers"
 
 #: usr/lib/bulky/bulky.py:650
 #, python-format
 msgid "Name collision on '%s'."
-msgstr "Collision de nom sur '%s'."
+msgstr "Collision de nom pour '%s'."
 
 #: usr/lib/bulky/bulky.py:654 usr/lib/bulky/bulky.py:658
 #, python-format
 msgid "'%s' is not writeable."
-msgstr "Droits en écriture manquants pour '%s'."
+msgstr "Le droit d’écriture n’est pas accordé pour '%s'."
 
 #: usr/share/bulky/bulky.ui.h:1
 msgid "Add files..."
@@ -91,11 +91,11 @@ msgstr "Ajouter des fichiers ..."
 
 #: usr/share/bulky/bulky.ui.h:2
 msgid "Remove"
-msgstr "Retirer"
+msgstr "Supprimer"
 
 #: usr/share/bulky/bulky.ui.h:3
 msgid "Remove selected files"
-msgstr "Retirer les lignes sélectionnées"
+msgstr "Supprimer les fichiers sélectionnés"
 
 #: usr/share/bulky/bulky.ui.h:4
 msgid "Clear"
@@ -115,35 +115,35 @@ msgstr "Changer la casse"
 
 #: usr/share/bulky/bulky.ui.h:8
 msgid "Name only"
-msgstr "Uniquement le nom"
+msgstr "Nom seulement"
 
 #: usr/share/bulky/bulky.ui.h:9
 msgid "Extension only"
-msgstr "Uniquement l'extension"
+msgstr "Extension seulement"
 
 #: usr/share/bulky/bulky.ui.h:10
 msgid "Entire filename"
-msgstr "Nom complet"
+msgstr "Nom de fichier complet"
 
 #: usr/share/bulky/bulky.ui.h:11
 msgid "Find:"
-msgstr "Chercher :"
+msgstr "Chercher :"
 
 #: usr/share/bulky/bulky.ui.h:12
 msgid "Replace:"
-msgstr "Remplacer :"
+msgstr "Remplacer :"
 
 #: usr/share/bulky/bulky.ui.h:15
 msgid "Regular expression"
-msgstr "Expression régulière"
+msgstr "Expression rationnelle"
 
 #: usr/share/bulky/bulky.ui.h:16
 msgid "Case sensitive"
-msgstr "Respecter la casse"
+msgstr "Sensible à la casse"
 
 #: usr/share/bulky/bulky.ui.h:17
 msgid "At position:"
-msgstr "À la position :"
+msgstr "À la position :"
 
 #: usr/share/bulky/bulky.ui.h:18
 msgid "From the end"
@@ -151,43 +151,43 @@ msgstr "En partant de la fin"
 
 #: usr/share/bulky/bulky.ui.h:19
 msgid "Overwrite"
-msgstr "Écraser"
+msgstr "Remplacer"
 
 #: usr/share/bulky/bulky.ui.h:20
 msgid "Text:"
-msgstr "Texte :"
+msgstr "Texte :"
 
 #: usr/share/bulky/bulky.ui.h:21
 msgid "Convert to:"
-msgstr "Convertir en :"
+msgstr "Convertir en :"
 
 #: usr/share/bulky/bulky.ui.h:22
 msgid "Lower case"
-msgstr "Minuscules"
+msgstr "Minuscule"
 
 #: usr/share/bulky/bulky.ui.h:23
 msgid "First character uppercase"
-msgstr "Majuscule sur la première lettre"
+msgstr "Première lettre en majuscule"
 
 #: usr/share/bulky/bulky.ui.h:24
 msgid "Title case"
-msgstr "Titre"
+msgstr "Noms en majuscule"
 
 #: usr/share/bulky/bulky.ui.h:25
 msgid "Upper case"
-msgstr "Majuscules"
+msgstr "Majuscule"
 
 #: usr/share/bulky/bulky.ui.h:26
 msgid "Remove accents"
-msgstr "Enlever les accents"
+msgstr "Supprimer les accents"
 
 #: usr/share/bulky/bulky.ui.h:27
 msgid "Remove from position:"
-msgstr "De la position :"
+msgstr "Supprimer à partir de la position :"
 
 #: usr/share/bulky/bulky.ui.h:28
 msgid "To position:"
-msgstr "À la position :"
+msgstr "À la position :"
 
 #: usr/share/bulky/bulky.ui.h:29
 msgid "Close"
