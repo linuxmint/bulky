@@ -12,6 +12,7 @@ Depends: python3,
          python3-gi,
          python3-setproctitle,
          python3-magic,
+         python3-unidecode,
          ${misc:Depends}
 Description: Bulk Renamer
  Utility application used to rename multiple files.
