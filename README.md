@@ -1,7 +1,8 @@
 # Bulky - Rename multiple files at once.
 ![build](https://github.com/linuxmint/bulky/actions/workflows/build.yml/badge.svg)
 
-![image](https://user-images.githubusercontent.com/1138515/119273676-dcc8c100-bc03-11eb-95dd-841a831285cc.png)
+![bulky_1](https://github.com/user-attachments/assets/d8ba440b-5223-4387-904d-62beffec6711)
+
 
 Bulky is used to rename files and directories.
 
