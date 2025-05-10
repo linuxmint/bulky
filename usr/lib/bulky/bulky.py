@@ -2,11 +2,9 @@
 import gettext
 import gi
 import locale
-import magic
 import os
 import re
 import setproctitle
-import subprocess
 import warnings
 import sys
 import functools
@@ -743,7 +741,6 @@ class MainWindow():
         inc  = self.insert_inc_spin.get_value_as_int()
         start= self.insert_start_spin.get_value_as_int()
         text = self.inject((index-1)*inc + start, text)
-        length = len(string) - 1
         from_index = self.insert_spin.get_value_as_int() - 1
         a = len(string)
         b = len(text)
