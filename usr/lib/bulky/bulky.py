@@ -31,6 +31,10 @@ SCOPE_NAME_ONLY = "name"
 SCOPE_EXTENSION_ONLY = "extension"
 SCOPE_ALL = "all"
 
+SETTINGS_SCHEMA_ID = "org.x.bulky"
+MRU_OPERATION = "mru-operation"
+MRU_SCOPE = "mru-scope"
+
 class FolderFileChooserDialog(Gtk.Dialog):
     def __init__(self, window_title, transient_parent, starting_location):
         super(FolderFileChooserDialog, self).__init__(title=window_title,
@@ -295,8 +299,13 @@ class MainWindow():
         self.treeview.get_selection().connect("changed", self.on_files_selected)
 
         # Combos
-        self.builder.get_object("combo_operation").connect("changed", self.on_operation_changed)
-        self.builder.get_object("combo_scope").connect("changed", self.on_scope_changed)
+        self.combo_operation = self.builder.get_object("combo_operation")
+        self.combo_operation.set_active_id(self.settings.get_string(MRU_OPERATION))
+        self.combo_operation.connect("changed", self.on_operation_changed)
+        self.combo_scope = self.builder.get_object("combo_scope")
+        self.combo_scope.set_active_id(self.settings.get_string(MRU_SCOPE))
+        self.combo_scope.connect("changed", self.on_scope_changed)
+
         self.stack = self.builder.get_object("stack")
         self.infobar = self.builder.get_object("infobar")
         self.error_label = self.builder.get_object("error_label")
@@ -612,10 +621,14 @@ class MainWindow():
         elif operation_id == "case":
             self.stack.set_visible_child_name("case_page")
             self.operation_function = self.change_case
+
+        self.settings.set_string(MRU_OPERATION, operation_id)
         self.preview_changes()
 
     def on_scope_changed(self, widget):
         self.scope = widget.get_active_id()
+
+        self.settings.set_string(MRU_SCOPE, self.scope)
         self.preview_changes()
 
     def on_widget_change(self, widget):
