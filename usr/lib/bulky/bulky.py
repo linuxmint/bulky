@@ -2,11 +2,9 @@
 import gettext
 import gi
 import locale
-import magic
 import os
 import re
 import setproctitle
-import subprocess
 import warnings
 import sys
 import functools
@@ -313,6 +311,19 @@ class MainWindow():
         self.replace_regex_check.connect("toggled", self.on_widget_change)
         self.replace_case_check.connect("toggled", self.on_widget_change)
 
+        self.replace_start_spin = self.builder.get_object("replace_start_spin")
+        self.replace_start_spin.connect("value-changed", self.on_widget_change)
+        self.replace_start_spin.set_range(0, 10000)
+        self.replace_start_spin.set_value(1)
+        self.replace_start_spin.set_increments(1, 10)
+
+        self.replace_inc_spin = self.builder.get_object("replace_inc_spin")
+        self.replace_inc_spin.connect("value-changed", self.on_widget_change)
+        self.replace_inc_spin.set_range(1, 1000)
+        self.replace_inc_spin.set_value(1)
+        self.replace_inc_spin.set_increments(1, 10)
+
+
         # Set focus chain
         # Not that this is deprecated (but not implemented differently) in Gtk3.
         # If we move to GTK4, we'll just drop this line of code.
@@ -328,9 +339,9 @@ class MainWindow():
         self.remove_from_check.connect("toggled", self.on_widget_change)
         self.remove_to_check.connect("toggled", self.on_widget_change)
         self.remove_from_spin.set_range(1, 100)
-        self.remove_from_spin.set_increments(1, 1)
+        self.remove_from_spin.set_increments(1, 10)
         self.remove_to_spin.set_range(1, 100)
-        self.remove_to_spin.set_increments(1, 1)
+        self.remove_to_spin.set_increments(1, 10)
 
         # Insert widgets
         self.insert_entry = self.builder.get_object("insert_entry")
@@ -342,7 +353,20 @@ class MainWindow():
         self.insert_reverse_check.connect("toggled", self.on_widget_change)
         self.overwrite_check.connect("toggled", self.on_widget_change)
         self.insert_spin.set_range(1, 100)
-        self.insert_spin.set_increments(1, 1)
+        self.insert_spin.set_increments(1, 10)
+
+        self.insert_start_spin = self.builder.get_object("insert_start_spin")
+        self.insert_start_spin.connect("value-changed", self.on_widget_change)
+        self.insert_start_spin.set_range(0, 10000)
+        self.insert_start_spin.set_value(1)
+        self.insert_start_spin.set_increments(1, 10)
+
+        self.insert_inc_spin = self.builder.get_object("insert_inc_spin")
+        self.insert_inc_spin.connect("value-changed", self.on_widget_change)
+        self.insert_inc_spin.set_range(1, 1000)
+        self.insert_inc_spin.set_value(1)
+        self.insert_inc_spin.set_increments(1, 10)
+
 
         # Case widgets
         self.radio_titlecase = self.builder.get_object("radio_titlecase")
@@ -358,7 +382,7 @@ class MainWindow():
         self.radio_accents.connect("toggled", self.on_widget_change)
 
         # Tooltips
-        variables_tooltip = _("Use %n, %0n, %00n, %000n to enumerate.")
+        variables_tooltip = _("Use %n, %0n, %00n, %000n, etc. to enumerate.")
         self.replace_entry.set_tooltip_text(variables_tooltip)
         self.insert_entry.set_tooltip_text(variables_tooltip)
 
@@ -673,8 +697,12 @@ class MainWindow():
         case = self.replace_case_check.get_active()
         regex = self.replace_regex_check.get_active()
         find = self.find_entry.get_text()
+        if not find:  #ignore empty search string
+            return string
+        inc  = self.replace_inc_spin.get_value_as_int()
+        start= self.replace_start_spin.get_value_as_int()
         replace = self.replace_entry.get_text()
-        replace = self.inject(index, replace)
+        replace = self.inject((index-1)*inc + start, replace)
         try:
             if regex:
                 if case:
@@ -710,8 +738,9 @@ class MainWindow():
 
     def insert_text(self, index, string):
         text = self.insert_entry.get_text()
-        text = self.inject(index, text)
-        length = len(string) - 1
+        inc  = self.insert_inc_spin.get_value_as_int()
+        start= self.insert_start_spin.get_value_as_int()
+        text = self.inject((index-1)*inc + start, text)
         from_index = self.insert_spin.get_value_as_int() - 1
         a = len(string)
         b = len(text)
@@ -740,11 +769,11 @@ class MainWindow():
             return unidecode.unidecode(string)
 
     def inject(self, index, string):
-        string = string.replace('%n', "{:01d}".format(index))
-        string = string.replace('%0n', "{:02d}".format(index))
-        string = string.replace('%00n', "{:03d}".format(index))
-        string = string.replace('%000n', "{:04d}".format(index))
-        return string
+        def repl(match):
+            zeros = match.group(1)
+            width = len(zeros) + 1
+            return f"{index:0{width}d}"
+        return re.sub(r'%([0]*)n', repl, string)
 
 '''
 TODO
