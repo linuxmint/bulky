@@ -19,6 +19,13 @@
 Help translate Bulky! Please use [Launchpad](https://translations.launchpad.net/linuxmint/latest/) to contribute translations.  
 The PO files in this repository are regularly imported from Launchpad.
 
+To add a new language translation:
+1. Visit the [Bulky project on Launchpad](https://translations.launchpad.net/linuxmint/latest/).
+2. Log in or create a Launchpad account.
+3. Select your language or request a new one if it’s not listed.
+4. Translate strings directly on Launchpad or upload a `.po` file for your language.
+5. Your contributions will be reviewed and regularly imported into this repository.
+
 ## License
 
 - **Code:** [GNU General Public License v3.0 (GPLv3)](https://www.gnu.org/licenses/gpl-3.0.html)
