@@ -65,7 +65,7 @@ msgstr "Enweghị ike ịgbanwe '%s': Aha faịlụ akarigo"
 #: usr/lib/bulky/bulky.py:481
 #, python-format
 msgid "Unable to rename '%s': %s"
-msgstr "Enweghị ike banwee '%s': %s"
+msgstr "Enweghị ike ịgbanwe '%s': %s"
 
 #: usr/lib/bulky/bulky.py:557 generate_desktop_files:25
 msgid "File Renamer"
@@ -195,4 +195,4 @@ msgstr "Mechie"
 
 #: usr/share/bulky/bulky.ui.h:30
 msgid "Rename"
-msgstr "Bagharịa aha"
+msgstr "Gbanwee aha"
