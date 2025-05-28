@@ -1,0 +1,198 @@
+# Igbo translation for linuxmint
+# Copyright (c) 2025 Rosetta Contributors and Canonical Ltd 2025
+# This file is distributed under the same license as the linuxmint package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmint\n"
+"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2024-11-25 11:35+0000\n"
+"PO-Revision-Date: 2025-05-28 12:05+0000\n"
+"Last-Translator: Ezeabasili Ugonna <Unknown>\n"
+"Language-Team: Igbo <ig@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2025-05-28 12:08+0000\n"
+"X-Generator: Launchpad (build 30048e740966359d3041f59a477700a1cd51464e)\n"
+
+#: usr/lib/bulky/bulky.py:43
+msgid "Cancel"
+msgstr "Kwụsị"
+
+#: usr/lib/bulky/bulky.py:44
+msgid "Add"
+msgstr "tinye"
+
+#: usr/lib/bulky/bulky.py:217 usr/share/bulky/bulky.ui.h:31
+msgid "Rename..."
+msgstr "gbanwe aha"
+
+#: usr/lib/bulky/bulky.py:255 usr/lib/bulky/bulky.py:396
+msgid "About"
+msgstr "Banyere"
+
+#: usr/lib/bulky/bulky.py:260
+msgid "Quit"
+msgstr "Kwụsị"
+
+#: usr/lib/bulky/bulky.py:277
+msgid "Name"
+msgstr "Aha"
+
+#: usr/lib/bulky/bulky.py:288
+msgid "New name"
+msgstr "Aha ọhụrụ"
+
+#: usr/lib/bulky/bulky.py:361 usr/share/bulky/bulky.ui.h:14
+msgid "Use %n, %0n, %00n, %000n to enumerate."
+msgstr "Jiri %n, %0n, %00n, %000n wee gụọ."
+
+#: usr/lib/bulky/bulky.py:398
+msgid "Rename Files"
+msgstr "Gbanwee aha faịlụ"
+
+#: usr/lib/bulky/bulky.py:449
+msgid "Add files"
+msgstr "Tinye faịlụ"
+
+#: usr/lib/bulky/bulky.py:478
+#, python-format
+msgid "Unable to rename '%s': File name too long"
+msgstr "Enweghị ike ịgbanwe '%s': Aha faịlụ akarigo"
+
+#: usr/lib/bulky/bulky.py:481
+#, python-format
+msgid "Unable to rename '%s': %s"
+msgstr "Enweghị ike banwee '%s': %s"
+
+#: usr/lib/bulky/bulky.py:557 generate_desktop_files:25
+msgid "File Renamer"
+msgstr ""
+
+#: usr/lib/bulky/bulky.py:558 generate_desktop_files:25
+msgid "Rename files and directories"
+msgstr ""
+
+#: usr/lib/bulky/bulky.py:650
+#, python-format
+msgid "Name collision on '%s'."
+msgstr "Nkukota aha na '%s"
+
+#: usr/lib/bulky/bulky.py:654 usr/lib/bulky/bulky.py:658
+#, python-format
+msgid "'%s' is not writeable."
+msgstr "Agahi edenwu na '%s'"
+
+#: usr/share/bulky/bulky.ui.h:1
+msgid "Add files..."
+msgstr ""
+
+#: usr/share/bulky/bulky.ui.h:2
+msgid "Remove"
+msgstr "Wepụ"
+
+#: usr/share/bulky/bulky.ui.h:3
+msgid "Remove selected files"
+msgstr "Wepu faịlụ ahọpụtara"
+
+#: usr/share/bulky/bulky.ui.h:4
+msgid "Clear"
+msgstr "Hichaa"
+
+#: usr/share/bulky/bulky.ui.h:5
+msgid "Replace"
+msgstr ""
+
+#: usr/share/bulky/bulky.ui.h:6
+msgid "Insert"
+msgstr "|Fanye"
+
+#: usr/share/bulky/bulky.ui.h:7
+msgid "Change case"
+msgstr "Gbanwe case"
+
+#: usr/share/bulky/bulky.ui.h:8
+msgid "Name only"
+msgstr "Naanị aha"
+
+#: usr/share/bulky/bulky.ui.h:9
+msgid "Extension only"
+msgstr "Naanị Extension"
+
+#: usr/share/bulky/bulky.ui.h:10
+msgid "Entire filename"
+msgstr "Aha faịlụ niile"
+
+#: usr/share/bulky/bulky.ui.h:11
+msgid "Find:"
+msgstr "Chọta"
+
+#: usr/share/bulky/bulky.ui.h:12
+msgid "Replace:"
+msgstr "Dochie"
+
+#: usr/share/bulky/bulky.ui.h:15
+msgid "Regular expression"
+msgstr ""
+
+#: usr/share/bulky/bulky.ui.h:16
+msgid "Case sensitive"
+msgstr ""
+
+#: usr/share/bulky/bulky.ui.h:17
+msgid "At position:"
+msgstr "N'ọnọdụ"
+
+#: usr/share/bulky/bulky.ui.h:18
+msgid "From the end"
+msgstr "Site na njedebe"
+
+#: usr/share/bulky/bulky.ui.h:19
+msgid "Overwrite"
+msgstr "Degharịa"
+
+#: usr/share/bulky/bulky.ui.h:20
+msgid "Text:"
+msgstr ""
+
+#: usr/share/bulky/bulky.ui.h:21
+msgid "Convert to:"
+msgstr "Tugharia"
+
+#: usr/share/bulky/bulky.ui.h:22
+msgid "Lower case"
+msgstr ""
+
+#: usr/share/bulky/bulky.ui.h:23
+msgid "First character uppercase"
+msgstr ""
+
+#: usr/share/bulky/bulky.ui.h:24
+msgid "Title case"
+msgstr ""
+
+#: usr/share/bulky/bulky.ui.h:25
+msgid "Upper case"
+msgstr ""
+
+#: usr/share/bulky/bulky.ui.h:26
+msgid "Remove accents"
+msgstr "Wepu ụda olu"
+
+#: usr/share/bulky/bulky.ui.h:27
+msgid "Remove from position:"
+msgstr "Wepụ n'ọnọdụ"
+
+#: usr/share/bulky/bulky.ui.h:28
+msgid "To position:"
+msgstr ""
+
+#: usr/share/bulky/bulky.ui.h:29
+msgid "Close"
+msgstr "Mechie"
+
+#: usr/share/bulky/bulky.ui.h:30
+msgid "Rename"
+msgstr "Bagharịa aha"
