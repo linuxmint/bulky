@@ -20,11 +20,11 @@ Help translate Bulky! Please use [Launchpad](https://translations.launchpad.net/
 The PO files in this repository are regularly imported from Launchpad.
 
 To add a new language translation:
-1. Visit the [Bulky project on Launchpad](https://translations.launchpad.net/linuxmint/latest/).
-2. Log in or create a Launchpad account.
-3. Select your language or request a new one if it’s not listed.
-4. Translate strings directly on Launchpad or upload a `.po` file for your language.
-5. Your contributions will be reviewed and regularly imported into this repository.
+
+1. Log in or create a Launchpad account.
+2. Select your language or request a new one if it’s not listed.
+3. Translate strings directly on Launchpad or upload a `.po` file for your language.
+4. Your contributions will be reviewed and regularly imported into this repository.
 
 ## License
 
