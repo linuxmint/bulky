@@ -62,6 +62,11 @@ msgstr ""
 msgid "Unable to rename '%s': File name too long"
 msgstr ""
 
+#: usr/lib/bulky/bulky.py:517
+#, python-format
+msgid "Unable to rename '%s': Remote operation failed. This may be due to insufficient permissions or a server error."
+msgstr ""
+
 #: usr/lib/bulky/bulky.py:481
 #, python-format
 msgid "Unable to rename '%s': %s"
