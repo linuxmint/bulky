@@ -310,6 +310,11 @@ class MainWindow():
         self.infobar = self.builder.get_object("infobar")
         self.error_label = self.builder.get_object("error_label")
 
+        # Ini "MRU"-view
+        self.on_operation_changed(self.combo_operation)
+        self.on_scope_changed(self.combo_scope)
+
+
         # Replace widgets
         self.find_entry = self.builder.get_object("find_entry")
         self.replace_entry = self.builder.get_object("replace_entry")
