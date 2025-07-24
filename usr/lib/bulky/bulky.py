@@ -633,6 +633,10 @@ class MainWindow():
         self.preview_changes()
 
     def on_widget_change(self, widget):
+        if self.replace_regex_check.get_active():
+            self.find_entry.set_placeholder_text("Enter a regular expression; example: .+")
+        else:
+            self.find_entry.set_placeholder_text("Enter a search string; wildcards ? and * are supported.")
         self.preview_changes()
 
     def preview_changes(self):
