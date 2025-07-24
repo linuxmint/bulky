@@ -477,6 +477,7 @@ class MainWindow():
             file_uri = self.model.get_value(iter, COL_FILE).uri
             self.uris.remove(file_uri)
             self.model.remove(iter)
+        self.treeview.columns_autosize()
         self.preview_changes()
 
     def on_add_button(self, widget):
