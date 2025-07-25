@@ -165,7 +165,10 @@ class FileObject():
             return parent.get_basename()
 
     def writable(self):
-        return self.info.get_attribute_boolean("access::can-write")
+        if self.gfile.is_native():
+            return self.info.get_attribute_boolean("access::can-write")
+        # For non-native (remote) files, optimistically assume writable
+        return True
 
     def parent_writable(self):
         parent = self.gfile.get_parent()
@@ -511,6 +514,10 @@ class MainWindow():
         # to add more exceptions here for other error codes.
         if Gio.IOErrorEnum(error.code) == Gio.IOErrorEnum.FILENAME_TOO_LONG:
             message = _("Unable to rename '%s': File name too long") \
+                % file_obj.get_path_or_uri_for_display()
+        elif not file_obj.gfile.is_native() and error.code == 0:
+            message = _("Unable to rename '%s': Remote operation failed. " \
+                "This may be due to insufficient permissions or a server error.") \
                 % file_obj.get_path_or_uri_for_display()
         else:
             message = _("Unable to rename '%s': %s") \
