@@ -7,81 +7,88 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxmint\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2024-11-25 11:35+0000\n"
-"PO-Revision-Date: 2022-04-13 11:42+0000\n"
+"POT-Creation-Date: 2025-07-25 15:24+0200\n"
+"PO-Revision-Date: 2025-02-19 06:38+0000\n"
 "Last-Translator: Umidjon Almasov <umutelmas.uz@gmail.com>\n"
 "Language-Team: Uzbek <uz@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2025-01-06 12:01+0000\n"
-"X-Generator: Launchpad (build 6394e03793719e8d73f5a60b5439440e693c92f1)\n"
+"X-Launchpad-Export-Date: 2025-07-31 09:25+0000\n"
+"X-Generator: Launchpad (build 647c49fc7f614412c17a151d8ba4fadd90c06a00)\n"
 "Language: uz\n"
 
-#: usr/lib/bulky/bulky.py:43
+#: usr/lib/bulky/bulky.py:45
 msgid "Cancel"
 msgstr "Bekor qilish"
 
-#: usr/lib/bulky/bulky.py:44
+#: usr/lib/bulky/bulky.py:46
 msgid "Add"
 msgstr "Qo‘shish"
 
-#: usr/lib/bulky/bulky.py:217 usr/share/bulky/bulky.ui.h:31
+#: usr/lib/bulky/bulky.py:222 usr/share/bulky/bulky.ui.h:33
 msgid "Rename..."
 msgstr "Nomini oʻzgartirish..."
 
-#: usr/lib/bulky/bulky.py:255 usr/lib/bulky/bulky.py:396
+#: usr/lib/bulky/bulky.py:260 usr/lib/bulky/bulky.py:437
 msgid "About"
 msgstr "Haqida"
 
-#: usr/lib/bulky/bulky.py:260
+#: usr/lib/bulky/bulky.py:265
 msgid "Quit"
 msgstr "Chiqish"
 
-#: usr/lib/bulky/bulky.py:277
+#: usr/lib/bulky/bulky.py:282
 msgid "Name"
 msgstr "Nomi"
 
-#: usr/lib/bulky/bulky.py:288
+#: usr/lib/bulky/bulky.py:293
 msgid "New name"
 msgstr "Yangi nom"
 
-#: usr/lib/bulky/bulky.py:361 usr/share/bulky/bulky.ui.h:14
-msgid "Use %n, %0n, %00n, %000n to enumerate."
-msgstr "Hisoblash uchun %n, %0n, %00n, %000n dan foydalaning."
+#: usr/lib/bulky/bulky.py:402
+msgid "Use %n, %0n, %00n, %000n, etc. to enumerate."
+msgstr ""
 
-#: usr/lib/bulky/bulky.py:398
+#: usr/lib/bulky/bulky.py:439
 msgid "Rename Files"
 msgstr "Fayllar nomini oʻzgartirish"
 
-#: usr/lib/bulky/bulky.py:449
+#: usr/lib/bulky/bulky.py:487
 msgid "Add files"
 msgstr "Fayllarni qo‘shish"
 
-#: usr/lib/bulky/bulky.py:478
+#: usr/lib/bulky/bulky.py:516
 #, python-format
 msgid "Unable to rename '%s': File name too long"
 msgstr "“%s” nomini o‘zgartirib bo‘lmadi: Fayl nomi juda uzun"
 
-#: usr/lib/bulky/bulky.py:481
+#: usr/lib/bulky/bulky.py:519
+#, python-format
+msgid ""
+"Unable to rename '%s': Remote operation failed. This may be due to "
+"insufficient permissions or a server error."
+msgstr ""
+
+#: usr/lib/bulky/bulky.py:523
 #, python-format
 msgid "Unable to rename '%s': %s"
 msgstr "“%s” nomini o‘zgartirib bo‘lmadi: %s"
 
-#: usr/lib/bulky/bulky.py:557 generate_desktop_files:25
+#: usr/lib/bulky/bulky.py:599 generate_desktop_files:25
 msgid "File Renamer"
 msgstr "Fayl nomini oʻzgartiruvchi"
 
-#: usr/lib/bulky/bulky.py:558 generate_desktop_files:25
+#: usr/lib/bulky/bulky.py:600 generate_desktop_files:25
 msgid "Rename files and directories"
 msgstr "Fayllar va kataloglarning nomini o'zgartirish"
 
-#: usr/lib/bulky/bulky.py:650
+#: usr/lib/bulky/bulky.py:700
 #, python-format
 msgid "Name collision on '%s'."
 msgstr "'%s' da nomlar to‘qnashuvi."
 
-#: usr/lib/bulky/bulky.py:654 usr/lib/bulky/bulky.py:658
+#: usr/lib/bulky/bulky.py:704 usr/lib/bulky/bulky.py:708
 #, python-format
 msgid "'%s' is not writeable."
 msgstr "'%s' yozish mumkin emas."
@@ -134,6 +141,10 @@ msgstr "Topish:"
 msgid "Replace:"
 msgstr "Almashtirish:"
 
+#: usr/share/bulky/bulky.ui.h:14
+msgid "Use %n, %0n, %00n, etc. to enumerate."
+msgstr ""
+
 #: usr/share/bulky/bulky.ui.h:15
 msgid "Regular expression"
 msgstr "Muntazam ifoda"
@@ -143,57 +154,65 @@ msgid "Case sensitive"
 msgstr "Harflar katta-kichikligiga sezgir"
 
 #: usr/share/bulky/bulky.ui.h:17
+msgid "Start number:"
+msgstr ""
+
+#: usr/share/bulky/bulky.ui.h:18
+msgid "Increment:"
+msgstr ""
+
+#: usr/share/bulky/bulky.ui.h:19
 msgid "At position:"
 msgstr "Joyida:"
 
-#: usr/share/bulky/bulky.ui.h:18
+#: usr/share/bulky/bulky.ui.h:20
 msgid "From the end"
 msgstr "Oxiridan"
 
-#: usr/share/bulky/bulky.ui.h:19
+#: usr/share/bulky/bulky.ui.h:21
 msgid "Overwrite"
 msgstr "Qayta yozish"
 
-#: usr/share/bulky/bulky.ui.h:20
+#: usr/share/bulky/bulky.ui.h:22
 msgid "Text:"
 msgstr "Matn:"
 
-#: usr/share/bulky/bulky.ui.h:21
+#: usr/share/bulky/bulky.ui.h:23
 msgid "Convert to:"
 msgstr "Konvertatsiya qilish:"
 
-#: usr/share/bulky/bulky.ui.h:22
+#: usr/share/bulky/bulky.ui.h:24
 msgid "Lower case"
 msgstr "Kichik harf"
 
-#: usr/share/bulky/bulky.ui.h:23
+#: usr/share/bulky/bulky.ui.h:25
 msgid "First character uppercase"
 msgstr "Birinchi belgi katta"
 
-#: usr/share/bulky/bulky.ui.h:24
+#: usr/share/bulky/bulky.ui.h:26
 msgid "Title case"
 msgstr "Sarlavha registri"
 
-#: usr/share/bulky/bulky.ui.h:25
+#: usr/share/bulky/bulky.ui.h:27
 msgid "Upper case"
 msgstr "Katta harflar"
 
-#: usr/share/bulky/bulky.ui.h:26
+#: usr/share/bulky/bulky.ui.h:28
 msgid "Remove accents"
-msgstr ""
+msgstr "Urg‘ularni olib tashlash"
 
-#: usr/share/bulky/bulky.ui.h:27
+#: usr/share/bulky/bulky.ui.h:29
 msgid "Remove from position:"
 msgstr "Joylashuvdan olib tashlash:"
 
-#: usr/share/bulky/bulky.ui.h:28
+#: usr/share/bulky/bulky.ui.h:30
 msgid "To position:"
 msgstr "Joylashtirish:"
 
-#: usr/share/bulky/bulky.ui.h:29
+#: usr/share/bulky/bulky.ui.h:31
 msgid "Close"
 msgstr "Yopish"
 
-#: usr/share/bulky/bulky.ui.h:30
+#: usr/share/bulky/bulky.ui.h:32
 msgid "Rename"
 msgstr "Nomini o‘zgartirish"
