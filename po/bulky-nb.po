@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: linuxmint\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2025-07-25 15:24+0200\n"
-"PO-Revision-Date: 2023-08-14 21:16+0000\n"
-"Last-Translator: Ivan Skodje <Unknown>\n"
+"PO-Revision-Date: 2025-08-23 09:48+0000\n"
+"Last-Translator: ovl-1 <Unknown>\n"
 "Language-Team: Norwegian Bokmal <nb@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2025-07-31 09:25+0000\n"
-"X-Generator: Launchpad (build 647c49fc7f614412c17a151d8ba4fadd90c06a00)\n"
+"X-Launchpad-Export-Date: 2025-08-26 15:25+0000\n"
+"X-Generator: Launchpad (build 919009172d854f2b8e4e8262db447f12f11d25eb)\n"
 
 #: usr/lib/bulky/bulky.py:45
 msgid "Cancel"
@@ -47,7 +47,7 @@ msgstr "Nytt navn"
 
 #: usr/lib/bulky/bulky.py:402
 msgid "Use %n, %0n, %00n, %000n, etc. to enumerate."
-msgstr ""
+msgstr "Bruk %n, %0n, %00n, %000n, osv. for å liste opp."
 
 #: usr/lib/bulky/bulky.py:439
 msgid "Rename Files"
@@ -68,6 +68,8 @@ msgid ""
 "Unable to rename '%s': Remote operation failed. This may be due to "
 "insufficient permissions or a server error."
 msgstr ""
+"Kan ikke gi nytt navn til '%s': Fjernstyrt operasjon feilet. Dette kan "
+"skyldes utilstrekkelige tillatelser eller en serverfeil."
 
 #: usr/lib/bulky/bulky.py:523
 #, python-format
@@ -76,11 +78,11 @@ msgstr "Kan ikke endre navnet på '%s': %s"
 
 #: usr/lib/bulky/bulky.py:599 generate_desktop_files:25
 msgid "File Renamer"
-msgstr "Endre filnavn"
+msgstr "Filnavnendring"
 
 #: usr/lib/bulky/bulky.py:600 generate_desktop_files:25
 msgid "Rename files and directories"
-msgstr "Endre navn på filer og kataloger"
+msgstr "Endre navn på filer og mapper"
 
 #: usr/lib/bulky/bulky.py:700
 #, python-format
@@ -118,7 +120,7 @@ msgstr "Sett inn"
 
 #: usr/share/bulky/bulky.ui.h:7
 msgid "Change case"
-msgstr "Endre store/små eller omvendt"
+msgstr "Store/små bokstaver"
 
 #: usr/share/bulky/bulky.ui.h:8
 msgid "Name only"
@@ -126,7 +128,7 @@ msgstr "Kun navn"
 
 #: usr/share/bulky/bulky.ui.h:9
 msgid "Extension only"
-msgstr "Kun utvidelse"
+msgstr "Kun filendelse"
 
 #: usr/share/bulky/bulky.ui.h:10
 msgid "Entire filename"
@@ -142,7 +144,7 @@ msgstr "Erstatt"
 
 #: usr/share/bulky/bulky.ui.h:14
 msgid "Use %n, %0n, %00n, etc. to enumerate."
-msgstr ""
+msgstr "Bruk %n, %0n, %00n, osv. for å liste opp."
 
 #: usr/share/bulky/bulky.ui.h:15
 msgid "Regular expression"
@@ -154,11 +156,11 @@ msgstr "Skill mellom store/små bokstaver"
 
 #: usr/share/bulky/bulky.ui.h:17
 msgid "Start number:"
-msgstr ""
+msgstr "Startnummer:"
 
 #: usr/share/bulky/bulky.ui.h:18
 msgid "Increment:"
-msgstr ""
+msgstr "Økning:"
 
 #: usr/share/bulky/bulky.ui.h:19
 msgid "At position:"
@@ -170,7 +172,7 @@ msgstr "Fra enden"
 
 #: usr/share/bulky/bulky.ui.h:21
 msgid "Overwrite"
-msgstr "Skriv over"
+msgstr "Overskriv"
 
 #: usr/share/bulky/bulky.ui.h:22
 msgid "Text:"
@@ -198,7 +200,7 @@ msgstr "Store bokstaver"
 
 #: usr/share/bulky/bulky.ui.h:28
 msgid "Remove accents"
-msgstr ""
+msgstr "Fjern spesialtegn"
 
 #: usr/share/bulky/bulky.ui.h:29
 msgid "Remove from position:"
