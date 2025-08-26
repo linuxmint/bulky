@@ -1,3 +1,10 @@
+bulky (3.9) zara; urgency=medium
+
+  * l10n: Update translations
+  * l10n: Update files
+
+ -- Clement Lefebvre <root@linuxmint.com>  Tue, 26 Aug 2025 17:36:12 +0200
+
 bulky (3.8) zara; urgency=medium
 
   * l10n: Update translations
