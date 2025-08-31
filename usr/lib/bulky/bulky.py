@@ -642,9 +642,9 @@ class MainWindow():
 
     def on_widget_change(self, widget):
         if self.replace_regex_check.get_active():
-            self.find_entry.set_placeholder_text("Enter a regular expression; example: .+")
+            self.find_entry.set_placeholder_text( _("Enter a regular expression; example: .+") )
         else:
-            self.find_entry.set_placeholder_text("Enter a search string; wildcards ? and * are supported.")
+            self.find_entry.set_placeholder_text( _("Enter a search string; wildcards ? and * allowed.") )
         self.preview_changes()
 
     def preview_changes(self):
