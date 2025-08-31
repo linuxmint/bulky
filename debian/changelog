@@ -1,3 +1,45 @@
+bulky (3.9) zara; urgency=medium
+
+  * l10n: Update translations
+  * l10n: Update files
+
+ -- Clement Lefebvre <root@linuxmint.com>  Tue, 26 Aug 2025 17:36:12 +0200
+
+bulky (3.8) zara; urgency=medium
+
+  * l10n: Update translations
+  * l10n: Update files
+
+ -- Clement Lefebvre <root@linuxmint.com>  Thu, 31 Jul 2025 11:34:09 +0200
+
+bulky (3.7) zara; urgency=medium
+
+  [ Michael Webster ]
+  * debian/control: Add missing dependency.
+
+  [ Klaus ]
+  * change numbering filenames (#67)
+
+  [ Michael Webster ]
+  * Remember the last operation type and filename scope.
+  * debian/control: Remove unnecessary python3-magic dependency.
+
+  [ hduelme ]
+  * Use auto resource management for license file (#71)
+
+  [ Klaus ]
+  * Fix MRU settings (#75)
+  * Minor optimization of the hint texts (#76)
+
+  [ Çağdaş Alagöz ]
+  * Autosize columns after a line is deleted. (#73)
+  * Assume path is writeable for GVfs mounted paths (#72)
+
+  [ Clement Lefebvre ]
+  * l10n: Update POT
+
+ -- Clement Lefebvre <root@linuxmint.com>  Fri, 25 Jul 2025 15:25:11 +0200
+
 bulky (3.6) xia; urgency=medium
 
   * l10n: Update translations

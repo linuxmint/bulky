@@ -7,80 +7,87 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxmint\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2024-11-25 11:35+0000\n"
+"POT-Creation-Date: 2025-07-25 15:24+0200\n"
 "PO-Revision-Date: 2024-12-17 22:05+0000\n"
 "Last-Translator: Martin Srebotnjak <miles@filmsi.net>\n"
 "Language-Team: Slovenian <sl@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2025-01-06 12:01+0000\n"
-"X-Generator: Launchpad (build 6394e03793719e8d73f5a60b5439440e693c92f1)\n"
+"X-Launchpad-Export-Date: 2025-08-26 15:25+0000\n"
+"X-Generator: Launchpad (build 919009172d854f2b8e4e8262db447f12f11d25eb)\n"
 
-#: usr/lib/bulky/bulky.py:43
+#: usr/lib/bulky/bulky.py:45
 msgid "Cancel"
 msgstr "Prekliči"
 
-#: usr/lib/bulky/bulky.py:44
+#: usr/lib/bulky/bulky.py:46
 msgid "Add"
 msgstr "Dodaj"
 
-#: usr/lib/bulky/bulky.py:217 usr/share/bulky/bulky.ui.h:31
+#: usr/lib/bulky/bulky.py:222 usr/share/bulky/bulky.ui.h:33
 msgid "Rename..."
 msgstr "Preimenuj ..."
 
-#: usr/lib/bulky/bulky.py:255 usr/lib/bulky/bulky.py:396
+#: usr/lib/bulky/bulky.py:260 usr/lib/bulky/bulky.py:437
 msgid "About"
 msgstr "O programu"
 
-#: usr/lib/bulky/bulky.py:260
+#: usr/lib/bulky/bulky.py:265
 msgid "Quit"
 msgstr "Izhod"
 
-#: usr/lib/bulky/bulky.py:277
+#: usr/lib/bulky/bulky.py:282
 msgid "Name"
 msgstr "Ime"
 
-#: usr/lib/bulky/bulky.py:288
+#: usr/lib/bulky/bulky.py:293
 msgid "New name"
 msgstr "Novo ime"
 
-#: usr/lib/bulky/bulky.py:361 usr/share/bulky/bulky.ui.h:14
-msgid "Use %n, %0n, %00n, %000n to enumerate."
-msgstr "Uporabite %n, %0n, %00n, %000n za številčenje."
+#: usr/lib/bulky/bulky.py:402
+msgid "Use %n, %0n, %00n, %000n, etc. to enumerate."
+msgstr ""
 
-#: usr/lib/bulky/bulky.py:398
+#: usr/lib/bulky/bulky.py:439
 msgid "Rename Files"
 msgstr "Preimenuj datoteke"
 
-#: usr/lib/bulky/bulky.py:449
+#: usr/lib/bulky/bulky.py:487
 msgid "Add files"
 msgstr "Dodaj datoteke"
 
-#: usr/lib/bulky/bulky.py:478
+#: usr/lib/bulky/bulky.py:516
 #, python-format
 msgid "Unable to rename '%s': File name too long"
 msgstr "Ni mogoče preimenovati »%s«:: ime datoteke je predolgo"
 
-#: usr/lib/bulky/bulky.py:481
+#: usr/lib/bulky/bulky.py:519
+#, python-format
+msgid ""
+"Unable to rename '%s': Remote operation failed. This may be due to "
+"insufficient permissions or a server error."
+msgstr ""
+
+#: usr/lib/bulky/bulky.py:523
 #, python-format
 msgid "Unable to rename '%s': %s"
 msgstr "Ni mogoče preimenovati »%s«: %s"
 
-#: usr/lib/bulky/bulky.py:557 generate_desktop_files:25
+#: usr/lib/bulky/bulky.py:599 generate_desktop_files:25
 msgid "File Renamer"
 msgstr "Preimenovalnik datotek"
 
-#: usr/lib/bulky/bulky.py:558 generate_desktop_files:25
+#: usr/lib/bulky/bulky.py:600 generate_desktop_files:25
 msgid "Rename files and directories"
 msgstr "Preimenujte datoteke in mape"
 
-#: usr/lib/bulky/bulky.py:650
+#: usr/lib/bulky/bulky.py:700
 #, python-format
 msgid "Name collision on '%s'."
 msgstr "Spor glede imena pri »%s«."
 
-#: usr/lib/bulky/bulky.py:654 usr/lib/bulky/bulky.py:658
+#: usr/lib/bulky/bulky.py:704 usr/lib/bulky/bulky.py:708
 #, python-format
 msgid "'%s' is not writeable."
 msgstr "V »%s« ni mogoče pisati."
@@ -133,6 +140,10 @@ msgstr "Najdi:"
 msgid "Replace:"
 msgstr "Zamenjaj:"
 
+#: usr/share/bulky/bulky.ui.h:14
+msgid "Use %n, %0n, %00n, etc. to enumerate."
+msgstr ""
+
 #: usr/share/bulky/bulky.ui.h:15
 msgid "Regular expression"
 msgstr "Regularni izraz"
@@ -142,57 +153,65 @@ msgid "Case sensitive"
 msgstr "Razlikuj velike in male črke"
 
 #: usr/share/bulky/bulky.ui.h:17
+msgid "Start number:"
+msgstr ""
+
+#: usr/share/bulky/bulky.ui.h:18
+msgid "Increment:"
+msgstr ""
+
+#: usr/share/bulky/bulky.ui.h:19
 msgid "At position:"
 msgstr "Na položaj:"
 
-#: usr/share/bulky/bulky.ui.h:18
+#: usr/share/bulky/bulky.ui.h:20
 msgid "From the end"
 msgstr "Od konca"
 
-#: usr/share/bulky/bulky.ui.h:19
+#: usr/share/bulky/bulky.ui.h:21
 msgid "Overwrite"
 msgstr "Prepiši"
 
-#: usr/share/bulky/bulky.ui.h:20
+#: usr/share/bulky/bulky.ui.h:22
 msgid "Text:"
 msgstr "Besedilo:"
 
-#: usr/share/bulky/bulky.ui.h:21
+#: usr/share/bulky/bulky.ui.h:23
 msgid "Convert to:"
 msgstr "Pretvori v:"
 
-#: usr/share/bulky/bulky.ui.h:22
+#: usr/share/bulky/bulky.ui.h:24
 msgid "Lower case"
 msgstr "Male črke"
 
-#: usr/share/bulky/bulky.ui.h:23
+#: usr/share/bulky/bulky.ui.h:25
 msgid "First character uppercase"
 msgstr "Velika začetnica za prvi znak"
 
-#: usr/share/bulky/bulky.ui.h:24
+#: usr/share/bulky/bulky.ui.h:26
 msgid "Title case"
 msgstr "Velike začetnice"
 
-#: usr/share/bulky/bulky.ui.h:25
+#: usr/share/bulky/bulky.ui.h:27
 msgid "Upper case"
 msgstr "Velike črke"
 
-#: usr/share/bulky/bulky.ui.h:26
+#: usr/share/bulky/bulky.ui.h:28
 msgid "Remove accents"
 msgstr "Odstrani poudarke"
 
-#: usr/share/bulky/bulky.ui.h:27
+#: usr/share/bulky/bulky.ui.h:29
 msgid "Remove from position:"
 msgstr "Odstrani s položaja:"
 
-#: usr/share/bulky/bulky.ui.h:28
+#: usr/share/bulky/bulky.ui.h:30
 msgid "To position:"
 msgstr "Na položaj:"
 
-#: usr/share/bulky/bulky.ui.h:29
+#: usr/share/bulky/bulky.ui.h:31
 msgid "Close"
 msgstr "Zapri"
 
-#: usr/share/bulky/bulky.ui.h:30
+#: usr/share/bulky/bulky.ui.h:32
 msgid "Rename"
 msgstr "Preimenuj"

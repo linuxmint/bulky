@@ -7,80 +7,89 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxmint\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2024-11-25 11:35+0000\n"
-"PO-Revision-Date: 2024-03-29 14:05+0000\n"
-"Last-Translator: thieninox <Unknown>\n"
+"POT-Creation-Date: 2025-07-25 15:24+0200\n"
+"PO-Revision-Date: 2025-07-26 02:36+0000\n"
+"Last-Translator: Doan Ho Dinh Nguyen <Unknown>\n"
 "Language-Team: Vietnamese <vi@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2025-01-06 12:01+0000\n"
-"X-Generator: Launchpad (build 6394e03793719e8d73f5a60b5439440e693c92f1)\n"
+"X-Launchpad-Export-Date: 2025-08-26 15:25+0000\n"
+"X-Generator: Launchpad (build 919009172d854f2b8e4e8262db447f12f11d25eb)\n"
 
-#: usr/lib/bulky/bulky.py:43
+#: usr/lib/bulky/bulky.py:45
 msgid "Cancel"
 msgstr "Hủy bỏ"
 
-#: usr/lib/bulky/bulky.py:44
+#: usr/lib/bulky/bulky.py:46
 msgid "Add"
 msgstr "Thêm"
 
-#: usr/lib/bulky/bulky.py:217 usr/share/bulky/bulky.ui.h:31
+#: usr/lib/bulky/bulky.py:222 usr/share/bulky/bulky.ui.h:33
 msgid "Rename..."
 msgstr "Đổi tên..."
 
-#: usr/lib/bulky/bulky.py:255 usr/lib/bulky/bulky.py:396
+#: usr/lib/bulky/bulky.py:260 usr/lib/bulky/bulky.py:437
 msgid "About"
 msgstr "Giới thiệu"
 
-#: usr/lib/bulky/bulky.py:260
+#: usr/lib/bulky/bulky.py:265
 msgid "Quit"
 msgstr "Thoát ra"
 
-#: usr/lib/bulky/bulky.py:277
+#: usr/lib/bulky/bulky.py:282
 msgid "Name"
 msgstr "Tên"
 
-#: usr/lib/bulky/bulky.py:288
+#: usr/lib/bulky/bulky.py:293
 msgid "New name"
 msgstr "Tên mới"
 
-#: usr/lib/bulky/bulky.py:361 usr/share/bulky/bulky.ui.h:14
-msgid "Use %n, %0n, %00n, %000n to enumerate."
-msgstr "Sử dụng %n, %0n, %00n, %000n để liệt kê."
+#: usr/lib/bulky/bulky.py:402
+msgid "Use %n, %0n, %00n, %000n, etc. to enumerate."
+msgstr "Sử dụng %n, %0n, %00n, %000n, v.v. để đánh số thứ tự."
 
-#: usr/lib/bulky/bulky.py:398
+#: usr/lib/bulky/bulky.py:439
 msgid "Rename Files"
 msgstr "Đổi tên tập tin"
 
-#: usr/lib/bulky/bulky.py:449
+#: usr/lib/bulky/bulky.py:487
 msgid "Add files"
 msgstr "Thêm tập tin"
 
-#: usr/lib/bulky/bulky.py:478
+#: usr/lib/bulky/bulky.py:516
 #, python-format
 msgid "Unable to rename '%s': File name too long"
 msgstr "Không thể đổi tên '%s': Tên của tệp quá dài"
 
-#: usr/lib/bulky/bulky.py:481
+#: usr/lib/bulky/bulky.py:519
+#, python-format
+msgid ""
+"Unable to rename '%s': Remote operation failed. This may be due to "
+"insufficient permissions or a server error."
+msgstr ""
+"Không thể đổi tên tập tin %s: Thao tác từ xa thất bại. Lí do có thể là không "
+"đủ quyền hạn hoặc lỗi máy chủ."
+
+#: usr/lib/bulky/bulky.py:523
 #, python-format
 msgid "Unable to rename '%s': %s"
 msgstr "Không thể đổi tên '%s': %s"
 
-#: usr/lib/bulky/bulky.py:557 generate_desktop_files:25
+#: usr/lib/bulky/bulky.py:599 generate_desktop_files:25
 msgid "File Renamer"
 msgstr "Trình đổi tên tệp"
 
-#: usr/lib/bulky/bulky.py:558 generate_desktop_files:25
+#: usr/lib/bulky/bulky.py:600 generate_desktop_files:25
 msgid "Rename files and directories"
 msgstr "Đổi tên tệp và thư mục"
 
-#: usr/lib/bulky/bulky.py:650
+#: usr/lib/bulky/bulky.py:700
 #, python-format
 msgid "Name collision on '%s'."
 msgstr "Xung đột tên trên '%s'."
 
-#: usr/lib/bulky/bulky.py:654 usr/lib/bulky/bulky.py:658
+#: usr/lib/bulky/bulky.py:704 usr/lib/bulky/bulky.py:708
 #, python-format
 msgid "'%s' is not writeable."
 msgstr "'%s' không thể ghi được."
@@ -133,6 +142,10 @@ msgstr "Tìm:"
 msgid "Replace:"
 msgstr "Thay thế:"
 
+#: usr/share/bulky/bulky.ui.h:14
+msgid "Use %n, %0n, %00n, etc. to enumerate."
+msgstr "Sử dụng %n, %0n, %00n, v.v. để đánh số thứ tự."
+
 #: usr/share/bulky/bulky.ui.h:15
 msgid "Regular expression"
 msgstr "Biểu thức chính quy"
@@ -142,57 +155,65 @@ msgid "Case sensitive"
 msgstr "Phân biệt chữ HOA/thường"
 
 #: usr/share/bulky/bulky.ui.h:17
+msgid "Start number:"
+msgstr "Bắt đầu ở số:"
+
+#: usr/share/bulky/bulky.ui.h:18
+msgid "Increment:"
+msgstr "Tăng:"
+
+#: usr/share/bulky/bulky.ui.h:19
 msgid "At position:"
 msgstr "Tại vị trí:"
 
-#: usr/share/bulky/bulky.ui.h:18
+#: usr/share/bulky/bulky.ui.h:20
 msgid "From the end"
 msgstr "Đến đoạn cuối"
 
-#: usr/share/bulky/bulky.ui.h:19
+#: usr/share/bulky/bulky.ui.h:21
 msgid "Overwrite"
 msgstr "Ghi đè"
 
-#: usr/share/bulky/bulky.ui.h:20
+#: usr/share/bulky/bulky.ui.h:22
 msgid "Text:"
 msgstr "Chữ:"
 
-#: usr/share/bulky/bulky.ui.h:21
+#: usr/share/bulky/bulky.ui.h:23
 msgid "Convert to:"
 msgstr "Chuyển sang:"
 
-#: usr/share/bulky/bulky.ui.h:22
+#: usr/share/bulky/bulky.ui.h:24
 msgid "Lower case"
 msgstr "Chữ thường"
 
-#: usr/share/bulky/bulky.ui.h:23
+#: usr/share/bulky/bulky.ui.h:25
 msgid "First character uppercase"
 msgstr "Chữ cái đầu viết hoa"
 
-#: usr/share/bulky/bulky.ui.h:24
+#: usr/share/bulky/bulky.ui.h:26
 msgid "Title case"
 msgstr "Viết hoa tiêu đề"
 
-#: usr/share/bulky/bulky.ui.h:25
+#: usr/share/bulky/bulky.ui.h:27
 msgid "Upper case"
 msgstr "Viết hoa"
 
-#: usr/share/bulky/bulky.ui.h:26
+#: usr/share/bulky/bulky.ui.h:28
 msgid "Remove accents"
-msgstr ""
+msgstr "Xóa dấu nhấn"
 
-#: usr/share/bulky/bulky.ui.h:27
+#: usr/share/bulky/bulky.ui.h:29
 msgid "Remove from position:"
 msgstr "Xóa khỏi vị trí này:"
 
-#: usr/share/bulky/bulky.ui.h:28
+#: usr/share/bulky/bulky.ui.h:30
 msgid "To position:"
 msgstr "Đến vị trí này:"
 
-#: usr/share/bulky/bulky.ui.h:29
+#: usr/share/bulky/bulky.ui.h:31
 msgid "Close"
 msgstr "Đóng"
 
-#: usr/share/bulky/bulky.ui.h:30
+#: usr/share/bulky/bulky.ui.h:32
 msgid "Rename"
 msgstr "Đổi tên"
