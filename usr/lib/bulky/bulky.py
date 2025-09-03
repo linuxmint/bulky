@@ -752,15 +752,21 @@ class MainWindow():
             return string
 
     def remove_text(self, index, string):
-        length = len(string) - 1
-        from_index = min(self.remove_from_spin.get_value_as_int() - 1, length)
-        to_index = min(self.remove_to_spin.get_value_as_int() - 1, length)
+        length = len(string)
+
+        from_index = self.remove_from_spin.get_value_as_int() - 1
         if self.remove_from_check.get_active():
-            from_index = length - from_index
+            from_index = max(length - from_index, 0)
+        else:
+            from_index = min(length, from_index)
+
+        to_index = self.remove_to_spin.get_value_as_int() - 1
         if self.remove_to_check.get_active():
-            to_index = length - to_index
-        to_index = max(to_index + 1, from_index)
-        return string[0:from_index]+string[to_index:]
+            to_index = max(length - to_index, 0)
+        else:
+            to_index = min(length, to_index)
+
+        return string[0:min(from_index, to_index)] + string[max(from_index, to_index):]
 
     def insert_text(self, index, string):
         text = self.insert_entry.get_text()
