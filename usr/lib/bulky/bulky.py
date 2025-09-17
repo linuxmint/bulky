@@ -438,7 +438,7 @@ class MainWindow():
         dlg.set_program_name("Bulky")
         dlg.set_comments(_("Rename Files"))
         try:
-            with open('/usr/share/common-licenses/GPL', encoding="utf-8") as h:
+            with open('/usr/share/common-licenses/GPL-3', encoding="utf-8") as h:
                 gpl= h.read()
             dlg.set_license(gpl)
         except Exception as e:

@@ -18,4 +18,4 @@ The PO files in this project are imported from there.
 
 # License
 
-- Code: GPLv3
+- Code: GPL-3.0-or-later
