@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: linuxmint\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2025-07-25 15:24+0200\n"
-"PO-Revision-Date: 2025-02-19 06:38+0000\n"
+"PO-Revision-Date: 2025-09-17 11:39+0000\n"
 "Last-Translator: Umidjon Almasov <umutelmas.uz@gmail.com>\n"
 "Language-Team: Uzbek <uz@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2025-08-26 15:25+0000\n"
-"X-Generator: Launchpad (build 919009172d854f2b8e4e8262db447f12f11d25eb)\n"
+"X-Launchpad-Export-Date: 2025-12-12 13:33+0000\n"
+"X-Generator: Launchpad (build 379e22b8475e3402088a4cdb4a6e7936a4d28414)\n"
 "Language: uz\n"
 
 #: usr/lib/bulky/bulky.py:45
@@ -48,7 +48,7 @@ msgstr "Yangi nom"
 
 #: usr/lib/bulky/bulky.py:402
 msgid "Use %n, %0n, %00n, %000n, etc. to enumerate."
-msgstr ""
+msgstr "Hisoblash uchun %n, %0n, %00n, %000n va hokazolardan foydalaning."
 
 #: usr/lib/bulky/bulky.py:439
 msgid "Rename Files"
@@ -69,6 +69,8 @@ msgid ""
 "Unable to rename '%s': Remote operation failed. This may be due to "
 "insufficient permissions or a server error."
 msgstr ""
+"“%s” nomini o‘zgartirib bo‘lmadi: masofaviy operatsiya amalga oshmadi. "
+"Buning sababi etarli ruxsatnomalar yoki server xatosi bo‘lishi mumkin."
 
 #: usr/lib/bulky/bulky.py:523
 #, python-format
@@ -143,7 +145,7 @@ msgstr "Almashtirish:"
 
 #: usr/share/bulky/bulky.ui.h:14
 msgid "Use %n, %0n, %00n, etc. to enumerate."
-msgstr ""
+msgstr "Hisoblash uchun %n, %0n, %00n va hokazolardan foydalaning."
 
 #: usr/share/bulky/bulky.ui.h:15
 msgid "Regular expression"
@@ -155,11 +157,11 @@ msgstr "Harflar katta-kichikligiga sezgir"
 
 #: usr/share/bulky/bulky.ui.h:17
 msgid "Start number:"
-msgstr ""
+msgstr "Boshlanish raqami:"
 
 #: usr/share/bulky/bulky.ui.h:18
 msgid "Increment:"
-msgstr ""
+msgstr "O‘sish:"
 
 #: usr/share/bulky/bulky.ui.h:19
 msgid "At position:"

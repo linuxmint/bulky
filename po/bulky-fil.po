@@ -8,18 +8,18 @@ msgstr ""
 "Project-Id-Version: linuxmint\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2025-07-25 15:24+0200\n"
-"PO-Revision-Date: 2024-12-12 05:38+0000\n"
-"Last-Translator: Jonel A. Agutaya <Unknown>\n"
+"PO-Revision-Date: 2025-10-25 14:04+0000\n"
+"Last-Translator: Emir Mendoza Emir's BTIN <Unknown>\n"
 "Language-Team: Filipino <fil@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2025-08-26 15:25+0000\n"
-"X-Generator: Launchpad (build 919009172d854f2b8e4e8262db447f12f11d25eb)\n"
+"X-Launchpad-Export-Date: 2025-12-12 13:33+0000\n"
+"X-Generator: Launchpad (build 379e22b8475e3402088a4cdb4a6e7936a4d28414)\n"
 
 #: usr/lib/bulky/bulky.py:45
 msgid "Cancel"
-msgstr "Kanselahin"
+msgstr "Ikansela"
 
 #: usr/lib/bulky/bulky.py:46
 msgid "Add"
@@ -27,15 +27,15 @@ msgstr "Idagdag"
 
 #: usr/lib/bulky/bulky.py:222 usr/share/bulky/bulky.ui.h:33
 msgid "Rename..."
-msgstr "Pangalanan..."
+msgstr "Palitan ang pangalan..."
 
 #: usr/lib/bulky/bulky.py:260 usr/lib/bulky/bulky.py:437
 msgid "About"
-msgstr "Patungkol"
+msgstr "Tungkol dito"
 
 #: usr/lib/bulky/bulky.py:265
 msgid "Quit"
-msgstr "Tapusin"
+msgstr "Isara"
 
 #: usr/lib/bulky/bulky.py:282
 msgid "Name"
@@ -47,21 +47,20 @@ msgstr "Bagong pangalan"
 
 #: usr/lib/bulky/bulky.py:402
 msgid "Use %n, %0n, %00n, %000n, etc. to enumerate."
-msgstr ""
+msgstr "Gamitin ang %n, %0n, %00n, %000n, etc. para mag-enumerate."
 
 #: usr/lib/bulky/bulky.py:439
 msgid "Rename Files"
-msgstr "Pangalanan ang Files"
+msgstr "Palitan ang Pangalan ng Files"
 
 #: usr/lib/bulky/bulky.py:487
 msgid "Add files"
-msgstr "Idagdag ang files"
+msgstr "Magdagdag ng mga file"
 
 #: usr/lib/bulky/bulky.py:516
 #, python-format
 msgid "Unable to rename '%s': File name too long"
-msgstr ""
-"Hindi mapangalanan ang '%s': Ang pangalan ng file ay masyadong mahaba"
+msgstr "Hindi mapalitan ang pangalan ng '%s': Masyadong mahaba ang file name"
 
 #: usr/lib/bulky/bulky.py:519
 #, python-format
@@ -69,29 +68,31 @@ msgid ""
 "Unable to rename '%s': Remote operation failed. This may be due to "
 "insufficient permissions or a server error."
 msgstr ""
+"Hindi mapalitan ang pangalan ng '%s': Bigo ang remote operation. Posibleng "
+"dahil ito sa kulang na permiso o service error."
 
 #: usr/lib/bulky/bulky.py:523
 #, python-format
 msgid "Unable to rename '%s': %s"
-msgstr "Hindi mapangalanan ang '%s': %s"
+msgstr "Hindi mapalitan ang pangalan ng '%s': %s"
 
 #: usr/lib/bulky/bulky.py:599 generate_desktop_files:25
 msgid "File Renamer"
-msgstr "Tagapangalan ng File"
+msgstr "Tagapalit ng Pangalan ng File"
 
 #: usr/lib/bulky/bulky.py:600 generate_desktop_files:25
 msgid "Rename files and directories"
-msgstr "Pangalanan ang files at directories"
+msgstr "Palitan ang pangalan ng files at directories"
 
 #: usr/lib/bulky/bulky.py:700
 #, python-format
 msgid "Name collision on '%s'."
-msgstr "Nagbanggaan ng pangalan sa '%s'."
+msgstr "Merong kaparehong pangalan sa '%s'."
 
 #: usr/lib/bulky/bulky.py:704 usr/lib/bulky/bulky.py:708
 #, python-format
 msgid "'%s' is not writeable."
-msgstr "'%s' ay hindi maisulat."
+msgstr "Hindi mai-save ang '%s'."
 
 #: usr/share/bulky/bulky.ui.h:1
 msgid "Add files..."
@@ -99,15 +100,15 @@ msgstr "Magdagdag ng files..."
 
 #: usr/share/bulky/bulky.ui.h:2
 msgid "Remove"
-msgstr "Alisin"
+msgstr "Tanggalin"
 
 #: usr/share/bulky/bulky.ui.h:3
 msgid "Remove selected files"
-msgstr "Alisin ang piniling files"
+msgstr "Tanggalin ang piniling files"
 
 #: usr/share/bulky/bulky.ui.h:4
 msgid "Clear"
-msgstr "Linisin"
+msgstr "Huwag nang piliin ang mga pinili na"
 
 #: usr/share/bulky/bulky.ui.h:5
 msgid "Replace"
@@ -115,11 +116,11 @@ msgstr "Palitan"
 
 #: usr/share/bulky/bulky.ui.h:6
 msgid "Insert"
-msgstr "Isingit"
+msgstr "Ilagay"
 
 #: usr/share/bulky/bulky.ui.h:7
 msgid "Change case"
-msgstr "Palitan ang titik"
+msgstr "Gawing malaki o maliit ang titik"
 
 #: usr/share/bulky/bulky.ui.h:8
 msgid "Name only"
@@ -127,11 +128,11 @@ msgstr "Pangalan lang"
 
 #: usr/share/bulky/bulky.ui.h:9
 msgid "Extension only"
-msgstr "Ekstensyon lang"
+msgstr "Extension lang"
 
 #: usr/share/bulky/bulky.ui.h:10
 msgid "Entire filename"
-msgstr "Buong pangalan ng file"
+msgstr "Buong filename"
 
 #: usr/share/bulky/bulky.ui.h:11
 msgid "Find:"
@@ -143,27 +144,27 @@ msgstr "Palitan:"
 
 #: usr/share/bulky/bulky.ui.h:14
 msgid "Use %n, %0n, %00n, etc. to enumerate."
-msgstr ""
+msgstr "Gamitin ang %n, %0n, %00n, etc. para mag-enumerate."
 
 #: usr/share/bulky/bulky.ui.h:15
 msgid "Regular expression"
-msgstr "Espresyong regular"
+msgstr "Regular expression"
 
 #: usr/share/bulky/bulky.ui.h:16
 msgid "Case sensitive"
-msgstr "Sensitibo ang titik"
+msgstr "Case sensitive"
 
 #: usr/share/bulky/bulky.ui.h:17
 msgid "Start number:"
-msgstr ""
+msgstr "Unang numero:"
 
 #: usr/share/bulky/bulky.ui.h:18
 msgid "Increment:"
-msgstr ""
+msgstr "Dagdag:"
 
 #: usr/share/bulky/bulky.ui.h:19
 msgid "At position:"
-msgstr "Sa posisyon:"
+msgstr "Sa puwestong:"
 
 #: usr/share/bulky/bulky.ui.h:20
 msgid "From the end"
@@ -171,7 +172,7 @@ msgstr "Sa dulo:"
 
 #: usr/share/bulky/bulky.ui.h:21
 msgid "Overwrite"
-msgstr "Patungan"
+msgstr "Palitan"
 
 #: usr/share/bulky/bulky.ui.h:22
 msgid "Text:"
@@ -183,19 +184,19 @@ msgstr "Palitan ng:"
 
 #: usr/share/bulky/bulky.ui.h:24
 msgid "Lower case"
-msgstr "Maliliit na letra"
+msgstr "Maliit na titik"
 
 #: usr/share/bulky/bulky.ui.h:25
 msgid "First character uppercase"
-msgstr "Malaki ang unang letra"
+msgstr "Malaki ang unang titik"
 
 #: usr/share/bulky/bulky.ui.h:26
 msgid "Title case"
-msgstr "Pangtitolong letra"
+msgstr "Title case"
 
 #: usr/share/bulky/bulky.ui.h:27
 msgid "Upper case"
-msgstr "Malalaking letra"
+msgstr "Malaking titik lahat"
 
 #: usr/share/bulky/bulky.ui.h:28
 msgid "Remove accents"
@@ -215,4 +216,4 @@ msgstr "Isara"
 
 #: usr/share/bulky/bulky.ui.h:32
 msgid "Rename"
-msgstr "Pangalanang muli"
+msgstr "Palitan ang Pangalan"

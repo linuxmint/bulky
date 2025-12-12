@@ -1,16 +1,16 @@
-# Malay translation for linuxmint
-# Copyright (c) 2022 Rosetta Contributors and Canonical Ltd 2022
+# Lao translation for linuxmint
+# Copyright (c) 2025 Rosetta Contributors and Canonical Ltd 2025
 # This file is distributed under the same license as the linuxmint package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: linuxmint\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2025-07-25 15:24+0200\n"
-"PO-Revision-Date: 2025-07-28 08:43+0000\n"
-"Last-Translator: Keviindran Ramachandran <Unknown>\n"
-"Language-Team: Malay <ms@li.org>\n"
+"PO-Revision-Date: 2025-10-12 10:36+0000\n"
+"Last-Translator: boneni <Unknown>\n"
+"Language-Team: Lao <lo@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -19,48 +19,48 @@ msgstr ""
 
 #: usr/lib/bulky/bulky.py:45
 msgid "Cancel"
-msgstr "Batal"
+msgstr "ຍົກເລີກ"
 
 #: usr/lib/bulky/bulky.py:46
 msgid "Add"
-msgstr "Tambah"
+msgstr "ເພີ່ມ"
 
 #: usr/lib/bulky/bulky.py:222 usr/share/bulky/bulky.ui.h:33
 msgid "Rename..."
-msgstr "Namakan Semula..."
+msgstr "ປ່ຽນຊື່..."
 
 #: usr/lib/bulky/bulky.py:260 usr/lib/bulky/bulky.py:437
 msgid "About"
-msgstr "Perihal"
+msgstr "ກ່ຽວກັບ"
 
 #: usr/lib/bulky/bulky.py:265
 msgid "Quit"
-msgstr "Keluar"
+msgstr "ອອກ"
 
 #: usr/lib/bulky/bulky.py:282
 msgid "Name"
-msgstr "Nama"
+msgstr "ຊື່"
 
 #: usr/lib/bulky/bulky.py:293
 msgid "New name"
-msgstr "Nama baru"
+msgstr "ຊື່ໃໝ່"
 
 #: usr/lib/bulky/bulky.py:402
 msgid "Use %n, %0n, %00n, %000n, etc. to enumerate."
-msgstr ""
+msgstr "ໃຊ້ %n, %0n, %00n, %000n, ແລະອື່ນໆ ເພື່ອຈັດລຳດັບ."
 
 #: usr/lib/bulky/bulky.py:439
 msgid "Rename Files"
-msgstr "Namakan semula fail-fail"
+msgstr "ປ່ຽນຊື່ໄຟລ໌"
 
 #: usr/lib/bulky/bulky.py:487
 msgid "Add files"
-msgstr "Tambah fail-fail"
+msgstr "ເພີ່ມໄຟລ໌"
 
 #: usr/lib/bulky/bulky.py:516
 #, python-format
 msgid "Unable to rename '%s': File name too long"
-msgstr "Gagal untuk menamakan semula '%s': Nama fail terlalu panjang"
+msgstr "ບໍ່ສາມາດປ່ຽນຊື່ '%s': ຊື່ໄຟລ໌ຍາວເກີນໄປ"
 
 #: usr/lib/bulky/bulky.py:519
 #, python-format
@@ -68,152 +68,152 @@ msgid ""
 "Unable to rename '%s': Remote operation failed. This may be due to "
 "insufficient permissions or a server error."
 msgstr ""
-"Tidak dapat menamakan semula '%s': Operasi remote gagal. Ini mungkin "
-"disebabkan oleh kebenaran yang tidak mencukupi atau ralat pelayan."
+"ບໍ່ສາມາດປ່ຽນຊື່ '%s': ການດຳເນີນງານທາງໄກລົ້ມເຫຼວ. ອາດເປັນຍ້ອນສິດບໍ່ພຽງພໍ ຫຼື "
+"ເຊີບເວີຂັດຂ້ອງ."
 
 #: usr/lib/bulky/bulky.py:523
 #, python-format
 msgid "Unable to rename '%s': %s"
-msgstr "Gagal untuk menamakan semula '%s': %s"
+msgstr "ບໍ່ສາມາດປ່ຽນຊື່ '%s' ໄດ້: %s"
 
 #: usr/lib/bulky/bulky.py:599 generate_desktop_files:25
 msgid "File Renamer"
-msgstr "Penama Semula Fail"
+msgstr "ໂປຣແກຣມປ່ຽນຊື່ໄຟລ໌"
 
 #: usr/lib/bulky/bulky.py:600 generate_desktop_files:25
 msgid "Rename files and directories"
-msgstr "Namakan semula fail dan direktori"
+msgstr "ປ່ຽນຊື່ໄຟລ໌ ແລະ ໄດເຣັກທໍຣີ"
 
 #: usr/lib/bulky/bulky.py:700
 #, python-format
 msgid "Name collision on '%s'."
-msgstr "Perlanggaran nama pada '%s'"
+msgstr "ຊື່ຊໍ້າກັນຢູ່ທີ່ '%s'."
 
 #: usr/lib/bulky/bulky.py:704 usr/lib/bulky/bulky.py:708
 #, python-format
 msgid "'%s' is not writeable."
-msgstr "'%s' tidak boleh ditulis"
+msgstr "'%s' ບໍ່ສາມາດຂຽນໄດ້."
 
 #: usr/share/bulky/bulky.ui.h:1
 msgid "Add files..."
-msgstr "Tambah fail..."
+msgstr "ເພີ່ມໄຟລ໌..."
 
 #: usr/share/bulky/bulky.ui.h:2
 msgid "Remove"
-msgstr "Buang"
+msgstr "ລຶບອອກ"
 
 #: usr/share/bulky/bulky.ui.h:3
 msgid "Remove selected files"
-msgstr "Buang fail yang dipilih"
+msgstr "ລຶບໄຟລ໌ທີ່ເລືອກອອກ"
 
 #: usr/share/bulky/bulky.ui.h:4
 msgid "Clear"
-msgstr "Kosongkan"
+msgstr "ລ້າງ"
 
 #: usr/share/bulky/bulky.ui.h:5
 msgid "Replace"
-msgstr "Ganti"
+msgstr "ແທນທີ່"
 
 #: usr/share/bulky/bulky.ui.h:6
 msgid "Insert"
-msgstr "Sisip"
+msgstr "ແຊກ"
 
 #: usr/share/bulky/bulky.ui.h:7
 msgid "Change case"
-msgstr "Ubah kata"
+msgstr "ປ່ຽນຕົວອັກສອນ"
 
 #: usr/share/bulky/bulky.ui.h:8
 msgid "Name only"
-msgstr "Nama sahaja"
+msgstr "ສະເພາະຊື່"
 
 #: usr/share/bulky/bulky.ui.h:9
 msgid "Extension only"
-msgstr "Ekstensi sahaja"
+msgstr "ສະເພາະນາມສະກຸນ"
 
 #: usr/share/bulky/bulky.ui.h:10
 msgid "Entire filename"
-msgstr "Seluruh nama fail"
+msgstr "ຊື່ໄຟລ໌ທັງໝົດ"
 
 #: usr/share/bulky/bulky.ui.h:11
 msgid "Find:"
-msgstr "Cari:"
+msgstr "ຄົ້ນຫາ:"
 
 #: usr/share/bulky/bulky.ui.h:12
 msgid "Replace:"
-msgstr "Ganti:"
+msgstr "ແທນທີ່:"
 
 #: usr/share/bulky/bulky.ui.h:14
 msgid "Use %n, %0n, %00n, etc. to enumerate."
-msgstr "Gunakan %n, %0n, %00n, dan sebagainya untuk penomboran."
+msgstr "ໃຊ້ %n, %0n, %00n, ແລະອື່ນໆ ເພື່ອຈັດລຳດັບ."
 
 #: usr/share/bulky/bulky.ui.h:15
 msgid "Regular expression"
-msgstr "Ungkapan biasa"
+msgstr "ການສະແດງອອກປົກກະຕິ"
 
 #: usr/share/bulky/bulky.ui.h:16
 msgid "Case sensitive"
-msgstr "Sensitif huruf"
+msgstr "ແຍກຕົວພິມໃຫຍ່-ນ້ອຍ"
 
 #: usr/share/bulky/bulky.ui.h:17
 msgid "Start number:"
-msgstr "Nombor mula:"
+msgstr "ເລີ່ມຕົ້ນຕົວເລກ:"
 
 #: usr/share/bulky/bulky.ui.h:18
 msgid "Increment:"
-msgstr "Kenaikan:"
+msgstr "ເພີ່ມຂຶ້ນເທື່ອລະ:"
 
 #: usr/share/bulky/bulky.ui.h:19
 msgid "At position:"
-msgstr "Pada kedudukan:"
+msgstr "ທີ່ຕຳແໜ່ງ:"
 
 #: usr/share/bulky/bulky.ui.h:20
 msgid "From the end"
-msgstr "Dari penghujung"
+msgstr "ຈາກທ້າຍ"
 
 #: usr/share/bulky/bulky.ui.h:21
 msgid "Overwrite"
-msgstr "Tulis Ganti"
+msgstr "ຂຽນທັບ"
 
 #: usr/share/bulky/bulky.ui.h:22
 msgid "Text:"
-msgstr "Teks:"
+msgstr "ຂໍ້ຄວາມ:"
 
 #: usr/share/bulky/bulky.ui.h:23
 msgid "Convert to:"
-msgstr "Tukar kepada:"
+msgstr "ປ່ຽນເປັນ:"
 
 #: usr/share/bulky/bulky.ui.h:24
 msgid "Lower case"
-msgstr "Huruf kecil"
+msgstr "ຕົວພິມນ້ອຍ"
 
 #: usr/share/bulky/bulky.ui.h:25
 msgid "First character uppercase"
-msgstr "Huruf besar pada aksara pertama"
+msgstr "ຕົວອັກສອນທຳອິດເປັນຕົວພິມໃຫຍ່"
 
 #: usr/share/bulky/bulky.ui.h:26
 msgid "Title case"
-msgstr "Huruf tajuk"
+msgstr "ຕົວພິມໃຫຍ່ທຸກຄຳ"
 
 #: usr/share/bulky/bulky.ui.h:27
 msgid "Upper case"
-msgstr "Huruf besar"
+msgstr "ຕົວພິມໃຫຍ່"
 
 #: usr/share/bulky/bulky.ui.h:28
 msgid "Remove accents"
-msgstr "Buang aksen"
+msgstr "ລຶບສຳນຽງ"
 
 #: usr/share/bulky/bulky.ui.h:29
 msgid "Remove from position:"
-msgstr "Buang dari kedudukan:"
+msgstr "ລຶບອອກຈາກຕຳແໜ່ງ:"
 
 #: usr/share/bulky/bulky.ui.h:30
 msgid "To position:"
-msgstr "Ke kedudukan:"
+msgstr "ໄປທີ່ຕຳແໜ່ງ:"
 
 #: usr/share/bulky/bulky.ui.h:31
 msgid "Close"
-msgstr "Tutup"
+msgstr "ປິດ"
 
 #: usr/share/bulky/bulky.ui.h:32
 msgid "Rename"
-msgstr "Namakan semula"
+msgstr "ປ່ຽນຊື່"
