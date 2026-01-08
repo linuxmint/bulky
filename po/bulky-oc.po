@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: linuxmint\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2025-07-25 15:24+0200\n"
-"PO-Revision-Date: 2025-08-09 09:23+0000\n"
+"PO-Revision-Date: 2025-12-12 14:18+0000\n"
 "Last-Translator: Quentin PAGÈS <Unknown>\n"
 "Language-Team: Occitan (post 1500) <oc@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2025-12-12 13:33+0000\n"
-"X-Generator: Launchpad (build 379e22b8475e3402088a4cdb4a6e7936a4d28414)\n"
+"X-Launchpad-Export-Date: 2026-01-08 15:44+0000\n"
+"X-Generator: Launchpad (build 99c00f518760bdd50fc6e353e7736d2fff8fba4a)\n"
 
 #: usr/lib/bulky/bulky.py:45
 msgid "Cancel"
@@ -132,7 +132,7 @@ msgstr "Extension solament"
 
 #: usr/share/bulky/bulky.ui.h:10
 msgid "Entire filename"
-msgstr "Nom complet"
+msgstr "Nom complèt"
 
 #: usr/share/bulky/bulky.ui.h:11
 msgid "Find:"

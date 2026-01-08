@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: linuxmint\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2025-07-25 15:24+0200\n"
-"PO-Revision-Date: 2025-06-15 10:45+0000\n"
+"PO-Revision-Date: 2025-12-23 08:51+0000\n"
 "Last-Translator: NorwayFun <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <ka@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2025-12-12 13:33+0000\n"
-"X-Generator: Launchpad (build 379e22b8475e3402088a4cdb4a6e7936a4d28414)\n"
+"X-Launchpad-Export-Date: 2026-01-08 15:44+0000\n"
+"X-Generator: Launchpad (build 99c00f518760bdd50fc6e353e7736d2fff8fba4a)\n"
 "Language: ka\n"
 
 #: usr/lib/bulky/bulky.py:45
@@ -48,7 +48,7 @@ msgstr "ახალი სახელი"
 
 #: usr/lib/bulky/bulky.py:402
 msgid "Use %n, %0n, %00n, %000n, etc. to enumerate."
-msgstr ""
+msgstr "ჩამოსათვლელად გამოიყენეთ %n, %0n, %00n, %000n და ა.შ."
 
 #: usr/lib/bulky/bulky.py:439
 msgid "Rename Files"
@@ -69,6 +69,8 @@ msgid ""
 "Unable to rename '%s': Remote operation failed. This may be due to "
 "insufficient permissions or a server error."
 msgstr ""
+"'%s'-ის სახელის გადარქმევის შეცდომა: დაშორებული ოპერაცია ჩავარდა. ეს "
+"შეიძლება, სერვერის შეცდომის გამო მოხდეს, ან არასაკმარისი წვდომებით."
 
 #: usr/lib/bulky/bulky.py:523
 #, python-format
@@ -143,7 +145,7 @@ msgstr "ჩანაცვლება:"
 
 #: usr/share/bulky/bulky.ui.h:14
 msgid "Use %n, %0n, %00n, etc. to enumerate."
-msgstr ""
+msgstr "ჩამოსათვლელად გამოიყენეთ %n, %0n, %00n და ა.შ."
 
 #: usr/share/bulky/bulky.ui.h:15
 msgid "Regular expression"
@@ -155,11 +157,11 @@ msgstr "დიდი და პატარა ასოების გან�
 
 #: usr/share/bulky/bulky.ui.h:17
 msgid "Start number:"
-msgstr ""
+msgstr "საწყისი რიცხვი:"
 
 #: usr/share/bulky/bulky.ui.h:18
 msgid "Increment:"
-msgstr ""
+msgstr "ზრდა:"
 
 #: usr/share/bulky/bulky.ui.h:19
 msgid "At position:"

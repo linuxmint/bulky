@@ -8,14 +8,15 @@ msgstr ""
 "Project-Id-Version: linuxmint\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2025-07-25 15:24+0200\n"
-"PO-Revision-Date: 2025-09-08 15:42+0000\n"
+"PO-Revision-Date: 2025-12-27 15:57+0000\n"
 "Last-Translator: Klavs Petersons <Unknown>\n"
 "Language-Team: Latvian <lv@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2025-12-12 13:33+0000\n"
-"X-Generator: Launchpad (build 379e22b8475e3402088a4cdb4a6e7936a4d28414)\n"
+"X-Launchpad-Export-Date: 2026-01-08 15:44+0000\n"
+"X-Generator: Launchpad (build 99c00f518760bdd50fc6e353e7736d2fff8fba4a)\n"
+"Language: lv\n"
 
 #: usr/lib/bulky/bulky.py:45
 msgid "Cancel"
@@ -47,7 +48,7 @@ msgstr "Jauns nosaukums"
 
 #: usr/lib/bulky/bulky.py:402
 msgid "Use %n, %0n, %00n, %000n, etc. to enumerate."
-msgstr "Izmantojiet %n, %0n, %00n, %000n, utt., lai uzskaitītu."
+msgstr "Izmanto %n, %0n, %00n, %000n, utt., lai uzskaitītu."
 
 #: usr/lib/bulky/bulky.py:439
 msgid "Rename Files"
@@ -144,7 +145,7 @@ msgstr "Aizstāt:"
 
 #: usr/share/bulky/bulky.ui.h:14
 msgid "Use %n, %0n, %00n, etc. to enumerate."
-msgstr "Lai uzskaitītu, izmantojiet %n, %0n, %00n, utt."
+msgstr "Lai uzskaitītu, izmanto %n, %0n, %00n, utt."
 
 #: usr/share/bulky/bulky.ui.h:15
 msgid "Regular expression"
@@ -192,7 +193,7 @@ msgstr "Pirmā rakstzīme ar lielajiem burtiem"
 
 #: usr/share/bulky/bulky.ui.h:26
 msgid "Title case"
-msgstr "Virsraksta lieta"
+msgstr "Lielie burti nosaukumos"
 
 #: usr/share/bulky/bulky.ui.h:27
 msgid "Upper case"
@@ -208,7 +209,7 @@ msgstr "Noņemt no pozīcijas:"
 
 #: usr/share/bulky/bulky.ui.h:30
 msgid "To position:"
-msgstr "Novietot:"
+msgstr "Pozicionēt:"
 
 #: usr/share/bulky/bulky.ui.h:31
 msgid "Close"
