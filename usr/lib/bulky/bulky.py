@@ -188,6 +188,8 @@ class MyApplication(Gtk.Application):
         Gtk.Application.__init__(self, application_id=application_id, flags=flags)
         self.connect("activate", self.activate)
 
+        GLib.set_prgname("bulky")
+
     def activate(self, application):
         windows = self.get_windows()
         if (len(windows) > 0):
