@@ -211,6 +211,7 @@ class MainWindow():
         # used to prevent collisions
         self.uris = []
         self.renamed_uris = []
+        self.is_processing = False
         self.last_chooser_location = Gio.File.new_for_path(GLib.get_home_dir())
 
         # Set the Glade file
@@ -224,6 +225,7 @@ class MainWindow():
 
         # Create variables to quickly access dynamic widgets
         self.headerbar = self.builder.get_object("headerbar")
+        self.file_progress = self.builder.get_object("file_progress")
         self.add_button = self.builder.get_object("add_button")
         self.remove_button = self.builder.get_object("remove_button")
         self.clear_button = self.builder.get_object("clear_button")
@@ -405,8 +407,23 @@ class MainWindow():
 
         self.load_files(sys.argv[1:], initial_load=True)
 
+    def show_progress(self, text):
+        self.file_progress.set_fraction(0)
+        self.file_progress.set_text(text)
+        self.file_progress.show()
+
+    def update_progress(self, current, total, text):
+        fraction = current / total if total else 0
+        self.file_progress.set_fraction(fraction)
+        self.file_progress.set_text("{} {} / {}".format(text, current, total))
+
+    def hide_progress(self):
+        self.file_progress.hide()
+        self.file_progress.set_fraction(0)
+        self.file_progress.set_text("")
+
     def on_drag_data_received(self, widget, context, x, y, data, info, _time, user_data=None):
-        if data:
+        if data and not self.is_processing:
             dtype = data.get_data_type().name()
             if context.get_selected_action() == Gdk.DragAction.COPY:
                 if dtype.startswith("text/uri-list"):
@@ -462,6 +479,9 @@ class MainWindow():
         self.remove_button.set_sensitive(len(paths) > 0)
 
     def on_key_press_event(self, widget, event):
+        if self.is_processing:
+            return
+
         ctrl = (event.state & Gdk.ModifierType.CONTROL_MASK)
         if ctrl:
             if event.keyval == Gdk.KEY_n:
@@ -484,6 +504,9 @@ class MainWindow():
         self.preview_changes()
 
     def on_add_button(self, widget):
+        if self.is_processing:
+            return
+
         dialog = FolderFileChooserDialog(_("Add files"), self.window, self.last_chooser_location)
 
         def update_last_location(dialog, response_id, data=None):
@@ -494,11 +517,14 @@ class MainWindow():
         dialog.connect("response", update_last_location)
 
         response = dialog.run()
-        if response == Gtk.ResponseType.OK:
-            for uri in dialog.get_uris():
-                self.add_file(uri)
-        self.preview_changes()
+        if response != Gtk.ResponseType.OK:
+            dialog.destroy()
+            self.preview_changes()
+            return
+
+        uris = dialog.get_uris()
         dialog.destroy()
+        self.load_files(uris)
 
     def on_clear_button(self, widget):
         self.model.clear()
@@ -527,6 +553,9 @@ class MainWindow():
         self.infobar.show()
 
     def on_rename_button(self, widget):
+        if self.is_processing:
+            return
+
         iters = []
         iter = self.model.get_iter_first()
         while iter != None:
@@ -546,25 +575,57 @@ class MainWindow():
                 print(e)
 
         rename_list = self.sort_list_by_depth(rename_list)
+        rename_list = [tup for tup in rename_list if tup[2] != tup[3]]
 
         # for i in rename_list:
         #     print(i[0].gfile.get_uri())
 
-        for tup in rename_list:
-                iter, file_obj, name, new_name = tup
-                if new_name != name:
-                    try:
-                        old_uri = file_obj.uri
-                        # print("Renaming %s --> %s" % (file_obj.get_path_or_uri_for_display(), new_name))
-                        if file_obj.rename(new_name):
-                            self.uris.remove(old_uri)
-                            self.uris.append(file_obj.uri)
-                            self.model.set_value(iter, COL_NAME, new_name)
-                    except GLib.Error as e:
-                        self.report_os_error(file_obj, new_name, e)
-                        break
-
+        total = len(rename_list)
+        current = 0
         self.rename_button.set_sensitive(False)
+
+        if total == 0:
+            return
+
+        self.is_processing = True
+        self.builder.get_object("file_toolbox").set_sensitive(False)
+        self.show_progress(_("Renaming files…"))
+
+        def rename_next_file():
+            nonlocal current
+
+            iter, file_obj, name, new_name = rename_list[current]
+            try:
+                old_uri = file_obj.uri
+                # print("Renaming %s --> %s" % (file_obj.get_path_or_uri_for_display(), new_name))
+                if file_obj.rename(new_name):
+                    self.uris.remove(old_uri)
+                    self.uris.append(file_obj.uri)
+                    self.model.set_value(iter, COL_NAME, new_name)
+            except GLib.Error as e:
+                self.report_os_error(file_obj, new_name, e)
+                self.hide_progress()
+                self.builder.get_object("file_toolbox").set_sensitive(True)
+                self.is_processing = False
+                return False
+            except Exception:
+                self.hide_progress()
+                self.builder.get_object("file_toolbox").set_sensitive(True)
+                self.is_processing = False
+                raise
+
+            current += 1
+            self.update_progress(current, total, _("Renaming files…"))
+
+            if current == total:
+                self.hide_progress()
+                self.builder.get_object("file_toolbox").set_sensitive(True)
+                self.is_processing = False
+                return False
+
+            return True
+
+        GLib.idle_add(rename_next_file)
 
     def sort_list_by_depth(self, rename_list):
         # Rename files first, followed by directories from deep to shallow.
@@ -590,16 +651,48 @@ class MainWindow():
 
     def load_files(self, uris, initial_load=False):
         # Clear treeview and selection
+        if self.is_processing:
+            return
+
         if len(uris) > 0:
             if initial_load:
                 self.builder.get_object("file_toolbox").hide()
-            for path in uris:
-                self.add_file(path)
+            total = len(uris)
+            current = 0
+            uri_iterator = iter(uris)
+
+            self.is_processing = True
+            self.builder.get_object("file_toolbox").set_sensitive(False)
+            self.show_progress(_("Loading files…"))
+
+            def load_next_file():
+                nonlocal current
+
+                try:
+                    self.add_file(next(uri_iterator))
+                except Exception:
+                    self.hide_progress()
+                    self.builder.get_object("file_toolbox").set_sensitive(True)
+                    self.is_processing = False
+                    raise
+
+                current += 1
+                self.update_progress(current, total, _("Loading files…"))
+
+                if current == total:
+                    self.hide_progress()
+                    self.builder.get_object("file_toolbox").set_sensitive(True)
+                    self.preview_changes()
+                    self.is_processing = False
+                    return False
+
+                return True
+
+            GLib.idle_add(load_next_file)
         else:
             self.builder.get_object("headerbar").set_title(_("File Renamer"))
             self.builder.get_object("headerbar").set_subtitle(_("Rename files and directories"))
-
-        self.preview_changes()
+            self.preview_changes()
 
     def add_file(self, uri_or_path):
         file_obj = FileObject(uri_or_path, self.window.get_scale_factor())

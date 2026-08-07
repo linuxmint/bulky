@@ -128,7 +128,26 @@
                           </packing>
                         </child>
                         <child>
-                          <object class="GtkToolbar" id="file_toolbox">
+                          <object class="GtkBox">
+                            <property name="visible">True</property>
+                            <property name="can-focus">False</property>
+                            <property name="orientation">horizontal</property>
+                            <child>
+                              <object class="GtkProgressBar" id="file_progress">
+                                <property name="visible">False</property>
+                                <property name="can-focus">False</property>
+                                <property name="orientation">horizontal</property>
+                                <property name="fraction">0</property>
+                                <property name="show-text">True</property>
+                              </object>
+                              <packing>
+                                <property name="expand">True</property>
+                                <property name="fill">True</property>
+                                <property name="position">0</property>
+                              </packing>
+                            </child>
+                            <child>
+                              <object class="GtkToolbar" id="file_toolbox">
                             <property name="visible">True</property>
                             <property name="can-focus">False</property>
                             <property name="toolbar-style">icons</property>
@@ -218,6 +237,13 @@
                             <style>
                               <class name="inline-toolbar"/>
                             </style>
+                          </object>
+                              <packing>
+                                <property name="expand">False</property>
+                                <property name="fill">True</property>
+                                <property name="position">1</property>
+                              </packing>
+                            </child>
                           </object>
                           <packing>
                             <property name="expand">False</property>
