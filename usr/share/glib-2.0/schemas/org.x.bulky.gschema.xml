@@ -11,5 +11,29 @@
       <summary>"name, extension, all"</summary>
       <description></description>
     </key>
+    <key type="b" name="remember-last-settings">
+      <default>false</default>
+      <summary>Remember last rename settings</summary>
+    </key>
+    <key type="a{sv}" name="last-rename-settings">
+      <default>{}</default>
+      <summary>Last rename settings</summary>
+    </key>
+    <key type="s" name="last-chooser-location">
+      <default>""</default>
+      <summary>Last file chooser location</summary>
+    </key>
+    <key type="i" name="window-width">
+      <default>600</default>
+      <summary>Window width</summary>
+    </key>
+    <key type="i" name="window-height">
+      <default>500</default>
+      <summary>Window height</summary>
+    </key>
+    <key type="b" name="window-maximized">
+      <default>false</default>
+      <summary>Window maximized state</summary>
+    </key>
   </schema>
 </schemalist>

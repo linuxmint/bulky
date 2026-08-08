@@ -32,8 +32,6 @@ SCOPE_EXTENSION_ONLY = "extension"
 SCOPE_ALL = "all"
 
 SETTINGS_SCHEMA_ID = "org.x.bulky"
-MRU_OPERATION = "mru-operation"
-MRU_SCOPE = "mru-scope"
 
 class FolderFileChooserDialog(Gtk.Dialog):
     def __init__(self, window_title, transient_parent, starting_location):
@@ -219,6 +217,11 @@ class MainWindow():
         self.builder.set_translation_domain(APP)
         self.builder.add_from_file(gladefile)
         self.window = self.builder.get_object("main_window")
+        width = self.settings.get_int("window-width")
+        height = self.settings.get_int("window-height")
+        self.window.set_default_size(width, height)
+        if self.settings.get_boolean("window-maximized"):
+            self.window.maximize()
         self.window.set_title(_("Rename..."))
         self.window.set_icon_name("bulky")
 
@@ -237,6 +240,9 @@ class MainWindow():
         self.close_button.connect("clicked", self.on_close_button)
         self.rename_button.connect("clicked", self.on_rename_button)
         self.window.connect("key-press-event",self.on_key_press_event)
+        self.window.connect("delete-event", self.on_window_delete_event)
+        self.window.connect("configure-event", self.on_window_configure_event)
+        self.window.connect("window-state-event", self.on_window_state_event)
 
         # DND
         self.dnd_box = self.builder.get_object("dnd")  # DND target, topmost window child
@@ -303,17 +309,22 @@ class MainWindow():
 
         # Combos
         self.combo_operation = self.builder.get_object("combo_operation")
-        self.combo_operation.set_active_id(self.settings.get_string(MRU_OPERATION))
         self.combo_operation.connect("changed", self.on_operation_changed)
         self.combo_scope = self.builder.get_object("combo_scope")
-        self.combo_scope.set_active_id(self.settings.get_string(MRU_SCOPE))
         self.combo_scope.connect("changed", self.on_scope_changed)
+        self.remember_settings_check = self.builder.get_object("remember_settings_check")
+        self.remember_settings_check.set_active(self.settings.get_boolean("remember-last-settings"))
+        if self.remember_settings_check.get_active():
+            chooser_location = self.settings.get_string("last-chooser-location")
+            if chooser_location:
+                self.last_chooser_location = Gio.File.new_for_uri(chooser_location)
+        self.remember_settings_check.connect("toggled", self.on_remember_settings_toggled)
 
         self.stack = self.builder.get_object("stack")
         self.infobar = self.builder.get_object("infobar")
         self.error_label = self.builder.get_object("error_label")
 
-        # Ini "MRU"-view
+        # Initialize view
         self.on_operation_changed(self.combo_operation)
         self.on_scope_changed(self.combo_scope)
 
@@ -403,7 +414,124 @@ class MainWindow():
         self.replace_entry.set_tooltip_text(variables_tooltip)
         self.insert_entry.set_tooltip_text(variables_tooltip)
 
+        if self.remember_settings_check.get_active():
+            self.restore_rename_settings()
+
         self.load_files(sys.argv[1:], initial_load=True)
+
+    def save_rename_settings(self):
+        if self.radio_titlecase.get_active():
+            case_mode = "titlecase"
+        elif self.radio_lowercase.get_active():
+            case_mode = "lowercase"
+        elif self.radio_uppercase.get_active():
+            case_mode = "uppercase"
+        elif self.radio_firstuppercase.get_active():
+            case_mode = "firstuppercase"
+        else:
+            case_mode = "accents"
+
+        rename_settings = {
+            "operation": GLib.Variant("s", self.combo_operation.get_active_id()),
+            "scope": GLib.Variant("s", self.combo_scope.get_active_id()),
+            "replace-find": GLib.Variant("s", self.find_entry.get_text()),
+            "replace-text": GLib.Variant("s", self.replace_entry.get_text()),
+            "replace-regex": GLib.Variant("b", self.replace_regex_check.get_active()),
+            "replace-case-sensitive": GLib.Variant("b", self.replace_case_check.get_active()),
+            "replace-start-number": GLib.Variant("i", self.replace_start_spin.get_value_as_int()),
+            "replace-increment": GLib.Variant("i", self.replace_inc_spin.get_value_as_int()),
+            "remove-from-value": GLib.Variant("i", self.remove_from_spin.get_value_as_int()),
+            "remove-to-value": GLib.Variant("i", self.remove_to_spin.get_value_as_int()),
+            "remove-from-enabled": GLib.Variant("b", self.remove_from_check.get_active()),
+            "remove-to-enabled": GLib.Variant("b", self.remove_to_check.get_active()),
+            "insert-text": GLib.Variant("s", self.insert_entry.get_text()),
+            "insert-position": GLib.Variant("i", self.insert_spin.get_value_as_int()),
+            "insert-reverse": GLib.Variant("b", self.insert_reverse_check.get_active()),
+            "insert-overwrite": GLib.Variant("b", self.overwrite_check.get_active()),
+            "insert-start-number": GLib.Variant("i", self.insert_start_spin.get_value_as_int()),
+            "insert-increment": GLib.Variant("i", self.insert_inc_spin.get_value_as_int()),
+            "case-mode": GLib.Variant("s", case_mode),
+        }
+        self.settings.set_value("last-rename-settings", GLib.Variant("a{sv}", rename_settings))
+
+    def restore_rename_settings(self):
+        rename_settings = self.settings.get_value("last-rename-settings").unpack()
+
+        if "operation" in rename_settings:
+            self.combo_operation.set_active_id(rename_settings["operation"])
+        if "scope" in rename_settings:
+            self.combo_scope.set_active_id(rename_settings["scope"])
+
+        if "replace-find" in rename_settings:
+            self.find_entry.set_text(rename_settings["replace-find"])
+        if "replace-text" in rename_settings:
+            self.replace_entry.set_text(rename_settings["replace-text"])
+        if "replace-regex" in rename_settings:
+            self.replace_regex_check.set_active(rename_settings["replace-regex"])
+        if "replace-case-sensitive" in rename_settings:
+            self.replace_case_check.set_active(rename_settings["replace-case-sensitive"])
+        if "replace-start-number" in rename_settings:
+            self.replace_start_spin.set_value(rename_settings["replace-start-number"])
+        if "replace-increment" in rename_settings:
+            self.replace_inc_spin.set_value(rename_settings["replace-increment"])
+
+        if "remove-from-value" in rename_settings:
+            self.remove_from_spin.set_value(rename_settings["remove-from-value"])
+        if "remove-to-value" in rename_settings:
+            self.remove_to_spin.set_value(rename_settings["remove-to-value"])
+        if "remove-from-enabled" in rename_settings:
+            self.remove_from_check.set_active(rename_settings["remove-from-enabled"])
+        if "remove-to-enabled" in rename_settings:
+            self.remove_to_check.set_active(rename_settings["remove-to-enabled"])
+
+        if "insert-text" in rename_settings:
+            self.insert_entry.set_text(rename_settings["insert-text"])
+        if "insert-position" in rename_settings:
+            self.insert_spin.set_value(rename_settings["insert-position"])
+        if "insert-reverse" in rename_settings:
+            self.insert_reverse_check.set_active(rename_settings["insert-reverse"])
+        if "insert-overwrite" in rename_settings:
+            self.overwrite_check.set_active(rename_settings["insert-overwrite"])
+        if "insert-start-number" in rename_settings:
+            self.insert_start_spin.set_value(rename_settings["insert-start-number"])
+        if "insert-increment" in rename_settings:
+            self.insert_inc_spin.set_value(rename_settings["insert-increment"])
+
+        if "case-mode" in rename_settings:
+            case_buttons = {
+                "titlecase": self.radio_titlecase,
+                "lowercase": self.radio_lowercase,
+                "uppercase": self.radio_uppercase,
+                "firstuppercase": self.radio_firstuppercase,
+                "accents": self.radio_accents,
+            }
+            case_button = case_buttons.get(rename_settings["case-mode"])
+            if case_button is not None:
+                case_button.set_active(True)
+
+    def save_application_state(self):
+        if self.remember_settings_check.get_active():
+            self.save_rename_settings()
+            if self.last_chooser_location is not None:
+                self.settings.set_string("last-chooser-location", self.last_chooser_location.get_uri())
+
+    def on_window_configure_event(self, window, event):
+        state = window.get_window().get_state()
+        if not state & (Gdk.WindowState.MAXIMIZED | Gdk.WindowState.ICONIFIED):
+            width, height = window.get_size()
+            self.settings.set_int("window-width", width)
+            self.settings.set_int("window-height", height)
+        return False
+
+    def on_window_state_event(self, window, event):
+        if event.changed_mask & Gdk.WindowState.MAXIMIZED:
+            maximized = bool(event.new_window_state & Gdk.WindowState.MAXIMIZED)
+            self.settings.set_boolean("window-maximized", maximized)
+        return False
+
+    def on_window_delete_event(self, window, event):
+        self.save_application_state()
+        return False
 
     def on_drag_data_received(self, widget, context, x, y, data, info, _time, user_data=None):
         if data:
@@ -455,7 +583,7 @@ class MainWindow():
         dlg.show()
 
     def on_menu_quit(self, widget):
-        self.application.quit()
+        self.window.close()
 
     def on_files_selected(self, selection):
         paths = selection.get_selected_rows()
@@ -505,7 +633,7 @@ class MainWindow():
         self.uris.clear()
 
     def on_close_button(self, widget):
-        self.application.quit()
+        self.window.close()
 
     def report_os_error(self, file_obj, new_path, error):
         message = ""
@@ -631,14 +759,15 @@ class MainWindow():
             self.stack.set_visible_child_name("case_page")
             self.operation_function = self.change_case
 
-        self.settings.set_string(MRU_OPERATION, operation_id)
         self.preview_changes()
 
     def on_scope_changed(self, widget):
         self.scope = widget.get_active_id()
 
-        self.settings.set_string(MRU_SCOPE, self.scope)
         self.preview_changes()
+
+    def on_remember_settings_toggled(self, widget):
+        self.settings.set_boolean("remember-last-settings", widget.get_active())
 
     def on_widget_change(self, widget):
         if self.replace_regex_check.get_active():
