@@ -437,13 +437,7 @@ class MainWindow():
         dlg.set_title(_("About"))
         dlg.set_program_name("Bulky")
         dlg.set_comments(_("Rename Files"))
-        try:
-            with open('/usr/share/common-licenses/GPL-3', encoding="utf-8") as h:
-                gpl= h.read()
-            dlg.set_license(gpl)
-        except Exception as e:
-            print (e)
-
+        dlg.set_license_type(Gtk.License.GPL_3_0)
         dlg.set_version("__DEB_VERSION__")
         dlg.set_icon_name("bulky")
         dlg.set_logo_icon_name("bulky")
