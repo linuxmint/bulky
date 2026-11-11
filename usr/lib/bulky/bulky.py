@@ -9,6 +9,7 @@ import warnings
 import sys
 import functools
 import unidecode
+import xapp.threading as xt
 
 # Suppress GTK deprecation warnings
 warnings.filterwarnings("ignore")
@@ -170,14 +171,17 @@ class FileObject():
         # For non-native (remote) files, optimistically assume writable
         return True
 
-    def parent_writable(self):
+    def parent_writable(self, cache):
         parent = self.gfile.get_parent()
 
         if parent.equal(self.gfile):
             return False
 
-        parent_fileobj = FileObject(parent.get_uri(), self.scale)
-        return parent_fileobj.writable()
+        # Most files share the same parent, only ask about it once
+        parent_uri = parent.get_uri()
+        if parent_uri not in cache:
+            cache[parent_uri] = FileObject(parent_uri, self.scale).writable()
+        return cache[parent_uri]
 
     def is_a_dir(self):
         return self.info.get_file_type() == Gio.FileType.DIRECTORY
@@ -211,8 +215,9 @@ class MainWindow():
         self.operation_function = self.replace_text
         self.scope = SCOPE_NAME_ONLY
         # used to prevent collisions
-        self.uris = []
+        self.uris = set()
         self.renamed_uris = []
+        self.busy = False
         self.last_chooser_location = Gio.File.new_for_path(GLib.get_home_dir())
 
         # Set the Glade file
@@ -226,6 +231,7 @@ class MainWindow():
 
         # Create variables to quickly access dynamic widgets
         self.headerbar = self.builder.get_object("headerbar")
+        self.content_box = self.builder.get_object("content_box")
         self.add_button = self.builder.get_object("add_button")
         self.remove_button = self.builder.get_object("remove_button")
         self.clear_button = self.builder.get_object("clear_button")
@@ -298,7 +304,6 @@ class MainWindow():
 
         self.treeview.show()
         self.model = Gtk.TreeStore(Gio.Icon, str, str, object, GdkPixbuf.Pixbuf) # icon, name, new_name, file, pixbuf
-        self.model.set_sort_column_id(COL_NAME, Gtk.SortType.ASCENDING)
         self.treeview.set_model(self.model)
         self.treeview.get_selection().set_mode(Gtk.SelectionMode.MULTIPLE)
         self.treeview.get_selection().connect("changed", self.on_files_selected)
@@ -458,6 +463,9 @@ class MainWindow():
         self.remove_button.set_sensitive(len(paths) > 0)
 
     def on_key_press_event(self, widget, event):
+        if self.busy:
+            return
+
         ctrl = (event.state & Gdk.ModifierType.CONTROL_MASK)
         if ctrl:
             if event.keyval == Gdk.KEY_n:
@@ -490,11 +498,11 @@ class MainWindow():
         dialog.connect("response", update_last_location)
 
         response = dialog.run()
-        if response == Gtk.ResponseType.OK:
-            for uri in dialog.get_uris():
-                self.add_file(uri)
-        self.preview_changes()
+        uris = dialog.get_uris() if response == Gtk.ResponseType.OK else []
         dialog.destroy()
+
+        if uris:
+            self.load_files(uris)
 
     def on_clear_button(self, widget):
         self.model.clear()
@@ -554,7 +562,7 @@ class MainWindow():
                         # print("Renaming %s --> %s" % (file_obj.get_path_or_uri_for_display(), new_name))
                         if file_obj.rename(new_name):
                             self.uris.remove(old_uri)
-                            self.uris.append(file_obj.uri)
+                            self.uris.add(file_obj.uri)
                             self.model.set_value(iter, COL_NAME, new_name)
                     except GLib.Error as e:
                         self.report_os_error(file_obj, new_name, e)
@@ -584,33 +592,64 @@ class MainWindow():
         rename_list.sort(key=functools.cmp_to_key(file_cmp))
         return rename_list
 
+    def set_busy(self, busy, message=None):
+        # While busy the whole window except the header bar is insensitive
+        self.busy = busy
+        self.content_box.set_sensitive(not busy)
+
+        # Every insert or change in a sorted model re-sorts it, which gets
+        # slower with each row. Only sort once the work is done.
+        if busy:
+            self.model.set_sort_column_id(Gtk.TREE_SORTABLE_UNSORTED_SORT_COLUMN_ID, Gtk.SortType.ASCENDING)
+            self.idle_subtitle = self.headerbar.get_subtitle()
+            if message:
+                self.headerbar.set_subtitle(message)
+        else:
+            self.model.set_sort_column_id(COL_NAME, Gtk.SortType.ASCENDING)
+            self.headerbar.set_subtitle(self.idle_subtitle)
+
     def load_files(self, uris, initial_load=False):
-        # Clear treeview and selection
+        if self.busy:
+            return
+
         if len(uris) > 0:
             if initial_load:
                 self.builder.get_object("file_toolbox").hide()
-            for path in uris:
-                self.add_file(path)
+            self.set_busy(True, _("Loading files..."))
+            # The list stays empty until all the files are loaded, and is
+            # detached from the model so that adding rows stays cheap
+            self.treeview.set_model(None)
+            scale = self.window.get_scale_factor()
+            self.load_files_thread(list(uris), scale)
         else:
             self.builder.get_object("headerbar").set_title(_("File Renamer"))
             self.builder.get_object("headerbar").set_subtitle(_("Rename files and directories"))
+            self.preview_changes()
 
-        self.preview_changes()
+    @xt.run_async
+    def load_files_thread(self, uris, scale):
+        # Gathering the file info is the slow part, so it happens here. The
+        # model is only touched from the main loop, once everything is loaded.
+        file_objs = []
+        try:
+            for uri in uris:
+                file_objs.append(FileObject(uri, scale))
+        finally:
+            self.on_load_finished(file_objs)
 
-    def add_file(self, uri_or_path):
-        file_obj = FileObject(uri_or_path, self.window.get_scale_factor())
-
-        if file_obj.is_valid:
+    @xt.run_idle
+    def on_load_finished(self, file_objs):
+        for file_obj in file_objs:
+            if not file_obj.is_valid:
+                continue
             if file_obj.uri in self.uris:
                 print("%s is already loaded, ignoring" % file_obj.uri)
-                return
-            self.uris.append(file_obj.uri)
-            iter = self.model.insert_before(None, None)
-            self.model.set_value(iter, COL_ICON, file_obj.icon)
-            self.model.set_value(iter, COL_NAME, file_obj.name)
-            self.model.set_value(iter, COL_NEW_NAME, file_obj.name)
-            self.model.set_value(iter, COL_FILE, file_obj)
-            self.model.set_value(iter, COL_PIXBUF, file_obj.pixbuf)
+                continue
+            self.uris.add(file_obj.uri)
+            self.model.append(None, [file_obj.icon, file_obj.name, file_obj.name, file_obj, file_obj.pixbuf])
+        self.set_busy(False)
+        self.treeview.set_model(self.model)
+        self.preview_changes()
 
     def on_operation_changed(self, widget):
         operation_id = widget.get_active_id()
@@ -667,6 +706,7 @@ class MainWindow():
             combo.set_sensitive(True)
 
         self.renamed_uris = []
+        parent_writable_cache = {}
         any_changes = False
 
         iter = self.model.get_iter_first()
@@ -695,7 +735,7 @@ class MainWindow():
                     self.infobar.show()
                     self.error_label.set_text(_("Name collision on '%s'.") % file_obj.get_path_or_uri_for_display())
                     self.rename_button.set_sensitive(False)
-                elif not file_obj.parent_writable():
+                elif not file_obj.parent_writable(parent_writable_cache):
                     self.infobar.show()
                     self.error_label.set_text(_("'%s' is not writeable.") % file_obj.get_parent_path_or_uri_for_display())
                     self.rename_button.set_sensitive(False)

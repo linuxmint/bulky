@@ -79,7 +79,7 @@
           </packing>
         </child>
         <child>
-          <object class="GtkBox">
+          <object class="GtkBox" id="content_box">
             <property name="visible">True</property>
             <property name="can-focus">False</property>
             <property name="border-width">12</property>
