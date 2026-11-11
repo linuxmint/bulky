@@ -217,6 +217,8 @@ class MainWindow():
         # used to prevent collisions
         self.uris = set()
         self.busy = False
+        self.busy_timeout = None
+        self.busy_shown = False
         self.preview_again = False
         self.last_chooser_location = Gio.File.new_for_path(GLib.get_home_dir())
 
@@ -474,6 +476,9 @@ class MainWindow():
                 self.on_remove_button(self.remove_button)
 
     def on_remove_button(self, widget):
+        if self.busy:
+            return
+
         iters = []
         model, paths = self.treeview.get_selection().get_selected_rows()
         for path in paths:
@@ -488,6 +493,9 @@ class MainWindow():
         self.preview_changes()
 
     def on_add_button(self, widget):
+        if self.busy:
+            return
+
         dialog = FolderFileChooserDialog(_("Add files"), self.window, self.last_chooser_location)
 
         def update_last_location(dialog, response_id, data=None):
@@ -505,6 +513,9 @@ class MainWindow():
             self.load_files(uris)
 
     def on_clear_button(self, widget):
+        if self.busy:
+            return
+
         self.model.clear()
         self.uris.clear()
 
@@ -531,6 +542,9 @@ class MainWindow():
         self.infobar.show()
 
     def on_rename_button(self, widget):
+        if self.busy:
+            return
+
         iters = []
         iter = self.model.get_iter_first()
         while iter != None:
@@ -592,25 +606,49 @@ class MainWindow():
         rename_list.sort(key=functools.cmp_to_key(file_cmp))
         return rename_list
 
-    def set_busy(self, busy, message=None):
-        # While busy the whole window except the header bar is insensitive
+    def set_busy(self, busy, message=None, delay=0):
+        # While busy the whole window except the header bar is insensitive.
+        # With a delay (in ms) that is only shown if the work takes that long,
+        # so that quick operations do not make the window flicker.
         self.busy = busy
 
         if busy:
-            # Widgets that become insensitive lose the focus, give it back later
-            self.focus_widget = self.window.get_focus()
-            self.idle_subtitle = self.headerbar.get_subtitle()
-            if message:
-                self.headerbar.set_subtitle(message)
-            self.content_box.set_sensitive(False)
+            if delay:
+                self.busy_timeout = GLib.timeout_add(delay, self.show_busy, message)
+            else:
+                self.show_busy(message)
         else:
-            self.content_box.set_sensitive(True)
-            self.headerbar.set_subtitle(self.idle_subtitle)
-            if self.focus_widget is not None and self.focus_widget.is_sensitive():
-                if isinstance(self.focus_widget, Gtk.Entry):
-                    self.focus_widget.grab_focus_without_selecting()
-                else:
-                    self.focus_widget.grab_focus()
+            self.hide_busy()
+
+    def show_busy(self, message):
+        self.busy_timeout = None
+        self.busy_shown = True
+
+        # Widgets that become insensitive lose the focus, give it back later
+        self.focus_widget = self.window.get_focus()
+        self.idle_subtitle = self.headerbar.get_subtitle()
+        if message:
+            self.headerbar.set_subtitle(message)
+        self.content_box.set_sensitive(False)
+
+        return GLib.SOURCE_REMOVE
+
+    def hide_busy(self):
+        if self.busy_timeout is not None:
+            GLib.source_remove(self.busy_timeout)
+            self.busy_timeout = None
+
+        if not self.busy_shown:
+            return
+        self.busy_shown = False
+
+        self.content_box.set_sensitive(True)
+        self.headerbar.set_subtitle(self.idle_subtitle)
+        if self.focus_widget is not None and self.focus_widget.is_sensitive():
+            if isinstance(self.focus_widget, Gtk.Entry):
+                self.focus_widget.grab_focus_without_selecting()
+            else:
+                self.focus_widget.grab_focus()
 
     def load_files(self, uris, initial_load=False):
         if self.busy:
@@ -715,7 +753,8 @@ class MainWindow():
             self.rename_button.set_sensitive(False)
             return
 
-        self.set_busy(True, _("Updating the preview..."))
+        # Most of the time this is instant, only show it if it takes a while
+        self.set_busy(True, _("Updating the preview..."), 150)
 
         # Adjust scope first if necessary
         if any(file_obj.is_a_dir() for iter, file_obj, name in rows):
