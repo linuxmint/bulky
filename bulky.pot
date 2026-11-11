@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-07-25 15:24+0200\n"
+"POT-Creation-Date: 2026-11-11 14:43+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,77 +17,89 @@ msgstr ""
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: usr/lib/bulky/bulky.py:45
+#: usr/lib/bulky/bulky.py:46
 msgid "Cancel"
 msgstr ""
 
-#: usr/lib/bulky/bulky.py:46
+#: usr/lib/bulky/bulky.py:47
 msgid "Add"
 msgstr ""
 
-#: usr/lib/bulky/bulky.py:222 usr/share/bulky/bulky.ui.h:33
+#: usr/lib/bulky/bulky.py:231 usr/share/bulky/bulky.ui.h:33
 msgid "Rename..."
 msgstr ""
 
-#: usr/lib/bulky/bulky.py:260 usr/lib/bulky/bulky.py:437
+#: usr/lib/bulky/bulky.py:270 usr/lib/bulky/bulky.py:478
 msgid "About"
 msgstr ""
 
-#: usr/lib/bulky/bulky.py:265
+#: usr/lib/bulky/bulky.py:275
 msgid "Quit"
 msgstr ""
 
-#: usr/lib/bulky/bulky.py:282
+#: usr/lib/bulky/bulky.py:292
 msgid "Name"
 msgstr ""
 
-#: usr/lib/bulky/bulky.py:293
+#: usr/lib/bulky/bulky.py:303
 msgid "New name"
 msgstr ""
 
-#: usr/lib/bulky/bulky.py:402
+#: usr/lib/bulky/bulky.py:411
 msgid "Use %n, %0n, %00n, %000n, etc. to enumerate."
 msgstr ""
 
-#: usr/lib/bulky/bulky.py:439
+#: usr/lib/bulky/bulky.py:480
 msgid "Rename Files"
 msgstr ""
 
-#: usr/lib/bulky/bulky.py:487
+#: usr/lib/bulky/bulky.py:531
 msgid "Add files"
 msgstr ""
 
-#: usr/lib/bulky/bulky.py:516
+#: usr/lib/bulky/bulky.py:563
 #, python-format
 msgid "Unable to rename '%s': File name too long"
 msgstr ""
 
-#: usr/lib/bulky/bulky.py:519
+#: usr/lib/bulky/bulky.py:566
 #, python-format
 msgid ""
 "Unable to rename '%s': Remote operation failed. This may be due to "
 "insufficient permissions or a server error."
 msgstr ""
 
-#: usr/lib/bulky/bulky.py:523
+#: usr/lib/bulky/bulky.py:570
 #, python-format
 msgid "Unable to rename '%s': %s"
 msgstr ""
 
-#: usr/lib/bulky/bulky.py:599 generate_desktop_files:25
+#: usr/lib/bulky/bulky.py:609
+msgid "Renaming files..."
+msgstr ""
+
+#: usr/lib/bulky/bulky.py:731
+msgid "Loading files..."
+msgstr ""
+
+#: usr/lib/bulky/bulky.py:737 generate_desktop_files:25
 msgid "File Renamer"
 msgstr ""
 
-#: usr/lib/bulky/bulky.py:600 generate_desktop_files:25
+#: usr/lib/bulky/bulky.py:738 generate_desktop_files:25
 msgid "Rename files and directories"
 msgstr ""
 
-#: usr/lib/bulky/bulky.py:700
+#: usr/lib/bulky/bulky.py:824
+msgid "Updating the preview..."
+msgstr ""
+
+#: usr/lib/bulky/bulky.py:865
 #, python-format
 msgid "Name collision on '%s'."
 msgstr ""
 
-#: usr/lib/bulky/bulky.py:704 usr/lib/bulky/bulky.py:708
+#: usr/lib/bulky/bulky.py:867 usr/lib/bulky/bulky.py:869
 #, python-format
 msgid "'%s' is not writeable."
 msgstr ""
