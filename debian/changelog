@@ -1,3 +1,26 @@
+bulky (4.3) adrien; urgency=medium
+
+  [ Michael Webster ]
+  * .github/workflows: Add generate-test-packages trigger.
+
+  [ Balló György ]
+  * Set license type on about dialog (#87)
+  * Set prgname to application ID (#88)
+
+  [ Olaf Mueller ]
+  * Fix crash when loading large file lists (#90)
+
+  [ Clement Lefebvre ]
+  * Add .gitignore
+  * threading: Load files asynchronously
+  * thread: Load change preview asynchronously
+  * thread: Don't show UI changes if thread is shorter than 150ms
+  * threading: Rename files asynchronously
+  * Make the options persistent
+  * l10n: Update POT
+
+ -- Clement Lefebvre <root@linuxmint.com>  Wed, 11 Nov 2026 14:43:35 +0000
+
 bulky (4.2) zena; urgency=medium
 
   * l10n: Update translations
