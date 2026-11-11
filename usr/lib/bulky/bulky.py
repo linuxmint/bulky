@@ -564,28 +564,55 @@ class MainWindow():
                 print(e)
 
         rename_list = self.sort_list_by_depth(rename_list)
+        rename_list = [tup for tup in rename_list if tup[2] != tup[3]]
 
         # for i in rename_list:
         #     print(i[0].gfile.get_uri())
 
-        for tup in rename_list:
-                iter, file_obj, name, new_name = tup
-                if new_name != name:
-                    try:
-                        old_uri = file_obj.uri
-                        # print("Renaming %s --> %s" % (file_obj.get_path_or_uri_for_display(), new_name))
-                        if file_obj.rename(new_name):
-                            self.uris.remove(old_uri)
-                            self.uris.add(file_obj.uri)
-                            self.model.set_value(iter, COL_NAME, new_name)
-                    except GLib.Error as e:
-                        self.report_os_error(file_obj, new_name, e)
-                        break
-
         self.rename_button.set_sensitive(False)
 
+        if rename_list:
+            self.unsort_model()
+            # Renaming a few files is instant, only show it if it takes a while
+            self.set_busy(True, _("Renaming files..."), 150)
+            self.rename_files_thread(rename_list)
+
+    @xt.run_async
+    def rename_files_thread(self, rename_list):
+        renamed = []
+        error = None
+
+        try:
+            for iter, file_obj, name, new_name in rename_list:
+                old_uri = file_obj.uri
+                # print("Renaming %s --> %s" % (file_obj.get_path_or_uri_for_display(), new_name))
+                try:
+                    file_obj.rename(new_name)
+                except GLib.Error as e:
+                    error = (file_obj, new_name, e)
+                    break
+                renamed.append((iter, old_uri, file_obj.uri, new_name))
+        finally:
+            self.on_rename_finished(renamed, error)
+
+    @xt.run_idle
+    def on_rename_finished(self, renamed, error):
+        for iter, old_uri, new_uri, new_name in renamed:
+            self.uris.remove(old_uri)
+            self.uris.add(new_uri)
+            self.model.set_value(iter, COL_NAME, new_name)
+
+        if error:
+            self.report_os_error(*error)
+
+        self.sort_model()
+        self.set_busy(False)
+
+        if self.preview_again:
+            self.preview_again = False
+            self.preview_changes()
+
     def sort_list_by_depth(self, rename_list):
-        # Rename files first, followed by directories from deep to shallow.
         def file_cmp(tup_a, tup_b):
             fo_a = tup_a[1]
             fo_b = tup_b[1]
@@ -650,6 +677,18 @@ class MainWindow():
             else:
                 self.focus_widget.grab_focus()
 
+    def unsort_model(self):
+        # Every row added or renamed in a sorted model re-sorts it, which gets
+        # slower with each row. Leave it unsorted until the work is done.
+        self.sort_state = self.model.get_sort_column_id()
+        self.model.set_sort_column_id(Gtk.TREE_SORTABLE_UNSORTED_SORT_COLUMN_ID, Gtk.SortType.ASCENDING)
+
+    def sort_model(self):
+        column, order = self.sort_state
+        if column is None:
+            column, order = COL_NAME, Gtk.SortType.ASCENDING
+        self.model.set_sort_column_id(column, order)
+
     def load_files(self, uris, initial_load=False):
         if self.busy:
             return
@@ -658,12 +697,7 @@ class MainWindow():
             if initial_load:
                 self.builder.get_object("file_toolbox").hide()
             self.set_busy(True, _("Loading files..."))
-            # The list stays empty until all the files are loaded, and is
-            # detached from the model so that adding rows stays cheap. Every
-            # row added to a sorted model re-sorts it, so it is also left
-            # unsorted until the end.
-            self.sort_state = self.model.get_sort_column_id()
-            self.model.set_sort_column_id(Gtk.TREE_SORTABLE_UNSORTED_SORT_COLUMN_ID, Gtk.SortType.ASCENDING)
+            self.unsort_model()
             self.treeview.set_model(None)
             scale = self.window.get_scale_factor()
             self.load_files_thread(list(uris), scale)
@@ -693,10 +727,7 @@ class MainWindow():
                 continue
             self.uris.add(file_obj.uri)
             self.model.append([file_obj.icon, file_obj.name, file_obj.name, file_obj, file_obj.pixbuf])
-        column, order = self.sort_state
-        if column is None:
-            column, order = COL_NAME, Gtk.SortType.ASCENDING
-        self.model.set_sort_column_id(column, order)
+        self.sort_model()
         self.set_busy(False)
         self.treeview.set_model(self.model)
         self.preview_changes()
