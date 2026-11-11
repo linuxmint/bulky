@@ -212,12 +212,12 @@ class MainWindow():
         self.application = application
         self.settings = Gio.Settings(schema_id="org.x.bulky")
         self.icon_theme = Gtk.IconTheme.get_default()
-        self.operation_function = self.replace_text
+        self.make_operation = self.replace_text
         self.scope = SCOPE_NAME_ONLY
         # used to prevent collisions
         self.uris = set()
-        self.renamed_uris = []
         self.busy = False
+        self.preview_again = False
         self.last_chooser_location = Gio.File.new_for_path(GLib.get_home_dir())
 
         # Set the Glade file
@@ -303,7 +303,7 @@ class MainWindow():
         self.treeview.append_column(column)
 
         self.treeview.show()
-        self.model = Gtk.TreeStore(Gio.Icon, str, str, object, GdkPixbuf.Pixbuf) # icon, name, new_name, file, pixbuf
+        self.model = Gtk.ListStore(Gio.Icon, str, str, object, GdkPixbuf.Pixbuf) # icon, name, new_name, file, pixbuf
         self.treeview.set_model(self.model)
         self.treeview.get_selection().set_mode(Gtk.SelectionMode.MULTIPLE)
         self.treeview.get_selection().connect("changed", self.on_files_selected)
@@ -595,18 +595,22 @@ class MainWindow():
     def set_busy(self, busy, message=None):
         # While busy the whole window except the header bar is insensitive
         self.busy = busy
-        self.content_box.set_sensitive(not busy)
 
-        # Every insert or change in a sorted model re-sorts it, which gets
-        # slower with each row. Only sort once the work is done.
         if busy:
-            self.model.set_sort_column_id(Gtk.TREE_SORTABLE_UNSORTED_SORT_COLUMN_ID, Gtk.SortType.ASCENDING)
+            # Widgets that become insensitive lose the focus, give it back later
+            self.focus_widget = self.window.get_focus()
             self.idle_subtitle = self.headerbar.get_subtitle()
             if message:
                 self.headerbar.set_subtitle(message)
+            self.content_box.set_sensitive(False)
         else:
-            self.model.set_sort_column_id(COL_NAME, Gtk.SortType.ASCENDING)
+            self.content_box.set_sensitive(True)
             self.headerbar.set_subtitle(self.idle_subtitle)
+            if self.focus_widget is not None and self.focus_widget.is_sensitive():
+                if isinstance(self.focus_widget, Gtk.Entry):
+                    self.focus_widget.grab_focus_without_selecting()
+                else:
+                    self.focus_widget.grab_focus()
 
     def load_files(self, uris, initial_load=False):
         if self.busy:
@@ -617,7 +621,11 @@ class MainWindow():
                 self.builder.get_object("file_toolbox").hide()
             self.set_busy(True, _("Loading files..."))
             # The list stays empty until all the files are loaded, and is
-            # detached from the model so that adding rows stays cheap
+            # detached from the model so that adding rows stays cheap. Every
+            # row added to a sorted model re-sorts it, so it is also left
+            # unsorted until the end.
+            self.sort_state = self.model.get_sort_column_id()
+            self.model.set_sort_column_id(Gtk.TREE_SORTABLE_UNSORTED_SORT_COLUMN_ID, Gtk.SortType.ASCENDING)
             self.treeview.set_model(None)
             scale = self.window.get_scale_factor()
             self.load_files_thread(list(uris), scale)
@@ -646,7 +654,11 @@ class MainWindow():
                 print("%s is already loaded, ignoring" % file_obj.uri)
                 continue
             self.uris.add(file_obj.uri)
-            self.model.append(None, [file_obj.icon, file_obj.name, file_obj.name, file_obj, file_obj.pixbuf])
+            self.model.append([file_obj.icon, file_obj.name, file_obj.name, file_obj, file_obj.pixbuf])
+        column, order = self.sort_state
+        if column is None:
+            column, order = COL_NAME, Gtk.SortType.ASCENDING
+        self.model.set_sort_column_id(column, order)
         self.set_busy(False)
         self.treeview.set_model(self.model)
         self.preview_changes()
@@ -655,16 +667,16 @@ class MainWindow():
         operation_id = widget.get_active_id()
         if operation_id == "replace":
             self.stack.set_visible_child_name("replace_page")
-            self.operation_function = self.replace_text
+            self.make_operation = self.replace_text
         elif operation_id == "remove":
             self.stack.set_visible_child_name("remove_page")
-            self.operation_function = self.remove_text
+            self.make_operation = self.remove_text
         elif operation_id == "insert":
             self.stack.set_visible_child_name("insert_page")
-            self.operation_function = self.insert_text
+            self.make_operation = self.insert_text
         elif operation_id == "case":
             self.stack.set_visible_child_name("case_page")
-            self.operation_function = self.change_case
+            self.make_operation = self.change_case
 
         self.settings.set_string(MRU_OPERATION, operation_id)
         self.preview_changes()
@@ -683,158 +695,199 @@ class MainWindow():
         self.preview_changes()
 
     def preview_changes(self):
+        if self.busy:
+            # Done again once the current work is finished
+            self.preview_again = True
+            return
+
         self.infobar.hide()
 
-        # Adjust scope first if necessary
-        any_dirs = False
+        rows = []
         iter = self.model.get_iter_first()
         while iter != None:
-            try:
-                file_obj = self.model.get_value(iter, COL_FILE)
-                any_dirs = file_obj.is_a_dir() or any_dirs
-                iter = self.model.iter_next(iter)
-            except:
-                pass
+            rows.append((iter, self.model.get_value(iter, COL_FILE), self.model.get_value(iter, COL_NAME)))
+            iter = self.model.iter_next(iter)
 
         combo = self.builder.get_object("combo_scope")
 
-        if any_dirs:
+        if not rows:
+            combo.set_sensitive(True)
+            self.rename_button.set_sensitive(False)
+            return
+
+        self.set_busy(True, _("Updating the preview..."))
+
+        # Adjust scope first if necessary
+        if any(file_obj.is_a_dir() for iter, file_obj, name in rows):
             # on_scope_changed will update self.scope
             combo.set_active_id(SCOPE_ALL)
             combo.set_sensitive(False)
         else:
             combo.set_sensitive(True)
+        self.preview_again = False
 
-        self.renamed_uris = []
+        # The widgets are read here, the new names are worked out in a thread
+        self.preview_changes_thread(rows, self.scope, self.make_operation())
+
+    @xt.run_async
+    def preview_changes_thread(self, rows, scope, operation):
+        results = []
+        pending_uris = set()
         parent_writable_cache = {}
+        error = None
         any_changes = False
 
-        iter = self.model.get_iter_first()
-        index = 1
-        while iter != None:
-            try:
-                file_obj = self.model.get_value(iter, COL_FILE)
-                orig_name = self.model.get_value(iter, COL_NAME)
-                name, ext = os.path.splitext(orig_name)
-                if ext and ext.startswith('.'):
-                    ext = ext[1:]
-                if self.scope == SCOPE_NAME_ONLY:
-                    name = self.operation_function(index, name)
-                elif self.scope == SCOPE_EXTENSION_ONLY:
-                    ext = self.operation_function(index, ext)
-                else:
-                    full_name = self.operation_function(index, orig_name)
-                if self.scope == SCOPE_ALL:
-                    new_name = full_name
-                else:
-                    new_name = name + ('.' if ext else '') + ext
+        try:
+            for index, (iter, file_obj, orig_name) in enumerate(rows, 1):
+                try:
+                    name, ext = os.path.splitext(orig_name)
+                    if ext and ext.startswith('.'):
+                        ext = ext[1:]
+                    if scope == SCOPE_NAME_ONLY:
+                        name = operation(index, name)
+                    elif scope == SCOPE_EXTENSION_ONLY:
+                        ext = operation(index, ext)
+                    else:
+                        full_name = operation(index, orig_name)
+                    if scope == SCOPE_ALL:
+                        new_name = full_name
+                    else:
+                        new_name = name + ('.' if ext else '') + ext
 
-                self.model.set_value(iter, COL_NEW_NAME, new_name)
-                renamed_uri = file_obj.get_pending_uri(new_name)
-                if renamed_uri in self.renamed_uris:
-                    self.infobar.show()
-                    self.error_label.set_text(_("Name collision on '%s'.") % file_obj.get_path_or_uri_for_display())
-                    self.rename_button.set_sensitive(False)
-                elif not file_obj.parent_writable(parent_writable_cache):
-                    self.infobar.show()
-                    self.error_label.set_text(_("'%s' is not writeable.") % file_obj.get_parent_path_or_uri_for_display())
-                    self.rename_button.set_sensitive(False)
-                elif not file_obj.writable():
-                    self.infobar.show()
-                    self.error_label.set_text(_("'%s' is not writeable.") % file_obj.get_path_or_uri_for_display())
-                    self.rename_button.set_sensitive(False)
-                self.renamed_uris.append(renamed_uri)
-                any_changes = (new_name != orig_name) or any_changes
-            except Exception as e:
-                print(e)
-                self.infobar.show()
-                self.error_label.set_text("'%s' %s." % (file_obj.get_path_or_uri_for_display(), str(e)))
-                self.model.set_value(iter, COL_NEW_NAME, orig_name)
-                self.renamed_uris.append(file_obj.uri)
-            iter = self.model.iter_next(iter)
-            index += 1
+                    renamed_uri = file_obj.get_pending_uri(new_name)
+                    if renamed_uri in pending_uris:
+                        error = _("Name collision on '%s'.") % file_obj.get_path_or_uri_for_display()
+                    elif not file_obj.parent_writable(parent_writable_cache):
+                        error = _("'%s' is not writeable.") % file_obj.get_parent_path_or_uri_for_display()
+                    elif not file_obj.writable():
+                        error = _("'%s' is not writeable.") % file_obj.get_path_or_uri_for_display()
+                    pending_uris.add(renamed_uri)
+                    any_changes = (new_name != orig_name) or any_changes
+                except Exception as e:
+                    print(e)
+                    error = "'%s' %s." % (file_obj.get_path_or_uri_for_display(), str(e))
+                    new_name = orig_name
+                    pending_uris.add(file_obj.uri)
+                results.append((iter, new_name))
+        finally:
+            self.on_preview_finished(results, error, any_changes)
+
+    @xt.run_idle
+    def on_preview_finished(self, results, error, any_changes):
+        for iter, new_name in results:
+            self.model.set_value(iter, COL_NEW_NAME, new_name)
+
+        if error:
+            self.infobar.show()
+            self.error_label.set_text(error)
         self.rename_button.set_sensitive(any_changes)
+        self.set_busy(False)
 
-    def replace_text(self, index, string):
+        if self.preview_again:
+            self.preview_again = False
+            self.preview_changes()
+
+    # The operations read the widgets and return a function that works out
+    # the new name for a given string. It does not touch any widget, so it can
+    # be used from a thread.
+
+    def replace_text(self):
         case = self.replace_case_check.get_active()
         regex = self.replace_regex_check.get_active()
         find = self.find_entry.get_text()
-        if not find:  #ignore empty search string
-            return string
         inc  = self.replace_inc_spin.get_value_as_int()
         start= self.replace_start_spin.get_value_as_int()
-        replace = self.replace_entry.get_text()
-        replace = self.inject((index-1)*inc + start, replace)
-        try:
-            if regex:
-                if case:
-                    return re.sub(find, replace, string)
+        replace_text = self.replace_entry.get_text()
+
+        def operation(index, string):
+            if not find:  #ignore empty search string
+                return string
+            pattern = find
+            replace = self.inject((index-1)*inc + start, replace_text)
+            try:
+                if regex:
+                    if case:
+                        return re.sub(pattern, replace, string)
+                    else:
+                        reg = re.compile(pattern, re.IGNORECASE)
+                        return reg.sub(replace, string)
                 else:
-                    reg = re.compile(find, re.IGNORECASE)
-                    return reg.sub(replace, string)
+                    pattern = pattern.replace("*", "~~~REGSTAR~~~")
+                    pattern = pattern.replace("?", "~~~REGQUES~~~")
+                    pattern = re.escape(pattern)
+                    pattern = pattern.replace(re.escape("~~~REGSTAR~~~"), ".+")
+                    pattern = pattern.replace(re.escape("~~~REGQUES~~~"), ".")
+                    if case:
+                        reg = re.compile(pattern)
+                        return reg.sub(replace, string)
+                    else:
+                        reg = re.compile(pattern, re.IGNORECASE)
+                        return reg.sub(replace, string)
+            except re.error:
+                return string
+
+        return operation
+
+    def remove_text(self):
+        from_value = self.remove_from_spin.get_value_as_int() - 1
+        from_end = self.remove_from_check.get_active()
+        to_value = self.remove_to_spin.get_value_as_int() - 1
+        to_end = self.remove_to_check.get_active()
+
+        def operation(index, string):
+            length = len(string)
+
+            if from_end:
+                from_index = max(length - from_value, 0)
             else:
-                find = find.replace("*", "~~~REGSTAR~~~")
-                find = find.replace("?", "~~~REGQUES~~~")
-                find = re.escape(find)
-                find = find.replace(re.escape("~~~REGSTAR~~~"), ".+")
-                find = find.replace(re.escape("~~~REGQUES~~~"), ".")
-                if case:
-                    reg = re.compile(find)
-                    return reg.sub(replace, string)
-                else:
-                    reg = re.compile(find, re.IGNORECASE)
-                    return reg.sub(replace, string)
-        except re.error:
-            return string
+                from_index = min(length, from_value)
 
-    def remove_text(self, index, string):
-        length = len(string)
+            if to_end:
+                to_index = max(length - to_value, 0)
+            else:
+                to_index = min(length, to_value)
 
-        from_index = self.remove_from_spin.get_value_as_int() - 1
-        if self.remove_from_check.get_active():
-            from_index = max(length - from_index, 0)
-        else:
-            from_index = min(length, from_index)
+            return string[0:min(from_index, to_index)] + string[max(from_index, to_index):]
 
-        to_index = self.remove_to_spin.get_value_as_int() - 1
-        if self.remove_to_check.get_active():
-            to_index = max(length - to_index, 0)
-        else:
-            to_index = min(length, to_index)
+        return operation
 
-        return string[0:min(from_index, to_index)] + string[max(from_index, to_index):]
-
-    def insert_text(self, index, string):
-        text = self.insert_entry.get_text()
+    def insert_text(self):
+        insert_text = self.insert_entry.get_text()
         inc  = self.insert_inc_spin.get_value_as_int()
         start= self.insert_start_spin.get_value_as_int()
-        text = self.inject((index-1)*inc + start, text)
         from_index = self.insert_spin.get_value_as_int() - 1
-        a = len(string)
-        b = len(text)
-        if self.insert_reverse_check.get_active():
-            diff = max(0, a - from_index)
-            if self.overwrite_check.get_active():
-                return string[0:diff] + text + string[diff + b:]
-            else:
-                return string[0:diff] + text + string[diff:]
-        else:
-            if self.overwrite_check.get_active():
-                return string[0:from_index] + text + string[from_index + b:]
-            else:
-                return string[0:from_index] + text + string[from_index:]
+        reverse = self.insert_reverse_check.get_active()
+        overwrite = self.overwrite_check.get_active()
 
-    def change_case(self, index, string):
+        def operation(index, string):
+            text = self.inject((index-1)*inc + start, insert_text)
+            a = len(string)
+            b = len(text)
+            if reverse:
+                diff = max(0, a - from_index)
+                if overwrite:
+                    return string[0:diff] + text + string[diff + b:]
+                else:
+                    return string[0:diff] + text + string[diff:]
+            else:
+                if overwrite:
+                    return string[0:from_index] + text + string[from_index + b:]
+                else:
+                    return string[0:from_index] + text + string[from_index:]
+
+        return operation
+
+    def change_case(self):
         if self.radio_titlecase.get_active():
-            return string.title()
+            return lambda index, string: string.title()
         elif self.radio_lowercase.get_active():
-            return string.lower()
+            return lambda index, string: string.lower()
         elif self.radio_uppercase.get_active():
-            return string.upper()
+            return lambda index, string: string.upper()
         elif self.radio_firstuppercase.get_active():
-            return string.capitalize()
+            return lambda index, string: string.capitalize()
         else:
-            return unidecode.unidecode(string)
+            return lambda index, string: unidecode.unidecode(string)
 
     def inject(self, index, string):
         def repl(match):
