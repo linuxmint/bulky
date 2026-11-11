@@ -412,6 +412,38 @@ class MainWindow():
         self.replace_entry.set_tooltip_text(variables_tooltip)
         self.insert_entry.set_tooltip_text(variables_tooltip)
 
+        # Remember the user's choices with gsettings
+        for key, widget, prop in (
+            ("replace-find", self.find_entry, "text"),
+            ("replace-text", self.replace_entry, "text"),
+            ("replace-regex", self.replace_regex_check, "active"),
+            ("replace-case-sensitive", self.replace_case_check, "active"),
+            ("replace-start-number", self.replace_start_spin, "value"),
+            ("replace-increment", self.replace_inc_spin, "value"),
+            ("remove-from-value", self.remove_from_spin, "value"),
+            ("remove-to-value", self.remove_to_spin, "value"),
+            ("remove-from-enabled", self.remove_from_check, "active"),
+            ("remove-to-enabled", self.remove_to_check, "active"),
+            ("insert-text", self.insert_entry, "text"),
+            ("insert-position", self.insert_spin, "value"),
+            ("insert-reverse", self.insert_reverse_check, "active"),
+            ("insert-overwrite", self.overwrite_check, "active"),
+            ("insert-start-number", self.insert_start_spin, "value"),
+            ("insert-increment", self.insert_inc_spin, "value"),
+        ):
+            self.settings.bind(key, widget, prop, Gio.SettingsBindFlags.DEFAULT)
+
+        case_radios = {
+            "titlecase": self.radio_titlecase,
+            "lowercase": self.radio_lowercase,
+            "uppercase": self.radio_uppercase,
+            "firstuppercase": self.radio_firstuppercase,
+            "accents": self.radio_accents,
+        }
+        case_radios[self.settings.get_string("case-mode")].set_active(True)
+        for mode, radio in case_radios.items():
+            radio.connect("toggled", self.on_case_mode_toggled, mode)
+
         self.load_files(sys.argv[1:], initial_load=True)
 
     def on_drag_data_received(self, widget, context, x, y, data, info, _time, user_data=None):
@@ -755,6 +787,10 @@ class MainWindow():
 
         self.settings.set_string(MRU_SCOPE, self.scope)
         self.preview_changes()
+
+    def on_case_mode_toggled(self, radio, mode):
+        if radio.get_active():
+            self.settings.set_string("case-mode", mode)
 
     def on_widget_change(self, widget):
         if self.replace_regex_check.get_active():

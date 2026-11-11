@@ -11,5 +11,87 @@
       <summary>"name, extension, all"</summary>
       <description></description>
     </key>
+    <key type="s" name="replace-find">
+      <default>""</default>
+      <summary>Text to find when replacing</summary>
+    </key>
+    <key type="s" name="replace-text">
+      <default>""</default>
+      <summary>Replacement text</summary>
+    </key>
+    <key type="b" name="replace-regex">
+      <default>false</default>
+      <summary>Treat the text to find as a regular expression</summary>
+    </key>
+    <key type="b" name="replace-case-sensitive">
+      <default>false</default>
+      <summary>Match case when replacing</summary>
+    </key>
+    <key type="i" name="replace-start-number">
+      <range min="0" max="10000"/>
+      <default>1</default>
+      <summary>First number used when replacing</summary>
+    </key>
+    <key type="i" name="replace-increment">
+      <range min="1" max="1000"/>
+      <default>1</default>
+      <summary>Increment of the number used when replacing</summary>
+    </key>
+    <key type="i" name="remove-from-value">
+      <range min="1" max="100"/>
+      <default>1</default>
+      <summary>First character to remove</summary>
+    </key>
+    <key type="i" name="remove-to-value">
+      <range min="1" max="100"/>
+      <default>1</default>
+      <summary>Last character to remove</summary>
+    </key>
+    <key type="b" name="remove-from-enabled">
+      <default>false</default>
+      <summary>Remove starting from a given character</summary>
+    </key>
+    <key type="b" name="remove-to-enabled">
+      <default>false</default>
+      <summary>Remove up to a given character</summary>
+    </key>
+    <key type="s" name="insert-text">
+      <default>""</default>
+      <summary>Text to insert</summary>
+    </key>
+    <key type="i" name="insert-position">
+      <range min="1" max="100"/>
+      <default>1</default>
+      <summary>Position where the text is inserted</summary>
+    </key>
+    <key type="b" name="insert-reverse">
+      <default>false</default>
+      <summary>Count the insert position from the end of the name</summary>
+    </key>
+    <key type="b" name="insert-overwrite">
+      <default>false</default>
+      <summary>Overwrite existing characters when inserting</summary>
+    </key>
+    <key type="i" name="insert-start-number">
+      <range min="0" max="10000"/>
+      <default>1</default>
+      <summary>First number used when inserting</summary>
+    </key>
+    <key type="i" name="insert-increment">
+      <range min="1" max="1000"/>
+      <default>1</default>
+      <summary>Increment of the number used when inserting</summary>
+    </key>
+    <key type="s" name="case-mode">
+      <choices>
+        <choice value="titlecase"/>
+        <choice value="lowercase"/>
+        <choice value="uppercase"/>
+        <choice value="firstuppercase"/>
+        <choice value="accents"/>
+      </choices>
+      <default>"titlecase"</default>
+      <summary>How the case is changed</summary>
+    </key>
   </schema>
 </schemalist>
