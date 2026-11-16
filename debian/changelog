@@ -1,3 +1,10 @@
+bulky (4.4) adrien; urgency=medium
+
+  * l10n: Update translations
+  * l10n: Update files
+
+ -- Clement Lefebvre <root@linuxmint.com>  Mon, 16 Nov 2026 13:25:57 +0000
+
 bulky (4.3) adrien; urgency=medium
 
   [ Michael Webster ]
