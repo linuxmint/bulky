@@ -1,0 +1,231 @@
+# Afrikaans translation for linuxmint
+# Copyright (c) 2026 Rosetta Contributors and Canonical Ltd 2026
+# This file is distributed under the same license as the linuxmint package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmint\n"
+"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2026-11-11 14:43+0000\n"
+"PO-Revision-Date: 2026-10-07 15:04+0000\n"
+"Last-Translator: Stéfan Driaan Turvey <Unknown>\n"
+"Language-Team: Afrikaans <af@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2026-11-16 12:00+0000\n"
+"X-Generator: Launchpad (build 72ba15af7e009b17d4aa1467977127ac8392a4de)\n"
+
+#: usr/lib/bulky/bulky.py:46
+msgid "Cancel"
+msgstr "Kanselleer"
+
+#: usr/lib/bulky/bulky.py:47
+msgid "Add"
+msgstr "Voeg by"
+
+#: usr/lib/bulky/bulky.py:231 usr/share/bulky/bulky.ui.h:33
+msgid "Rename..."
+msgstr "Hernoem..."
+
+#: usr/lib/bulky/bulky.py:270 usr/lib/bulky/bulky.py:478
+msgid "About"
+msgstr "Aangaande"
+
+#: usr/lib/bulky/bulky.py:275
+msgid "Quit"
+msgstr "Sluit af"
+
+#: usr/lib/bulky/bulky.py:292
+msgid "Name"
+msgstr "Naam"
+
+#: usr/lib/bulky/bulky.py:303
+msgid "New name"
+msgstr "Nuwe naam"
+
+#: usr/lib/bulky/bulky.py:411
+msgid "Use %n, %0n, %00n, %000n, etc. to enumerate."
+msgstr "Gebruik %n, %0n, %00n, %000n, ens. om te nommer."
+
+#: usr/lib/bulky/bulky.py:480
+msgid "Rename Files"
+msgstr "Hernoem lêers"
+
+#: usr/lib/bulky/bulky.py:531
+msgid "Add files"
+msgstr "Voeg lêers by"
+
+#: usr/lib/bulky/bulky.py:563
+#, python-format
+msgid "Unable to rename '%s': File name too long"
+msgstr "Kan nie '%s' hernoem nie: Lêernaam te lank"
+
+#: usr/lib/bulky/bulky.py:566
+#, python-format
+msgid ""
+"Unable to rename '%s': Remote operation failed. This may be due to "
+"insufficient permissions or a server error."
+msgstr ""
+"Kan nie '%s' hernoem nie: Afgeleë bewerking het misluk. Dit kan wees weens "
+"onvoldoende toestemmings of 'n bedienerfout."
+
+#: usr/lib/bulky/bulky.py:570
+#, python-format
+msgid "Unable to rename '%s': %s"
+msgstr "Kan nie '%s' hernoem nie: %s"
+
+#: usr/lib/bulky/bulky.py:609
+msgid "Renaming files..."
+msgstr ""
+
+#: usr/lib/bulky/bulky.py:731
+msgid "Loading files..."
+msgstr ""
+
+#: usr/lib/bulky/bulky.py:737 generate_desktop_files:25
+msgid "File Renamer"
+msgstr "Lêerhernoemer"
+
+#: usr/lib/bulky/bulky.py:738 generate_desktop_files:25
+msgid "Rename files and directories"
+msgstr "Hernoem lêers en gidse"
+
+#: usr/lib/bulky/bulky.py:824
+msgid "Updating the preview..."
+msgstr ""
+
+#: usr/lib/bulky/bulky.py:865
+#, python-format
+msgid "Name collision on '%s'."
+msgstr "Naambotsing by '%s'."
+
+#: usr/lib/bulky/bulky.py:867 usr/lib/bulky/bulky.py:869
+#, python-format
+msgid "'%s' is not writeable."
+msgstr "'%s' is nie skryfbaar nie."
+
+#: usr/share/bulky/bulky.ui.h:1
+msgid "Add files..."
+msgstr "Voeg lêers by..."
+
+#: usr/share/bulky/bulky.ui.h:2
+msgid "Remove"
+msgstr "Verwyder"
+
+#: usr/share/bulky/bulky.ui.h:3
+msgid "Remove selected files"
+msgstr "Verwyder gekose lêers"
+
+#: usr/share/bulky/bulky.ui.h:4
+msgid "Clear"
+msgstr "Maak skoon"
+
+#: usr/share/bulky/bulky.ui.h:5
+msgid "Replace"
+msgstr "Vervang"
+
+#: usr/share/bulky/bulky.ui.h:6
+msgid "Insert"
+msgstr "Voeg in"
+
+#: usr/share/bulky/bulky.ui.h:7
+msgid "Change case"
+msgstr "Verander kas"
+
+#: usr/share/bulky/bulky.ui.h:8
+msgid "Name only"
+msgstr "Slegs naam"
+
+#: usr/share/bulky/bulky.ui.h:9
+msgid "Extension only"
+msgstr "Slegs uitbreiding"
+
+#: usr/share/bulky/bulky.ui.h:10
+msgid "Entire filename"
+msgstr "Hele lêernaam"
+
+#: usr/share/bulky/bulky.ui.h:11
+msgid "Find:"
+msgstr "Vind:"
+
+#: usr/share/bulky/bulky.ui.h:12
+msgid "Replace:"
+msgstr "Vervang:"
+
+#: usr/share/bulky/bulky.ui.h:14
+msgid "Use %n, %0n, %00n, etc. to enumerate."
+msgstr "Gebruik %n, %0n, %00n, ens. om te nommer."
+
+#: usr/share/bulky/bulky.ui.h:15
+msgid "Regular expression"
+msgstr "Reguliere uitdrukking"
+
+#: usr/share/bulky/bulky.ui.h:16
+msgid "Case sensitive"
+msgstr "Kassensitief"
+
+#: usr/share/bulky/bulky.ui.h:17
+msgid "Start number:"
+msgstr "Begingetal:"
+
+#: usr/share/bulky/bulky.ui.h:18
+msgid "Increment:"
+msgstr "Verhoging:"
+
+#: usr/share/bulky/bulky.ui.h:19
+msgid "At position:"
+msgstr "By posisie:"
+
+#: usr/share/bulky/bulky.ui.h:20
+msgid "From the end"
+msgstr "Van die einde"
+
+#: usr/share/bulky/bulky.ui.h:21
+msgid "Overwrite"
+msgstr "Oorskryf"
+
+#: usr/share/bulky/bulky.ui.h:22
+msgid "Text:"
+msgstr "Teks:"
+
+#: usr/share/bulky/bulky.ui.h:23
+msgid "Convert to:"
+msgstr "Skakel om na:"
+
+#: usr/share/bulky/bulky.ui.h:24
+msgid "Lower case"
+msgstr "Kleinletters"
+
+#: usr/share/bulky/bulky.ui.h:25
+msgid "First character uppercase"
+msgstr "Eerste karakter hoofletter"
+
+#: usr/share/bulky/bulky.ui.h:26
+msgid "Title case"
+msgstr "Titelkas"
+
+#: usr/share/bulky/bulky.ui.h:27
+msgid "Upper case"
+msgstr "Hoofletters"
+
+#: usr/share/bulky/bulky.ui.h:28
+msgid "Remove accents"
+msgstr "Verwyder aksente"
+
+#: usr/share/bulky/bulky.ui.h:29
+msgid "Remove from position:"
+msgstr "Verwyder vanaf posisie:"
+
+#: usr/share/bulky/bulky.ui.h:30
+msgid "To position:"
+msgstr "Tot posisie:"
+
+#: usr/share/bulky/bulky.ui.h:31
+msgid "Close"
+msgstr "Sluit"
+
+#: usr/share/bulky/bulky.ui.h:32
+msgid "Rename"
+msgstr "Hernoem"

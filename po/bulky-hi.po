@@ -7,62 +7,62 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxmint\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2025-07-25 15:24+0200\n"
+"POT-Creation-Date: 2026-11-11 14:43+0000\n"
 "PO-Revision-Date: 2025-09-18 18:16+0000\n"
 "Last-Translator: Kapil Gupta <Unknown>\n"
 "Language-Team: Hindi <hi@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2026-01-08 15:44+0000\n"
-"X-Generator: Launchpad (build 99c00f518760bdd50fc6e353e7736d2fff8fba4a)\n"
+"X-Launchpad-Export-Date: 2026-11-16 12:00+0000\n"
+"X-Generator: Launchpad (build 72ba15af7e009b17d4aa1467977127ac8392a4de)\n"
 
-#: usr/lib/bulky/bulky.py:45
+#: usr/lib/bulky/bulky.py:46
 msgid "Cancel"
 msgstr "रद्द करें"
 
-#: usr/lib/bulky/bulky.py:46
+#: usr/lib/bulky/bulky.py:47
 msgid "Add"
 msgstr "जोड़ें"
 
-#: usr/lib/bulky/bulky.py:222 usr/share/bulky/bulky.ui.h:33
+#: usr/lib/bulky/bulky.py:231 usr/share/bulky/bulky.ui.h:33
 msgid "Rename..."
 msgstr "नाम परिवर्तन..."
 
-#: usr/lib/bulky/bulky.py:260 usr/lib/bulky/bulky.py:437
+#: usr/lib/bulky/bulky.py:270 usr/lib/bulky/bulky.py:478
 msgid "About"
 msgstr "बारे में"
 
-#: usr/lib/bulky/bulky.py:265
+#: usr/lib/bulky/bulky.py:275
 msgid "Quit"
 msgstr "बंद करें"
 
-#: usr/lib/bulky/bulky.py:282
+#: usr/lib/bulky/bulky.py:292
 msgid "Name"
 msgstr "नाम"
 
-#: usr/lib/bulky/bulky.py:293
+#: usr/lib/bulky/bulky.py:303
 msgid "New name"
 msgstr "नया नाम"
 
-#: usr/lib/bulky/bulky.py:402
+#: usr/lib/bulky/bulky.py:411
 msgid "Use %n, %0n, %00n, %000n, etc. to enumerate."
 msgstr "गणना करने के लिए %n, %0n, %00n, %000n, आदि का प्रयोग करें।"
 
-#: usr/lib/bulky/bulky.py:439
+#: usr/lib/bulky/bulky.py:480
 msgid "Rename Files"
 msgstr "फाइल नाम परिवर्तन"
 
-#: usr/lib/bulky/bulky.py:487
+#: usr/lib/bulky/bulky.py:531
 msgid "Add files"
 msgstr "फाइलें जोड़ें"
 
-#: usr/lib/bulky/bulky.py:516
+#: usr/lib/bulky/bulky.py:563
 #, python-format
 msgid "Unable to rename '%s': File name too long"
 msgstr "'%s' का नाम परिवर्तित करना विफल। फाइल नाम अति दीर्घ है।"
 
-#: usr/lib/bulky/bulky.py:519
+#: usr/lib/bulky/bulky.py:566
 #, python-format
 msgid ""
 "Unable to rename '%s': Remote operation failed. This may be due to "
@@ -71,25 +71,37 @@ msgstr ""
 "‘%s’ का नाम बदलने में असमर्थ  :  रिमोट ऑपरेशन विफल हो गया। यह अपर्याप्त "
 "अनुमति या सर्वर त्रुटि के कारण हो सकता है।"
 
-#: usr/lib/bulky/bulky.py:523
+#: usr/lib/bulky/bulky.py:570
 #, python-format
 msgid "Unable to rename '%s': %s"
 msgstr "'%s' का नाम परिवर्तित करना विफल : %s"
 
-#: usr/lib/bulky/bulky.py:599 generate_desktop_files:25
+#: usr/lib/bulky/bulky.py:609
+msgid "Renaming files..."
+msgstr ""
+
+#: usr/lib/bulky/bulky.py:731
+msgid "Loading files..."
+msgstr ""
+
+#: usr/lib/bulky/bulky.py:737 generate_desktop_files:25
 msgid "File Renamer"
 msgstr "फाइल नाम परिवर्तन साधन"
 
-#: usr/lib/bulky/bulky.py:600 generate_desktop_files:25
+#: usr/lib/bulky/bulky.py:738 generate_desktop_files:25
 msgid "Rename files and directories"
 msgstr "फाइल व डायरेक्टरी नाम परिवर्तन"
 
-#: usr/lib/bulky/bulky.py:700
+#: usr/lib/bulky/bulky.py:824
+msgid "Updating the preview..."
+msgstr ""
+
+#: usr/lib/bulky/bulky.py:865
 #, python-format
 msgid "Name collision on '%s'."
 msgstr "'%s' हेतु नामकरण विरोधाभास है।"
 
-#: usr/lib/bulky/bulky.py:704 usr/lib/bulky/bulky.py:708
+#: usr/lib/bulky/bulky.py:867 usr/lib/bulky/bulky.py:869
 #, python-format
 msgid "'%s' is not writeable."
 msgstr "'%s' राइट योग्य नहीं है।"

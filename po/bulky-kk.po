@@ -7,102 +7,117 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxmint\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2025-07-25 15:24+0200\n"
-"PO-Revision-Date: 2021-12-05 09:51+0000\n"
-"Last-Translator: Murat Käribay <Unknown>\n"
+"POT-Creation-Date: 2026-11-11 14:43+0000\n"
+"PO-Revision-Date: 2026-11-14 14:27+0000\n"
+"Last-Translator: Clement Lefebvre <root@linuxmint.com>\n"
 "Language-Team: Kazakh <kk@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2026-01-08 15:44+0000\n"
-"X-Generator: Launchpad (build 99c00f518760bdd50fc6e353e7736d2fff8fba4a)\n"
+"X-Launchpad-Export-Date: 2026-11-16 12:00+0000\n"
+"X-Generator: Launchpad (build 72ba15af7e009b17d4aa1467977127ac8392a4de)\n"
+"Language: kk\n"
 
-#: usr/lib/bulky/bulky.py:45
+#: usr/lib/bulky/bulky.py:46
 msgid "Cancel"
 msgstr "Бас тарту"
 
-#: usr/lib/bulky/bulky.py:46
+#: usr/lib/bulky/bulky.py:47
 msgid "Add"
 msgstr "Қосу"
 
-#: usr/lib/bulky/bulky.py:222 usr/share/bulky/bulky.ui.h:33
+#: usr/lib/bulky/bulky.py:231 usr/share/bulky/bulky.ui.h:33
 msgid "Rename..."
-msgstr "Қайта атау..."
+msgstr "Атын өзгерту..."
 
-#: usr/lib/bulky/bulky.py:260 usr/lib/bulky/bulky.py:437
+#: usr/lib/bulky/bulky.py:270 usr/lib/bulky/bulky.py:478
 msgid "About"
-msgstr "Бағдарлама жайлы"
+msgstr "Туралы"
 
-#: usr/lib/bulky/bulky.py:265
+#: usr/lib/bulky/bulky.py:275
 msgid "Quit"
 msgstr "Шығу"
 
-#: usr/lib/bulky/bulky.py:282
+#: usr/lib/bulky/bulky.py:292
 msgid "Name"
 msgstr "Аты"
 
-#: usr/lib/bulky/bulky.py:293
+#: usr/lib/bulky/bulky.py:303
 msgid "New name"
-msgstr "Жаңа атауы"
+msgstr "Жаңа аты"
 
-#: usr/lib/bulky/bulky.py:402
+#: usr/lib/bulky/bulky.py:411
 msgid "Use %n, %0n, %00n, %000n, etc. to enumerate."
-msgstr ""
+msgstr "Нөмірлеу үшін %n, %0n, %00n, %000n және т.б. қолдану."
 
-#: usr/lib/bulky/bulky.py:439
+#: usr/lib/bulky/bulky.py:480
 msgid "Rename Files"
-msgstr "Файлды қайта атау"
+msgstr "Файлдардың атын өзгерту"
 
-#: usr/lib/bulky/bulky.py:487
+#: usr/lib/bulky/bulky.py:531
 msgid "Add files"
-msgstr "Файл қосу"
+msgstr "Файлдарды қосу"
 
-#: usr/lib/bulky/bulky.py:516
+#: usr/lib/bulky/bulky.py:563
 #, python-format
 msgid "Unable to rename '%s': File name too long"
-msgstr ""
+msgstr "'%s' атын өзгерту мүмкін емес: Файл аты тым ұзын"
 
-#: usr/lib/bulky/bulky.py:519
+#: usr/lib/bulky/bulky.py:566
 #, python-format
 msgid ""
 "Unable to rename '%s': Remote operation failed. This may be due to "
 "insufficient permissions or a server error."
 msgstr ""
+"'%s' атын өзгерту мүмкін емес: Қашықтағы операция сәтсіз аяқталды. Бұл "
+"рұқсаттардың жеткіліксіздігінен немесе сервер қатесінен болуы мүмкін."
 
-#: usr/lib/bulky/bulky.py:523
+#: usr/lib/bulky/bulky.py:570
 #, python-format
 msgid "Unable to rename '%s': %s"
+msgstr "'%s' атын өзгерту мүмкін емес: %s"
+
+#: usr/lib/bulky/bulky.py:609
+msgid "Renaming files..."
 msgstr ""
 
-#: usr/lib/bulky/bulky.py:599 generate_desktop_files:25
+#: usr/lib/bulky/bulky.py:731
+msgid "Loading files..."
+msgstr ""
+
+#: usr/lib/bulky/bulky.py:737 generate_desktop_files:25
 msgid "File Renamer"
+msgstr "Файлдардың атын өзгерткіш"
+
+#: usr/lib/bulky/bulky.py:738 generate_desktop_files:25
+msgid "Rename files and directories"
+msgstr "Файлдар мен бумалардың атын өзгерту"
+
+#: usr/lib/bulky/bulky.py:824
+msgid "Updating the preview..."
 msgstr ""
 
-#: usr/lib/bulky/bulky.py:600 generate_desktop_files:25
-msgid "Rename files and directories"
-msgstr "Файл мен буманы қайта атау"
-
-#: usr/lib/bulky/bulky.py:700
+#: usr/lib/bulky/bulky.py:865
 #, python-format
 msgid "Name collision on '%s'."
-msgstr "'%s' атауында қайшылық туындады"
+msgstr "'%s' үшін аттар қақтығысы."
 
-#: usr/lib/bulky/bulky.py:704 usr/lib/bulky/bulky.py:708
+#: usr/lib/bulky/bulky.py:867 usr/lib/bulky/bulky.py:869
 #, python-format
 msgid "'%s' is not writeable."
-msgstr "'%s' жазыла алмайды."
+msgstr "'%s' жазуға қолжетімді емес."
 
 #: usr/share/bulky/bulky.ui.h:1
 msgid "Add files..."
-msgstr "Файл қосу..."
+msgstr "Файлдарды қосу..."
 
 #: usr/share/bulky/bulky.ui.h:2
 msgid "Remove"
-msgstr "Жою"
+msgstr "Өшіру"
 
 #: usr/share/bulky/bulky.ui.h:3
 msgid "Remove selected files"
-msgstr "Таңдалған файлды жою"
+msgstr "Таңдалған файлдарды өшіру"
 
 #: usr/share/bulky/bulky.ui.h:4
 msgid "Clear"
@@ -110,108 +125,108 @@ msgstr "Тазарту"
 
 #: usr/share/bulky/bulky.ui.h:5
 msgid "Replace"
-msgstr ""
+msgstr "Алмастыру"
 
 #: usr/share/bulky/bulky.ui.h:6
 msgid "Insert"
-msgstr ""
+msgstr "Кірістіру"
 
 #: usr/share/bulky/bulky.ui.h:7
 msgid "Change case"
-msgstr ""
+msgstr "Регистрді өзгерту"
 
 #: usr/share/bulky/bulky.ui.h:8
 msgid "Name only"
-msgstr ""
+msgstr "Тек аты"
 
 #: usr/share/bulky/bulky.ui.h:9
 msgid "Extension only"
-msgstr ""
+msgstr "Тек кеңейтуі"
 
 #: usr/share/bulky/bulky.ui.h:10
 msgid "Entire filename"
-msgstr ""
+msgstr "Толық файл аты"
 
 #: usr/share/bulky/bulky.ui.h:11
 msgid "Find:"
-msgstr ""
+msgstr "Табу:"
 
 #: usr/share/bulky/bulky.ui.h:12
 msgid "Replace:"
-msgstr ""
+msgstr "Алмастыру:"
 
 #: usr/share/bulky/bulky.ui.h:14
 msgid "Use %n, %0n, %00n, etc. to enumerate."
-msgstr ""
+msgstr "Нөмірлеу үшін %n, %0n, %00n және т.б. қолдану."
 
 #: usr/share/bulky/bulky.ui.h:15
 msgid "Regular expression"
-msgstr ""
+msgstr "Тұрақты өрнек"
 
 #: usr/share/bulky/bulky.ui.h:16
 msgid "Case sensitive"
-msgstr ""
+msgstr "Регистрді ескеру"
 
 #: usr/share/bulky/bulky.ui.h:17
 msgid "Start number:"
-msgstr ""
+msgstr "Бастапқы сан:"
 
 #: usr/share/bulky/bulky.ui.h:18
 msgid "Increment:"
-msgstr ""
+msgstr "Қадам:"
 
 #: usr/share/bulky/bulky.ui.h:19
 msgid "At position:"
-msgstr ""
+msgstr "Орында:"
 
 #: usr/share/bulky/bulky.ui.h:20
 msgid "From the end"
-msgstr ""
+msgstr "Соңынан бастап"
 
 #: usr/share/bulky/bulky.ui.h:21
 msgid "Overwrite"
-msgstr ""
+msgstr "Үстінен жазу"
 
 #: usr/share/bulky/bulky.ui.h:22
 msgid "Text:"
-msgstr ""
+msgstr "Мәтін:"
 
 #: usr/share/bulky/bulky.ui.h:23
 msgid "Convert to:"
-msgstr ""
+msgstr "Келесіге түрлендіру:"
 
 #: usr/share/bulky/bulky.ui.h:24
 msgid "Lower case"
-msgstr ""
+msgstr "Кіші әріптер"
 
 #: usr/share/bulky/bulky.ui.h:25
 msgid "First character uppercase"
-msgstr ""
+msgstr "Бірінші әріп бас әріппен"
 
 #: usr/share/bulky/bulky.ui.h:26
 msgid "Title case"
-msgstr ""
+msgstr "Тақырыптық регистр"
 
 #: usr/share/bulky/bulky.ui.h:27
 msgid "Upper case"
-msgstr ""
+msgstr "Бас әріптер"
 
 #: usr/share/bulky/bulky.ui.h:28
 msgid "Remove accents"
-msgstr ""
+msgstr "Диакритикалық таңбаларды өшіру"
 
 #: usr/share/bulky/bulky.ui.h:29
 msgid "Remove from position:"
-msgstr ""
+msgstr "Мына позициядан бастап өшіру:"
 
 #: usr/share/bulky/bulky.ui.h:30
 msgid "To position:"
-msgstr ""
+msgstr "Мына позицияға дейін:"
 
 #: usr/share/bulky/bulky.ui.h:31
 msgid "Close"
-msgstr ""
+msgstr "Жабу"
 
 #: usr/share/bulky/bulky.ui.h:32
 msgid "Rename"
-msgstr ""
+msgstr "Атын өзгерту"
