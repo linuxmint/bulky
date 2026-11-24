@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: linuxmint\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2026-11-11 14:43+0000\n"
-"PO-Revision-Date: 2025-07-26 14:14+0000\n"
-"Last-Translator: Zehua Huang <Unknown>\n"
+"PO-Revision-Date: 2026-11-17 01:53+0000\n"
+"Last-Translator: 张鹏 <scbeta@qq.com>\n"
 "Language-Team: Chinese (Simplified) <zh_CN@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2026-11-16 12:00+0000\n"
-"X-Generator: Launchpad (build 72ba15af7e009b17d4aa1467977127ac8392a4de)\n"
+"X-Launchpad-Export-Date: 2026-11-24 12:01+0000\n"
+"X-Generator: Launchpad (build 012091084314157d19ae714f55ef4c582ff0feb5)\n"
 
 #: usr/lib/bulky/bulky.py:46
 msgid "Cancel"
@@ -76,11 +76,11 @@ msgstr "无法重命名 '%s': %s"
 
 #: usr/lib/bulky/bulky.py:609
 msgid "Renaming files..."
-msgstr ""
+msgstr "正在重命名文件..."
 
 #: usr/lib/bulky/bulky.py:731
 msgid "Loading files..."
-msgstr ""
+msgstr "正在加载文件..."
 
 #: usr/lib/bulky/bulky.py:737 generate_desktop_files:25
 msgid "File Renamer"
@@ -92,7 +92,7 @@ msgstr "重命名文件和目录"
 
 #: usr/lib/bulky/bulky.py:824
 msgid "Updating the preview..."
-msgstr ""
+msgstr "正在更新预览..."
 
 #: usr/lib/bulky/bulky.py:865
 #, python-format

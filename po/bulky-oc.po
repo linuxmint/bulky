@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: linuxmint\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2026-11-11 14:43+0000\n"
-"PO-Revision-Date: 2026-11-12 18:26+0000\n"
+"PO-Revision-Date: 2026-11-24 09:56+0000\n"
 "Last-Translator: Quentin PAGÈS <Unknown>\n"
 "Language-Team: Occitan (post 1500) <oc@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2026-11-16 12:00+0000\n"
-"X-Generator: Launchpad (build 72ba15af7e009b17d4aa1467977127ac8392a4de)\n"
+"X-Launchpad-Export-Date: 2026-11-24 12:01+0000\n"
+"X-Generator: Launchpad (build 012091084314157d19ae714f55ef4c582ff0feb5)\n"
 
 #: usr/lib/bulky/bulky.py:46
 msgid "Cancel"
@@ -60,7 +60,7 @@ msgstr "Apondre de fichièrs"
 #: usr/lib/bulky/bulky.py:563
 #, python-format
 msgid "Unable to rename '%s': File name too long"
-msgstr "Renomenatge impossible de « %s » : nom de fichièr tròp long"
+msgstr "Renomenatge impossible de « %s » : nom de fichièr tròp long"
 
 #: usr/lib/bulky/bulky.py:566
 #, python-format
@@ -68,13 +68,13 @@ msgid ""
 "Unable to rename '%s': Remote operation failed. This may be due to "
 "insufficient permissions or a server error."
 msgstr ""
-"Renomenatge de « %s » impossible : l’operacion distanta a fracassat. Aquò "
-"pòt venir de permission insufisentas o d’una error servidor."
+"Renomenatge de « %s » impossible : l’operacion distanta a fracassat. Aquò "
+"pòt venir de permissions insufisentas o d’una error del servidor."
 
 #: usr/lib/bulky/bulky.py:570
 #, python-format
 msgid "Unable to rename '%s': %s"
-msgstr "Renomenatge impossible de « %s » : %s"
+msgstr "Renomenatge impossible de « %s » : %s"
 
 #: usr/lib/bulky/bulky.py:609
 msgid "Renaming files..."
@@ -99,16 +99,16 @@ msgstr "Actualizacion de l’apercebut..."
 #: usr/lib/bulky/bulky.py:865
 #, python-format
 msgid "Name collision on '%s'."
-msgstr "Collision de nom sus « %s »."
+msgstr "Collision de nom sus « %s »."
 
 #: usr/lib/bulky/bulky.py:867 usr/lib/bulky/bulky.py:869
 #, python-format
 msgid "'%s' is not writeable."
-msgstr "Escritura impossibla sus « %s »."
+msgstr "Escritura impossibla sus « %s »."
 
 #: usr/share/bulky/bulky.ui.h:1
 msgid "Add files..."
-msgstr "Apondre de fichièrs"
+msgstr "Apondre de fichièrs..."
 
 #: usr/share/bulky/bulky.ui.h:2
 msgid "Remove"
@@ -116,7 +116,7 @@ msgstr "Suprimir"
 
 #: usr/share/bulky/bulky.ui.h:3
 msgid "Remove selected files"
-msgstr "Tirar las lihnas seleccionadas"
+msgstr "Tirar los fichièrs seleccionats"
 
 #: usr/share/bulky/bulky.ui.h:4
 msgid "Clear"
@@ -148,11 +148,11 @@ msgstr "Nom complèt"
 
 #: usr/share/bulky/bulky.ui.h:11
 msgid "Find:"
-msgstr "Recercar :"
+msgstr "Recercar :"
 
 #: usr/share/bulky/bulky.ui.h:12
 msgid "Replace:"
-msgstr "Remplaçar :"
+msgstr "Remplaçar :"
 
 #: usr/share/bulky/bulky.ui.h:14
 msgid "Use %n, %0n, %00n, etc. to enumerate."
@@ -176,7 +176,7 @@ msgstr "Increment :"
 
 #: usr/share/bulky/bulky.ui.h:19
 msgid "At position:"
-msgstr "A la posicion :"
+msgstr "A la posicion :"
 
 #: usr/share/bulky/bulky.ui.h:20
 msgid "From the end"
@@ -188,11 +188,11 @@ msgstr "Espotir"
 
 #: usr/share/bulky/bulky.ui.h:22
 msgid "Text:"
-msgstr "Tèxte :"
+msgstr "Tèxte :"
 
 #: usr/share/bulky/bulky.ui.h:23
 msgid "Convert to:"
-msgstr "Convertir cap a :"
+msgstr "Convertir cap a :"
 
 #: usr/share/bulky/bulky.ui.h:24
 msgid "Lower case"
@@ -216,11 +216,11 @@ msgstr "Levar los accents"
 
 #: usr/share/bulky/bulky.ui.h:29
 msgid "Remove from position:"
-msgstr "De la posicion :"
+msgstr "Suprimir de la posicion :"
 
 #: usr/share/bulky/bulky.ui.h:30
 msgid "To position:"
-msgstr "Fins a :"
+msgstr "Fins a :"
 
 #: usr/share/bulky/bulky.ui.h:31
 msgid "Close"
