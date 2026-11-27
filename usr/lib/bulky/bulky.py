@@ -134,7 +134,10 @@ class FileObject():
     def rename(self, new_name):
         backup_gfile = self.gfile.dup()
         try:
-            new_gfile = self.gfile.set_display_name(new_name, None)
+            if new_name.lower() == self.name.lower():
+                new_gfile = self.change_case(new_name)
+            else:
+                new_gfile = self.gfile.set_display_name(new_name, None)
         except:
             # This can fail - make sure the GFile is still in a pre-fail state
             # (not sure this is necessary), then let the caller handle telling
@@ -146,6 +149,23 @@ class FileObject():
         self._update_info()
 
         return True
+
+    def change_case(self, new_name):
+        try:
+            return self.gfile.set_display_name(new_name, None)
+        except GLib.Error as e:
+            if e.code != Gio.IOErrorEnum.EXISTS:
+                raise
+
+        # Case-insensitive filesystems (vfat, SMB shares...) see the new name
+        # as an existing file, so go through a temporary name. If the new name
+        # really belongs to another file, put the original name back.
+        temp_gfile = self.gfile.set_display_name(".bulky-%s" % GLib.uuid_string_random(), None)
+        try:
+            return temp_gfile.set_display_name(new_name, None)
+        except GLib.Error:
+            temp_gfile.set_display_name(self.name, None)
+            raise
 
     def get_pending_uri(self, new_name):
         parent = self.gfile.get_parent()
